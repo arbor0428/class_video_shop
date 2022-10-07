@@ -1,0 +1,268 @@
+/*header*/
+.h_top {padding: 10px 0 20px 0;}
+.h_top .h_top_menu li {margin: 0 10px;}
+.h_top .h_top_menu li a {display: block; font-size: 0.813rem; transition: all 0.3s;}
+.h_top .h_top_menu li a:hover {color: #8800B8;}
+
+.h_bot {padding: 10px 0; position: relative; height: 50px; box-sizing: border-box;}
+.h_bot .h_bot_menu li a {margin: 0 15px; font-size: 1.125rem; transition: all 0.3s;}
+.h_bot .h_bot_menu li a:hover {color: #8800B8; text-decoration: underline;}
+.h_bot .classBtn {width: 100px; height: 30px; font-size: 0.875rem; border-radius: 5px;}
+
+.depthWrap {position: absolute; top: 50px; width: 100%; z-index: 99; color: #000;}
+.depthWrap .boxWrap {position:absolute; top: 0; width: 100%; height: 100%;}
+.depthWrap .boxWrap .depthbox {display:none; position: absolute; top: 0; left: 0; width: 100%; background-color: #fff; box-shadow: 0 11px 10px rgb(0,0,0,3%); overflow: hidden; z-index: 9999; transition: all 0.3s;}
+/* .depthWrap .depthbox:nth-child(1) {display: block;} */
+.depthWrap .depthbox .alcMnWrap {border-left: 1px solid #ECECEC; height: 100%;}
+.depthWrap .depthbox .allClassMenu {height: 100%; padding: 15px; box-sizing: border-box; border-right: 1px solid #ECECEC;}
+.depthWrap .depthbox .allClassMenu .depth1 > li {margin-bottom: 10px;}
+.depthWrap .depthbox .allClassMenu .depth1 > li > a {margin-bottom: 10px;}
+.depthWrap .depthbox .allClassMenu .depth2 > li > a {margin-bottom: 7px; font-size: 0.75rem; }
+.depthWrap .depthbox .allClassMenu .depth3 > li > a {margin-bottom: 5px; font-size: 0.875rem;} 
+.depthWrap .depthbox .boraMenuTit {padding: 15px; width: 593px; box-sizing: border-box;}
+.depthWrap .depthbox .boraMenuTit p {height: fit-content; font-size:1.125rem;}
+.depthWrap .depthbox .boraMenuTit .lnr-chevron-right {margin-left: 100px; font-weight: bold; font-size: 0.875rem;}
+.depthWrap .depthbox .boraMenuCont > li {padding: 15px; border-right: 1px solid #ECECEC; width: 322px; box-sizing: border-box;}
+.depthWrap .depthbox .boraMenuCont .b_menu > li {margin-bottom: 15px;}
+.depthWrap .depthbox .boraMenuCont .b_menu > li a {display: block; font-weight: 700;}
+/*header*/
+
+/*중간영역*/
+h3 {font-size:1.875rem;}
+.visual {position: relative;}
+.mainVbtnWrap {position: absolute; left: 360px; bottom: 40px; padding: 5px 10px 5px 20px; background-color: #444444; border-radius: 20px; color: #fff; z-index: 33;}
+.mainVbtnWrap .pagingInfo {font-size: 0.875rem;}
+.mainVbtnWrap .mVprevBtn {margin: 0 8px; cursor:pointer;}
+.mainVbtnWrap .mVprevBtn span {font-size: 0.875rem;}
+.mainVbtnWrap .mVnextBtn {margin: 0 8px; cursor:pointer;}
+.mainVbtnWrap .mVnextBtn span {font-size: 0.875rem;}
+.mainVbtnWrap .mVstopBtn {width: 9px; height: 16px; background-position: center center; background-repeat: no-repeat; background-size: inherit; background-image: url("../images/s_playBtn.png"); cursor: pointer;}
+.mainVbtnWrap .mVstopBtn.on {background-image: url("../images/white_stop_btn.png");}
+
+.cont1 {padding: 73px 0;}
+.cont1 .videoTit {margin-bottom: 25px;}
+.cont1 .videoTit > span {margin-right: 10px; width: 80px; height: 40px; border-radius: 10px; font-size:1.625rem; font-weight: 500;}
+.cont1 .videoTit .hotTi {background: transparent linear-gradient(180deg, #FF5700 0%, #FFD800 100%) 0% 0% no-repeat padding-box;}
+.cont1 .videoTit .newTi {background: transparent linear-gradient(180deg, #9800CE 0%, #4C0067 100%) 0% 0% no-repeat padding-box;}
+.cont1 .nVdSlickBox {margin: 0 10px; width: 23%;}
+.cont1 .nVdSlickBox:hover .imgWrap img {transform: scale(1.2deg);}
+.cont1 .nVdSlickBox .imgWrap {position: relative; margin-bottom: 15px; border-radius: 10px; width: 100%; height: 150px; overflow: hidden; background-color: #ddd;}
+.cont1 .nVdSlickBox .imgWrap .likeMark {border: none; background-color: transparent; position: absolute; top: 5px; right: 5px; width: 26px; height: 26px; border-radius: 50%; background-repeat: no-repeat; background-position: center center; background-size: inherit; background-image: url("../images/like_off.svg"); cursor: pointer; transition: all 0.3s;}
+.cont1 .nVdSlickBox .imgWrap .likeMark.on {background-image: url("../images/like_on.svg");}
+.cont1 .nVdSlickBox .imgWrap .likeMark:hover {background-color:rgb(255,255,255,0.5);}
+
+.cont1 .nVdSlickBox .nVdCont .nVdtit01 {margin-bottom: 5px; font-size: 1.125rem;}
+.cont1 .nVdSlickBox .nVdCont .nVdtit02 {margin-bottom: 5px; font-size: 0.875rem;}
+.cont1 .nVdSlickBox .nVdCont .clickicon {padding-bottom: 8px; border-bottom: 1px solid #fff;}
+.cont1 .nVdSlickBox .nVdCont .clickicon li {margin-right: 5px;}
+.cont1 .nVdSlickBox .nVdCont .clickicon li:last-child {margin-right: 0;}
+.cont1 .nVdSlickBox .nVdCont .clickicon li span {margin: 0 5px; font-size: 0.75rem;}
+.cont1 .nVdSlickBox .nVdCont .nVdBot {padding-top: 10px; }
+.cont1 .nVdSlickBox .nVdCont .nVdBot span {font-size: 1.125rem;}
+.cont1 .nVdSlickBox .nVdCont .nVdBot .priceDet {margin: 0 3px 0 5px;}
+.cont1 .nVdSlickBox .nVdCont .nVdBot .monDet {font-size: 0.875rem;}
+.cont1 .hotWrap {margin-top: 72px;}
+
+.cont1 .slick-next, .cont1 .slick-prev {
+	width: 9px; 
+	height: 18px;
+	z-index: 30;
+}
+
+.cont1 .slick-next {
+	right: -30px;
+}
+
+.cont1 .slick-prev {
+	left: -30px;
+}
+
+.cont1 .slick-next:before, .cont1 .slick-prev:before {
+	content: "";
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.cont1 .slick-next:before {
+	background-image: url("../images/next.svg");
+}
+
+.cont1 .slick-prev:before {
+	background-image: url("../images/prev.svg");
+}
+
+.c_titWrap {padding-bottom: 25px;}
+.c_titWrap > span {margin-right: 10px; width: 80px; height: 40px; border-radius: 10px; font-size:1.625rem; font-weight: 500;}
+.c_titWrap .slash {margin: 0 15px;}
+.c_titWrap .aiTi {background: transparent linear-gradient(180deg, #E23234 0%, #4931BE 100%) 0% 0% no-repeat padding-box;}
+.c_titWrap .titcont p {margin-bottom: 5px; font-size:0.938rem;}
+.c_titWrap .indicaotr li {margin: 0 3px; width: 36px; height: 36px; border-radius: 50%; background-color: #fff; background-position: center center; background-size: inherit; background-repeat: no-repeat; cursor: pointer;}
+.c_titWrap .indicaotr li:nth-child(1) {background-image: url("../images/navy_left_btn.png");}
+.c_titWrap .indicaotr li:nth-child(2) {background-image: url("../images/navy_right_btn.png"); background-position: 54% center;}
+
+.slick-dotted.slick-slider {margin-bottom: 0 !important;}
+.cont2 .bannerSlick .slick-dots {bottom: 15px;}
+.cont2 .bannerSlick .slick-dots li {width: 10px; height: 10px; margin: 0 3px;}
+.cont2 .bannerSlick .slick-dots li button {width: 10px; height: 10px;}
+.cont2 .bannerSlick .slick-dots li button:before {width: 10px; height: 10px; color: #fff;}
+
+.cont3 {padding: 70px 0;}
+.cont3 .rcmtSlick .rcmt_box {padding: 40px 0; margin: 0 10px; width: 23%; border-radius: 10px; background-color: #fff; color: #000;}
+.cont3 .rcmtSlick .rcmt_box .rcmt_tit {margin-bottom: 30px; color: #222; font-size:1.250rem; text-align: center;}
+.cont3 .rcmtSlick .rcmt_box .nameCirBox {margin: 0 auto 30px; width: 140px; height: 30px; border-radius: 18px; background-color: #002250; color: #fff; font-size:0.938rem;}
+.cont3 .rcmtSlick .rcmt_box .reviewTxt {font-size:0.938rem; line-height: 1.8; text-align: center;}
+.cont3 .rvdoSlick {margin: 20px 0 70px 0;}
+.cont3 .rvdo_box {position: relative; border-radius: 10px; margin: 0 10px; width: 31.333%; height: 250px; overflow: hidden; background-color: #efefef;}
+
+.cont3 .rvdo_box .playShape {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.cont3 .curTabBtn {margin-bottom: 30px;}
+.cont3 .curTabBtn li {margin: 0 1%; width: 18%;}
+.cont3 .curTabBtn li a {width: 100%; height: 45px; border-radius: 45px; color: #fff; border: 1px solid #fff; box-sizing:border-box; transition: all 0.3s;}
+
+.cont3 .curTabBtn li.on a {background-color: #fff; color: #002250; font-weight: 700;}
+.cont3 .curTabCont > .tabBox {display: none;}
+.cont3 .curTabCont > .tabBox:nth-child(1) {display: block;}
+.cont3 .hashTabCont > .tabBox {display: none;}
+.cont3 .hashTabCont > .tabBox:nth-child(1) {display: block;}
+.cont3 .curTabCont .tabBox .ct_tit {padding-bottom: 20px; font-weight: 700; border-bottom: 1px solid #fff; text-align: center;}
+.cont3 .curTabCont .tabBox .ct_cont {padding-top: 10px; font-size: 0.875rem; color: #AAAAAA; line-height: 1.8;}
+.cont3 .tabCont01,
+.cont3 .tabCont02 {margin-bottom: 80px;}
+.cont3 .hashTabBtn li a {font-size:1.250rem; font-weight: 500; transition: all 0.3s;}
+.cont3 .hashTabBtn li.on a {text-decoration: underline;}
+.cont3 .hashTabBtn li::after {content: ""; display: inline-block; margin: 0 15px; width: 1px; height: 18px; background-color: #fff;}
+.cont3 .hashTabBtn li:last-child::after {display: none; margin: 0;}
+.cont3 .vdTabBtn li a {margin: 0 10px; border-radius: 45px; padding: 10px 20px; box-sizing: border-box; border: 1px solid #fff; transition: all 0.3s;}
+.cont3 .vdTabBtn li a.on {background-color: #fff; color: #002250; font-weight: 700; box-sizing: border-box;}
+.cont3 .vdTabBtn li:first-child a {margin: 0 10px 0 20px;}
+
+.cont3 .slick-next, .cont3 .slick-prev {
+	width: 9px; 
+	height: 18px;
+	z-index: 30;
+}
+
+.cont3 .slick-next {
+	right: -30px;
+}
+
+.cont3 .slick-prev {
+	left: -30px;
+}
+
+.cont3 .slick-next:before, .cont3 .slick-prev:before {
+	content: "";
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.cont3 .slick-next:before {
+	background-image: url("../images/next.svg");
+}
+
+.cont3 .slick-prev:before {
+	background-image: url("../images/prev.svg");
+}
+
+.cont4 {padding-top: 50px; position: relative; overflow: hidden;}
+.cont4 .symbol {position: absolute; right: 0; bottom: -120px;}
+.cont4 .blueBigTit {position: absolute; top: 145px; left: 0; color: #002250; opacity: 0.3; font-size: 9.063rem; font-weight: 900; letter-spacing: -12px;}
+.cont4 .eduPerSlick .eduPerBox {height: 760px;}
+.cont4 .perWrap {position: relative; width: 600px; height: 760px;}
+.cont4 .perWrap img {position: absolute; bottom: 0; left: 0;}
+.cont4 .eduPerSlick .eduPerBox .perYear .perNm {margin-bottom: 40px; font-size: 2.75rem; font-weight: 700;}
+.cont4 .eduPerSlick .eduPerBox .perYear .perYearCont {margin-bottom: 60px;}
+.cont4 .eduPerSlick .eduPerBox .perYear .perYearCont li {margin-bottom: 5px;}
+.cont4 .eduPerSlick .eduPerBox .perYear .vdTastyTit {margin-bottom: 5px;}
+.cont4 .eduPerSlick .vdTastyImg {width: 220px; height: 130px; background-color: #efefef;}
+.cont4 .eduPerSlickBtn {position: absolute; bottom: 70px; left: 0; z-index: 30;}
+.cont4 .eduPerSlickBtn li {margin: 0 3px; width: 36px; height: 36px; border-radius: 50%; background-color: #002250; background-position: center center; background-size: inherit; background-repeat: no-repeat; cursor: pointer;}
+.cont4 .eduPerSlickBtn li:nth-child(1) {background-image: url("../images/white_left_btn.png");}
+.cont4 .eduPerSlickBtn li:nth-child(2) {background-image: url("../images/white_play_btn.png");}
+.cont4 .eduPerSlickBtn li:nth-child(2).on {background-image: url("../images/white_stop_btn.png");}
+.cont4 .eduPerSlickBtn li:nth-child(3) {background-image: url("../images/white_right_btn.png"); background-position: 54% center;}
+
+
+.cont5 {border-top: 1px solid #ECECEC; padding-bottom: 70px;}
+.cont5 .ct5_twoBox {padding-top: 60px; width: 50%; box-sizing: border-box;} 
+.cont5 .ct5_twoBox:nth-child(1) {padding-right: 50px; border-right: 1px solid #ECECEC;}
+.cont5 .ct5_twoBox:nth-child(2) {padding-left: 50px;}
+.cont5 .ct5_twoBox .titcont {width: 100%;}
+.cont5 .ct5_twoBox .titcont p {margin-bottom: 3px; color: #464646; font-size: 0.875rem; font-weight: 700;}
+.cont5 .ct5_twoBox .titcont h3 {width: 100%;}
+.cont5 .ct5_twoBox .titcont .c_tit_btn {font-weight: 500; color: #5B5B5B; font-size: 1rem;}
+.cont5 .ct5_twoBox .gryWrap {padding: 20px 25px; border-radius: 10px; background-color: #F9F9F9;}
+.cont5 .ct5_twoBox .noticeRoll li {color: #222; font-weight: 700;}
+.cont5 .ct5_twoBox .phoneEmail li img {margin-right: 5px;}
+.cont5 .ct5_twoBox .phoneEmail li:after {content: ""; margin: 0 12px; display: inline-block; width: 1px; height: 15px; background-color: #CBCBCB;}
+.cont5 .ct5_twoBox .phoneEmail li:last-child:after {display: none; margin: 0;}
+.cont5 .noticeBtn {position: absolute; right: 25px; top: 40%; transform: translateY(-50%);}
+.cont5 .noticeBtn > div {width: 14px; height: 14px; cursor: pointer;}
+.cont5 .noticeBtn > div span {font-size: 0.875rem;}
+
+
+.videoPopUp {display: none; position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; background-color: rgb(0,0,0,0.5);}
+.videoPopUp .videoPopUpBox {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 768px; height: 432px;}
+.videoPopUp .videoPopUpBox .videoClose {position: absolute; top: -40px; right: 0; width: 40px; height: 40px; background-color: #9800CE; cursor: pointer;}
+.videoPopUp .videoPopUpBox .viPlayWrap {position: relative; width: 100%; height: 100%; background-color: #efefef;}
+.videoPopUp .videoPopUpBox .viPlayWrap .playBtn {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+/*중간영역*/
+
+/*footer*/
+footer .f_top01 .yelloTit {margin: 23px 0 13px 0; font-size:1.625rem; color: #F7D593;}
+footer .f_top01 .f_top01_det {margin-bottom: 30px; font-size: 0.875rem;}
+footer .f_top01 .startBtn {margin: 0 auto 60px; border: 1px solid #fff; box-sizing: border-box; width: 146px; height: 43px; border-radius: 43px;}
+footer .f_top01 .startBtn:hover {background-color: #F7D593; border: 1px solid #F7D593; color: #002250; font-weight: 700;}
+footer .f_top02 {padding: 30px 0;}
+footer .f_top02 .familySlickBtn {width: 20%;}
+footer .f_top02 .familySlickWrap {width: 85%;}
+footer .f_top02 .familySlickWrap .f_SlickBox {margin-right: 16px;}
+footer .f_bot01 {padding: 28px 0;}
+footer .f_bot01 .f_bot01_menu li {margin: 0 15px;}
+footer .f_bot01 .f_bot01_menu li a {display: block; font-size: 0.875rem;}
+footer .f_bot01 .f_bot01_sns li {margin: 0 5px;}
+footer .f_bot02 {padding: 50px 0 98px;}
+footer .f_bot02 .f_logo {margin-bottom: 15px;}
+footer .f_bot02_left .companyList li {margin-bottom: 5px; font-size: 0.813rem;}
+footer .f_bot02_left .addr {margin-bottom: 5px; font-size: 0.813rem;}
+footer .f_bot02 .copyright {margin-top: 20px; font-size: 0.813rem; font-family: 'Montserrat', sans-serif;}
+footer .f_bot02_menu li a {display: block; margin-bottom: 5px; font-size: 0.875rem;}
+footer .familySlickBtn li {margin: 0 3px; width: 36px; height: 36px; border-radius: 50%; background-color: #fff; background-position: center center; background-size: inherit; background-repeat: no-repeat; cursor: pointer;}
+footer .familySlickBtn li:nth-child(1) {background-image: url("../images/navy_left_btn.png");}
+footer .familySlickBtn li:nth-child(2) {background-image: url("../images/navy_play_btn.png");}
+footer .familySlickBtn li:nth-child(2).on {background-image: url("../images/navy_stop_btn.png"); background-position: 55% center;}
+footer .familySlickBtn li:nth-child(3) {background-image: url("../images/navy_right_btn.png"); background-position: 54% center;}
+
+
+.fixBtnWrap {position: fixed; right: 25px; bottom: 70px; z-index: 999;}
+.fixBtnWrap .mediaWrap {position: relative; margin-bottom: 110px;}
+.fixBtnWrap .mediaWrap .mediaOpenBtn {width: 55px; height: 55px; border-radius: 50%; background-position: center center; background-repeat: no-repeat; background-size: inherit; background-image: url("../images/hideBtn.svg"); cursor: pointer;}
+.fixBtnWrap .mediaWrap .mediaOpenBtn.on {background-image: url("../images/showBtn.svg");}
+.fixBtnWrap .mediaWrap .mediaToggle li {position:relative; margin: 5px 0; width: 55px; height: 55px; border-radius: 50%; background-position: center center; background-repeat: no-repeat; background-size: inherit; cursor: pointer;}
+.fixBtnWrap .mediaWrap .mediaToggle li a {width: 100%; height: 100%;}
+.fixBtnWrap .mediaWrap .mediaToggle li:before {font-size: 0.875rem; color: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: absolute; right:25px; top: 0; border-radius: 55px 0 0 55px; width: 0; height: 55px; z-index: -99; transition: all 0.3s; overflow:hidden;}
+.fixBtnWrap .mediaWrap .mediaToggle li:nth-child(1) {background-image: url("../images/n_icon.png"); background-color: #2fb14a;}
+.fixBtnWrap .mediaWrap .mediaToggle li:nth-child(1):before {content: "네이버블로그"; background-color: #2fb14a;}
+.fixBtnWrap .mediaWrap .mediaToggle li:hover:before {padding-left: 20px; width: 120px;}
+.fixBtnWrap .mediaWrap .mediaToggle li:nth-child(2) {background-image: url("../images/k_icon.png"); background-color: #fde500;}
+.fixBtnWrap .mediaWrap .mediaToggle li:nth-child(2):before {content: "카카오톡"; background-color: #fde500; color: #240f0e;}
+.fixBtnWrap .mediaWrap .mediaToggle li:nth-child(3) {background: transparent linear-gradient(180deg, #E23234 0%, #4931BE 100%) 0% 0% no-repeat padding-box;}
+.fixBtnWrap .mediaWrap .mediaToggle li:nth-child(3):before {content: "인스타그램"; background: transparent linear-gradient(180deg, #E23234 0%, #4931BE 100%) 0% 0% no-repeat padding-box;}
+.fixBtnWrap .mediaWrap .mediaToggle {display: none; position:absolute; bottom:57px; left:0px; width:100%; z-index:11; box-sizing:border-box;}
+
+
+.fixBtnWrap .updownWrap li {margin: 5px 0; width: 55px; height: 55px; border-radius: 50%; background-color: #9800ce;}
+.fixBtnWrap .updownWrap li a {width: 100%; height: 100%;}
+/*footer*/
