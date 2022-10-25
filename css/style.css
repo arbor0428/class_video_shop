@@ -44,23 +44,23 @@ h3 {font-size:1.875rem;}
 .cont1 .videoTit > span {margin-right: 10px; width: 80px; height: 40px; border-radius: 10px; font-size:1.625rem; font-weight: 500;}
 .cont1 .videoTit .hotTi {background: transparent linear-gradient(180deg, #FF5700 0%, #FFD800 100%) 0% 0% no-repeat padding-box;}
 .cont1 .videoTit .newTi {background: transparent linear-gradient(180deg, #9800CE 0%, #4C0067 100%) 0% 0% no-repeat padding-box;}
-.cont1 .nVdSlickBox {margin: 0 10px; width: 23%;}
-.cont1 .nVdSlickBox:hover .imgWrap img {transform: scale(1.2deg);}
-.cont1 .nVdSlickBox .imgWrap {position: relative; margin-bottom: 15px; border-radius: 10px; width: 100%; height: 150px; overflow: hidden; background-color: #ddd;}
-.cont1 .nVdSlickBox .imgWrap .likeMark {border: none; background-color: transparent; position: absolute; top: 5px; right: 5px; width: 26px; height: 26px; border-radius: 50%; background-repeat: no-repeat; background-position: center center; background-size: inherit; background-image: url("../images/like_off.svg"); cursor: pointer; transition: all 0.3s;}
-.cont1 .nVdSlickBox .imgWrap .likeMark.on {background-image: url("../images/like_on.svg");}
-.cont1 .nVdSlickBox .imgWrap .likeMark:hover {background-color:rgb(255,255,255,0.5);}
+.nVdSlickBox {margin: 0 10px; width: 23%;}
+.nVdSlickBox:hover .imgWrap img {transform: scale(1.2deg);}
+.nVdSlickBox .imgWrap {position: relative; margin-bottom: 15px; border-radius: 10px; width: 100%; height: 150px; overflow: hidden; background-color: #ddd;}
+.nVdSlickBox .imgWrap .likeMark {border: none; background-color: transparent; position: absolute; top: 5px; right: 5px; width: 26px; height: 26px; border-radius: 50%; background-repeat: no-repeat; background-position: center center; background-size: inherit; background-image: url("../images/like_off.svg"); cursor: pointer; transition: all 0.3s;}
+.nVdSlickBox .imgWrap .likeMark.on {background-image: url("../images/like_on.svg");}
+.nVdSlickBox .imgWrap .likeMark:hover {background-color:rgb(255,255,255,0.5);}
 
-.cont1 .nVdSlickBox .nVdCont .nVdtit01 {margin-bottom: 5px; font-size: 1.125rem;}
-.cont1 .nVdSlickBox .nVdCont .nVdtit02 {margin-bottom: 5px; font-size: 0.875rem;}
-.cont1 .nVdSlickBox .nVdCont .clickicon {padding-bottom: 8px; border-bottom: 1px solid #fff;}
-.cont1 .nVdSlickBox .nVdCont .clickicon li {margin-right: 5px;}
-.cont1 .nVdSlickBox .nVdCont .clickicon li:last-child {margin-right: 0;}
-.cont1 .nVdSlickBox .nVdCont .clickicon li span {margin: 0 5px; font-size: 0.75rem;}
-.cont1 .nVdSlickBox .nVdCont .nVdBot {padding-top: 10px; }
-.cont1 .nVdSlickBox .nVdCont .nVdBot span {font-size: 1.125rem;}
-.cont1 .nVdSlickBox .nVdCont .nVdBot .priceDet {margin: 0 3px 0 5px;}
-.cont1 .nVdSlickBox .nVdCont .nVdBot .monDet {font-size: 0.875rem;}
+.nVdSlickBox .nVdCont .nVdtit01 {margin-bottom: 5px; font-size: 1.125rem;}
+.nVdSlickBox .nVdCont .nVdtit02 {margin-bottom: 5px; font-size: 0.875rem;}
+.nVdSlickBox .nVdCont .clickicon {padding-bottom: 8px; border-bottom: 1px solid #fff;}
+.nVdSlickBox .nVdCont .clickicon li {margin-right: 5px;}
+.nVdSlickBox .nVdCont .clickicon li:last-child {margin-right: 0;}
+.nVdSlickBox .nVdCont .clickicon li span {margin: 0 5px; font-size: 0.75rem;}
+.nVdSlickBox .nVdCont .nVdBot {padding-top: 10px; }
+.nVdSlickBox .nVdCont .nVdBot span {font-size: 1.125rem;}
+.nVdSlickBox .nVdCont .nVdBot .priceDet {margin: 0 3px 0 5px;}
+.nVdSlickBox .nVdCont .nVdBot .monDet {font-size: 0.875rem;}
 .cont1 .hotWrap {margin-top: 72px;}
 
 .cont1 .slick-next, .cont1 .slick-prev {

@@ -163,6 +163,12 @@
 				</div>
 			</div>
 		</footer>
+
+		<?
+		//팝업 모달창
+		include '/home/edufim/www/module/popupoverlay.php';
+		?>
+
 		<script>
 			$('.familySlickWrap').slick({ 
 				fade: false,

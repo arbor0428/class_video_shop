@@ -1,0 +1,39 @@
+.subWrap {padding: 63px 0 100px 0;}
+.subWrap .s_center {margin: 0 auto; width: 1200px;}
+.subWrap .sidemenu {padding: 0 10px; width: 170px; box-sizing: border-box;}
+.subWrap .sidemenu .sideTit {margin-bottom: 30px; border-radius: 5px; width: 126px; height: 44px;}
+.subWrap .sidemenu .sidemenu_list {margin-bottom: 40px;}
+.subWrap .sidemenu .sidemenu_list li.content_box_a {font-weight: 700; color: #BC00FF;}
+.subWrap .sidemenu li {margin: 15px 0;}
+.subWrap .s_cont {width: 1000px;}
+
+.subWrap .s_cont_tit {margin-bottom: 30px;}
+.subWrap .s_cont_tit:after {content:""; display: block; margin-top: 10px; width: 100%; height: 1px; background-color: #EFEFEF;}
+.subWrap .nVdSlickBox {margin: 0 0 20px; width: 31.333%;}
+.subWrap .nVdSlickBox .nVdCont .clickicon {border-bottom: 1px solid #EFEFEF;}
+.subWrap .nVdSlickBox .nVdCont .clickicon li span {color: #bcbcbc;}
+.subWrap .top_searchBar {margin: 10px 0 30px 0;}
+.subWrap .inputwrap input {display: block; padding: 10px 20px; width: 390px; box-sizing: border-box; border-radius: 5px 0 0 5px; border: 1px solid #EFEFEF; font-size: 0.875rem; color: #000;}
+.subWrap .inputwrap input::placeholder {font-size: 0.875rem; color: #bcbcbc;}
+.subWrap .inputwrap .searchBtn {width: 60px; border-radius: 0 5px 5px 0; box-sizing: border-box; font-size: 14px;}
+
+.subWrap .grytitBox {padding: 20px 15px; background-color: #F8F8F8; border-radius: 5px; box-sizing: border-box;}
+.morescroll {width: 100%; height: 48px; border-radius: 3px; font-weight: 700;}
+.morescroll img {margin-left: 10px;}
+.s_cont_tit .s_cont_tabbtn li {position: relative; margin-right: 20px; font-size: 20px;}
+.s_cont_tit .s_cont_tabbtn li.on:after {content:""; display: block; position: absolute; bottom: -11px; width: 100%; height: 2px; background-color: #BC00FF;}
+.s_cont_tit .s_cont_tabbtn li.on {color: #BC00FF; font-weight: 700;}
+.top_searchBar .selectwrap {margin-right: 20px;}
+.top_searchBar .selectwrap .select_tit {margin-right: 10px;}
+.top_searchBar .selectwrap select {height: 36px; border: 1px solid #C8C8C8; border-radius: 5px;}
+.class_videoList_wrap .class_videoCont {padding-bottom: 15px; border-bottom: 1px solid #efefef;}
+.class_videoList_wrap .class_videoCont .imgWrap {position: relative; margin-right: 20px; width: 200px; height: 110px; border-radius: 5px;}
+.class_videoList_wrap .class_videoCont .imgWrap .likeMark {position: absolute; border: none; background-color: transparent; top: 10px; right: 10px; display: block; width: 16px; height: 16px; background-repeat: no-repeat; background-position: center center; background-image: url("../images/star_off.svg"); background-size: inherit;}
+.class_videoList_wrap .class_videoCont .video_progress {width: calc(100% - 220px);} 
+.class_videoList_wrap .video_progress .play_titWrap .play_tit {margin-bottom: 3px; font-size: 1.125rem; font-weight: 700;}
+.video_progress .progressBar_wrap {margin-top: 10px;}
+.video_progress .progressBar_wrap .progressBar {position: relative; border-radius: 4px; width: 730px; height: 8px; background-color: #ECECEC; overflow: hidden;}
+.video_progress .progressBar_wrap .progressBar_fill {border-radius: 4px; height: 100%; background-color: #BC00FF;}
+.class_videoList_wrap .class_video_tit_wrap {padding: 15px 0 20px 0;}
+.playBtnWrap .play_status {margin-right: 20px; border-radius: 5px; background-color: #ECECEC; color: #949494; width: 170px; height: 36px; font-weight: 700;}
+.playBtnWrap .play_status.on {color: #fff; background-color: #BC00FF;}
