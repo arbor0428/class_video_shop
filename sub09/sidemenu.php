@@ -17,17 +17,18 @@
 		<li class='<?=$side[6]?>'><a href='/sub09/sub06.php'>나의 리뷰</a></li>
 		<li class='<?=$side[7]?>'><a href='/sub09/sub07.php'>수강증 발급</a></li>
 		<li class='<?=$side[8]?>'><a href='/sub09/sub08.php'>수료증 발급</a></li>
+		<li class='<?=$side[9]?>'><a href='/sub09/sub09.php'>자격증 발급</a></li>
 	</ul>
 	<ul class="sidemenu_list">
 		<li class="c_gry04 f14">강좌신청 관리</li>
-		<li class='<?=$side[9]?>'><a href='/sub09/sub09.php'>강좌 바구니</a></li>
-		<li class='<?=$side[10]?>'><a href='/sub09/sub10.php'>쿠폰함</a></li>
-		<li class='<?=$side[11]?>'><a href='/sub09/sub11.php'>적립금</a></li>
-		<li class='<?=$side[12]?>'><a href='/sub09/sub12.php'>구매내역</a></li>
+		<li class='<?=$side[10]?>'><a href='/sub09/sub10.php'>강좌 바구니</a></li>
+		<li class='<?=$side[11]?>'><a href='/sub09/sub11.php'>쿠폰함</a></li>
+		<li class='<?=$side[12]?>'><a href='/sub09/sub12.php'>적립금</a></li>
+		<li class='<?=$side[13]?>'><a href='/sub09/sub13.php'>구매내역</a></li>
 	</ul>
 	<ul class="sidemenu_list">
 		<li class="c_gry04 f14">설정</li>
-		<li class='<?=$side[13]?>'><a href='/sub09/sub13.php'>개인정보 수정</a></li>
-		<li class='<?=$side[14]?>'><a href='/sub09/sub14.php'>모바일기기 초기화</a></li>
+		<li class='<?=$side[14]?>'><a href='/sub09/sub14.php'>개인정보 수정</a></li>
+		<li class='<?=$side[15]?>'><a href='/sub09/sub15.php'>모바일기기 초기화</a></li>
 	</ul>
 </div>

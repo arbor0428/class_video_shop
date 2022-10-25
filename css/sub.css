@@ -28,7 +28,8 @@
 .top_searchBar .selectwrap select {height: 36px; border: 1px solid #C8C8C8; border-radius: 5px;}
 .class_videoList_wrap .class_videoCont {padding-bottom: 15px; border-bottom: 1px solid #efefef;}
 .class_videoList_wrap .class_videoCont .imgWrap {position: relative; margin-right: 20px; width: 200px; height: 110px; border-radius: 5px;}
-.class_videoList_wrap .class_videoCont .imgWrap .likeMark {position: absolute; border: none; background-color: transparent; top: 10px; right: 10px; display: block; width: 16px; height: 16px; background-repeat: no-repeat; background-position: center center; background-image: url("../images/star_off.svg"); background-size: inherit;}
+.class_videoList_wrap .class_videoCont .imgWrap .likeMark {position: absolute; border: none; background-color: transparent; top: 0px; right: 0px; display: block; width: 30px; height: 30px; background-repeat: no-repeat; background-position: center center; background-image: url("../images/star_off.svg"); background-size: inherit; cursor: pointer;}
+.class_videoList_wrap .class_videoCont .imgWrap .likeMark.on {background-image: url("../images/star_on.svg");}
 .class_videoList_wrap .class_videoCont .video_progress {width: calc(100% - 220px);} 
 .class_videoList_wrap .video_progress .play_titWrap .play_tit {margin-bottom: 3px; font-size: 1.125rem; font-weight: 700;}
 .video_progress .progressBar_wrap {margin-top: 10px;}

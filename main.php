@@ -623,20 +623,9 @@
      	slidesToScroll : 1,        //스크롤 한번에 움직일 컨텐츠 개수
 	});
 
-	var flag = true;
 	$('.likeMark').click(function(event){ 
 		event.preventDefault();
-		if(flag){
-
-			$(this).addClass("on");
-
-			flag= false;
-		} else {
-
-			$(this).removeClass("on");
-
-			flag= true;
-		}
+		$(this).toggleClass("on");
 	});
 </script>
 <section class="cont2">

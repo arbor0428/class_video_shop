@@ -12,13 +12,13 @@
 		<div class="s_cont">
 			<div class="s_cont_tit">
 				<ul class="s_cont_tabbtn dp_f">
-					<li class="on">수강중인 강좌</li>
-					<li>찜한 강좌</li>
-					<li>나의 학습질문</li>
-					<li>나의 리뷰</li>
-					<li>수강증 발급</li>
-					<li>수료증 발급</li>
-					<li>자격증 발급</li>
+					<li class="on"><a href="/sub09/sub03.php">수강중인 강좌</a></li>
+					<li><a href="/sub09/sub04.php">찜한 강좌</a></li>
+					<li><a href="/sub09/sub05.php">나의 학습질문</a></li>
+					<li><a href="/sub09/sub06.php">나의 리뷰</a></li>
+					<li><a href="/sub09/sub07.php">수강증 발급</a></li>
+					<li><a href="/sub09/sub08.php">수료증 발급</a></li>
+					<li><a href="/sub09/sub09.php">자격증 발급</a></li>
 				</ul>
 			</div>
 			<div class="top_searchBar dp_sb">
@@ -226,7 +226,12 @@
 		</div>
     </div>
 </div>
-
+<script>
+	$('.likeMark').click(function(event){ 
+		event.preventDefault();
+		$(this).toggleClass("on");
+	});
+</script>
 <?
 	include '../footer.php';
 ?>

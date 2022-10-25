@@ -372,20 +372,9 @@
 </div>
 
 <script>
-	var flag = true;
 	$('.likeMark').click(function(event){ 
 		event.preventDefault();
-		if(flag){
-
-			$(this).addClass("on");
-
-			flag= false;
-		} else {
-
-			$(this).removeClass("on");
-
-			flag= true;
-		}
+		$(this).toggleClass("on");
 	});
 </script>
 
