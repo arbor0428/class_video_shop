@@ -45,6 +45,7 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
     text-overflow:ellipsis;
 }
 
+.f12 {font-size:0.75rem;}
 .f14 {font-size:0.875rem;}
 .f15 {font-size:0.938rem;}
 .f16 {font-size:1rem;}
@@ -78,12 +79,13 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 .m-36 {margin-top: 36px;}
 .m-40 {margin-top: 40px;}
 .m-45 {margin-top: 45px;}
+.m-50 {margin-top: 50px;}
 .m-60 {margin-top: 60px;}
 .m-80 {margin-top: 80px;}
 .m-72 {margin-top: 72px;}
 .m-100 {margin-top: 100px;}
 
-.m_10 {margin-bottom: 10px;}
+.m_10 {margin-bottom: 10px !important;}
 .m_12 {margin-bottom: 12px;}
 .m_20 {margin-bottom: 20px;}
 .m_24 {margin-bottom: 24px;}
@@ -119,6 +121,7 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 
 
 .wid100 {width: 100%;}
+.wid50 {width: 50%;}
 .wid49 {width: 49%;}
 .wid23 {width: 23%;}
 .wid20 {width: 20%;}
@@ -151,9 +154,9 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 
 .po_r {position:relative;}
 
-.txt-l {text-align:left;}
-.txt-r {text-align:right;}
-.txt-c {text-align:center;}
+.txt-l {text-align:left !important;}
+.txt-r {text-align:right !important;}
+.txt-c {text-align:center !important;}
 
 .mo {display:none;}
 .mo-m {display:none;}

@@ -37,7 +37,7 @@
 					</div>
 				</div>
 				<div class="inputwrap dp_f">
-					<input type="text" placeholder="강좌명으로 검색" value="" name="">
+					<input class="search" type="text" placeholder="강좌명으로 검색" value="" name="">
 					<a class="searchBtn bora01 c_w dp_f dp_c dp_cc" href="" title="검색">검색</a>
 				</div>
 			</div>

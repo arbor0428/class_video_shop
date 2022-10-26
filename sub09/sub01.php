@@ -13,7 +13,7 @@
 			<div class="s_cont_tit f20 bold2 c_bora01">맞춤 강좌</div>
 			<div class="top_searchBar">
 				<div class="inputwrap dp_f dp_end02">
-					<input type="text" placeholder="원하시는 강좌를 검색해보세요." value="" name="">
+					<input class="search" type="text" placeholder="원하시는 강좌를 검색해보세요." value="" name="">
 					<a class="searchBtn bora01 c_w dp_f dp_c dp_cc" href="" title="검색">검색</a>
 				</div>
 			</div>

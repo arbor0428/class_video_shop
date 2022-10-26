@@ -5,17 +5,19 @@
 .subWrap .sidemenu .sidemenu_list {margin-bottom: 40px;}
 .subWrap .sidemenu .sidemenu_list li.content_box_a {font-weight: 700; color: #BC00FF;}
 .subWrap .sidemenu li {margin: 15px 0;}
-.subWrap .s_cont {width: 1000px;}
+.subWrap .s_cont {width: 1000px; min-height: 669px;}
 
 .subWrap .s_cont_tit {margin-bottom: 30px;}
 .subWrap .s_cont_tit:after {content:""; display: block; margin-top: 10px; width: 100%; height: 1px; background-color: #EFEFEF;}
+.subWrap .s_cont_tit.nobrb:after {display: none;}
 .subWrap .nVdSlickBox {margin: 0 0 20px; width: 31.333%;}
 .subWrap .nVdSlickBox .nVdCont .clickicon {border-bottom: 1px solid #EFEFEF;}
 .subWrap .nVdSlickBox .nVdCont .clickicon li span {color: #bcbcbc;}
 .subWrap .top_searchBar {margin: 10px 0 30px 0;}
-.subWrap .inputwrap input {display: block; padding: 10px 20px; width: 390px; box-sizing: border-box; border-radius: 5px 0 0 5px; border: 1px solid #EFEFEF; font-size: 0.875rem; color: #000;}
+.subWrap .inputwrap input.search {display: block; padding: 10px 20px; width: 390px; box-sizing: border-box; border-radius: 5px 0 0 5px; border: 1px solid #EFEFEF; font-size: 0.875rem; color: #000;}
 .subWrap .inputwrap input::placeholder {font-size: 0.875rem; color: #bcbcbc;}
 .subWrap .inputwrap .searchBtn {width: 60px; border-radius: 0 5px 5px 0; box-sizing: border-box; font-size: 14px;}
+.subWrap .searchBtn02 {width: 170px; height: 35px; border-radius: 5px;}
 
 .subWrap .grytitBox {padding: 20px 15px; background-color: #F8F8F8; border-radius: 5px; box-sizing: border-box;}
 .morescroll {width: 100%; height: 48px; border-radius: 3px; font-weight: 700;}
@@ -25,7 +27,9 @@
 .s_cont_tit .s_cont_tabbtn li.on {color: #BC00FF; font-weight: 700;}
 .top_searchBar .selectwrap {margin-right: 20px;}
 .top_searchBar .selectwrap .select_tit {margin-right: 10px;}
-.top_searchBar .selectwrap select {height: 36px; border: 1px solid #C8C8C8; border-radius: 5px;}
+.selectwrap select {height: 36px; border: 1px solid #C8C8C8; border-radius: 5px;}
+.selectwrap.wid500 select {width: 500px;}
+.selectwrap.wid400 select {width: 400px;}
 .class_videoList_wrap .class_videoCont {padding-bottom: 15px; border-bottom: 1px solid #efefef;}
 .class_videoList_wrap .class_videoCont .imgWrap {position: relative; margin-right: 20px; width: 200px; height: 110px; border-radius: 5px;}
 .class_videoList_wrap .class_videoCont .imgWrap .likeMark {position: absolute; border: none; background-color: transparent; top: 0px; right: 0px; display: block; width: 30px; height: 30px; background-repeat: no-repeat; background-position: center center; background-image: url("../images/star_off.svg"); background-size: inherit; cursor: pointer;}
@@ -38,3 +42,49 @@
 .class_videoList_wrap .class_video_tit_wrap {padding: 15px 0 20px 0;}
 .playBtnWrap .play_status {margin-right: 20px; border-radius: 5px; background-color: #ECECEC; color: #949494; width: 170px; height: 36px; font-weight: 700;}
 .playBtnWrap .play_status.on {color: #fff; background-color: #BC00FF;}
+
+.tableWrap .subTbl {width: 100%; border-top: 2px solid #000; table-layout: fixed;}
+.tableWrap .subTbl.brbt0 {border-top: 1px solid #000;}
+.tableWrap .subTbl tr.brb000 {border-bottom: 1px solid #000;}
+.tableWrap .subTbl tr {border-bottom: 1px solid #EFEFEF;}
+.tableWrap .subTbl tr th,
+.tableWrap .subTbl tr td {position: relative; padding: 10px 20px; font-size: 0.875rem; text-align: center;}
+.tableWrap .subTbl tr td p {width: 90%; margin: 0 auto; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.tableWrap .subTbl tr.noResult {height: 84px;}
+.tableWrap .subTbl tr.noResult td {color: #949494;}
+.tableWrap .subTbl tr .replyStatus {margin: 0 auto; width: 76px; height: 26px; border-radius: 5px; border: 1px solid #949494; color: #949494;}
+.tableWrap .subTbl tr .replyStatus.on {background-color: #949494; color: #fff;}
+.tableWrap .subTbl tr .reviewWrt {position: absolute; top: 50%; transform: translateY(-50%); right: 20px; width: 76px; height: 26px; border-radius: 5px; font-size: 0.75rem;}
+
+.tableWrap .subTbl02 tr {height: 50px;}
+.tableWrap .subTbl02 th {text-align: left; color: #949494; font-size: 1rem; font-weight: 400;}
+.tableWrap .subTbl02 td {text-align: right;}
+
+.noListShow {margin-top: 130px;}
+.noListShow p {margin-bottom: 5px;}
+.noListShow .goClassList {margin: 15px auto 0; border-radius: 5px; width: 140px; height: 30px; border: 1px solid #BC00FF; color: #BC00FF; font-size: 0.875rem;}
+.class_searchBar .chkBoxTit::before {content: ""; display: inline-block; margin-right: 5px; width: 6px; height: 6px; border-radius: 50%; background-color: #BC00FF;}
+.class_searchBar .chkBoxwrap {padding: 14px 20px; box-sizing: border-box; border: 1px solid #EFEFEF;}
+.chkBoxwrap .inputwrap {margin: 0 15px;}
+.chkBoxwrap .inputwrap label {display: block; font-size: 0.875rem;}
+.class_searchBar .classRegiBtn {margin: 70px auto 0; width: 240px; height: 50px; border-radius: 5px; background-color: #BC00FF; color: #fff;}
+.class_searchBar .inputwrap input[type=checkbox] {margin-right: 10px; width: 20px; height: 20px; border: 1px solid #efefef;}
+.tableWrap .testStatus {width: 76px; height: 26px; border-radius: 5px; border:1px solid #BC00FF; color: #BC00FF;}
+.tableWrap .testStatus.on {background-color: #BC00FF; color: #fff;}
+.tableWrap .subTbl02 {width: 100%; table-layout: fixed;}
+.tableWrap .subTbl tr td.nopadd {padding:0 !important;}
+.tableWrap .subTbl td .imgWrap {width: 150px; height: 80px; border-radius: 5px;}
+.tableWrap .subTbl .cart_tit {width: calc(100% - 150px);}
+.tableWrap .subTbl .cart_tit01 {margin-bottom: 3px;} 
+.tableWrap .subTbl .trDelBtn {position: absolute; top: 15px; right: 0;}
+.tableWrap .subTbl .trDelBtn .lnr-cross {font-size: 1rem; font-weight: bold;}
+.tableWrap .discount_tit {margin-bottom: 15px;}
+.tableWrap .subTbl .couponBtn {width: 76px; height: 26px; border-radius: 5px;}
+.tableWrap .subTbl .gryinput {width: 76px; height: 26px; box-sizing: border-box; border-radius: 5px; background-color: #ECECEC; text-align: center; color: #000;}
+.tableWrap .subTbl .gryinput::placeholder {color: #000;}
+.totalAmtWrap {padding: 20px 10px 0 10px; border-top: 1px solid #000; border-bottom: 1px solid #000; box-sizing: border-box;}
+.tableWrap .subTbl02 .totalTrWrap {height: 80px; border-top: 1px dashed #949494;}
+.tableWrap .subTbl02 .totalTrWrap th,
+.tableWrap .subTbl02 .totalTrWrap td {color: #000; font-weight: 700;}
+.twoBtnWrap a {margin: 0 10px; border-radius: 3px; width: 200px; height: 48px; border: 1px solid #BC00FF; font-weight: 700; font-size:0.938rem;}
