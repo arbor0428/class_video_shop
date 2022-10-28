@@ -23,10 +23,10 @@
 				<div class="dp_sb m_10">
 					<div class="dp_f dp_c">
 						<input type="checkbox">
-						<label for="">전체선택</label>
-						<span class="nmBox"><span class="c_bora01">0</span>/2</span>
+						<label class="f14" for="">전체선택</label>
+						<span class="nmBox f14" style="margin: 0 5px;"><span class="c_bora01 f14">0</span>/2</span>
 					</div>
-					<div class="dp_f dp_c">선택삭제<span class="lnr lnr-cross"></span></div>
+					<div class="dp_f dp_c c_gry04 f14">선택삭제<span class="lnr lnr-cross" style="margin: 0 5px;"></span></div>
 				</div>
 				<table class="subTbl">
 					<colgroup>
@@ -104,7 +104,7 @@
 							<td class="txt-l">
 								<input class="gryinput" type="text" placeholder="0">
 								<span class="f12">원</span> 
-								<span class="f14">(사용가능 적립금 <span>0</span>원)</span>
+								<span class="f14">(사용가능 적립금 <span style="margin: 0 5px;">0</span>원)</span>
 							</td>
 						</tr>
 					</tbody>
@@ -136,7 +136,7 @@
 							</tr>
 							<tr class="totalTrWrap">
 								<th>최종 결제금액</th>
-								<td><span class="f20 bold2 c_bora01">0</span>원</td>
+								<td><span class="f20 bold2 c_bora01" style="margin: 0 5px;">0</span>원</td>
 							</tr>
 						</tbody>
 					</table>

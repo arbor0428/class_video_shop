@@ -21,6 +21,7 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 .c_blk02 {color: #222;}
 .c_w {color:#fff;}
 .c_red {color: #FF0000;}
+.c_red01 {color: #ED342F;}
 .c_blue {color: #002250;}
 .c_yellow {color: #F7D593;}
 .c_bora {color: #8800B8;}
@@ -34,6 +35,8 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 .bora {background-color: #9800CE;}
 .bora01 {background-color: #BC00FF;}
 .gry {background-color: #ddd;}
+.gry01 {background-color: #efefef;}
+.blk {background-color: #000;}
 
 .blind {display:block; overflow:hidden; position:absolute !important; left:-9999px; width:1px; height:1px; font-size:0; line-height:0; text-indent:-9999px;}
 
