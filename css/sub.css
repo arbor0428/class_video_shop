@@ -38,6 +38,32 @@
 .subWrap .grytitBox {padding: 20px 15px; background-color: #F8F8F8; border-radius: 5px; box-sizing: border-box;}
 .morescroll {width: 100%; height: 48px; border-radius: 3px; font-weight: 700;}
 .morescroll img {margin-left: 10px;}
+.alertListWrap {margin-top: 15px;}
+.alertListWrap .alertList {padding: 15px 10px; box-sizing: border-box; border-bottom: 1px solid #eeeeee;}
+
+#readAll {
+    display:none;
+}
+#readAll + label { 
+    cursor: pointer; 
+    padding-left: 35px; 
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 10px center;
+    background-image: url('../images/circheck_off.svg');
+}
+
+#readAll:checked + label {
+    background-image: url('../images/circheck_on.svg');
+}
+
+#readAll:disabled + label {
+    background-image: url('../images/circheck_on.svg');
+}
+
+#readAll:checked::after {
+    display: none;
+}
 
 
 /*학습관리*/
@@ -143,6 +169,36 @@
 .tableWrap .divTBL .row .row_detWrap .row_det:nth-child(2) {width: 14%;} 
 .tableWrap .divTBL .row .row_detWrap .row_det:nth-child(3) {width: 12%;} 
 .tableWrap .divTBL .row .row_detWrap .row_det:nth-child(4) {width: 14%;} 
-.payDetailMore .lnr-chevron-down {display: block; margin: 3px 0 0 5px; font-weight: bold; font-size: 0.65rem;}
-.detailToggWrap {padding: 25px 20px;}
+.paytblWrap .paytbl {width: 100%;}
+.payDetailMore {display: block; width: 100px; background-repeat: no-repeat; background-position: 100% center; background-size: 10px 5px; background-image: url("../images/downArr.svg");}
+.payDetailMore.on {background-image: url("../images/upArr.svg");}
+.detailToggWrap {display: none; padding: 25px 20px;}
 .detailToggWrap .paystatusBox {margin-bottom: 15px; width: 76px; height: 28px; border-radius: 5px;}
+.detailToggWrap .paytblWrap .paytbl tr {height: 35px;}
+.detailToggWrap .paytblWrap .paytbl th {width: 25%; text-align: left; color: #949494; font-weight: 400;}
+.detailToggWrap .paytblWrap .paytbl td {width: 75%;}
+.lastTotal {margin-top: 20px;}
+.lastTotal .total_tit {font-weight: 700; width: 25%;}
+.lastTotal .total_det {width: 75%;}
+
+
+/*개인정보 수정*/
+.s_cont_tit_det {margin-left: 10px;}
+.personal_row {margin-bottom: 15px;}
+.personal_row .personal_tit {width: 15%; font-size: 0.875rem;}
+.personal_row .personal_det {width: 85%; font-size: 0.875rem;}
+.personal_row .personal_det input,
+.personal_row .personal_det select {box-sizing: border-box; width: 240px; height: 40px; border-radius: 3px; border: 1px solid #EFEFEF; font-size: 0.875rem;}
+.s_label {margin-left: 10px;}
+.s_label img {margin: 4px 5px 0 0;}
+.addSubtbl tr.addr_tr_det {height: 84px;}
+.addSubtbl tr .default_label {width: 68px; height: 20px; margin: 0 auto 5px; border-radius: 10px;}
+.addrEditBtnWrap .addrEditBtn:nth-child(1):after {content: ""; display: block; margin: 3px 10px 0; width: 1px; height: 18px; background-color: #EFEFEF;}
+.twoBtn02Wrap a {margin: 65px 5px 0; border-radius: 3px; width: 150px; height: 48px; font-size: 0.875rem; color: #000; border: 1px solid #000;}
+.twoBtn02Wrap a.bora01 {border:1px solid #BC00FF; color: #fff !important;}
+.mobile_resetWrap li {margin-bottom: 5px;}
+.mobile_resetWrap li:before {content: "-"; margin-right: 10px;}
+select.reason_reset {width: 200px; height: 36px; border: 1px solid #EFEFEF; border-radius: 5px; color: #949494; font-size: 0.875rem;}
+.resetBtn {margin: 50px auto 0; width: 240px; height: 50px; border-radius: 5px;}
+
+.mustInput {display: block; margin-left: 5px; color: #BC00FF; font-size: 0.875rem; font-weight: 700;}

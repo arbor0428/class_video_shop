@@ -259,19 +259,19 @@
 </div>
 
 <script>
-$(".couTabBtn > li").on("click",function(event){
+	$(".couTabBtn > li").on("click",function(event){
 
-	event.preventDefault();
+		event.preventDefault();
 
-	let tabNumber = $(this).index();
+		let tabNumber = $(this).index();
 
-	$(".couTabBtn > li").removeClass("on");
-	$(this).addClass("on");
+		$(".couTabBtn > li").removeClass("on");
+		$(this).addClass("on");
 
-	$(".couTabContWrap .couTabCont").hide();;
-	$(".couTabContWrap .couTabCont").eq(tabNumber).show();
+		$(".couTabContWrap .couTabCont").hide();;
+		$(".couTabContWrap .couTabCont").eq(tabNumber).show();
 
-});
+	});
 </script>
 
 <?
