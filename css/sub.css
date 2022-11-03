@@ -39,7 +39,7 @@
 .morescroll {width: 100%; height: 48px; border-radius: 3px; font-weight: 700;}
 .morescroll img {margin-left: 10px;}
 .alertListWrap {margin-top: 15px;}
-.alertListWrap .alertList {padding: 15px 10px; box-sizing: border-box; border-bottom: 1px solid #eeeeee;}
+.alertListWrap .alertList {padding: 15px; box-sizing: border-box; border-bottom: 1px solid #eeeeee;}
 
 #readAll {
     display:none;
@@ -64,6 +64,11 @@
 #readAll:checked::after {
     display: none;
 }
+
+.alertListWrap .alertList{display: none;}
+
+.alertListWrap .alertList .alertTit {position: relative;}
+.alertListWrap .alertList .alertTit.read:before {content:""; display: block; width: 4px; height: 4px; border-radius: 50%; position: absolute; top: 0; left: -10px; background-color:#BC00FF;}
 
 
 /*학습관리*/
@@ -101,6 +106,29 @@
 .class_searchBar .inputwrap input[type=checkbox] {margin-right: 10px; width: 20px; height: 20px; border: 1px solid #efefef;}
 .tableWrap .testStatus {width: 76px; height: 26px; border-radius: 5px; border:1px solid #BC00FF; color: #BC00FF;}
 .tableWrap .testStatus.on {background-color: #BC00FF; color: #fff;}
+
+.classConfWrap .classConf_tit {padding: 20px 0; border-top: 1px solid#ECECEC; border-bottom: 1px solid#ECECEC;}
+.classConf_top_tbl {margin-top: 15px;}
+.classConf_top_tbl th {width: 20%;}
+.classConf_top_tbl td {width: 80%;}
+.classConf_top_tbl th,
+.classConf_top_tbl td {text-align: left; padding: 7px 20px; font-size: 0.875rem;}
+.classConf_bot {margin-top: 7px;}
+.classConf_bot .classConf_bot_tit {padding: 0 0 10px 20px; font-size: 0.875rem; font-weight: 700;}
+.classConf_bot_tbl {border-top: 2px solid #000; border-bottom: 2px solid #000;}
+.classConf_bot_tbl tr {border-bottom: 1px solid #C8C8C8;}
+.classConf_bot_tbl th {width: 20%; background-color: #EFEFEF; font-size: 0.875rem;}
+.classConf_bot_tbl td {width: 80%; font-size: 0.75rem; color: #949494; line-height: 1.8;}
+.classConf_bot_tbl th,
+.classConf_bot_tbl td {padding: 7px 20px;}
+.classConf_bot_tbl_wrap .tbl_notice {margin: 7px 0 43px 0; font-size: 0.875rem; color: #949494; font-weight: 700;}
+.classConf_signWrap {margin-bottom: 40px; position: relative;}
+.classConf_signWrap .classConf_sign_tit {margin-bottom: 8px;}
+.classConf_signWrap .classConf_sign_cir {position: absolute; top: 50%; transform: translateY(-50%); right: 20%; width: 90px; height: 90px; border-radius: 50%; background-color: #A5A5A5; color: #fff; font-weight: 700; text-align: center;}
+.classConf_addrwrap {padding-top: 25px; border-top: 1px dashed #ECECEC;}
+.classConf_addrwrap .classConf_addr {margin: 15px 0 10px 0;}
+.classConf_addrwrap .classConf_addr li:after {content: ""; display: inline-block; margin: 0 7px; width: 1px; height: 15px; background-color: #333;}
+.classConf_addrwrap .classConf_addr li:last-child:after {display: none;}
 
 
 /*강좌 바구니*/
@@ -152,7 +180,20 @@
 .tableWrap .subTbl tr td .pointDet {margin-top: 4px;}
 .point_moreBtn {margin-top: 40px; height: 48px; border-radius: 4px;}
 .point_moreBtn .lnr-chevron-down {margin-left: 7px; position: relative; top: 1px;}
-
+.pointTrWrap .pointTr {display: none;}
+.subTbl .noResult {height: 84px; border-bottom: 1px solid #EFEFEF;}
+.subTbl .row_tit_wrap {border-bottom: 1px solid #000;}
+.subTbl .row_tit_wrap .row_tit {padding: 10px 20px; box-sizing:border-box; text-align: center; font-size: 0.875rem; font-weight: 700;}
+.subTbl .row_tit_wrap .row_tit:nth-child(1) {width: 10%;}
+.subTbl .row_tit_wrap .row_tit:nth-child(2) {width: 18%;}
+.subTbl .row_tit_wrap .row_tit:nth-child(3) {width: 60%;}
+.subTbl .row_tit_wrap .row_tit:nth-child(4) {width: 12%;}
+.subTbl .pointTr {border-bottom: 1px solid #EFEFEF;}
+.subTbl .pointTr .row_det {padding: 10px 20px; box-sizing:border-box; text-align: center; font-size: 0.875rem;}
+.subTbl .pointTr .row_det:nth-child(1) {width: 10%;}
+.subTbl .pointTr .row_det:nth-child(2) {width: 18%;}
+.subTbl .pointTr .row_det:nth-child(3) {width: 60%;}
+.subTbl .pointTr .row_det:nth-child(4) {width: 12%;}
 
 /*내 구매내역*/
 .tableWrap .divTBL {border-top: 2px solid #000;}

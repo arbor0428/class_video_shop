@@ -56,6 +56,19 @@
     </div>
 </div>
 
+<script>
+	function tema(t){
+		$('#classConsFrame').html("<iframe src='/sub09/classConfirm.php?uid="+t+"' name='' style='width:100%;height:650px;' frameborder='0' scrolling='auto'></iframe>");
+		$('.classConsBox_open').click();
+	}
+
+	$(".classRegiBtn ").click(function(event){
+		tid = $(this).data('tid');
+		tema(tid);
+		event.preventDefault();
+	});
+</script>
+
 
 <?
 	include '../footer.php';

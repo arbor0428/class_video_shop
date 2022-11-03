@@ -1,9 +1,10 @@
-/* ¾Ë¸²Ã¢ */
-.popup_background {background:#fff;z-index:99999999; border-radius:3px}
-.popup_background2 {background:#;z-index:99999999; border-radius:3px}
-.close_button_pop {background:url("/intro/popupoverlay/btn_close_pop.gif") no-repeat;border-collapse:collapse;border:0;width:17px;height:18px;cursor:pointer;background-size:cover;}
-.close_button_pop2 {background:url("/intro/popupoverlay/btn_close_pop.gif") no-repeat;border-collapse:collapse;border:0;width:20px;height:20px;cursor:pointer;background-size:cover;margin:7px;}
-.close_button_pop3 {position:absolute;top:-30px;right:-50px;;background:url("/intro/popupoverlay/btn_close_pop2.png") no-repeat;border-collapse:collapse;border:0;width:30px;height:30px;cursor:pointer;background-size:cover;}
+/* ï¿½Ë¸ï¿½Ã¢ */
+.popup_background {background:#fff;z-index:99999999; border-radius:10px}
+.popup_background2 {background:#fff; z-index:99999999; border-radius:3px}
+.close_button_pop {background-color: transparent; border-collapse:collapse;border:0;width:20px;height:20px;cursor:pointer;}
+.close_button_pop img {width: 100%;}
+.close_button_pop2 {background:url("../images/x_icon.svg") no-repeat;border-collapse:collapse;border:0;width:20px;height:20px;cursor:pointer;background-size:cover;margin:7px;}
+.close_button_pop3 {position:absolute;top:-30px;right:-50px;;background:url("../images/x_icon.svg") no-repeat;border-collapse:collapse;border:0;width:30px;height:30px;cursor:pointer;background-size:cover;}
 .cls_buttonali {
 width:96%;
 padding:13px;
@@ -14,7 +15,7 @@ right: 20px;
 }
 
 
-.cls_buttonali2 {margin-top:10px;float:right;}
+.cls_buttonali2 {position: absolute; top: 20px; right: 20px; width: 20px; height: 20px;}
 .cls_buttonali3 {float:right;}
 .cls_buttonali4 {float:right;margin:10px;}
 .popup_ali {padding-left:4%;padding-right:6%;padding-bottom:9%;}
@@ -48,7 +49,7 @@ border-radius:3px
 
 
 
-/*Å©·Ò Åõ¸í ½ºÅ©·Ñ*/
+/*Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½*/
  .scrollable-content {
 	overflow-x:hidden;
 	overflow-y:scroll;
@@ -61,6 +62,11 @@ border-radius:3px
 }
 .scrollable-content::-webkit-scrollbar-thumb {
 	background:transparent !important;
+}
+
+.printBtnWrap .printBtn {
+	background-color: transparent;
+	border: none;
 }
 
 
