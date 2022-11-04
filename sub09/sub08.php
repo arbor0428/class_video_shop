@@ -48,7 +48,7 @@
 						<tr>
 							<td>체형분석평가사 견관절 과정</td>
 							<td>100%</td>
-							<td><div class="testStatus on dp_f dp_c dp_cc">수료증 발급</div></td>
+							<td><a class="testStatus on dp_f dp_c dp_cc certifi_printBtn">수료증 발급</a></td>
 						</tr>
 					</tbody>
 				</table>
@@ -57,7 +57,18 @@
     </div>
 </div>
 
+<script>
+	function tema(t){
+		$('#classConsFrame').html("<iframe src='/sub09/completion.php?uid="+t+"' name='' style='width:100%;height:680px;' frameborder='0' scrolling='auto'></iframe>");
+		$('.classConsBox_open').click();
+	}
 
+	$(".certifi_printBtn ").click(function(event){
+		tid = $(this).data('tid');
+		tema(tid);
+		event.preventDefault();
+	});
+</script>
 <?
 	include '../footer.php';
 ?>

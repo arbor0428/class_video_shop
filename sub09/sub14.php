@@ -67,7 +67,7 @@
 			<div class="addr_Info m-60">
 				<div class="dp_sb dp_c dp_end m_10">
 					<p class="s_edit_tit f18 bold2">배송지 수정</p>
-					<a class="c_bora01 f12 bold2" href="" title="">신규 배송지 추가+</a>
+					<a class="c_bora01 f12 bold2 newAddrBtn" href="" title="">신규 배송지 추가+</a>
 				</div>
 				<div class="tableWrap">
 					<table class="subTbl addSubtbl">
@@ -127,6 +127,18 @@
     </div>
 </div>
 
+<script>
+	function tema(t){
+		$('#addrRegisterFrame').html("<iframe src='/sub09/addrRegister.php?uid="+t+"' name='' style='width:100%;height:545px;' frameborder='0' scrolling='auto'></iframe>");
+		$('.addrRegister_open').click();
+	}
+
+	$(".newAddrBtn").click(function(event){
+		tid = $(this).data('tid');
+		tema(tid);
+		event.preventDefault();
+	});
+</script>
 
 <?
 	include '../footer.php';

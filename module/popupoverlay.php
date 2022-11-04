@@ -56,12 +56,35 @@
 </div>
 
 <a id="classConsBox_open" class="classConsBox_open"></a>
-<div id="classConsBox" class="popup_background" style="padding: 20px; min-width: 1000px; position:relative; display:none;">
+<div id="classConsBox" class="popup_background" style="padding: 20px; box-sizing: border-box; min-width: 1000px; position:relative; display:none;">
 	<div style="height: 54px;">
 		<div class="printBtnWrap"><a class="printBtn dp_f dp_c"><img src="../images/print.svg" alt=""><span class="f12 bold2" style="margin-left: 8px;">인쇄하기</span></a></div>
 		<div class="cls_buttonali2"><button class="newsConsBox_close close_button_pop"><img src="../images/x_icon.svg" alt=""></button></div>
 	</div>
 	<div id='classConsFrame' style="background:#fff; overflow:hidden; position:relative;"></div>
+</div>
+
+<a id="cerPrint_open" class="cerPrint_open"></a>
+<div id="cerPrint" class="popup_background" style="padding: 20px; box-sizing: border-box; min-width: 550px; position:relative; display:none;">
+	<div style="height: 54px;">
+		<div class="printBtnWrap"><a class="printBtn dp_f dp_c"><img src="../images/print.svg" alt=""><span class="f12 bold2" style="margin-left: 8px;">인쇄하기</span></a></div>
+		<div class="cls_buttonali2"><button class="cerPrint_close close_button_pop"><img src="../images/x_icon.svg" alt=""></button></div>
+	</div>
+	<div id='cerPrintFrame' style="background:#fff; overflow:hidden; position:relative;"></div>
+</div>
+
+<a id="couponList_open" class="couponList_open"></a>
+<div id="couponList" class="popup_background" style="position: relative; padding: 20px; box-sizing: border-box; min-width: 600px; position:relative; display:none;">
+	<!-- <div class="cls_buttonali2"><button class="cerPrint_close close_button_pop"><img src="../images/x_icon.svg" alt=""></button></div> -->
+	<div id='couponListFrame' style="background:#fff; overflow:hidden; position:relative;"></div>
+	<a class="couponApplyBtn dp_f dp_c dp_cc bold2" href="javascript:void(0)" title="확인">확인</a>
+</div>
+
+<a id="addrRegister_open" class="addrRegister_open"></a>
+<div id="addrRegister" class="popup_background" style="position: relative; padding: 20px; box-sizing: border-box; min-width: 720px; position:relative; display:none;">
+	<div class="cls_buttonali2"><button class="cerPrint_close close_button_pop"><img src="../images/x_icon.svg" alt=""></button></div>
+	<div id='addrRegisterFrame' style="background:#fff; overflow:hidden; position:relative;"></div>
+	<a class="bora01 c_w dp_f dp_c dp_cc addrRegiBtn" href="" title="등록하기">등록하기</a>
 </div>
 
 
@@ -82,6 +105,13 @@ $(document).ready(function () {
 		scrolllock: false
 	});
 
+	$('#cerPrint, #couponList, #addrRegister').popup({
+		transition: 'all 0.3s',
+		blur: false,
+		escape:false,
+		scrolllock: false
+	});
+
 
 	//숫자만 입력받기
 	// $('input.numberOnly').keydown(function(e){
@@ -92,6 +122,18 @@ $(document).ready(function () {
 
 	//input필드 자동완성기능
 	jQuery('input').attr("autocomplete","off");
+
+	$(".close_button_pop").click(function(event){
+		$('#multiBox').popup('hide');
+		$('#titleBox').popup('hide');
+		$('#classConsBox').popup('hide');
+		$('#cerPrint').popup('hide');
+		$('#addrRegister').popup('hide');
+	});
+	
+	$(".couponApplyBtn").click(function(event){
+		$('#couponList').popup('hide');
+	});
 });
 </script>
 <!-- 팝업 스크립트 -->

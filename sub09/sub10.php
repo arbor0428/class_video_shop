@@ -96,7 +96,7 @@
 						<tr>
 							<th>쿠폰 할인</th>
 							<td class="txt-l">
-								<a class="couponBtn bora01 c_w dp_f dp_c dp_cc" href="" title="쿠폰 적용">쿠폰 적용</a>
+								<a class="couponBtn bora01 c_w dp_f dp_c dp_cc couponListopen" href="" title="쿠폰 적용">쿠폰 적용</a>
 							</td>
 						</tr>
 						<tr>
@@ -151,6 +151,19 @@
     </div>
 </div>
 
+
+<script>
+	function tema(t){
+		$('#couponListFrame').html("<iframe src='/sub09/couponList.php?uid="+t+"' name='' style='width:100%;height:655px;' frameborder='0' scrolling='auto'></iframe>");
+		$('.couponList_open').click();
+	}
+
+	$(".couponListopen").click(function(event){
+		tid = $(this).data('tid');
+		tema(tid);
+		event.preventDefault();
+	});
+</script>
 
 <?
 	include '../footer.php';

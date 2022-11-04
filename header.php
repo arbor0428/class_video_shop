@@ -4,14 +4,48 @@
 <header class="blue_gradient c_w">
 	<div class="h_top bor_bot">
 		<div class="c_center">
-			<ul class="h_top_menu dp_f dp_end02">
-				<li><a href="" title="회원가입">회원가입</a></li>
-				<li><a href="" title="로그인">로그인</a></li>
-				<li><a href="" title="장바구니">장바구니</a></li>
-			</ul>
+			<div class="dp_sb">
+				<div class="langWrap">
+					<div class="toggleTit dp_f dp_c">
+						<img src="../images/earthIcon.svg" alt="">
+						<span class="f12 bold" style="margin: 0 15px 0 8px;">KOR</span>
+						<div class="dp_f dp_c langArr"><img src="../images/lang_arrow.svg" alt=""></div>
+					</div>
+					<div class="toggleDown">
+						<ul class="toggleDownmenu">
+							<li class="dp_f dp_c f12 bold"><span class="mr10">+</span>KOR</li>
+							<li class="dp_f dp_c f12 bold"><span class="mr10">-</span>ENG</li>
+							<li class="dp_f dp_c f12 bold"><span class="mr10">-</span>CHN</li>
+							<li class="dp_f dp_c f12 bold"><span class="mr10">-</span>JAP</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="h_top_menu dp_f dp_c">
+					<li><a href="" title="회원가입">회원가입</a></li>
+					<li><a href="" title="로그인">로그인</a></li>
+					<li><a href="" title="장바구니">장바구니</a></li>
+				</ul>
+			</div>
 			<h1 class="logo txt-c"><a href="/" title="logo"><img src="/images/logo.svg" alt="logo"></a></h1>
 		</div>
 	</div>
+	<script>
+	var flag = true;
+	$(".toggleTit").click(function(){
+		if(flag){
+			$(".langArr").addClass("on");
+			$(".toggleDown").stop().slideDown();
+
+			flag= false;
+		} else {
+			$(".langArr").removeClass("on");
+			$(".toggleDown").stop().slideUp();
+
+			flag= true;
+		}
+	});
+
+	</script>
 	<div class="h_bot">
 		<div class="c_center dp_sb">
 			<ul class="h_bot_menu dp_f">

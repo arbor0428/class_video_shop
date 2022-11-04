@@ -129,6 +129,23 @@
 .classConf_addrwrap .classConf_addr {margin: 15px 0 10px 0;}
 .classConf_addrwrap .classConf_addr li:after {content: ""; display: inline-block; margin: 0 7px; width: 1px; height: 15px; background-color: #333;}
 .classConf_addrwrap .classConf_addr li:last-child:after {display: none;}
+.showWayWrap .showWayBox {display: none;}
+.showWayWrap .showWayBox:nth-child(1) {display: block;}
+.certifi_printBtn {cursor:pointer;}
+.completionWrap .completionBox {width:950px; height: 670px; padding: 10px; box-sizing: border-box; margin: 0 auto; background-repeat: no-repeat; background-position: center center; background-size: cover; background-image: url("../images/comp_bg.png");}
+.completionWrap .compleTop {margin-top: 215px;}
+.completionWrap .compleTop .compleTop_left {padding: 0 44px;}
+.completionWrap .completionBox .compleTop .compleTop_bar {width: 380px; height: 30px; margin: 0 auto 20px; background-image:url("../images/gradient_cir.png"); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%;}
+.completionWrap .compleTop .compleTop_right {padding: 0 40px;}
+.completionWrap .completionBox .compleTop .compleTop_nm {width: 450px; margin: 0 auto; padding-bottom: 14px; border-bottom: 2px solid #8B8B8B; font-family: 'Noto Serif', serif;}
+.completionWrap .compleTop .compleTop_det {margin-top: 20px; line-height: 2; font-family: 'Dancing Script', cursive;}
+.completionWrap .completionBox .compleBot {margin-top: 78px; padding: 0 44px; width: 478px;}
+.completionWrap .compleBot .compleBot_date_det,
+.completionWrap .compleBot .compleBot_sign_det {padding-bottom: 10px; width: 148px; border-bottom: 2px solid #8B8B8B; font-family: 'Dancing Script', cursive;}
+.completionWrap .certificateBox {padding: 12px; box-sizing: border-box; width: 500px; height: 705px; background-repeat: no-repeat; background-position: center center; background-size: cover; background-image:url("../images/certifi_bg.png")}
+.completionWrap .certificateBox .compleTop .compleTop_bar {width: 298px; height: 24px; margin: 0 auto 20px; background-image:url("../images/gradient_cir.png"); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%;}
+.completionWrap .certificateBox .compleTop .compleTop_nm {width: 335px; margin: 0 auto; padding-bottom: 14px; border-bottom: 2px solid #8B8B8B; font-family: 'Noto Serif', serif;}
+.completionWrap .certificateBox .compleBot {width: 362px; margin: 63px auto 0;}
 
 
 /*강좌 바구니*/
@@ -148,6 +165,45 @@
 .tableWrap .subTbl02 .totalTrWrap th,
 .tableWrap .subTbl02 .totalTrWrap td {color: #000; font-weight: 700;}
 .twoBtnWrap a {margin: 0 10px; border-radius: 3px; width: 200px; height: 48px; border: 1px solid #BC00FF; font-weight: 700; font-size:0.938rem;}
+.couponApplyList .radioWrap {margin-bottom: 5px; box-sizing:border-box; padding: 10px 15px; width: 100%; height: 40px; border-radius: 5px; border: 1px solid #ECECEC;}
+.radioWrap input[type="checkbox"] {  /* 실제 체크박스는 화면에서 숨김 */
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip:rect(0,0,0,0);
+	border: 0
+}
+.radioWrap input[type="checkbox"] + label {
+	position: relative;
+	cursor: pointer;
+}
+  .radioWrap input[type="checkbox"] + label:before {  /* 가짜 체크박스 */
+	content: '';
+	display: inline-block;
+    margin-right: 10px;
+	width: 24px;
+	color:#fff;
+	height: 24px;
+    border-radius: 50%;
+	text-align: center; 
+	vertical-align: middle;
+	background: #fff;
+	border: 1px solid #ECECEC;
+}
+.radioWrap input[type="checkbox"] + label:active:before,
+.radioWrap input[type="checkbox"]:checked + label:active:before {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.radioWrap input[type="checkbox"]:checked + label:before {  /* 체크박스를 체크했을때 */ 
+	background: url("../images/cou_check.svg") no-repeat center;
+	border-color: #BC00FF;
+}  
+.radioWrap label > ul li:after {content:""; display: block; margin: 1px 5px 0; width: 1px; height: 10px; background-color:#ececec;}
+.radioWrap label > ul li:last-child:after {display: none;}
+.couponApplyBtn {width: 100%; height: 50px; border: 1px solid #ECECEC; box-sizing: border-box; border-radius: 5px;}
 
 
 /*쿠폰함*/
@@ -241,5 +297,12 @@
 .mobile_resetWrap li:before {content: "-"; margin-right: 10px;}
 select.reason_reset {width: 200px; height: 36px; border: 1px solid #EFEFEF; border-radius: 5px; color: #949494; font-size: 0.875rem;}
 .resetBtn {margin: 50px auto 0; width: 240px; height: 50px; border-radius: 5px;}
-
 .mustInput {display: block; margin-left: 5px; color: #BC00FF; font-size: 0.875rem; font-weight: 700;}
+.form_row_wrap .row {margin-bottom: 10px;}
+.form_row_wrap .row .inputWrap {width: 544px;}
+.form_row_wrap .row .inputWrap input[type="text"] {width: 100%; margin-bottom: 6px; height: 40px; padding: 9px 10px; border-radius: 3px; box-sizing: border-box; border: 1px solid #EFEFEF; font-size: 0.875rem;}
+.form_row_wrap .row .inputWrap input[type="text"]::placeholder {font-size: 0.875rem; color: #A5A5A5;}
+.form_row_wrap .row .two_inputWrap input[type="text"] {width: 426px;}
+.form_row_wrap .row .two_inputWrap .addrSearchBtn {background-color: transparent; width: 108px; height: 40px; box-sizing: border-box; border: 1px solid #BC00FF; border-radius: 3px; color: #BC00FF;}
+.addrRegisterWrap .addr_caution {margin-bottom: 50px; line-height: 1.8;}
+.addrRegiBtn {margin: 0 auto;width: 240px; height: 50px; border-radius: 5px;}
