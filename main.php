@@ -122,239 +122,253 @@
 				</div>
 				<a class="c_tit_btn dp_b bold" href="" title="">전체 클래스 보기+</a>
 			</div>
-			<div class="newVdSlick">
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
+			<div class="po_r newVdSlick_wrap">
+				<div class="swiper newVdSlick">
+					<div class="swiper-wrapper">
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="priceDet bold">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
 						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="priceDet bold">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="priceDet bold">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
 						</div>
-					</a>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="priceDet bold">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="priceDet bold">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="priceDet bold">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="priceDet bold">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="priceDet bold">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="priceDet bold">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
 				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="priceDet bold">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="priceDet bold">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="priceDet bold">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="priceDet bold">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="priceDet bold">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="priceDet bold">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="priceDet bold">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
 		</div>
 		<div class="hotWrap">
@@ -365,268 +379,276 @@
 				</div>
 				<a class="c_tit_btn dp_b bold" href="" title="">전체 클래스 보기+</a>
 			</div>
-			<div class="hotVdSlick">
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
+			<div class="po_r hotVdSlick_wrap">
+				<div class="swiper hotVdSlick">
+					<div class="swiper-wrapper">
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="bold priceDet">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
 						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="bold priceDet">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="bold priceDet">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
 						</div>
-					</a>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="bold priceDet">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="bold priceDet">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="bold priceDet">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="bold priceDet">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="bold priceDet">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="nVdSlickBox swiper-slide">
+							<a href="" title="">
+								<div class="imgWrap c_gry02 p_r">
+									<button type="button" title="관심" class="likeMark"></button>
+									<img src="" alt="">
+								</div>
+								<div class="nVdCont">
+									<div class="nVdTop">
+										<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
+										<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
+										<ul class="clickicon dp_f dp_c">
+											<li class="dp_f dp_c">
+												<img src="/images/likeChk.svg" alt="">
+												<span>10884</span>
+											</li>
+											<li class="dp_f dp_c">
+												<img src="/images/bestChk.svg" alt="">
+												<span>97%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="nVdBot">
+										<p class="c_w">500,000원</p>
+										<span class="c_red bold">46%</span>
+										<span class="bold priceDet">월 89,000원</span>
+										<span class="monDet">(12개월)</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
 				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="bold priceDet">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="bold priceDet">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="bold priceDet">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="bold priceDet">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="bold priceDet">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="bold priceDet">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="nVdSlickBox">
-					<a href="" title="">
-						<div class="imgWrap c_gry02 p_r">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="nVdCont">
-							<div class="nVdTop">
-								<p class="nVdtit01 bold2 dotdot">무릎손상의 단계별 재활 운동법 1편</p>
-								<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
-								<ul class="clickicon dp_f dp_c">
-									<li class="dp_f dp_c">
-										<img src="/images/likeChk.svg" alt="">
-										<span>10884</span>
-									</li>
-									<li class="dp_f dp_c">
-										<img src="/images/bestChk.svg" alt="">
-										<span>97%</span>
-									</li>
-								</ul>
-							</div>
-							<div class="nVdBot">
-								<span class="c_red bold">46%</span>
-								<span class="bold priceDet">월 89,000원</span>
-								<span class="monDet">(12개월)</span>
-							</div>
-						</div>
-					</a>
-				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
 		</div>
 	</div>
 </section>
 <script>
-	$('.newVdSlick').slick({ 
-		fade: false,
-		dots : false,
-		arrows : true,	
-		autoplay : false,			// 자동 스크롤 사용 여부
-		autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-		slidesToShow : 4,        // 한 화면에 보여질 컨텐츠 개수
-     	slidesToScroll : 1,        //스크롤 한번에 움직일 컨텐츠 개수
+	var swiper01 = new Swiper(".newVdSlick", {
+		slidesPerView: 4,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: ".newVdSlick_wrap .swiper-button-next",
+			prevEl: ".newVdSlick_wrap .swiper-button-prev",
+		},
 	});
 
-	$('.hotVdSlick').slick({ 
-		fade: false,
-		dots : false,
-		arrows : true,	
-		autoplay : false,			// 자동 스크롤 사용 여부
-		autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-		slidesToShow : 4,        // 한 화면에 보여질 컨텐츠 개수
-     	slidesToScroll : 1,        //스크롤 한번에 움직일 컨텐츠 개수
+	var swiper02 = new Swiper(".hotVdSlick", {
+		slidesPerView: 4,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: ".hotVdSlick_wrap .swiper-button-next",
+			prevEl: ".hotVdSlick_wrap .swiper-button-prev",
+		},
 	});
 
-	$('.likeMark').click(function(event){ 
-		event.preventDefault();
-		$(this).toggleClass("on");
-	});
 </script>
 <section class="cont2">
 	<div class="c_titWrap blue_gradient c_w">
@@ -720,86 +742,122 @@
 			</div>
 			<a class="c_tit_btn" href="" title="">자세히 보기+</a>
 		</div>
-		<div class="rcmtSlick">
-			<div class="rcmt_box">
-				<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
-				<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
-				<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+		<div class="po_r rcmtSlick_wrap">
+			<div class="swiper rcmtSlick">
+				<div class="swiper-wrapper">
+					<div class="rcmt_box swiper-slide">
+						<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
+						<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
+						<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+					</div>
+					<div class="rcmt_box swiper-slide">
+						<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
+						<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
+						<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+					</div>
+					<div class="rcmt_box swiper-slide">
+						<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
+						<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
+						<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+					</div>
+					<div class="rcmt_box swiper-slide">
+						<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
+						<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
+						<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+					</div>
+					<div class="rcmt_box swiper-slide">
+						<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
+						<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
+						<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+					</div>
+					<div class="rcmt_box swiper-slide">
+						<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
+						<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
+						<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+					</div>
+					<div class="rcmt_box swiper-slide">
+						<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
+						<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
+						<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+					</div>
+					<div class="rcmt_box swiper-slide">
+						<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
+						<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
+						<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
+					</div>
+				</div>
 			</div>
-			<div class="rcmt_box">
-				<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
-				<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
-				<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
-			</div>
-			<div class="rcmt_box">
-				<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
-				<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
-				<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
-			</div>
-			<div class="rcmt_box">
-				<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
-				<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
-				<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
-			</div>
-			<div class="rcmt_box">
-				<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
-				<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
-				<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
-			</div>
-			<div class="rcmt_box">
-				<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
-				<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
-				<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
-			</div>
-			<div class="rcmt_box">
-				<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
-				<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
-				<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
-			</div>
-			<div class="rcmt_box">
-				<p class="rcmt_tit bold2">강의 완전 강추합니다!!</p>
-				<div class="nameCirBox dp_f dp_c dp_cc">iwebz***님</div>
-				<p class="reviewTxt txt-c">이것은 테스트이며, 수강평 후기를 입력해주신다면 감사하겠습니다. 후기를 입력해주세요!</p>
-			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
 		</div>
-		<div class="rvdoSlick">
-			<div class="rvdo_box">
-				<a href="" title="">
-					<img src="" alt="">
-					<img class="playShape" src="/images/playBtn.svg" alt="">
-				</a>
+
+
+		<div class="po_r rvdoSlick_wrap">
+			<div class="swiper rvdoSlick">
+				<div class="swiper-wrapper">
+					<div class="rvdo_box swiper-slide">
+						<a href="" title="">
+							<img src="" alt="">
+							<img class="playShape" src="/images/playBtn.svg" alt="">
+						</a>
+					</div>
+					<div class="rvdo_box swiper-slide">
+						<a href="" title="">
+							<img src="" alt="">
+							<img class="playShape" src="/images/playBtn.svg" alt="">
+						</a>
+					</div>
+					<div class="rvdo_box swiper-slide">
+						<a href="" title="">
+							<img src="" alt="">
+							<img class="playShape" src="/images/playBtn.svg" alt="">
+						</a>
+					</div>
+					<div class="rvdo_box swiper-slide">
+						<a href="" title="">
+							<img src="" alt="">
+							<img class="playShape" src="/images/playBtn.svg" alt="">
+						</a>
+					</div>
+					<div class="rvdo_box swiper-slide">
+						<a href="" title="">
+							<img src="" alt="">
+							<img class="playShape" src="/images/playBtn.svg" alt="">
+						</a>
+					</div>
+					<div class="rvdo_box swiper-slide">
+						<a href="" title="">
+							<img src="" alt="">
+							<img class="playShape" src="/images/playBtn.svg" alt="">
+						</a>
+					</div>
+				</div>
 			</div>
-			<div class="rvdo_box">
-				<a href="" title="">
-					<img src="" alt="">
-					<img class="playShape" src="/images/playBtn.svg" alt="">
-				</a>
-			</div>
-			<div class="rvdo_box">
-				<a href="" title="">
-					<img src="" alt="">
-					<img class="playShape" src="/images/playBtn.svg" alt="">
-				</a>
-			</div>
-			<div class="rvdo_box">
-				<a href="" title="">
-					<img src="" alt="">
-					<img class="playShape" src="/images/playBtn.svg" alt="">
-				</a>
-			</div>
-			<div class="rvdo_box">
-				<a href="" title="">
-					<img src="" alt="">
-					<img class="playShape" src="/images/playBtn.svg" alt="">
-				</a>
-			</div>
-			<div class="rvdo_box">
-				<a href="" title="">
-					<img src="" alt="">
-					<img class="playShape" src="/images/playBtn.svg" alt="">
-				</a>
-			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
 		</div>
+		<script>
+			var swiper03 = new Swiper(".rvdoSlick", {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				slidesPerGroup: 3,
+				navigation: {
+					nextEl: ".rvdoSlick_wrap .swiper-button-next",
+					prevEl: ".rvdoSlick_wrap .swiper-button-prev",
+				},
+			});
+
+			var swiper04 = new Swiper(".rcmtSlick", {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				navigation: {
+					nextEl: ".rcmtSlick_wrap .swiper-button-next",
+					prevEl: ".rcmtSlick_wrap .swiper-button-prev",
+				},
+			});
+		</script>
+
+
 		<!--자격증 커리큘럼-->
 		<div class="c_titWrap dp_sb dp_end">
 			<div class="titcont">
@@ -809,236 +867,57 @@
 			<a class="c_tit_btn" href="" title="">자세히 보기+</a>
 		</div>
 		
-		<ul class="tabBtn01 curTabBtn dp_sb">
-			<li class="on"><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏</a></li>
-			<li><a class="dp_f dp_c dp_cc" href="" title="">컨디셔닝</a></li>
-			<li><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏</a></li>
-			<li><a class="dp_f dp_c dp_cc" href="" title="">컨디셔닝</a></li>
-			<li><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏</a></li>
-		</ul>
-
-		<div class="tabCont01 curTabCont">
-			<div class="tabBox">
-				<ul class="dp_sb">
-					<li>
-						<div class="ct_tit">
-							CRS 과정1
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-				</ul>
+		<div class="curri_slick_wrap po_r">
+			<div class="swiper curri_slick">
+				<div class="swiper-wrapper">
+					<div class="curri_box swiper-slide">
+						<p class="c_bora01 bold2 txt-c">국제인증강사</p>
+						<a class="curri_moreBtn dp_f dp_c dp_cc bora01 c_w" href="" title="자세히 보기">자세히 보기</a>
+					</div>
+					<div class="curri_box swiper-slide">
+						<p class="c_bora01 bold2 txt-c">물리치료사강사</p>
+						<a class="curri_moreBtn dp_f dp_c dp_cc bora01 c_w" href="" title="자세히 보기">자세히 보기</a>
+					</div>
+					<div class="curri_box swiper-slide">
+						<p class="c_bora01 bold2 txt-c">anatomy master</p>
+						<a class="curri_moreBtn dp_f dp_c dp_cc bora01 c_w" href="" title="자세히 보기">자세히 보기</a>
+					</div>
+					<div class="curri_box swiper-slide">
+						<p class="c_bora01 bold2 txt-c">체형분석평가사</p>
+						<a class="curri_moreBtn dp_f dp_c dp_cc bora01 c_w" href="" title="자세히 보기">자세히 보기</a>
+					</div>
+					<div class="curri_box swiper-slide">
+						<p class="c_bora01 bold2 txt-c">골프피지오 2급</p>
+						<a class="curri_moreBtn dp_f dp_c dp_cc bora01 c_w" href="" title="자세히 보기">자세히 보기</a>
+					</div>
+					<div class="curri_box swiper-slide">
+						<p class="c_bora01 bold2 txt-c">필라테스시퀀스처방사</p>
+						<a class="curri_moreBtn dp_f dp_c dp_cc bora01 c_w" href="" title="자세히 보기">자세히 보기</a>
+					</div>
+					<div class="curri_box swiper-slide">
+						<p class="c_bora01 bold2 txt-c">필라테스지도자</p>
+						<a class="curri_moreBtn dp_f dp_c dp_cc bora01 c_w" href="" title="자세히 보기">자세히 보기</a>
+					</div>
+					<div class="curri_box swiper-slide">
+						<p class="c_bora01 bold2 txt-c">체형분석운동지도자</p>
+						<a class="curri_moreBtn dp_f dp_c dp_cc bora01 c_w" href="" title="자세히 보기">자세히 보기</a>
+					</div>
+				</div>
 			</div>
-			<div class="tabBox">
-				<ul class="dp_sb">
-					<li>
-						<div class="ct_tit">
-							CRS 과정2
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="tabBox">
-				<ul class="dp_sb">
-					<li>
-						<div class="ct_tit">
-							CRS 과정3
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="tabBox">
-				<ul class="dp_sb">
-					<li>
-						<div class="ct_tit">
-							CRS 과정4
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="tabBox">
-				<ul class="dp_sb">
-					<li>
-						<div class="ct_tit">
-							CRS 과정5
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-					<li>
-						<div class="ct_tit">
-							CRS 과정
-						</div>
-						<div class="ct_cont txt-c">
-							기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-						</div>
-					</li>
-				</ul>
-			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
 		</div>
+
+		<script>
+			var swiper05 = new Swiper(".curri_slick", {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				navigation: {
+					nextEl: ".curri_slick_wrap .swiper-button-next",
+					prevEl: ".curri_slick_wrap .swiper-button-prev",
+				},
+			});
+		</script>
 
 		<!--맞춤 커리큘럼-->
 		<div class="c_titWrap dp_f dp_c">
@@ -1049,703 +928,170 @@
 				<li class="on dp_f dp_c"><a class="dp_b" href="" title="">#물리치료사</a></li>
 				<li class="dp_f dp_c"><a class="dp_b" href="" title="">#필라테스강사</a></li>
 				<li class="dp_f dp_c"><a class="dp_b" href="" title="">#트레이너</a></li>
+				<li class="dp_f dp_c"><a class="dp_b" href="" title="">#일반인</a></li>
 			</ul>
 		</div>
 		<div class="tabCont02 hashTabCont">
 			<div class="tabBox">
-				<ul class="tabBtn02-1 curTabBtn dp_sb">
-					<li class="on"><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏1</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">컨디셔닝1</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏1</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">컨디셔닝1</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏1</a></li>
+				<ul class="curricul_list box_06 dp_sb">
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0101">
+							<p class="c_w">평가과정</p>
+							<span class="c_gry06">Evaluation process</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0102">
+							<p class="c_w">도수기법</p>
+							<span class="c_gry06">Manual therapy</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0103">
+							<p class="c_w">운동접근법</p>
+							<span class="c_gry06">Exercise approach</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0104">
+							<p class="c_w">필라테스</p>
+							<span class="c_gry06">Pilates</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0105">
+							<p class="c_w">골프</p>
+							<span class="c_gry06">Golf</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0106">
+							<p class="c_w">기초해부</p>
+							<span class="c_gry06">Basic anatomy</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
 				</ul>
-				<div class="tabCont02-1 curTabCont">
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정1
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정2
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정3
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정4
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정5
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
 			</div>
 			<div class="tabBox">
-				<ul class="tabBtn02-2 curTabBtn dp_sb">
-					<li class="on"><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏2</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">컨디셔닝2</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏2</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">컨디셔닝2</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏2</a></li>
+				<ul class="curricul_list box_05 dp_sb">
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0201">
+							<p class="c_w">기초해부</p>
+							<span class="c_gry06">Basic anatomy</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0202">
+							<p class="c_w">체형분석</p>
+							<span class="c_gry06">Body type analysis</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0203">
+							<p class="c_w">교정운동</p>
+							<span class="c_gry06">Corrective exercise</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0204">
+							<p class="c_w">시퀀스</p>
+							<span class="c_gry06">Sequence</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0205">
+							<p class="c_w">골프</p>
+							<span class="c_gry06">Golf</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
 				</ul>
-				<div class="tabCont02-2 curTabCont">
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정1
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정2
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정3
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정4
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정5
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
 			</div>
 			<div class="tabBox">
-				<ul class="tabBtn02-3 curTabBtn dp_sb">
-					<li class="on"><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏3</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">컨디셔닝3</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏3</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">컨디셔닝3</a></li>
-					<li><a class="dp_f dp_c dp_cc" href="" title="">교육 베네핏3</a></li>
+				<ul class="curricul_list box_05 dp_sb">
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0301">
+							<p class="c_w">기초해부</p>
+							<span class="c_gry06">Basic anatomy</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0302">
+							<p class="c_w">체형분석</p>
+							<span class="c_gry06">Body type analysis</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0303">
+							<p class="c_w">교정운동</p>
+							<span class="c_gry06">Corrective exercise</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0304">
+							<p class="c_w">시퀀스</p>
+							<span class="c_gry06">Sequence</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0305">
+							<p class="c_w">골프</p>
+							<span class="c_gry06">Golf</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
 				</ul>
-				<div class="tabCont02-3 curTabCont">
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정1
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정2
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정3
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정4
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="tabBox">
-						<ul class="dp_sb">
-							<li>
-								<div class="ct_tit">
-									CRS 과정5
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-							<li>
-								<div class="ct_tit">
-									CRS 과정
-								</div>
-								<div class="ct_cont txt-c">
-									기초 해부학을 통해 근육별 위치, 기능, 움직임을 이루는 방법들에 대해 배우게 됩니다.
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
+			</div>
+			<div class="tabBox">
+				<ul class="curricul_list box_02 dp_sb">
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0401">
+							<p class="c_w">필라테스 지도자</p>
+							<span class="c_gry06">Pilates leader</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+					<li>
+						<a class="classShowBtn" href="" title="" data-dp="0402">
+							<p class="c_w">홈트</p>
+							<span class="c_gry06">Home training</span>
+							<div class="plus_btn dp_f dp_c dp_cc">+</div>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
+
+		<script>
+			var posY;
+
+			$(".classShowBtn").click(function(event){
+				event.preventDefault();
+
+				posY = $(window).scrollTop();
+				index = $(this).data('dp');
+
+				$('#classShowFrame').html("<iframe src='./classDetail"+index+".php?uid="+index+"' name='' style='width:100%;height:675px;' frameborder='0' scrolling='auto'></iframe>");
+				$('.classShow_open').click();
+				$("html, body").addClass("not_scroll");
+				$("section").css("top",-posY);
+			});
+
+		</script>
 
 		<!--한컷 강의-->
 		<div class="c_titWrap dp_f">
@@ -1760,69 +1106,87 @@
 		</div>
 		<div class="tabCont04 vdTabCont">
 			<div id="vdcontSlick01" class="tabBox">
-				<div class="vdTabSlick01 vdTabSlick">
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
+				<div class="vdTabSlick01_wrap po_r">
+					<div class="swiper vdTabSlick01 vdTabSlick">
+						<div class="swiper-wrapper">
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+						</div>
 					</div>
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
-					</div>
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
-					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 				</div>
 			</div>
 			<div id="vdcontSlick02" class="tabBox">
-				<div class="vdTabSlick02 vdTabSlick">
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
+				<div class="vdTabSlick02_wrap po_r">
+					<div class="swiper vdTabSlick02 vdTabSlick">
+						<div class="swiper-wrapper">
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+						</div>
 					</div>
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
-					</div>
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
-					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 				</div>
 			</div>
 			<div id="vdcontSlick03" class="tabBox">
-				<div class="vdTabSlick03 vdTabSlick">
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
+				<div class="vdTabSlick03_wrap po_r">
+					<div class="swiper vdTabSlick03 vdTabSlick">
+						<div class="swiper-wrapper">
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+							<div class="rvdo_box swiper-slide">
+								<a href="" title="">
+									<img src="" alt="">
+									<img class="playShape" src="/images/playBtn.svg" alt="">
+								</a>
+							</div>
+						</div>
 					</div>
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
-					</div>
-					<div class="rvdo_box">
-						<a href="" title="">
-							<img src="" alt="">
-							<img class="playShape" src="/images/playBtn.svg" alt="">
-						</a>
-					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 				</div>
 			</div>
 		</div>
@@ -1830,19 +1194,6 @@
 	</div>
 </section>
 <script>
-	$(".tabBtn01 > li").on("click",function(event){
-
-		event.preventDefault();
-
-		let tabNumber = $(this).index();
-
-		$(".tabBtn01 > li").removeClass("on");
-		$(this).addClass("on");
-
-		$(".tabCont01 > .tabBox").hide();;
-		$(".tabCont01 > .tabBox").eq(tabNumber).show();
-
-	});
 
 	$(".tabBtn02 > li").on("click",function(event){
 
@@ -1856,129 +1207,93 @@
 		$(".tabCont02 > .tabBox").hide();
 		$(".tabCont02 > .tabBox").eq(tabNumber).show();
 
-		$(".tabBtn02-1 > li").removeClass("on");
-		$(".tabBtn02-1 > li:nth-child(1)").addClass("on");
-
-		$(".tabCont02-1 > .tabBox").hide();
-		$(".tabCont02-1 > .tabBox:nth-child(1)").show();
-
-		$(".tabBtn02-2 > li").removeClass("on");
-		$(".tabBtn02-2 > li:nth-child(1)").addClass("on");
-
-		$(".tabCont02-2 > .tabBox").hide();
-		$(".tabCont02-2 > .tabBox:nth-child(1)").show();
-
-		$(".tabBtn02-3 > li").removeClass("on");
-		$(".tabBtn02-3 > li:nth-child(1)").addClass("on");
-
-		$(".tabCont02-3 > .tabBox").hide();
-		$(".tabCont02-3 > .tabBox:nth-child(1)").show();
-
 	});
 
-	$(".tabBtn02-1 > li").on("click",function(event){
+	$(".tabBtn04 > li").on("click",function(event){
 
 		event.preventDefault();
 
 		let tabNumber = $(this).index();
 
-		$(".tabBtn02-1 > li").removeClass("on");
-		$(this).addClass("on");
+		$(".tabBtn04 > li > a").removeClass("on");
+		$(this).children("a").addClass("on");
+		
 
-		$(".tabCont02-1 > .tabBox").hide();
-		$(".tabCont02-1 > .tabBox").eq(tabNumber).show();
-
-	});
-
-	$(".tabBtn02-2 > li").on("click",function(event){
-
-		event.preventDefault();
-
-		let tabNumber = $(this).index();
-
-		$(".tabBtn02-2 > li").removeClass("on");
-		$(this).addClass("on");
-
-		$(".tabCont02-2 > .tabBox").hide();
-		$(".tabCont02-2 > .tabBox").eq(tabNumber).show();
+		$(".tabCont04 > .tabBox").hide();
+		$(".tabCont04 > .tabBox").eq(tabNumber).show();
 
 	});
 
-	$(".tabBtn02-3 > li").on("click",function(event){
-
-		event.preventDefault();
-
-		let tabNumber = $(this).index();
-
-		$(".tabBtn02-3 > li").removeClass("on");
-		$(this).addClass("on");
-
-		$(".tabCont02-3 > .tabBox").hide();
-		$(".tabCont02-3 > .tabBox").eq(tabNumber).show();
-
+	var swiper06 = new Swiper(".vdTabSlick01", {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: ".vdTabSlick01_wrap .swiper-button-next",
+			prevEl: ".vdTabSlick01_wrap .swiper-button-prev",
+		},
 	});
+
+	var swiper07 = new Swiper(".vdTabSlick02", {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: ".vdTabSlick02_wrap .swiper-button-next",
+			prevEl: ".vdTabSlick02_wrap .swiper-button-prev",
+		},
+	});
+
+	var swiper08 = new Swiper(".vdTabSlick03", {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: ".vdTabSlick03_wrap .swiper-button-next",
+			prevEl: ".vdTabSlick03_wrap .swiper-button-prev",
+		},
+	});
+
 </script>
 <script>
-	$('.rcmtSlick').slick({ 
-		fade: false,
-		dots : false,
-		arrows : true,	
-		autoplay : false,			// 자동 스크롤 사용 여부
-		autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-		slidesToShow : 4,        // 한 화면에 보여질 컨텐츠 개수
-     	slidesToScroll : 1,        //스크롤 한번에 움직일 컨텐츠 개수
-	});
 
-	$('.rvdoSlick').slick({ 
-		fade: false,
-		dots : false,
-		arrows : true,	
-		autoplay : false,			// 자동 스크롤 사용 여부
-		autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-		slidesToShow : 3,        // 한 화면에 보여질 컨텐츠 개수
-     	slidesToScroll : 3,        //스크롤 한번에 움직일 컨텐츠 개수
-	});
+	// $('.vdTabSlick01').slick({ 
+	// 	fade: false,
+	// 	dots : false,
+	// 	arrows : true,	
+	// 	autoplay : false,			// 자동 스크롤 사용 여부
+	// 	autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+	// 	slidesToShow : 3,        // 한 화면에 보여질 컨텐츠 개수
+    //  	slidesToScroll : 1,        //스크롤 한번에 움직일 컨텐츠 개수
+	// });
 
-	$('.vdTabSlick01').slick({ 
-		fade: false,
-		dots : false,
-		arrows : true,	
-		autoplay : false,			// 자동 스크롤 사용 여부
-		autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-		slidesToShow : 3,        // 한 화면에 보여질 컨텐츠 개수
-     	slidesToScroll : 1,        //스크롤 한번에 움직일 컨텐츠 개수
-	});
+	// $('.vdTabSlick02').slick({ 
+	// 	fade: false,
+	// 	dots : false,
+	// 	arrows : true,	
+	// 	autoplay : false,			// 자동 스크롤 사용 여부
+	// 	autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+	// 	slidesToShow : 3,        // 한 화면에 보여질 컨텐츠 개수
+    //  	slidesToScroll : 3,        //스크롤 한번에 움직일 컨텐츠 개수
+	// });
 
-	$('.vdTabSlick02').slick({ 
-		fade: false,
-		dots : false,
-		arrows : true,	
-		autoplay : false,			// 자동 스크롤 사용 여부
-		autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-		slidesToShow : 3,        // 한 화면에 보여질 컨텐츠 개수
-     	slidesToScroll : 3,        //스크롤 한번에 움직일 컨텐츠 개수
-	});
+	// $('.vdTabSlick03').slick({ 
+	// 	fade: false,
+	// 	dots : false,
+	// 	arrows : true,	
+	// 	autoplay : false,			// 자동 스크롤 사용 여부
+	// 	autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+	// 	slidesToShow : 3,        // 한 화면에 보여질 컨텐츠 개수
+    //  	slidesToScroll : 3,        //스크롤 한번에 움직일 컨텐츠 개수
+	// });
 
-	$('.vdTabSlick03').slick({ 
-		fade: false,
-		dots : false,
-		arrows : true,	
-		autoplay : false,			// 자동 스크롤 사용 여부
-		autoplaySpeed : 5000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-		slidesToShow : 3,        // 한 화면에 보여질 컨텐츠 개수
-     	slidesToScroll : 3,        //스크롤 한번에 움직일 컨텐츠 개수
-	});
-
-	$('.tabCont04 .tabBox').hide();
-		$('.tabBtn04 a').click(function () {
-			$('.tabCont04 .tabBox').hide().filter(this.hash).fadeIn();
-			$('.vdTabSlick').slick('slickGoTo', 0); //탭클릭시 slick의 순서를 0번째부터 나오게
-			$('.vdTabSlick').slick('setPosition'); //slick의 위치를 수동으로 새로 고쳐줌
+	// $('.tabCont04 .tabBox').hide();
+	// 	$('.tabBtn04 a').click(function () {
+	// 		$('.tabCont04 .tabBox').hide().filter(this.hash).fadeIn();
+	// 		$('.vdTabSlick').slick('slickGoTo', 0); //탭클릭시 slick의 순서를 0번째부터 나오게
+	// 		$('.vdTabSlick').slick('setPosition'); //slick의 위치를 수동으로 새로 고쳐줌
 			
-			$('.tabBtn04 a').removeClass('on');
-			$(this).addClass('on');
-			return false;
-		}).filter(':eq(0)').click();
+	// 		$('.tabBtn04 a').removeClass('on');
+	// 		$(this).addClass('on');
+	// 		return false;
+	// 	}).filter(':eq(0)').click();
 
 </script>
 <section class="cont4">

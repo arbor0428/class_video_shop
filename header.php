@@ -1,5 +1,5 @@
 <?
-	include "/home/edufim/www/module/login/head.php";
+include "/home/edufim/www/module/login/head.php";
 ?>
 <header class="blue_gradient c_w">
 	<div class="h_top bor_bot">
@@ -21,8 +21,12 @@
 					</div>
 				</div>
 				<ul class="h_top_menu dp_f dp_c">
-					<li><a href="" title="회원가입">회원가입</a></li>
-					<li><a href="" title="로그인">로그인</a></li>
+					<? if (!$GBL_EMAIL) { ?>
+						<li><a href="/member/signup.php" title="회원가입">회원가입</a></li>
+						<li><a href="/member/login.php" title="로그인">로그인</a></li>
+						<? } else { ?>
+							<li><a href="/module/login/logout_proc.php" title="로그인">로그아웃</a></li>
+					<? } ?>
 					<li><a href="" title="장바구니">장바구니</a></li>
 				</ul>
 			</div>
@@ -30,21 +34,20 @@
 		</div>
 	</div>
 	<script>
-	var flag = true;
-	$(".toggleTit").click(function(){
-		if(flag){
-			$(".langArr").addClass("on");
-			$(".toggleDown").stop().slideDown();
+		var flag = true;
+		$(".toggleTit").click(function() {
+			if (flag) {
+				$(".langArr").addClass("on");
+				$(".toggleDown").stop().slideDown();
 
-			flag= false;
-		} else {
-			$(".langArr").removeClass("on");
-			$(".toggleDown").stop().slideUp();
+				flag = false;
+			} else {
+				$(".langArr").removeClass("on");
+				$(".toggleDown").stop().slideUp();
 
-			flag= true;
-		}
-	});
-
+				flag = true;
+			}
+		});
 	</script>
 	<div class="h_bot">
 		<div class="c_center dp_sb">
@@ -57,13 +60,14 @@
 				<li><a class="dp_b bold" href="" title="홈트">홈트</a></li>
 				<li><a class="dp_b bold" href="" title="스토어">스토어</a></li>
 				<li><a class="dp_b bold" href="" title="강의 후기">강의 후기</a></li>
+				<li><a class="dp_b bold" href="" title="자격증시험응시">자격증시험응시</a></li>
 				<li><a class="dp_b bold" href="" title="Q&A">Q&A</a></li>
 			</ul>
-			<a class="classBtn bora dp_f dp_c dp_cc c_w" href="" title="나의 강의실">나의 강의실</a>
+			<a class="classBtn bora dp_f dp_c dp_cc c_w" href="/sub11/sub01.php" title="나의 강의실">나의 강의실</a>
 		</div>
 		<div class="depthWrap">
 			<div class="boxWrap">
-				<div class="depthbox" style="height: 450px;">
+				<div class="depthbox" style="height: 470px;">
 					<div class="c_center dp_f alcMnWrap">
 						<div class="allClassMenu wid20">
 							<ul class="depth1">
@@ -79,9 +83,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
 									<ul class="depth2">
 										<li>
 											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
@@ -92,52 +93,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-						<div class="allClassMenu wid20">
-							<ul class="depth1">
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
 									<ul class="depth2">
 										<li>
 											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
@@ -165,9 +120,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
 									<ul class="depth2">
 										<li>
 											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
@@ -178,52 +130,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-						<div class="allClassMenu wid20">
-							<ul class="depth1">
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
 									<ul class="depth2">
 										<li>
 											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
@@ -251,7 +157,31 @@
 											</ul>
 										</li>
 									</ul>
+									<ul class="depth2">
+										<li>
+											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
+											<ul class="depth3">
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="depth2">
+										<li>
+											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
+											<ul class="depth3">
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+											</ul>
+										</li>
+									</ul>
 								</li>
+							</ul>
+						</div>
+						<div class="allClassMenu wid20">
+							<ul class="depth1">
 								<li>
 									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
 									<ul class="depth2">
@@ -264,9 +194,53 @@
 											</ul>
 										</li>
 									</ul>
+									<ul class="depth2">
+										<li>
+											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
+											<ul class="depth3">
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="depth2">
+										<li>
+											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
+											<ul class="depth3">
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+											</ul>
+										</li>
+									</ul>
 								</li>
+							</ul>
+						</div>
+						<div class="allClassMenu wid20">
+							<ul class="depth1">
 								<li>
 									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
+									<ul class="depth2">
+										<li>
+											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
+											<ul class="depth3">
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="depth2">
+										<li>
+											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
+											<ul class="depth3">
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
+											</ul>
+										</li>
+									</ul>
 									<ul class="depth2">
 										<li>
 											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
@@ -296,20 +270,22 @@
 						<ul class="boraMenuCont dp_f">
 							<li>
 								<ul class="b_menu">
-									<li><a href="" title="필라테스시퀀스 처방사">필라테스시퀀스 처방사</a></li>
-									<li><a href="" title="근신경움직임 처방사">근신경움직임 처방사</a></li>
-								</ul>
-							</li>
-							<li>
-								<ul class="b_menu">
-									<li><a href="" title="골프 필라테스">골프 필라테스</a></li>
-									<li><a href="" title="체형분석 운동지도자">체형분석 운동지도자</a></li>
-								</ul>
-							</li>
-							<li>
-								<ul class="b_menu">
+									<li><a href="" title="국제인증강사">국제인증강사</a></li>
 									<li><a href="" title="체형분석평가사">체형분석평가사</a></li>
-									<li><a href="" title="에듀핌 근골격계시퀀스 지도자">에듀핌 근골격계시퀀스 지도자</a></li>
+									<li><a href="" title="필라테스지도자">필라테스지도자</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="b_menu">
+									<li><a href="" title="물리치료사 강사">물리치료사 강사</a></li>
+									<li><a href="" title="골프피지오 2급">골프피지오 2급</a></li>
+									<li><a href="" title="체형분석운동지도자">체형분석운동지도자</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="b_menu">
+									<li><a href="" title="Anatomy master">Anatomy master</a></li>
+									<li><a href="" title="필라테스시퀀스처방사">필라테스시퀀스처방사</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -431,6 +407,37 @@
 					<div class="dp_f hght100">
 						<div class="boraMenuTit bora c_w dp_f dp_end02">
 							<p class="dp_f dp_c">
+								자격증시험응시
+								<span class="lnr lnr-chevron-right"></span>
+							</p>
+						</div>
+						<ul class="boraMenuCont dp_f">
+							<li>
+								<ul class="b_menu">
+									<li><a href="" title="필라테스 지도자과정 이론시험">필라테스 지도자과정 이론시험</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="b_menu">
+									<li>
+										<!--빈값-->
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="b_menu">
+									<li>
+										<!--빈값-->
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="depthbox" style="height: 160px;">
+					<div class="dp_f hght100">
+						<div class="boraMenuTit bora c_w dp_f dp_end02">
+							<p class="dp_f dp_c">
 								Q&A
 								<span class="lnr lnr-chevron-right"></span>
 							</p>
@@ -461,8 +468,8 @@
 
 <script>
 	//pc - header depth2
-        
-	$(".h_bot_menu > li").mouseenter(function(event){
+
+	$(".h_bot_menu > li").mouseenter(function(event) {
 
 		event.preventDefault();
 
@@ -473,20 +480,30 @@
 		$(this).addClass("on");
 
 
-		$(".depthWrap .depthbox").css({"opacity":0,"display":"none"});
-		$(".depthWrap .depthbox").eq(navnumber).css({"opacity":1,"display":"block"});
+		$(".depthWrap .depthbox").css({
+			"opacity": 0,
+			"display": "none"
+		});
+		$(".depthWrap .depthbox").eq(navnumber).css({
+			"opacity": 1,
+			"display": "block"
+		});
 
 	});
 
-	$(".h_bot").mouseleave(function(event){
+	$(".h_bot").mouseleave(function(event) {
 
 		event.preventDefault();
 
 		$(".h_bot_menu > li").removeClass("on");
 
-		$(".depthWrap .depthbg").stop().animate({"height":"0"},200);
-		$(".depthWrap .depthbox").css({"opacity":0,"display":"none"});
+		$(".depthWrap .depthbg").stop().animate({
+			"height": "0"
+		}, 200);
+		$(".depthWrap .depthbox").css({
+			"opacity": 0,
+			"display": "none"
+		});
 
 	});
-
 </script>

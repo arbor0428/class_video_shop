@@ -2,9 +2,9 @@
 			<div class="mediaWrap dp_f dp_fc">
 				<div class="mediaOpenBtn bora"></div>
 				<ul class="mediaToggle dp_f dp_fc">
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a class="dp_f dp_c dp_cc" href=""><img src="/images/in_icon.png"></a></li>
+					<li><a class="dp_b" href="http://blog.naver.com/movement-lab" target="_blank"></a></li>
+					<li><a class="dp_b" href="http://pf.kakao.com/_bsqxcK" target="_blank"></a></li>
+					<li><a class="dp_f dp_c dp_cc" href="http://instagram.com/edu_fim?igshid=YmMyMTA2M2Y=" target="_blank"><img src="/images/in_icon.png"></a></li>
 				</ul>
 			</div>
 			<ul class="updownWrap dp_f dp_fc">
@@ -46,7 +46,10 @@
 				return false;
 			});	
 	
-
+			$('.likeMark').click(function(event){ 
+				event.preventDefault();
+				$(this).toggleClass("on");
+			});
 		</script>
 
 		<footer class="blue_gradient c_w">

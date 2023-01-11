@@ -1,46 +1,330 @@
 <?
 	include '../header.php';
+	$side_menu=1;
 ?>
 
-<style>
-   .sample-re{
-      font-family: 'NanumSquare', sans-serif;
-      transform: skew(-0.001deg);
-      padding:300px 0 200px 0;
-      color:#333;
-      word-break:keep-all;
-      font-size:18px;
-      line-height:150%;
-      text-align:center;
-   }
-   .sample-re .img{width:13%; margin:0 auto;}
-   .sample-re .txt>h1{font-size:50px; font-weight:400; margin:50px 0;line-height:150%;}
-   .sample-re .txt .txt-s{color:#666;}
+<div class="subWrap">
+    <div class="s_center dp_sb">
+      <?
+			include 'sidemenu.php';
+		?>
+      <div class="s_cont">
+         <div class="s_cont_tit02 dp_f dp_c bor_bot">
+		 	<span class="f20 regular line dp_f dp_c">전체</span>
+            <span class="f20 bold2 c_bora01">체형분석 전문가</span>
+		 </div>
+         <div class="top_searchBar">
+            <div class="selectwrap dp_f dp_c">
+               <p class="select_tit c_gry04 f14">정렬 기준</p>
+               <select name="" id="">
+                  <option value="">추천순</option>
+               </select>
+            </div>
+		</div>
 
-   @media screen and (max-width:768px){
-      .sample-re{
-         padding:200px 0 100px 0;
-         font-size:16px;
-         transform: skew(-0.001deg);
-      }
-      .sample-re .img{width:25%; margin:0 auto;}
-      .sample-re .txt>h1{font-size:30px; margin:30px 0 20px;}
-   }
-</style>
+		<!------>
+		<div class="all_list_wrap">
+			<div class="s_cont_tit02 dp_f dp_c">
+				<span class="f18 bold2 c_bora01">하위메뉴</span>
+			</div>
+			<div class="dp_sb dp_wrap">
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!------>
+		
+		<!------>
+		<div class="all_list_wrap">
+			<div class="s_cont_tit02 dp_f dp_c">
+				<span class="f18 bold2 c_bora01">하위메뉴</span>
+			</div>
+			<div class="dp_sb dp_wrap">
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!------>
 
-<div class="sample-re">
-   <div class="img">
-      <img src="http://i-web.kr/wlsdud0812/uploaded/smart/N201222101346vkz57wrbtp.png" alt="pic" style="width:100%;">
-   </div>
-   <div class="txt">
-      <h1>페이지 준비중입니다.</h1>
-      <div class="txt-s">
-         이용에 불편을 드려 죄송합니다.<br>
-         빠른 시일내에 준비하도록 하겠습니다.
+		<!------>
+		<div class="all_list_wrap">
+			<div class="s_cont_tit02 dp_f dp_c">
+				<span class="f18 bold2 c_bora01">하위메뉴</span>
+			</div>
+			<div class="dp_sb dp_wrap">
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="nVdSlickBox">
+					<a href="./view.php" title="">
+						<div class="imgWrap c_gry02 p_r">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="nVdCont">
+							<div class="nVdTop">
+								<p class="nVdtit01 bold2 dotdot">멀리건 기법을 이용한 관절 테크닉 1편</p>
+								<p class="nVdtit02 c_gry03 dotdot">멀리건 기법을 이용한 관절 유동술 빠른 치료 효과</p>
+								<ul class="clickicon dp_f dp_c">
+									<li class="dp_f dp_c">
+										<img src="/images/likeChk_gry.png" alt="">
+										<span>10884</span>
+									</li>
+									<li class="dp_f dp_c">
+										<img src="/images/bestChk_gry.png" alt="">
+										<span>97%</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nVdBot">
+								<p class="c_gry03">500,000원</p>
+								<span class="c_red bold">46%</span>
+								<span class="priceDet bold">월 89,000원</span>
+								<span class="monDet">(12개월)</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!------>
       </div>
-   </div>
-
+    </div>
 </div>
+
 
 
 <?

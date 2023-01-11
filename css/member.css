@@ -1,0 +1,325 @@
+/*********************************
+            회원가입
+**********************************/
+.signin {
+  width: 100%;
+}
+.signin__inner {
+  width: 100%;
+  max-width: 465px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+.signin__title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #000f24;
+  margin-bottom: 40px;
+}
+.essential__text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #bc00ff;
+  display: flex;
+  align-items: flex-start;
+}
+.essential__text::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #bc00ff;
+  display: inline-block;
+  margin-left: 4px;
+}
+.signin__row {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.signin__row input[type="text"],
+.signin__row input[type="password"],
+.signin__row select {
+  width: 100%;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  padding: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #333;
+}
+.signin__row input::placeholder {
+  color: #a5a5a5;
+}
+.signin__row input:focus {
+  outline: none;
+  border: 1px solid #333;
+}
+.input-phone {
+  position: relative;
+}
+.signin__row .input-phone > input[type="text"] {
+  margin-bottom: 0;
+}
+.input-phone2 {
+  margin-top: 10px;
+  display: none;
+}
+input[type="text"].chk-time {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  border: none;
+  padding: 0;
+}
+.send-code__btn {
+  width: fit-content;
+  padding: 4px 8px;
+  background: #c8c8c8 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  color: #fff;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.signin__row2 p,
+.signin__row > p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #333333;
+  margin: 20px 0 10px;
+}
+.input-address {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.input-address input[type="text"] {
+  width: calc(74.84% - 5px);
+  margin-bottom: 0;
+}
+.search-address__btn {
+  width: calc(23.23% - 5px);
+  padding: 14px;
+  box-sizing: border-box;
+  background-color: #bc00ff;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.gender__radio {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.gender__radio input[type="radio"] {
+  display: none;
+}
+.gender__radio label {
+  width: 50%;
+  padding: 14px;
+  box-sizing: border-box;
+  border: 1px solid #efefef;
+  border-radius: 3px 0px 0px 3px;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.gender__radio input[type="radio"]:checked + label {
+  background-color: #bc00ff;
+  color: #fff;
+  border: 1px solid #bc00ff;
+}
+.interest__wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+.interest-radio input[type="radio"] {
+  display: none;
+}
+.interest-radio input[type="radio"] + label {
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #333333;
+  cursor: pointer;
+}
+.interest-radio input[type="radio"] + label span {
+  display: inline-block;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background: url("/images/member/radio-icon.svg") 0 0px no-repeat;
+  cursor: pointer;
+}
+
+.interest-radio input[type="radio"]:checked + label span {
+  background: url("/images/member/radio-chk-icon.svg") 0 0px no-repeat;
+}
+.interest__wrap.join {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.agree__wrap {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+}
+.agree__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0px;
+  margin-bottom: 15px;
+}
+.terms__link {
+  color: #949494;
+  margin-left: 20px;
+}
+.agreeAll__wrap {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.agreeAll__row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 0px;
+}
+.agreeAll__row > label {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-top: -2px;
+}
+.agreeAll__row > span {
+  font-size: 12px;
+  color: #333333;
+  margin-top: 4px;
+}
+.signin__btn {
+  display: block;
+  margin-top: 40px;
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  background-color: #bc00ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*********************************
+                로그인
+**********************************/
+.login__form {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ececec;
+}
+.find__info {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.find__info a {
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #333333;
+  border-left: 1px solid #ececec;
+}
+.find__info a:first-child {
+  border-left: none;
+}
+.login__btn {
+  margin-top: 0;
+}
+.sns__login {
+  width: 100%;
+  margin-top: 20px;
+}
+.sns__login p {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  color: #333333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.sns__login p span {
+  color: #002250;
+  font-weight: 500;
+}
+.sns__btn {
+  margin-top: 10px;
+  background-position: 15px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  font-weight: bold;
+}
+#kakao {
+  background-color: #fde500;
+  color: #240f0e;
+  background-image: url("/images/member/k_icon.svg");
+}
+#naver {
+  background-color: #03cf5d;
+  background-image: url("/images/member/n_icon.svg");
+}
+#goggle {
+  background-color: #ea4335;
+  background-image: url("/images/member/g_icon.svg");
+}
+/*******************
+    find id
+********************/
+.find-id > form > p {
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0px;
+  color: #777777;
+  margin: 20px 0;
+}

@@ -4,10 +4,10 @@ session_start();
 Header("p3p: CP=\"CAO DSP AND SO ON\" policyref=\"/w3c/p3p.xml\"");
 
 //글로벌 변수 설정
-$GBL_USERID	= strtolower($_SESSION['ses_member_id']);
-$GBL_NAME	= $_SESSION['ses_member_name'];
-$GBL_MTYPE = $_SESSION['ses_member_type'];
-$GBL_PASSWORD = $_SESSION['ses_member_pwd'];
+$GBL_EMAIL		= strtolower($_SESSION['ses_member_email']);
+$GBL_NAME		= $_SESSION['ses_member_name'];
+$GBL_MTYPE		= $_SESSION['ses_member_type'];
+$GBL_PASSWORD	= $_SESSION['ses_member_pwd'];
 
 $SYSTEM_DATE = date('Y-m-d');
 
@@ -19,16 +19,13 @@ $boardRoot = '../board/';
 <!doctype html>
 	<html lang="ko">
 		<head>
-
-
 			<?
 				include "/home/edufim/www/module/login/metaTag.php";
 			?>
-			
-
 			<link rel="stylesheet" type="text/css" href="/css/reset.css?v=1">
 			<link rel="stylesheet" type="text/css" href="/css/style.css?v=1">
 			<link rel="stylesheet" type="text/css" href="/css/sub.css?v=1">
+			<link rel="stylesheet" type="text/css" href="/css/member.css?v=1">
 			<link rel="stylesheet" type="text/css" href="/css/mediaquery.css?v=1">
 
 			<!-- Noto Sans KR -->
@@ -68,6 +65,18 @@ $boardRoot = '../board/';
 			<!--<script src="/js/slick.min.js"></script>-->
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+			
+			<!-- swiper -->
+			<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css"/> 
+
+			<!-- bxslider -->
+			<link rel="stylesheet" href="/css/jquery.bxslider.css">
+			<script type="text/javascript" src="/module/js/jquery.bxslider.js"></script>
+
+			<!-- gsap -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 			
 			<title>에듀핌</title>
 

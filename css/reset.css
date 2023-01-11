@@ -45,6 +45,7 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 .c_gry03 {color: #BCBCBC;}
 .c_gry04 {color: #949494;}
 .c_gry05 {color: #A5A5A5;}
+.c_gry06 {color: #8F8F8F;}
 
 .blue_gradient {background: transparent linear-gradient(180deg, #000019 0%, #00142E 52%, #000019 100%) 0% 0% no-repeat padding-box;}
 .bora {background-color: #9800CE;}
@@ -170,8 +171,7 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 .dp_b {display:block;}
 .p_r {position:relative;}
 .v_m {vertical-align:middle;}
-
-.po_r {position:relative;}
+.p_a {position:absolute;}
 
 .txt-l {text-align:left !important;}
 .txt-r {text-align:right !important;}
@@ -220,4 +220,22 @@ input[type="checkbox"]:checked {
 }
 input[type="checkbox"]:checked::after {
     display: block;
+}
+
+.swiper {overflow: hidden;}
+
+.not_scroll{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+}
+
+.not_scroll section {
+    position: relative;
+    top: 0;
+}
+section {
+    position: relative;
+    top: 0;
 }

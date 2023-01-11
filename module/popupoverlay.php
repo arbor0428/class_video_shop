@@ -87,6 +87,14 @@
 	<a class="bora01 c_w dp_f dp_c dp_cc addrRegiBtn" href="" title="등록하기">등록하기</a>
 </div>
 
+<a id="classShow_open" class="classShow_open"></a>
+<div id="classShow" class="popup_background" style="padding: 20px; box-sizing: border-box; min-width: 1200px; position:relative; display:none;">
+	<div style="height: 34px;">
+		<div class="cls_buttonali2"><button class="cerPrint_close close_button_pop"><img src="../images/x_icon.svg" alt=""></button></div>
+	</div>
+	<div id='classShowFrame' style="background:#fff; overflow:hidden; position:relative;"></div>
+</div>
+
 
 <!-- 팝업 스크립트 -->
 <script>
@@ -105,7 +113,7 @@ $(document).ready(function () {
 		scrolllock: false
 	});
 
-	$('#cerPrint, #couponList, #addrRegister').popup({
+	$('#cerPrint, #couponList, #addrRegister, #classShow').popup({
 		transition: 'all 0.3s',
 		blur: false,
 		escape:false,
@@ -123,12 +131,17 @@ $(document).ready(function () {
 	//input필드 자동완성기능
 	jQuery('input').attr("autocomplete","off");
 
+
 	$(".close_button_pop").click(function(event){
 		$('#multiBox').popup('hide');
 		$('#titleBox').popup('hide');
 		$('#classConsBox').popup('hide');
 		$('#cerPrint').popup('hide');
 		$('#addrRegister').popup('hide');
+		$('#classShow').popup('hide');
+		$("html, body").removeClass("not_scroll");
+
+		$("section").css("top",0);
 	});
 	
 	$(".couponApplyBtn").click(function(event){
