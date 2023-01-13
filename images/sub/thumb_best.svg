@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="14.545" viewBox="0 0 16 14.545">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_16" data-name="사각형 16" width="16" height="14.545" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="따봉_icon" data-name="따봉 icon" clip-path="url(#clip-path)">
+    <path id="패스_74" data-name="패스 74" d="M23.332,5.419a1.671,1.671,0,0,0-1.263-.571H17.937a6.8,6.8,0,0,0,.821-3.232,1.656,1.656,0,0,0-3.31,0,3.645,3.645,0,0,1-.64,2.064L13.643,5.387h-1.5v7.543h1.649l.012.134a1.64,1.64,0,0,0,1.649,1.482h5.518A1.644,1.644,0,0,0,22.6,13.195L23.7,6.73a1.589,1.589,0,0,0-.369-1.311" transform="translate(-7.724 0)" fill="#fff"/>
+    <rect id="사각형_15" data-name="사각형 15" width="3.686" height="9.697" transform="translate(0 4.849)" fill="#fff"/>
+  </g>
+</svg>

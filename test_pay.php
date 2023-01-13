@@ -66,7 +66,6 @@ include 'header.php';
 		}
 
 		const payment = function() {
-			$('.email-warning').hide();
 			const amount = parseInt(document.getElementById('amount').value.replace(',', '').replace('   P', ''));
 			if (amount === 0 || amount === "" || isNaN(amount)) {
 				$('#amount').addClass('input-point-warning');

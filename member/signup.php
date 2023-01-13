@@ -215,6 +215,12 @@ include '../header.php';
 		const agree01 = form.agree01.checked;
 		const agree02 = form.agree02.checked;
 
+		const email_regex = '^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$';
+		const pwd_regex = '';
+		const phone_regex = '\d{10,11}';
+		const address_regex = '\d[0-9]';
+
+
 		if (email === "") {
 			GblMsgBox("이메일을 입력해주세요", "")
 			form.email.focus()

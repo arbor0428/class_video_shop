@@ -1,13 +1,14 @@
 <?
-	include '../header.php';
-	$side_menu=14;
+include '../header.php';
+$side_menu = 14;
+
 ?>
 
 
 <div class="subWrap">
-    <div class="s_center dp_sb">
-        <?
-			include 'sidemenu.php';
+	<div class="s_center dp_sb">
+		<?
+		include 'sidemenu.php';
 		?>
 		<div class="s_cont">
 			<div class="s_cont_tit f20 bold2 c_bora01">
@@ -17,8 +18,8 @@
 			<div class="personal_Info">
 				<p class="s_edit_tit f18 bold2 m_24">내 정보 수정</p>
 				<div class="personal_row dp_f dp_c">
-					<div class="personal_tit dp_f">아이디<span class="mustInput">*</span></div>
-					<div class="personal_det">fim2021@naver.com</div>
+					<div class="personal_tit dp_f">이메일<span class="mustInput">*</span></div>
+					<div class="personal_det"><?= $row['email'] ?></div>
 				</div>
 				<div class="personal_row dp_f dp_c">
 					<div class="personal_tit dp_f">비밀번호<span class="mustInput">*</span></div>
@@ -35,9 +36,7 @@
 				</div>
 				<div class="personal_row dp_f dp_c">
 					<div class="personal_tit dp_f">성 명<span class="mustInput">*</span></div>
-					<div class="personal_det dp_f dp_c">
-						<input type="text">
-					</div>
+					<div class="personal_det dp_f dp_c"><?= $row['name'] ?></div>
 				</div>
 				<div class="personal_row dp_f dp_c">
 					<div class="personal_tit">성 별</div>
@@ -49,6 +48,7 @@
 					<div class="personal_tit dp_f">직 업<span class="mustInput">*</span></div>
 					<div class="personal_det dp_f dp_c">
 						<select name="" id="">
+							<?= $row['option01'] ?>
 							<option value="">직업을 선택해주세요.</option>
 						</select>
 					</div>
@@ -56,7 +56,7 @@
 				<div class="personal_row dp_f dp_c">
 					<div class="personal_tit dp_f">휴대전화<span class="mustInput">*</span></div>
 					<div class="personal_det dp_f dp_c">
-						<input type="text" value="01012345678">
+						<input type="text" value="<?= $row['phone'] ?>">
 						<div class="dp_f dp_c s_label">
 							<img src="../images/check_V.svg" alt="">
 							<span class="f12">문자 메세지 정보수신 동의(서비스 안내, 이벤트 등의 정보)</span>
@@ -124,16 +124,16 @@
 				<a class="dp_f dp_c dp_cc bora01 c_w" href="" title="">정보수정</a>
 			</div>
 		</div>
-    </div>
+	</div>
 </div>
 
 <script>
-	function tema(t){
-		$('#addrRegisterFrame').html("<iframe src='/sub09/addrRegister.php?uid="+t+"' name='' style='width:100%;height:545px;' frameborder='0' scrolling='auto'></iframe>");
+	function tema(t) {
+		$('#addrRegisterFrame').html("<iframe src='/sub09/addrRegister.php?uid=" + t + "' name='' style='width:100%;height:545px;' frameborder='0' scrolling='auto'></iframe>");
 		$('.addrRegister_open').click();
 	}
 
-	$(".newAddrBtn").click(function(event){
+	$(".newAddrBtn").click(function(event) {
 		tid = $(this).data('tid');
 		tema(tid);
 		event.preventDefault();
@@ -141,5 +141,5 @@
 </script>
 
 <?
-	include '../footer.php';
+include '../footer.php';
 ?>

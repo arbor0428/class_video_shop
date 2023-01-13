@@ -4,6 +4,7 @@ session_start();
 Header("p3p: CP=\"CAO DSP AND SO ON\" policyref=\"/w3c/p3p.xml\"");
 
 //글로벌 변수 설정
+$GBL_UID		= strtolower($_SESSION['ses_member_uid']);
 $GBL_EMAIL		= strtolower($_SESSION['ses_member_email']);
 $GBL_NAME		= $_SESSION['ses_member_name'];
 $GBL_MTYPE		= $_SESSION['ses_member_type'];
@@ -13,6 +14,16 @@ $SYSTEM_DATE = date('Y-m-d');
 
 $strRoot = '../';
 $boardRoot = '../board/';
+
+// function access_sign($is_signed)
+// {
+// 	if(!$is_signed) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// 	Msg::
+// }
 
 ?>
 

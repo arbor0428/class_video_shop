@@ -4,10 +4,10 @@
 
 <div class="subWrap">
    <div class="s_center">
-      <div class="bora c_w sideTit f22 bold2 dp_f dp_c dp_cc">자격증 과정</div>
+      <div class="bora c_w sideTit f22 bold2 sideTit dp_inline dp_c dp_cc">자격증 과정</div>
       <div class="dp_sb dp_wrap nVdSlickBox_04_wrap">
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -37,7 +37,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -67,7 +67,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -97,7 +97,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -127,7 +127,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -157,7 +157,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -187,7 +187,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -217,7 +217,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -247,7 +247,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -277,7 +277,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -307,7 +307,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -337,7 +337,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -367,7 +367,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -397,7 +397,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -427,7 +427,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
@@ -457,7 +457,7 @@
             </a>
          </div>
          <div class="nVdSlickBox">
-            <a href="" title="">
+            <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">

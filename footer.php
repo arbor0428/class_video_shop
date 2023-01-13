@@ -120,10 +120,10 @@
 						<li><a href="" title="">개인정보처리방침</a></li>
 					</ul>
 					<ul class="f_bot01_sns dp_f">
-						<li><a href="" title=""><img src="/images/whtface.svg" alt=""></a></li>
-						<li><a href="" title=""><img src="/images/whtinsta.svg" alt=""></a></li>
-						<li><a href="" title=""><img src="/images/whtblog.svg" alt=""></a></li>
-						<li><a href="" title=""><img src="/images/whttalk.svg" alt=""></a></li>
+						<li><a href="" title="페이스북"><img src="/images/whtface.svg" alt=""></a></li>
+						<li><a href="http://instagram.com/edu_fim?igshid=YmMyMTA2M2Y=" title="인스타그램" target="_blank"><img src="/images/whtinsta.svg" alt=""></a></li>
+						<li><a href="http://blog.naver.com/movement-lab" title="블로그" target="_blank"><img src="/images/whtblog.svg" alt=""></a></li>
+						<li><a href="http://pf.kakao.com/_bsqxcK" title="카카오" target="_blank"><img src="/images/whttalk.svg" alt=""></a></li>
 					</ul>
 				</div>
 			</div>

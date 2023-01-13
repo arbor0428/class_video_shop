@@ -122,7 +122,7 @@
 				</div>
 				<a class="c_tit_btn dp_b bold" href="" title="">전체 클래스 보기+</a>
 			</div>
-			<div class="po_r newVdSlick_wrap">
+			<div class="p_r newVdSlick_wrap">
 				<div class="swiper newVdSlick">
 					<div class="swiper-wrapper">
 						<div class="nVdSlickBox swiper-slide">
@@ -379,7 +379,7 @@
 				</div>
 				<a class="c_tit_btn dp_b bold" href="" title="">전체 클래스 보기+</a>
 			</div>
-			<div class="po_r hotVdSlick_wrap">
+			<div class="p_r hotVdSlick_wrap">
 				<div class="swiper hotVdSlick">
 					<div class="swiper-wrapper">
 						<div class="nVdSlickBox swiper-slide">
@@ -742,7 +742,7 @@
 			</div>
 			<a class="c_tit_btn" href="" title="">자세히 보기+</a>
 		</div>
-		<div class="po_r rcmtSlick_wrap">
+		<div class="p_r rcmtSlick_wrap">
 			<div class="swiper rcmtSlick">
 				<div class="swiper-wrapper">
 					<div class="rcmt_box swiper-slide">
@@ -792,7 +792,7 @@
 		</div>
 
 
-		<div class="po_r rvdoSlick_wrap">
+		<div class="p_r rvdoSlick_wrap">
 			<div class="swiper rvdoSlick">
 				<div class="swiper-wrapper">
 					<div class="rvdo_box swiper-slide">
@@ -867,7 +867,7 @@
 			<a class="c_tit_btn" href="" title="">자세히 보기+</a>
 		</div>
 		
-		<div class="curri_slick_wrap po_r">
+		<div class="curri_slick_wrap p_r">
 			<div class="swiper curri_slick">
 				<div class="swiper-wrapper">
 					<div class="curri_box swiper-slide">
@@ -1106,7 +1106,7 @@
 		</div>
 		<div class="tabCont04 vdTabCont">
 			<div id="vdcontSlick01" class="tabBox">
-				<div class="vdTabSlick01_wrap po_r">
+				<div class="vdTabSlick01_wrap p_r">
 					<div class="swiper vdTabSlick01 vdTabSlick">
 						<div class="swiper-wrapper">
 							<div class="rvdo_box swiper-slide">
@@ -1134,7 +1134,7 @@
 				</div>
 			</div>
 			<div id="vdcontSlick02" class="tabBox">
-				<div class="vdTabSlick02_wrap po_r">
+				<div class="vdTabSlick02_wrap p_r">
 					<div class="swiper vdTabSlick02 vdTabSlick">
 						<div class="swiper-wrapper">
 							<div class="rvdo_box swiper-slide">
@@ -1162,7 +1162,7 @@
 				</div>
 			</div>
 			<div id="vdcontSlick03" class="tabBox">
-				<div class="vdTabSlick03_wrap po_r">
+				<div class="vdTabSlick03_wrap p_r">
 					<div class="swiper vdTabSlick03 vdTabSlick">
 						<div class="swiper-wrapper">
 							<div class="rvdo_box swiper-slide">
@@ -1301,7 +1301,7 @@
 	<img class="symbol" src="/images/symbol.svg" alt="">
 	<!--absolute-->
 
-	<div class="c_center po_r">
+	<div class="c_center p_r">
 		<div class="c_titWrap dp_sb c_blue dp_end">
 			<div class="titcont">
 				<p class="bold2">EDUFIM Instructor</p>
@@ -1514,7 +1514,7 @@
 					</h3>
 				</div>
 			</div>
-			<div class="gryWrap po_r">
+			<div class="gryWrap p_r">
 				<ul class="noticeRoll">
 					<li>홈페이지를 오픈했습니다. 많은 성원 부탁드립니다.</li>
 					<li>홈페이지를 오픈했습니다. 많은 성원 부탁드립니다.</li>

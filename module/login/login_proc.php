@@ -47,6 +47,7 @@ if ($num) {
 		// 	$sql = "update ks_member set token='$token' where email='$email'";
 		// 	$result = mysql_query($sql);
 		// }
+		$_SESSION['ses_member_uid']		= $info['uid'];
 		$_SESSION['ses_member_email']	= strtolower($email);
 		$_SESSION['ses_member_name']	= $info['name'];
 		$_SESSION['ses_member_type']	= $info['mtype'];

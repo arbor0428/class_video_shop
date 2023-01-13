@@ -98,13 +98,15 @@ h3 {font-size:1.875rem;}
 	background-size: cover;
 
 }
-.cont1 .slick-next:before {
+.slick-next:before {
 	background-image: url("../images/next.svg");
 }
 
-.cont1 .slick-prev:before {
+.slick-prev:before {
 	background-image: url("../images/prev.svg");
 }
+
+.swiper {position: relative;}
 
 .cont1 .swiper-button-prev, .cont1 .swiper-button-next {
 	margin-top: 0;

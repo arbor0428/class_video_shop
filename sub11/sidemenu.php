@@ -3,7 +3,7 @@
 ?>
 
 <div class='sidemenu'>
-	<div class="bora c_w sideTit f22 bold2 dp_f dp_c dp_cc">나의 강의실</div>
+	<div class="bora c_w sideTit f22 bold2 dp_inline dp_c dp_cc">나의 강의실</div>
 	<ul class="sidemenu_list">
 		<li class="c_gry04 f14">HOME</li>
 		<li class='<?=$side[1]?>'><a href='/sub11/sub01.php'>맞춤 강좌</a></li>

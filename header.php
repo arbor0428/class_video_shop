@@ -1,5 +1,7 @@
 <?
 include "/home/edufim/www/module/login/head.php";
+include "/home/edufim/www/module/class/class.DbCon.php";
+include "/home/edufim/www/module/class/class.Msg.php";
 ?>
 <header class="blue_gradient c_w">
 	<div class="h_top bor_bot">

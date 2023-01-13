@@ -4,7 +4,7 @@
 ?>
 
 <div class='sidemenu sidemenu02'>
-	<a href="/sub01/allList.php" class="bora c_w sideTit f22 bold2 dp_f dp_c dp_cc" title="ALL클래스">ALL클래스</a>
+	<a href="/sub01/allList.php" class="bora c_w sideTit f22 bold2 dp_inline dp_c dp_cc" title="ALL클래스">ALL클래스</a>
 	<ul class="sidemenu_list">
 		<li class='<?=$side[1]?>'>
             <img src="/images/sub/arr_btn1.svg" alt="화살표">
