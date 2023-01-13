@@ -384,7 +384,8 @@ select.reason_reset {width: 200px; heignVdSlickBox_04_wrapht: 36px; border: 1px 
 .subWrap .class_dayamount_info li:last-child::after {margin: 0; display: none;}
 
 /*자격증 과정*/
-.subWrap .nVdSlickBox_04_wrap .nVdSlickBox {margin: 0 0 40px; width: 23%;}
+.subWrap .nVdSlickBox_04_wrap .nVdSlickBox {margin-right: 2.666%; margin-bottom: 40px; width: 23%;}
+.subWrap .nVdSlickBox_04_wrap .nVdSlickBox:nth-child(4n) {margin-right: 0;}
 .subWrap .nVdSlickBox_04_wrap .nVdSlickBox .imgWrap {height: 240px;}
 .subWrap .pin_box .choose_list_box li {margin-bottom: 10px;}
 .subWrap .pin_box .price_detail_box02 {margin-bottom: 25px;}
@@ -418,7 +419,8 @@ select.reason_reset {width: 200px; heignVdSlickBox_04_wrapht: 36px; border: 1px 
 .detail_cont_subcont.br_bot_gry .review_box .class_quest_reply_box .admin_user {margin-bottom: 15px; border-radius: 15px; padding: 5px 15px; font-size: 0.75rem;}
 
 /*이벤트*/
-.event_nVdSlickBox_wrap .nVdSlickBox {margin: 0 0 40px;}
+.event_nVdSlickBox_wrap .nVdSlickBox:nth-child(3n) {margin-right:0;}
+.event_nVdSlickBox_wrap .nVdSlickBox {margin-right: 2.666%; margin-bottom: 40px;}
 .event_nVdSlickBox_wrap .nVdSlickBox .imgWrap {height: 200px;}
 .event_nVdSlickBox_wrap .nVdSlickBox .imgWrap .time_show {display: inline-block; right: 10px; top: 10px; border-radius: 5px; padding: 3px;}
 .event_nVdSlickBox_wrap .nVdSlickBox .imgWrap .time_show span {margin: 0 2px; font-size: 10px;}

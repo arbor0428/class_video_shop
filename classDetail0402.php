@@ -9,11 +9,11 @@
 		<p class="c_bora01 bold2 txt-c classDetail_sub_tit">추천대상</p>
 		<div class="verti_line bora01"><!-- 선--></div>
 		<ul class="classDetail_box_wrap box_05 dp_sb dp_c">
-			<li class="dp_f dp_c dp_cc">① 건강향상이 목적이다.</li>
-			<li class="dp_f dp_c dp_cc">② 운동 시간이 불규칙하다.</li>
-			<li class="dp_f dp_c dp_cc">③ 전문화된 운동을 배우고싶다.</li>
-			<li class="dp_f dp_c dp_cc">④ 항상 몸이 뻐근하다.</li>
-			<li class="dp_f dp_c dp_cc">⑤ 체형 교정이 필요하다.</li>
+			<li class="dp_f dp_c dp_cc f14">① 건강향상이 목적이다.</li>
+			<li class="dp_f dp_c dp_cc f14">② 운동 시간이 불규칙하다.</li>
+			<li class="dp_f dp_c dp_cc f14">③ 전문화된 운동을 배우고싶다.</li>
+			<li class="dp_f dp_c dp_cc f14">④ 항상 몸이 뻐근하다.</li>
+			<li class="dp_f dp_c dp_cc f14">⑤ 체형 교정이 필요하다.</li>
 		</ul>
 		<div class="under_arrow dp_f dp_c dp_cc">
 			<img src="/images/classDetail_arr.png" alt="">

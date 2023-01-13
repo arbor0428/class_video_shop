@@ -5,7 +5,7 @@
 <div class="subWrap">
    <div class="s_center">
       <div class="bora c_w sideTit f22 bold2 dp_inline dp_c dp_cc">스토어</div>
-      <div class="dp_sb dp_wrap nVdSlickBox_04_wrap">
+      <div class="dp_f dp_wrap nVdSlickBox_04_wrap">
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
                <div class="imgWrap c_gry02 p_r">

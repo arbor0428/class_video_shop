@@ -1042,14 +1042,14 @@
 					</li>
 					<li>
 						<a class="classShowBtn" href="" title="" data-dp="0304">
-							<p class="c_w">시퀀스</p>
+							<p class="c_w">골프</p>
 							<span class="c_gry06">Sequence</span>
 							<div class="plus_btn dp_f dp_c dp_cc">+</div>
 						</a>
 					</li>
 					<li>
 						<a class="classShowBtn" href="" title="" data-dp="0305">
-							<p class="c_w">골프</p>
+							<p class="c_w">통증/재활</p>
 							<span class="c_gry06">Golf</span>
 							<div class="plus_btn dp_f dp_c dp_cc">+</div>
 						</a>

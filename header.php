@@ -2,6 +2,31 @@
 include "/home/edufim/www/module/login/head.php";
 include "/home/edufim/www/module/class/class.DbCon.php";
 include "/home/edufim/www/module/class/class.Msg.php";
+include '/home/edufim/www/module/popupoverlay.php';
+
+function isLogin()
+{
+	global $GBL_UID;
+	if ($GBL_UID) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function redirectLogin()
+{
+	Msg::goMsg("로그인이 필요한 서비스 입니다.", "/member/login.php");
+	// Msg::GblMsgBox("로그인이 필요한 서비스 입니다.", "location.href='/member/login.php'");
+	exit;
+}
+
+function deny()
+{
+	Msg::goNext('/');
+	exit;
+}
+
 ?>
 <header class="blue_gradient c_w">
 	<div class="h_top bor_bot">
@@ -26,10 +51,10 @@ include "/home/edufim/www/module/class/class.Msg.php";
 					<? if (!$GBL_EMAIL) { ?>
 						<li><a href="/member/signup.php" title="회원가입">회원가입</a></li>
 						<li><a href="/member/login.php" title="로그인">로그인</a></li>
-						<? } else { ?>
-							<li><a href="/module/login/logout_proc.php" title="로그인">로그아웃</a></li>
+					<? } else { ?>
+						<li><a href="/module/login/logout_proc.php" title="로그인">로그아웃</a></li>
+						<li><a href="" title="장바구니">장바구니</a></li>
 					<? } ?>
-					<li><a href="" title="장바구니">장바구니</a></li>
 				</ul>
 			</div>
 			<h1 class="logo txt-c"><a href="/" title="logo"><img src="/images/logo.svg" alt="logo"></a></h1>
@@ -54,7 +79,7 @@ include "/home/edufim/www/module/class/class.Msg.php";
 	<div class="h_bot">
 		<div class="c_center dp_sb">
 			<ul class="h_bot_menu dp_f">
-				<li><a class="dp_b bold" href="" title="ALL클래스">ALL클래스</a></li>
+				<li><a class="dp_b bold" href="/sub01/allList.php" title="ALL클래스">ALL클래스</a></li>
 				<li><a class="dp_b bold" href="" title="이벤트">이벤트</a></li>
 				<li><a class="dp_b bold" href="" title="자격증 과정">자격증 과정</a></li>
 				<li><a class="dp_b bold" href="" title="BEST 콜라보">BEST 콜라보</a></li>

@@ -24,7 +24,7 @@
 	<div class="sec">
 		<p class="c_bora01 bold2 txt-c classDetail_sub_tit">맞춤강좌</p>
 		<div class="verti_line bora01"><!-- 선--></div>
-		<ul class="classDetail_box_wrap box_03 dp_sb dp_c">
+		<ul class="classDetail_box_wrap box_02 dp_sb dp_c">
 			<li class="dp_f dp_c dp_cc">골프 피지오 필라테스 베이직</li>
 			<li class="dp_f dp_c dp_cc">골프 피지오 필라테스 어드벤스</li>
 		</ul>

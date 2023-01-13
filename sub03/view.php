@@ -435,7 +435,7 @@
         </div>
         <div class="detail_right">
             <div class="pin_box">
-                <p class="pin_box_tit bold2">체형분석 평가사</p>
+                <p class="pin_box_tit bold2">국제인증강사</p>
                 <p class="pin_box_det">요추/골반 [ 평가 + 운동처방 + 도수기법 ]</p>
                 
                 <ul class="choose_list_box price_detail_box">
