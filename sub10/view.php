@@ -238,34 +238,30 @@
         <div class="detail_right">
             <div class="pin_box" style="padding: 0;">
                 <div class="pin_box_scroll">
-                    <p class="pin_box_tit bold2">EMS 어깨 마사지기기</p>
+                    <p class="pin_box_tit bold2">필라테스 지도자과정 이론시험</p>
                     <p class="pin_box_det">NASA가 무중력 상태의 우주인 운동을 위해 만든 최첨단 건강의료가전 어깨 저주파 마사지기기</p>
                     <ul class="price_detail_box">
                         <li class="dp_sb dp_end">
                             <div class="bold2 f14">판매가</div>
                             <div class="bold2 txt-r f18"><span>360,000</span>원</div>
                         </li>
-                        <li class="dp_sb dp_end">
-                            <div class="bold2 f14">배송비</div>
-                            <div class="bold2 txt-r f14">무료배송</div>
-                        </li>
                         <li class="dp_sb dp_c">
-                            <div class="bold2 f14">판매가</div>
+                            <div class="bold2 f14">옵션선택</div>
                             <div>
                                 <select name="" id="">
                                     <option value="">[필수] 옵션을 선택해주세요.</option>
-                                    <option value="">남성용 L 사이즈</option>
-                                    <option value="">여성용 M 사이즈</option>
+                                    <option value="">필라테스 지도자과정 이론시험</option>
+                                    <option value="">필라테스 지도자과정 이론시험</option>
                                 </select>
                             </div>
                         </li>
                     </ul>
                     
-                    <div class="selected_option_wrap">
+<!--                     <div class="selected_option_wrap">
                         <div class="selected_option gry02">
                             <div class="p_r">
                                 <a class="selected_option_close p_a" href="" title="닫기"><img src="/images/sub/price_x_icon.svg" alt=""></a>
-                                <p class="bold2 f14 m_05">EMS 어깨 마사지기기</p>
+                                <p class="bold2 f14 m_05">필라테스 지도자과정 이론시험</p>
                                 <div class="dp_sb">
                                     <span class="c_gry04 f12">남성용 L 사이즈</span>
                                     <span class="c_bora01 bold2 f12">360,000</span>
@@ -280,7 +276,7 @@
                         <div class="selected_option gry02">
                             <div class="p_r">
                                 <a class="selected_option_close p_a" href="" title="닫기"><img src="/images/sub/price_x_icon.svg" alt=""></a>
-                                <p class="bold2 f14 m_05">EMS 어깨 마사지기기</p>
+                                <p class="bold2 f14 m_05">필라테스 지도자과정 이론시험</p>
                                 <div class="dp_sb">
                                     <span class="c_gry04 f12">여성용 M 사이즈</span>
                                     <span class="c_bora01 bold2 f12">360,000</span>
@@ -292,7 +288,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <div class="total_price_wrap dp_sb dp_end">
                         <p class="c_bora01 bold2 f14">총 금액</p>
@@ -328,6 +324,7 @@
             auto: false
         });
     });
+
     $('.pin_two_btn:nth-child(1)').click(function(event){
         event.preventDefault();
         $(this).children('.like_toggle').toggleClass("on");
@@ -336,9 +333,11 @@
 </script>
 <style>
     .bx-wrapper {
-        width: 665px;
+        width: 644px;
         margin-bottom: 30px;
         box-shadow: none;
+        border-radius: 4px;
+		overflow:hidden;
         border: none;
     }
     .bx-wrapper .bx-next {

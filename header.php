@@ -80,15 +80,15 @@ function deny()
 		<div class="c_center dp_sb">
 			<ul class="h_bot_menu dp_f">
 				<li><a class="dp_b bold" href="/sub01/allList.php" title="ALL클래스">ALL클래스</a></li>
-				<li><a class="dp_b bold" href="" title="이벤트">이벤트</a></li>
-				<li><a class="dp_b bold" href="" title="자격증 과정">자격증 과정</a></li>
-				<li><a class="dp_b bold" href="" title="BEST 콜라보">BEST 콜라보</a></li>
-				<li><a class="dp_b bold" href="" title="대면강의">대면강의</a></li>
-				<li><a class="dp_b bold" href="" title="홈트">홈트</a></li>
-				<li><a class="dp_b bold" href="" title="스토어">스토어</a></li>
-				<li><a class="dp_b bold" href="" title="강의 후기">강의 후기</a></li>
-				<li><a class="dp_b bold" href="" title="자격증시험응시">자격증시험응시</a></li>
-				<li><a class="dp_b bold" href="" title="Q&A">Q&A</a></li>
+				<li><a class="dp_b bold" href="/sub02/" title="이벤트">이벤트</a></li>
+				<li><a class="dp_b bold" href="/sub03/" title="자격증 과정">자격증 과정</a></li>
+				<li><a class="dp_b bold" href="/sub04/" title="BEST 콜라보">BEST 콜라보</a></li>
+				<li><a class="dp_b bold" href="/sub05/" title="대면강의">대면강의</a></li>
+				<li><a class="dp_b bold" href="/sub06/" title="홈트">홈트</a></li>
+				<li><a class="dp_b bold" href="/sub07/" title="스토어">스토어</a></li>
+				<li><a class="dp_b bold" href="/sub08/" title="강의 후기">강의 후기</a></li>
+				<li><a class="dp_b bold" href="/sub09/" title="자격증시험응시">자격증시험응시</a></li>
+				<li><a class="dp_b bold" href="/sub10/" title="Q&A">Q&A</a></li>
 			</ul>
 			<a class="classBtn bora dp_f dp_c dp_cc c_w" href="/sub11/sub01.php" title="나의 강의실">나의 강의실</a>
 		</div>
@@ -404,7 +404,7 @@ function deny()
 					</div>
 				</div>
 				<div class="depthbox" style="height: 160px;">
-					<div class="dp_f hght100">
+					<!-- <div class="dp_f hght100">
 						<div class="boraMenuTit bora c_w dp_f dp_end02">
 							<p class="dp_f dp_c">
 								강의 후기
@@ -428,7 +428,7 @@ function deny()
 								</ul>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 				<div class="depthbox" style="height: 160px;">
 					<div class="dp_f hght100">
@@ -472,17 +472,17 @@ function deny()
 						<ul class="boraMenuCont dp_f">
 							<li>
 								<ul class="b_menu">
-									<li><a href="" title="하위메뉴">하위메뉴</a></li>
+									<li><a href="/sub10/sub01.php" title="공지사항">공지사항</a></li>
 								</ul>
 							</li>
 							<li>
 								<ul class="b_menu">
-									<li><a href="" title="하위메뉴">하위메뉴</a></li>
+									<li><a href="/sub10/sub02.php" title="창업문의">창업문의</a></li>
 								</ul>
 							</li>
 							<li>
 								<ul class="b_menu">
-									<li><a href="" title="하위메뉴">하위메뉴</a></li>
+									<li><a href="/sub10/sub03.php" title="지부문의">지부문의</a></li>
 								</ul>
 							</li>
 						</ul>

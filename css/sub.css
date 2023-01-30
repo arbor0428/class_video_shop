@@ -51,7 +51,9 @@
 .numWrap .num {margin: 0 5px; width: 30px; height: 30px; border-radius: 5px;}
 .numWrap .num.on {background-color: #BC00FF; color: #fff;}
 
-.subWrap .detail_cont {width: 800px;}
+.subWrap .detail_cont {width: 800px; padding: 0 10px; box-sizing: border-box;}
+.subWrap .detail_cont .detail_sum img {width: 100%;}
+.subWrap .detail_cont .event_detail img {width: 100%;}
 .subWrap .detail_cont .detail_sum {border-radius: 5px; overflow: hidden; margin: 24px 0 40px 0;}
 .subWrap .detail_right {margin: 24px 0 0 0;}
 .subWrap .pin_box {padding: 30px 24px; width: 375px; border-radius: 0px 0px 5px 5px; border:1px solid #E9E9E9; box-sizing: border-box;}
@@ -108,7 +110,8 @@
 .selectwrap select {height: 36px; border: 1px solid #C8C8C8; border-radius: 5px;}
 .selectwrap.wid500 select {width: 500px;}
 .selectwrap.wid400 select {width: 400px;}
-.subWrap .nVdSlickBox {margin: 0 0 20px; width: 31.333%;}
+.subWrap .nVdSlickBox {margin-bottom: 20px; margin-right: 2.666%; width: 31.333%;}
+.subWrap .nVdSlickBox:nth-child(3n) {margin-right: 0;}
 .subWrap .nVdSlickBox .nVdCont .nVdBot {border-top: 1px solid #EFEFEF;}
 .subWrap .nVdSlickBox .nVdCont .clickicon li span {color: #bcbcbc;}
 .class_videoList_wrap .class_videoCont {padding-bottom: 15px; border-bottom: 1px solid #efefef;}
@@ -184,7 +187,7 @@
 /*강좌 바구니*/
 .tableWrap .subTbl02 {width: 100%; table-layout: fixed;}
 .tableWrap .subTbl tr td.nopadd {padding:0 !important;}
-.tableWrap .subTbl td .imgWrap {width: 150px; height: 80px; border-radius: 5px;}
+.tableWrap .subTbl td .imgWrap {width: 150px; height: 80px; border-radius: 5px; overflow:hidden;}
 .tableWrap .subTbl .cart_tit {width: calc(100% - 150px);}
 .tableWrap .subTbl .cart_tit01 {margin-bottom: 3px;} 
 .tableWrap .subTbl .trDelBtn {position: absolute; top: 15px; right: 0;}
@@ -288,7 +291,8 @@
 .couTabWrap .couTabCont {display: none; padding-top: 20px;}
 .couTabWrap .couTabCont:nth-child(1) {display: block;}
 .couTabWrap .couTabCont .noCouponWrap {padding-top: 139px;}
-.couTabWrap .couTabCont .couponUseBox {position: relative; margin-bottom: 35px; height: 150px; border-radius: 10px; overflow:hidden; width: 31.333%; border: 1px solid #EFEFEF; box-sizing: border-box;}
+.couTabWrap .couTabCont .couponUseBox {position: relative; margin-bottom: 35px; height: 150px; border-radius: 10px; overflow:hidden; margin-right: 2.666%; width: 31.333%; border: 1px solid #EFEFEF; box-sizing: border-box;}
+.couTabWrap .couTabCont .couponUseBox:nth-child(3n) {margin-right: 0;}
 .couTabWrap .couTabCont .couponUseBox .couponUse {height: calc(100% - 42px); padding: 10px; box-sizing: border-box;}
 .couTabWrap .couTabCont .couponUseBox .couponUse .cc_tit {margin-top: 5px;}
 .couTabWrap .couTabCont .couponUseBox .botText {height: 42px;}
@@ -353,6 +357,22 @@
 .personal_row .personal_det {width: 85%; font-size: 0.875rem;}
 .personal_row .personal_det input,
 .personal_row .personal_det select {box-sizing: border-box; width: 240px; height: 40px; border-radius: 3px; border: 1px solid #EFEFEF; font-size: 0.875rem;}
+.personal_row .personal_det .interest_radio_wrap input {
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+	appearance: none;
+	border: 1px solid #EFEFEF;
+	border-radius: 50%;
+	padding: 0;
+}
+.personal_row .personal_det .interest_radio_wrap input:checked {
+	border: 4px solid #BC00FF;
+}
+  
+.personal_row .personal_det .interest_radio_wrap label {
+	margin-right: 20px;
+}
 .s_label {margin-left: 10px;}
 .s_label img {margin: 4px 5px 0 0;}
 .addSubtbl tr.addr_tr_det {height: 84px;}
@@ -362,7 +382,7 @@
 .twoBtn02Wrap a.bora01 {border:1px solid #BC00FF; color: #fff !important;}
 .mobile_resetWrap li {margin-bottom: 5px;}
 .mobile_resetWrap li:before {content: "-"; margin-right: 10px;}
-select.reason_reset {width: 200px; heignVdSlickBox_04_wrapht: 36px; border: 1px solid #EFEFEF; border-radius: 5px; color: #949494; font-size: 0.875rem;}
+select.reason_reset {width: 200px; height: 36px; border: 1px solid #EFEFEF; border-radius: 5px; color: #949494; font-size: 0.875rem;}
 .resetBtn {margin: 50px auto 0; width: 240px; height: 50px; border-radius: 5px;}
 .mustInput {display: block; margin-left: 5px; color: #BC00FF; font-size: 0.875rem; font-weight: 700;}
 .form_row_wrap .row {margin-bottom: 10px;}
@@ -387,6 +407,7 @@ select.reason_reset {width: 200px; heignVdSlickBox_04_wrapht: 36px; border: 1px 
 .subWrap .nVdSlickBox_04_wrap .nVdSlickBox {margin-right: 2.666%; margin-bottom: 40px; width: 23%;}
 .subWrap .nVdSlickBox_04_wrap .nVdSlickBox:nth-child(4n) {margin-right: 0;}
 .subWrap .nVdSlickBox_04_wrap .nVdSlickBox .imgWrap {height: 240px;}
+.subWrap .nVdSlickBox_04_wrap.hght150 .nVdSlickBox .imgWrap {height: 150px;}
 .subWrap .pin_box .choose_list_box li {margin-bottom: 10px;}
 .subWrap .pin_box .price_detail_box02 {margin-bottom: 25px;}
 .subWrap .pin_box .price_detail_box02 li .discount_label {margin-left: 3px; padding: 2px 8px; border-radius: 16px;}
@@ -401,9 +422,7 @@ select.reason_reset {width: 200px; heignVdSlickBox_04_wrapht: 36px; border: 1px 
 .detail_cont_scroll {padding-bottom: 150px; box-sizing: border-box; margin: 24px 0 0 0; height: calc(100vh - 279px); overflow-y: auto;}
 .detail_cont_scroll::-webkit-scrollbar{width:6px;height:6px;background-color:#e1e1e1} /* 스크롤 바 전체 너비 */
 .detail_cont_scroll::-webkit-scrollbar-thumb {background-color: #888; border-radius: 3px;}
-.now_class_status_play.on .ncsp_timeline {display: inline-block;}
 .now_class_status_play  .ncsp_timeline {display: none;}
-.now_class_status_play.on .ncsp_yet {display: none;}
 .now_class_status_play  .ncsp_yet {display: inline-block;}
 .detail_cont_scroll_tit {margin-bottom: 10px; font-size:1.75rem;}
 .detail_cont_scroll_sub_tit {margin-bottom: 10px; font-size:1.250rem;} 
@@ -419,6 +438,7 @@ select.reason_reset {width: 200px; heignVdSlickBox_04_wrapht: 36px; border: 1px 
 .detail_cont_subcont.br_bot_gry .review_box .class_quest_reply_box .admin_user {margin-bottom: 15px; border-radius: 15px; padding: 5px 15px; font-size: 0.75rem;}
 
 /*이벤트*/
+
 .event_nVdSlickBox_wrap .nVdSlickBox:nth-child(3n) {margin-right:0;}
 .event_nVdSlickBox_wrap .nVdSlickBox {margin-right: 2.666%; margin-bottom: 40px;}
 .event_nVdSlickBox_wrap .nVdSlickBox .imgWrap {height: 200px;}
@@ -431,7 +451,8 @@ select.reason_reset {width: 200px; heignVdSlickBox_04_wrapht: 36px; border: 1px 
 .detail_cont_sub_tit.dp_sb {padding-bottom: 0;}
 .detail_cont_sub_tit > span{border-radius: 3px 3px 0px 0px; box-sizing: border-box; padding: 5px 10px; font-size:1.250rem;}
 .pin_box .pin_two_btn_wrap .pin_two_btn {width: 48%; height: 50px; box-sizing: border-box; border: 1px solid #000; border-radius: 5px; font-size: 0.875rem;}
-.pin_box .pin_two_btn_wrap .pin_two_btn img {margin-right: 4px;}
+.pin_box .pin_two_btn_wrap .pin_two_btn .like_toggle {width: 18px; height: 16px; margin-right: 4px; background-position: center center; background-size: cover; background-repeat: no-repeat; background-image: url('/images/sub/like_blk.svg');}
+.pin_box .pin_two_btn_wrap .pin_two_btn .like_toggle.on {background-image: url('../images/like_on.svg');}
 .detail_right .price_detail_box {margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #E9E9E9;}
 .detail_right .price_detail_box li {margin-bottom: 15px;}
 .detail_right .price_detail_box li select {height: 36px; border: 1px solid #E9E9E9; font-size: 0.875rem;}
@@ -473,4 +494,68 @@ select.reason_reset {width: 200px; heignVdSlickBox_04_wrapht: 36px; border: 1px 
 
 
 /*강의후기 페이지*/
-.sub08_01_review_wrap .review_box_wrap .review_box {display: block;}
+.sub08_01_review_wrap {padding: 100px 0; background-color: #FAF8FA;}
+.sub08_01_review_wrap .review_box_wrap .review_box {padding: 25px; box-sizing: border-box; margin-bottom: 20px; border-radius: 5px; display: block; background-color: #fff; border:1px solid #EFEFEF;}
+
+.sub08_01_review_wrap .review_box_wrap .review_box .best_chk {padding: 1px 10px; border-radius: 3px; }
+.sub08_01_review_wrap .top_chk_line {margin-bottom: 15px;}
+.sub08_01_review_wrap .top_chk_line .top_chk_line_nm {margin: 0 0 0 10px;}
+.sub08_01_review_wrap .top_chk_line .top_chk_line_nm:after {display: block; content: ""; margin: 0 10px; width: 1px; height: 13px; background-color: #C8C8C8;}
+.sub08_01_review_wrap .bnrprevBtn,
+.sub08_01_review_wrap .bnrnextBtn {
+	cursor: pointer;
+}
+.swiper-container03 {margin:50px auto 100px; width: 1200px; height: 526px; overflow: hidden;}
+.swiper-container03 .swiper-slide {position: relative; width: 1000px; height: 562px; background-position: center center; background-repeat: no-repeat; background-size: cover;}
+.swiper-container03 .swiper-slide .playBtn {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.swiper-container03 .swiper-slide-active {
+    background: #fff;
+}
+.swiper-container03 .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  transform: translate3d(0, 0, 0);
+
+}
+.swiper-container03 .swiper-slide-active img {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+  transform: translate3d(0, 0, 0);
+}
+
+.swiper-container03 .swiper-button-next::after,
+.swiper-container03 .swiper-button-prev::after {
+	content: "";
+  }
+.swiper-container03 .swiper-button-next {
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+	background-image: url("/images/sub/class_right_btn.png");
+  }
+.swiper-container03 .swiper-button-next:hover {
+	background-image: url("/images/sub/class_right_btn.png");
+  }
+.swiper-container03 .swiper-button-prev {
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+	background-image: url("/images/sub/class_left_btn.png");
+  }
+.swiper-container03 .swiper-button-prev:hover {
+	background-image: url("/images/sub/class_left_btn.png");
+  }
+.swiper-container03 .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left,rgba(255,255,255,.5),rgba(255,255,255,0)) !important;
+}
+.swiper-container03 .swiper-slide-shadow-right {
+    background-image: linear-gradient(to right,rgba(255,255,255,.5),rgba(255,255,255,0)) !important;
+}

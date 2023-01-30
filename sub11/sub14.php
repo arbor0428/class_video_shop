@@ -36,21 +36,12 @@ $side_menu = 14;
 				</div>
 				<div class="personal_row dp_f dp_c">
 					<div class="personal_tit dp_f">성 명<span class="mustInput">*</span></div>
-					<div class="personal_det dp_f dp_c"><?= $row['name'] ?></div>
+					<div class="personal_det dp_f dp_c"><input type="text" value="<?= $row['name'] ?>" style="color: #000;"></div>
 				</div>
 				<div class="personal_row dp_f dp_c">
 					<div class="personal_tit">성 별</div>
 					<div class="personal_det dp_f dp_c">
 						남자
-					</div>
-				</div>
-				<div class="personal_row dp_f dp_c">
-					<div class="personal_tit dp_f">직 업<span class="mustInput">*</span></div>
-					<div class="personal_det dp_f dp_c">
-						<select name="" id="">
-							<?= $row['option01'] ?>
-							<option value="">직업을 선택해주세요.</option>
-						</select>
 					</div>
 				</div>
 				<div class="personal_row dp_f dp_c">
@@ -63,11 +54,74 @@ $side_menu = 14;
 						</div>
 					</div>
 				</div>
+				<div class="personal_row dp_f dp_c">
+					<div class="personal_tit dp_f">직 업<span class="mustInput">*</span></div>
+					<div class="personal_det dp_f dp_c">
+						<select name="" id="">
+							<?= $row['option01'] ?>
+							<option value="">직업을 선택해주세요.</option>
+						</select>
+					</div>
+				</div>
+				<div class="personal_row dp_f dp_c">
+					<div class="personal_tit dp_f">관심분야</div>
+					<div class="personal_det">
+						<div class="interest_radio_wrap dp_f dp_c">
+							<label for="interest01">
+								<input type="radio" id="interest01" name="interest">
+								운동
+							</label>
+							<label for="interest02">
+								<input type="radio" id="interest02" name="interest">
+								도수
+							</label>
+							<label for="interest03">
+								<input type="radio" id="interest03" name="interest">
+								필라테스
+							</label>
+							<label for="interest04">
+								<input type="radio" id="interest04" name="interest">
+								골프
+							</label>
+							<label for="interest05">
+								<input type="radio" id="interest05" name="interest">
+								기타
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="personal_row dp_f dp_c">
+					<div class="personal_tit dp_f">가입경로</div>
+					<div class="personal_det">
+						<div class="interest_radio_wrap dp_f dp_c">
+							<label for="join_way01">
+								<input type="radio" id="join_way01" name="join_way">
+								검색
+							</label>
+							<label for="join_way02">
+								<input type="radio" id="join_way02" name="join_way">
+								SNS
+							</label>
+							<label for="join_way03">
+								<input type="radio" id="join_way03" name="join_way">
+								카페
+							</label>
+							<label for="join_way04">
+								<input type="radio" id="join_way04" name="join_way">
+								블로그
+							</label>
+							<label for="join_way05">
+								<input type="radio" id="join_way05" name="join_way">
+								기타
+							</label>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="addr_Info m-60">
 				<div class="dp_sb dp_c dp_end m_10">
 					<p class="s_edit_tit f18 bold2">배송지 수정</p>
-					<a class="c_bora01 f12 bold2 newAddrBtn" href="" title="">신규 배송지 추가+</a>
+					<a class="c_bora01 f12 bold2 newAddrBtn" href="" title="">신규 배송지 추가&nbsp;&nbsp;+</a>
 				</div>
 				<div class="tableWrap">
 					<table class="subTbl addSubtbl">

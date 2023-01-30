@@ -17,7 +17,7 @@
 					<a class="searchBtn bora01 c_w dp_f dp_c dp_cc" href="" title="검색">검색</a>
 				</div>
 			</div>
-			<div class="dp_sb dp_wrap">
+			<div class="dp_f dp_wrap">
 				<div class="nVdSlickBox">
 					<a href="" title="">
 						<div class="imgWrap c_gry02 p_r">

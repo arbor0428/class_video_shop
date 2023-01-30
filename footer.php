@@ -1,4 +1,4 @@
-		<div class="fixBtnWrap">
+<div class="fixBtnWrap">
 			<div class="mediaWrap dp_f dp_fc">
 				<div class="mediaOpenBtn bora"></div>
 				<ul class="mediaToggle dp_f dp_fc">
@@ -58,7 +58,7 @@
 					<img src="/images/custMedal.png" alt="">
 					<p class="yelloTit bold2">2021 대한민국 고객만족지수 1위 교육(재활치료, 필라테스) 부문 수상</p>
 					<p class="f_top01_det">지속적인 서비스 품질개선에 적극 반영하여 더 좋은 교육 컨텐츠로 보답하겠습니다.</p>
-					<a class="startBtn dp_f dp_c dp_cc bold2" href="" title="">에듀핌 시작하기</a>
+					<a class="startBtn dp_f dp_c dp_cc bold2" href="/member/signup.php" title="">에듀핌 시작하기</a>
 				</div>
 			</div>
 			<div class="f_top02 bor_bot">
@@ -115,7 +115,7 @@
 			<div class="f_bot01 bor_bot">
 				<div class="c_center dp_sb dp_c">
 					<ul class="f_bot01_menu dp_f">
-						<li><a href="" title="">회사소개</a></li>
+						<li><a href="https://edufim.co.kr/" target='_blank' title="">회사소개</a></li>
 						<li><a href="" title="">이용약관</a></li>
 						<li><a href="" title="">개인정보처리방침</a></li>
 					</ul>
@@ -134,30 +134,28 @@
 						<div class="f_bot02_left">
 							<div class="dp_f">
 								<ul class="companyList dp_f">
-									<li>주식회사 에듀핌</li>
-									<li>대표자 : 김철원</li>
-								</ul>
-								<ul class="companyList dp_f">
-									<li>Tel : 010-3968-9609</li>
-									<li>E-mail : fim2021@naver.com</li>
+									<li class="dp_f dp_c">주식회사 에듀핌</li>
+									<li class="dp_f dp_c">대표자 : 김철원</li>
+									<li class="dp_f dp_c">Tel : 010-3968-9609</li>
+									<li class="dp_f dp_c">E-mail : fim2021@naver.com</li>
 								</ul>
 							</div>
 							<p class="addr">경기도 고양시 덕양구 중앙로 442, 4층 402호(행신동, 아성프라자)</p>
 							<ul class="dp_f companyList">
-								<li>사업자등록번호 : 640-86-02251</li>
-								<li>통신판매신고번호 : 2021-고양덕양구-1375</li>
+								<li class="dp_f dp_c">사업자등록번호 : 640-86-02251</li>
+								<li class="dp_f dp_c">통신판매신고번호 : 2021-고양덕양구-1375</li>
 							</ul>
 						</div>
 						<div class="f_bot02_right">
 							<ul class="f_bot02_menu">
 								<li>
-									<a href="" title="공지사항">공지사항</a>
+									<a href="/sub10/sub01.php" title="공지사항">공지사항</a>
 								</li>
 								<li>
-									<a href="" title="창업문의">창업문의</a>
+									<a href="/sub10/sub02.php" title="창업문의">창업문의</a>
 								</li>
 								<li>
-									<a href="" title="지부문의">지부문의</a>
+									<a href="/sub10/sub03.php" title="지부문의">지부문의</a>
 								</li>
 							</ul>
 						</div>
@@ -169,7 +167,7 @@
 
 		<?
 		//팝업 모달창
-		include '/home/edufim/www/module/popupoverlay.php';
+		include './module/popupoverlay.php';
 		?>
 
 		<script>

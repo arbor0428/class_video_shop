@@ -26,7 +26,7 @@
 
         <!----->
         <div class="all_list_wrap">
-            <div class="dp_sb dp_wrap">
+            <div class="dp_f dp_wrap">
                 <div class="nVdSlickBox">
                     <a href="./view.php" title="">
                         <div class="imgWrap c_gry02 p_r">

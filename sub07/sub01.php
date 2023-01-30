@@ -8,7 +8,7 @@
       <div class="dp_f dp_wrap nVdSlickBox_04_wrap">
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -36,7 +36,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -64,7 +64,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -92,7 +92,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -120,7 +120,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -148,7 +148,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -176,7 +176,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -204,7 +204,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -232,7 +232,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -260,7 +260,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -288,7 +288,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>
@@ -316,7 +316,7 @@
          </div>
          <div class="nVdSlickBox">
             <a href="./view.php" title="">
-               <div class="imgWrap c_gry02 p_r">
+               <div class="imgWrap c_gry02 p_r" style="background-image:url('../images/sum_2023_02.png');">
                   <button type="button" title="관심" class="likeMark"></button>
                   <img src="" alt="">
                </div>

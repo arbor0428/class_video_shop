@@ -26,7 +26,7 @@
                 <span class="f18 bold2 dp_f dp_c line">체형분석 전문가</span>
                 <span class="f18 bold2 c_bora01">하위메뉴</span>
             </div>
-            <div class="dp_sb dp_wrap">
+            <div class="dp_f dp_wrap">
                 <div class="nVdSlickBox">
                     <a href="" title="">
                         <div class="imgWrap c_gry02 p_r">
@@ -127,7 +127,7 @@
                 <span class="f18 bold2 dp_f dp_c line">체형분석 전문가</span>
                 <span class="f18 bold2 c_bora01">하위메뉴</span>
             </div>
-            <div class="dp_sb dp_wrap">
+            <div class="dp_f dp_wrap">
                 <div class="nVdSlickBox">
                     <a href="" title="">
                         <div class="imgWrap c_gry02 p_r">
@@ -228,7 +228,7 @@
                 <span class="f18 bold2 dp_f dp_c line">체형분석 전문가</span>
                 <span class="f18 bold2 c_bora01">하위메뉴</span>
             </div>
-            <div class="dp_sb dp_wrap">
+            <div class="dp_f dp_wrap">
                 <div class="nVdSlickBox">
                     <a href="" title="">
                         <div class="imgWrap c_gry02 p_r">

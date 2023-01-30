@@ -27,7 +27,7 @@
 			<div class="s_cont_tit02 dp_f dp_c">
 				<span class="f18 bold2 c_bora01">하위메뉴</span>
 			</div>
-			<div class="dp_sb dp_wrap">
+			<div class="dp_f dp_wrap">
 				<div class="nVdSlickBox">
 					<a href="./view.php" title="">
 						<div class="imgWrap c_gry02 p_r">
@@ -127,7 +127,7 @@
 			<div class="s_cont_tit02 dp_f dp_c">
 				<span class="f18 bold2 c_bora01">하위메뉴</span>
 			</div>
-			<div class="dp_sb dp_wrap">
+			<div class="dp_f dp_wrap">
 				<div class="nVdSlickBox">
 					<a href="./view.php" title="">
 						<div class="imgWrap c_gry02 p_r">
@@ -227,7 +227,7 @@
 			<div class="s_cont_tit02 dp_f dp_c">
 				<span class="f18 bold2 c_bora01">하위메뉴</span>
 			</div>
-			<div class="dp_sb dp_wrap">
+			<div class="dp_f dp_wrap">
 				<div class="nVdSlickBox">
 					<a href="./view.php" title="">
 						<div class="imgWrap c_gry02 p_r">

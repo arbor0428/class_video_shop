@@ -475,7 +475,7 @@
                 <a class="pin_box_btn dp_f dp_c dp_cc bora01 c_w bold2" href="" title="">구매하기</a>
                 <div class="pin_two_btn_wrap dp_sb dp_c">
                     <a class="pin_two_btn dp_f dp_c dp_cc bold2" href="" title="">
-                        <img src="/images/sub/like_blk.svg" alt="하트">
+                        <div class="like_toggle"></div>
                         <span>찜하기</span>
                     </a>
                     <a class="pin_two_btn dp_f dp_c dp_cc bold2" href="" title="">
@@ -487,7 +487,13 @@
         </div>
     </div>
 </div>
+<script>
+    $('.pin_two_btn:nth-child(1)').click(function(event){
+        event.preventDefault();
+        $(this).children('.like_toggle').toggleClass("on");
 
+    });
+</script>
 <?
 	include '../footer.php';
 ?>

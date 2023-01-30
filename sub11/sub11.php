@@ -50,7 +50,7 @@
 						</div> -->
 
 						<!--보유 쿠폰이 있을 때 뜨는 페이지-->
-						<div class="dp_sb dp_wrap">
+						<div class="dp_f dp_wrap">
 							<div class="couponUseBox dp_sb dp_fc">
 								<div class="couponUse dp_sb dp_fc">
 									<div>
@@ -68,7 +68,7 @@
 
 					</div>
 					<div class="couTabCont">
-						<div class="dp_sb dp_wrap">
+						<div class="dp_f dp_wrap">
 							<div class="couponUseBox dp_sb dp_fc">
 								<div class="couponUse dp_sb dp_fc">
 									<div>
@@ -85,7 +85,7 @@
 						</div>
 					</div>
 					<div class="couTabCont">
-						<div class="dp_sb dp_wrap">
+						<div class="dp_f dp_wrap">
 							<div class="couponUseBox dp_sb dp_fc used">
 								<div class="couponUse dp_sb dp_fc">
 									<div>
@@ -167,7 +167,7 @@
 						</div>
 					</div>
 					<div class="couTabCont">
-						<div class="dp_sb dp_wrap">
+						<div class="dp_f dp_wrap">
 							<div class="couponUseBox dp_sb dp_fc">
 								<div class="couponUse dp_sb dp_fc">
 									<div>
