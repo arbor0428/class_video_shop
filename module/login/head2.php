@@ -38,14 +38,16 @@ $ver = 20230101;
 	<?
 	include "/home/edufim/www/module/login/metaTag.php";
 	?>
+
 	<link rel="stylesheet" type="text/css" href="/css/reset.css?ver=<?= $ver ?>">
 	<link rel="stylesheet" type="text/css" href="/css/style.css?ver=<?= $ver ?>">
 	<link rel="stylesheet" type="text/css" href="/css/sub.css?ver=<?= $ver ?>">
 	<link rel="stylesheet" type="text/css" href="/css/member.css?ver=<?= $ver ?>">
 	<link rel="stylesheet" type="text/css" href="/css/mediaquery.css?ver=<?= $ver ?>">
-
+<!-- 
 	<link rel="stylesheet" type="text/css" href="/common/adm/css/style.css?v=<?= $ver ?>">
-	<link rel="stylesheet" type="text/css" href="/common/adm/css/button.css?v=<?= $csv ?>">
+	<link rel="stylesheet" type="text/css" href="/common/adm/css/button.css?v=<?= $csv ?>"> -->
+	
 	<link rel="stylesheet" type="text/css" href="/common/vendor/fontawesome-free/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="/common/vendor/datatables/dataTables.bootstrap4.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
@@ -96,6 +98,7 @@ $ver = 20230101;
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 
 	<!-- swiper -->
+	<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css" />
 

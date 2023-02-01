@@ -139,10 +139,21 @@ h3 {font-size:1.875rem;}
 .cont3 .curri_slick {margin-bottom: 74px;}
 .cont3 .curri_slick .curri_box {padding: 55px 0; box-sizing:border-box; height: 175px; border-radius: 8px; background-color: #fff;}
 .cont3 .curri_slick .curri_moreBtn {margin: 8px auto; border-radius: 18px; width: 102px; height: 31px;}
-.cont3 .rcmtSlick .rcmt_box {padding: 40px 0; width: 23%; border-radius: 10px; background-color: #fff; color: #000;}
+.cont3 .rcmtSlick .rcmt_box {padding: 40px 0; min-height: 280px; box-sizing:border-box; width: 23%; border-radius: 10px; background-color: #fff; color: #000;}
 .cont3 .rcmtSlick .rcmt_box .rcmt_tit {margin-bottom: 30px; color: #222; font-size:1.250rem; text-align: center;}
 .cont3 .rcmtSlick .rcmt_box .nameCirBox {margin: 0 auto 30px; width: 140px; height: 30px; border-radius: 18px; background-color: #002250; color: #fff; font-size:0.938rem;}
-.cont3 .rcmtSlick .rcmt_box .reviewTxt {font-size:0.938rem; line-height: 1.8; text-align: center;}
+.cont3 .rcmtSlick .rcmt_box .reviewTxt {
+	padding: 0 10px;
+	box-sizing:border-box;
+	text-overflow: ellipsis;
+	overflow: hidden;
+     display: -webkit-box;
+   -webkit-line-clamp: 3; 
+   -webkit-box-orient: vertical;
+	font-size:0.938rem; 
+	line-height: 1.8; 
+	text-align: center;
+ }
 .cont3 .rvdoSlick {margin: 20px 0 70px 0;}
 .cont3 .rvdo_box {position: relative; border-radius: 10px; width: 31.333%; height: 250px; overflow: hidden; background-color: #efefef;}
 
@@ -160,8 +171,18 @@ h3 {font-size:1.875rem;}
 .cont3 .hashTabCont > .tabBox .curricul_list li {padding: 33px 0; border-radius: 8px; box-sizing: border-box; border:1px solid #fff;}
 .cont3 .hashTabCont > .tabBox .curricul_list li > a {text-align: center;}
 .cont3 .hashTabCont > .tabBox .curricul_list li span {display: block; margin: 3px 0 10px 0; font-size: 0.875rem;}
-.cont3 .hashTabCont > .tabBox .curricul_list li .plus_btn {margin: 3px auto 0; padding: 0 1px 1px 0px; box-sizing: border-box; border-radius: 50%; width: 20px; height: 20px; font-size: 0.875rem; border:1px solid #fff; transition: all 0.3s;}
-.cont3 .hashTabCont > .tabBox .curricul_list li:hover .plus_btn {background-color: #BC00FF; color: #fff; border:1px solid #BC00FF;}
+.cont3 .hashTabCont > .tabBox .curricul_list li .plus_btn {
+	margin: 3px auto 0; 
+	width: 20px; 
+	height: 20px; 
+	font-size: 0.875rem; 
+	transition: all 0.3s;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("../images/ai_plusbtn_off.svg");
+}
+.cont3 .hashTabCont > .tabBox .curricul_list li:hover .plus_btn {background-image: url("../images/ai_plusbtn_on.svg");}
 .cont3 .hashTabCont > .tabBox .curricul_list.box_06 li {width: 14.666%;}
 .cont3 .hashTabCont > .tabBox .curricul_list.box_05 li {width: 18%;}
 .cont3 .hashTabCont > .tabBox .curricul_list.box_02 li {width: 48%;}
@@ -226,7 +247,7 @@ h3 {font-size:1.875rem;}
 .cont3 .tabCont04  .tabBox:nth-child(1) {display: block;}
 
 
-.classDetail_wrap .classDetail_tit {margin: 0 auto 20px; max-width: 148px; padding: 15px 30px; border-radius: 34px; font-size:1.5rem;}
+.classDetail_wrap .classDetail_tit {margin: 0 auto 20px; max-width: 148px; padding: 15px 30px; border-radius: 34px; font-size:1.5rem; font-weight: 700;}
 .classDetail_wrap .sec:first-child {border-top: none;}
 .classDetail_wrap .sec {padding:30px 0; border-top: 1px solid #ECECEC;}
 .classDetail_wrap .classDetail_sub_tit {font-size:1.250rem;}

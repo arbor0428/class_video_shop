@@ -1,4 +1,4 @@
-<div class="fixBtnWrap">
+		<div class="fixBtnWrap">
 			<div class="mediaWrap dp_f dp_fc">
 				<div class="mediaOpenBtn bora"></div>
 				<ul class="mediaToggle dp_f dp_fc">
@@ -167,7 +167,7 @@
 
 		<?
 		//팝업 모달창
-		include './module/popupoverlay.php';
+		include '/home/edufim/www/module/popupoverlay.php';
 		?>
 
 		<script>

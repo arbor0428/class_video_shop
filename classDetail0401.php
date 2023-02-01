@@ -32,5 +32,5 @@
 </div>
 
 <style>
-	.classDetail_wrap .classDetail_tit {max-width: 175px;}
+	.classDetail_wrap .classDetail_tit {max-width: 225px;}
 </style>

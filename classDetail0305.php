@@ -31,3 +31,7 @@
 	</div>
 
 </div>
+
+<style>
+	.classDetail_wrap .classDetail_tit {max-width: 162px;}
+</style>

@@ -1,31 +1,5 @@
 <?
-include "/home/edufim/www/module/login/head.php";
-include "/home/edufim/www/module/class/class.DbCon.php";
-include "/home/edufim/www/module/class/class.Msg.php";
-include '/home/edufim/www/module/popupoverlay.php';
-
-function isLogin()
-{
-	global $GBL_UID;
-	if ($GBL_UID) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-function redirectLogin()
-{
-	Msg::goMsg("로그인이 필요한 서비스 입니다.", "/member/login.php");
-	// Msg::GblMsgBox("로그인이 필요한 서비스 입니다.", "location.href='/member/login.php'");
-	exit;
-}
-
-function deny()
-{
-	Msg::goNext('/');
-	exit;
-}
+include "/module/login/head2.php";
 
 ?>
 <header class="blue_gradient c_w">
@@ -48,12 +22,12 @@ function deny()
 					</div>
 				</div>
 				<ul class="h_top_menu dp_f dp_c">
-					<? if (!$GBL_EMAIL) { ?>
+					<? if (!$GBL_USERID) { ?>
 						<li><a href="/member/signup.php" title="회원가입">회원가입</a></li>
 						<li><a href="/member/login.php" title="로그인">로그인</a></li>
 					<? } else { ?>
 						<li><a href="/module/login/logout_proc.php" title="로그인">로그아웃</a></li>
-						<li><a href="" title="장바구니">장바구니</a></li>
+						<li><a href="/mypage/cart.php" title="장바구니">장바구니</a></li>
 					<? } ?>
 				</ul>
 			</div>
@@ -79,7 +53,7 @@ function deny()
 	<div class="h_bot">
 		<div class="c_center dp_sb">
 			<ul class="h_bot_menu dp_f">
-				<li><a class="dp_b bold" href="/sub01/allList.php" title="ALL클래스">ALL클래스</a></li>
+				<li><a class="dp_b bold" href="/sub01/" title="ALL클래스">ALL클래스</a></li>
 				<li><a class="dp_b bold" href="/sub02/" title="이벤트">이벤트</a></li>
 				<li><a class="dp_b bold" href="/sub03/" title="자격증 과정">자격증 과정</a></li>
 				<li><a class="dp_b bold" href="/sub04/" title="BEST 콜라보">BEST 콜라보</a></li>
@@ -88,51 +62,16 @@ function deny()
 				<li><a class="dp_b bold" href="/sub07/" title="스토어">스토어</a></li>
 				<li><a class="dp_b bold" href="/sub08/" title="강의 후기">강의 후기</a></li>
 				<li><a class="dp_b bold" href="/sub09/" title="자격증시험응시">자격증시험응시</a></li>
-				<li><a class="dp_b bold" href="/sub10/" title="Q&A">Q&A</a></li>
+				<li><a class="dp_b bold" href="/sub10/sub01.php" title="Q&A">Q&A</a></li>
 			</ul>
-			<a class="classBtn bora dp_f dp_c dp_cc c_w" href="/sub11/sub01.php" title="나의 강의실">나의 강의실</a>
+			<a class="classBtn bora dp_f dp_c dp_cc c_w" href="/mypage/sub01.php" title="나의 강의실">나의 강의실</a>
 		</div>
 		<div class="depthWrap">
 			<div class="boxWrap">
 				<div class="depthbox" style="height: 470px;">
 					<div class="c_center dp_f alcMnWrap">
-						<div class="allClassMenu wid20">
-							<ul class="depth1">
-								<li>
-									<a class="c_bora dp_b bold2" href="" title="상위메뉴">상위메뉴</a>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="depth2">
-										<li>
-											<a class="bold2" href="" title="하위메뉴">하위메뉴</a>
-											<ul class="depth3">
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-												<li><a class="c_gry dp_b" href="" title="게시물">게시물</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
+
+
 						<div class="allClassMenu wid20">
 							<ul class="depth1">
 								<li>
@@ -403,7 +342,7 @@ function deny()
 						</ul>
 					</div>
 				</div>
-				<div class="depthbox" style="height: 160px;">
+				<div class="depthbox" style="opacity: 0;">
 					<!-- <div class="dp_f hght100">
 						<div class="boraMenuTit bora c_w dp_f dp_end02">
 							<p class="dp_f dp_c">
@@ -414,17 +353,7 @@ function deny()
 						<ul class="boraMenuCont dp_f">
 							<li>
 								<ul class="b_menu">
-									<li><a href="" title="하위메뉴">하위메뉴</a></li>
-								</ul>
-							</li>
-							<li>
-								<ul class="b_menu">
-									<li><a href="" title="하위메뉴">하위메뉴</a></li>
-								</ul>
-							</li>
-							<li>
-								<ul class="b_menu">
-									<li><a href="" title="하위메뉴">하위메뉴</a></li>
+									<li><a href="/sub08/" title="강의후기">강의후기</a></li>
 								</ul>
 							</li>
 						</ul>
