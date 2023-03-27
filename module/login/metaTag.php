@@ -5,7 +5,7 @@
 
 <meta name="description" content="깊이를 채우다. 글로벌 커리어 에듀핌 코리아">
 
-<meta property="og:url" content="http://edufim.smilework.kr/">
+<meta property="og:url" content="http://www.edupimcampus.com/">
 <meta property="og:title" content="에듀핌">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/images/sns.png"><!--sns이미지-->

@@ -7,19 +7,104 @@
         <div class="detail_cont">
             <div class="detail_sum dp_sb">
                 <div class='bx'>
-                    <div style="width:665px; height:450px; background:url('/images/sub/store_sumnail.png') center center no-repeat; background-size:cover;"></div>
-                    <div style="width:665px; height:450px; background:url('/images/sub/store_sumnail.png') center center no-repeat; background-size:cover;"></div>
-                    <div style="width:665px; height:450px; background:url('/images/sub/store_sumnail.png') center center no-repeat; background-size:cover;"></div>
-                    <div style="width:665px; height:450px; background:url('/images/sub/store_sumnail.png') center center no-repeat; background-size:cover;"></div>
+                    <div class="bx_box" style="background-image:url('/images/sub/store_sumnail.png');"></div>
+                    <div class="bx_box" style="background-image:url('/images/sub/store_sumnail.png');"></div>
+                    <div class="bx_box" style="background-image:url('/images/sub/store_sumnail.png');"></div>
+                    <div class="bx_box" style="background-image:url('/images/sub/store_sumnail.png');"></div>
                 </div>
                 
                 <div id="bx-pager">
-                    <a data-slide-index="0" href="javascript:avoid(0)" style="background:url('/images/sub/store_sumnail.png') center center no-repeat; background-size:cover;"></a>
-                    <a data-slide-index="1" href="javascript:avoid(0)" style="background:url('/images/sub/store_sumnail.png') center center no-repeat; background-size:cover;"></a>
-                    <a data-slide-index="2" href="javascript:avoid(0)" style="background:url('/images/sub/store_sumnail.png') center center no-repeat; background-size:cover;"></a>
-                    <a data-slide-index="3" href="javascript:avoid(0)" style="background:url('/images/sub/store_sumnail.png') center center no-repeat; background-size:cover;"></a>
+                    <a data-slide-index="0" href="javascript:avoid(0)" style="background-image:url('/images/sub/store_sumnail.png')"></a>
+                    <a data-slide-index="1" href="javascript:avoid(0)" style="background-image:url('/images/sub/store_sumnail.png')"></a>
+                    <a data-slide-index="2" href="javascript:avoid(0)" style="background-image:url('/images/sub/store_sumnail.png')"></a>
+                    <a data-slide-index="3" href="javascript:avoid(0)" style="background-image:url('/images/sub/store_sumnail.png')"></a>
                 </div>
             </div>
+
+            <!--mobile-->
+            <div class="mobile_detail_wrap">
+                <div class="detail_right">
+                    <div class="pin_box" style="padding: 0;">
+                        <div class="pin_box_scroll">
+                            <p class="pin_box_tit bold2">EMS 어깨 마사지기기</p>
+                            <p class="pin_box_det">NASA가 무중력 상태의 우주인 운동을 위해 만든 최첨단 건강의료가전 어깨 저주파 마사지기기</p>
+                            <ul class="price_detail_box">
+                                <li class="dp_sb dp_end">
+                                    <div class="bold2 f14">판매가</div>
+                                    <div class="bold2 txt-r f18"><span>360,000</span>원</div>
+                                </li>
+                                <li class="dp_sb dp_end">
+                                    <div class="bold2 f14">배송비</div>
+                                    <div class="bold2 txt-r f14">무료배송</div>
+                                </li>
+                                <li class="dp_sb dp_c">
+                                    <div class="bold2 f14">옵션선택</div>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">[필수] 옵션을 선택해주세요.</option>
+                                            <option value="">EMS 어깨 마사지기기</option>
+                                            <option value="">EMS 어깨 마사지기기</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <div class="selected_option_wrap">
+                                <div class="selected_option gry02">
+                                    <div class="p_r">
+                                        <a class="selected_option_close p_a" href="" title="닫기"><img src="/images/sub/price_x_icon.svg" alt=""></a>
+                                        <p class="bold2 f14 m_05">EMS 어깨 마사지기기</p>
+                                        <div class="dp_sb">
+                                            <span class="c_gry04 f12">남성용 L 사이즈</span>
+                                            <span class="c_bora01 bold2 f12">360,000</span>
+                                        </div>
+                                        <ul class="num_list dp_inline dp_c">
+                                            <li class="dp_f dp_c dp_cc"><a href="">-</a></li>
+                                            <li><input type="text" value="1"></li>
+                                            <li class="dp_f dp_c dp_cc"><a href="">+</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="selected_option gry02">
+                                    <div class="p_r">
+                                        <a class="selected_option_close p_a" href="" title="닫기"><img src="/images/sub/price_x_icon.svg" alt=""></a>
+                                        <p class="bold2 f14 m_05">EMS 어깨 마사지기기</p>
+                                        <div class="dp_sb">
+                                            <span class="c_gry04 f12">여성용 M 사이즈</span>
+                                            <span class="c_bora01 bold2 f12">360,000</span>
+                                        </div>
+                                        <ul class="num_list dp_inline dp_c">
+                                            <li class="dp_f dp_c dp_cc"><a href="">-</a></li>
+                                            <li><input type="text" value="1"></li>
+                                            <li class="dp_f dp_c dp_cc"><a href="">+</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="total_price_wrap dp_sb dp_end">
+                                <p class="c_bora01 bold2 f14">총 금액</p>
+                                <p class="c_bora01 bold2 f22"><span>360,000</span>원</p>
+                            </div>
+
+                            <a class="pin_box_btn dp_f dp_c dp_cc bold2 c_bora01 border" href="" title="">장바구니</a>
+                            <a class="pin_box_btn dp_f dp_c dp_cc bora01 c_w bold2" href="" title="">구매하기</a>
+                            <div class="pin_two_btn_wrap dp_sb dp_c">
+                                <a class="pin_two_btn dp_f dp_c dp_cc bold2" href="" title="">
+                                    <div class="like_toggle"></div>
+                                    <span>찜하기</span>
+                                </a>
+                                <a class="pin_two_btn dp_f dp_c dp_cc bold2" href="" title="">
+                                    <img src="/images/sub/clip_icon_blk.svg" alt="클립">
+                                    <span>링크 복사하기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
             <div class="event_detail">
                 <img src="/images/sub/store_detail_sample.png" alt="상세보기">
             </div>
@@ -235,33 +320,39 @@
             </script>
             <!---상품후기--->
         </div>
-        <div class="detail_right">
+
+        <!--pc-->
+        <div class="detail_right pc_detail_wrap">
             <div class="pin_box" style="padding: 0;">
                 <div class="pin_box_scroll">
-                    <p class="pin_box_tit bold2">필라테스 지도자과정 이론시험</p>
+                    <p class="pin_box_tit bold2">EMS 어깨 마사지기기</p>
                     <p class="pin_box_det">NASA가 무중력 상태의 우주인 운동을 위해 만든 최첨단 건강의료가전 어깨 저주파 마사지기기</p>
                     <ul class="price_detail_box">
                         <li class="dp_sb dp_end">
                             <div class="bold2 f14">판매가</div>
                             <div class="bold2 txt-r f18"><span>360,000</span>원</div>
                         </li>
+                        <li class="dp_sb dp_end">
+                            <div class="bold2 f14">배송비</div>
+                            <div class="bold2 txt-r f14">무료배송</div>
+                        </li>
                         <li class="dp_sb dp_c">
                             <div class="bold2 f14">옵션선택</div>
                             <div>
                                 <select name="" id="">
                                     <option value="">[필수] 옵션을 선택해주세요.</option>
-                                    <option value="">필라테스 지도자과정 이론시험</option>
-                                    <option value="">필라테스 지도자과정 이론시험</option>
+                                    <option value="">EMS 어깨 마사지기기</option>
+                                    <option value="">EMS 어깨 마사지기기</option>
                                 </select>
                             </div>
                         </li>
                     </ul>
                     
-<!--                     <div class="selected_option_wrap">
+                    <div class="selected_option_wrap">
                         <div class="selected_option gry02">
                             <div class="p_r">
                                 <a class="selected_option_close p_a" href="" title="닫기"><img src="/images/sub/price_x_icon.svg" alt=""></a>
-                                <p class="bold2 f14 m_05">필라테스 지도자과정 이론시험</p>
+                                <p class="bold2 f14 m_05">EMS 어깨 마사지기기</p>
                                 <div class="dp_sb">
                                     <span class="c_gry04 f12">남성용 L 사이즈</span>
                                     <span class="c_bora01 bold2 f12">360,000</span>
@@ -276,7 +367,7 @@
                         <div class="selected_option gry02">
                             <div class="p_r">
                                 <a class="selected_option_close p_a" href="" title="닫기"><img src="/images/sub/price_x_icon.svg" alt=""></a>
-                                <p class="bold2 f14 m_05">필라테스 지도자과정 이론시험</p>
+                                <p class="bold2 f14 m_05">EMS 어깨 마사지기기</p>
                                 <div class="dp_sb">
                                     <span class="c_gry04 f12">여성용 M 사이즈</span>
                                     <span class="c_bora01 bold2 f12">360,000</span>
@@ -288,7 +379,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     
                     <div class="total_price_wrap dp_sb dp_end">
                         <p class="c_bora01 bold2 f14">총 금액</p>
@@ -334,6 +425,7 @@
 <style>
     .bx-wrapper {
         width: 644px;
+        height: 450px;
         margin-bottom: 30px;
         box-shadow: none;
         border-radius: 4px;
@@ -366,18 +458,71 @@
         top: 115%;
     }
 
+    .bx .bx_box {
+        width:665px; 
+        height:450px; 
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    #bx-pager {
+        display: -webkit-box; 
+        display: -ms-flexbox; 
+        display: flex; 
+        flex-direction: column;
+        -webkit-box-pack: justify; 
+        -ms-flex-pack: justify; 
+        justify-content: space-between;
+    }
     #bx-pager a {
-        margin-bottom: 17px;
         display: block;
         border-radius: 4px;
         width: 120px; 
         height: 100px;
         overflow: hidden;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size:cover;
     }
     #bx-pager a:last-child {
         margin-bottom: 0;
     }
 
+    @media (max-width:1240px){
+        .bx-wrapper {
+            width: calc(100% - 140px);
+        }
+    }
+    @media (max-width:1024px){
+        #bx-pager a {
+            height: calc(25% - 17px);
+        }
+    }
+    @media (max-width:600px){
+        .bx-wrapper {
+            width: 70%;
+            margin-bottom: 0;
+            height: auto;
+        }
+        .bx-wrapper .bx-viewport {
+            height: 100%;
+        }
+        .bx {
+            height: 100%;
+        }
+        .bx .bx_box {
+            height: 100%;
+        }
+        #bx-pager {
+            width: 28%;
+        }
+        #bx-pager a {
+            width: 100%;
+            height: calc(25% - 5px);
+            background-size: 100% 100%;
+        }
+
+    }
 </style>
 
 

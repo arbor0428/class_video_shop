@@ -2,6 +2,7 @@
 include "/home/edufim/www/module/class/class.DbCon.php";
 include "/home/edufim/www/module/class/class.Msg.php";
 include "/home/edufim/www/module/class/class.Util.php";
+include "/home/edufim/www/module/class/class.jUtil.php";
 include '/home/edufim/www/module/enc_func.php';
 // include '/home/edufim/www/module/lib.php';
 
@@ -40,6 +41,7 @@ $ver = 20230101;
 	?>
 
 	<link rel="stylesheet" type="text/css" href="/css/reset.css?ver=<?= $ver ?>">
+	<link rel="stylesheet" type="text/css" href="/css/board.css?ver=<?= $ver ?>">
 	<link rel="stylesheet" type="text/css" href="/css/style.css?ver=<?= $ver ?>">
 	<link rel="stylesheet" type="text/css" href="/css/sub.css?ver=<?= $ver ?>">
 	<link rel="stylesheet" type="text/css" href="/css/member.css?ver=<?= $ver ?>">
@@ -58,7 +60,7 @@ $ver = 20230101;
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-	
+
 	<!-- Ubuntu -->
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -69,6 +71,9 @@ $ver = 20230101;
 	<!-- Dancing Script &  Noto Serif-->
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Serif&display=swap" rel="stylesheet">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hahmlet:wght@700;900&family=Niconne&family=Racing+Sans+One&family=Sanchez&display=swap" rel="stylesheet">
 
 
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

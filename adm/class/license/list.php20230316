@@ -1,0 +1,225 @@
+<?
+$record_count = 10;  //한 페이지에 출력되는 레코드수
+$link_count = 10; //한 페이지에 출력되는 페이지 링크수
+
+if (!$record_start) {
+	$record_start = 0;
+}
+
+$current_page = ($record_start / $record_count) + 1;
+$group = floor($record_start / ($record_count * $link_count));
+
+//쿼리조건
+$query_ment = "WHERE sType='"._TYPE."'";
+if ($f_status == '1')		$query_ment .= " and status='1'";
+elseif ($f_status == '2')	$query_ment .= " and status='2'";
+elseif ($f_status == '3')	$query_ment .= " and status=''";
+if ($f_userid)	 $query_ment .= " and userid like '%$f_userid%'";
+if ($f_name)	 $query_ment .= " and title like '%$f_name%'";
+
+// $group_ment = "GROUP BY s.uid";
+
+// if (!$f_sort)	$f_sort = 'rTime';
+$sort_ment = "ORDER BY uid DESC";
+// if ($f_sort == 'rTime')$sort_ment = "order by rTime desc";
+// else	$sort_ment = "order by uid desc";
+
+$query = "SELECT *";
+$query .= " FROM ks_class_set";
+$query .= " $query_ment";
+$query .= " $group_ment";
+$query .= " $sort_ment";
+
+$result = mysql_query($query) or die("연결실패");
+$total_record = mysql_num_rows($result);
+
+$total_page = (int)($total_record / $record_count);
+if ($total_record % $record_count) {
+	$total_page++;
+}
+
+$result = mysql_query($query . " LIMIT $record_start, $record_count");
+?>
+
+<style>
+	.listTable td {
+		text-align: center;
+	}
+</style>
+
+<form name='frm01' class="user" method='post' ENCTYPE="multipart/form-data">
+	<input type="text" style="display: none;"> <!-- 텍스트박스 1개이상 처리.. 자동전송방지 -->
+	<input type='hidden' name='type' value='<?= $type ?>'>
+	<input type='hidden' name='uid' value=''>
+	<input type='hidden' name='record_start' value='<?= $record_start ?>'>
+	<input type='hidden' name='next_url' value="<?= $_SERVER['PHP_SELF'] ?>">
+	<input type='hidden' name='cType' value="user">
+	<input type='hidden' name='total_record' id='total_record' value='<?= $total_record ?>'>
+
+	<div class="mo-hand1 mo-hand" style="float:right;text-align:right;">
+		<span class="scorll-hand">
+			<img src="/common/adm/images/scroll_hand.gif" style="max-width:100%;">
+		</span>
+	</div>
+
+	<div class="tbl-st-wrap01 @tbl-st-wrap" style="clear:both;border-top:0;">
+		<div class="@tbl-st-w01 @tbl-st-w @tbl-st mb20 clearfix">
+
+			<a href="javascript:reg_write();" class="btn btn-sm btn-success btn-icon-split" style="margin-top:-5px;">
+				<span class="icon text-white-50">
+					<i class="fas fa-download"></i>
+				</span>
+				<span class="text">등록</span>
+			</a>
+
+			<table cellpadding='0' cellspacing='0' border='0' width='100%' class='listTable' style='min-width:900px;margin:5px 0;'>
+				<tr>
+					<th width='1%'><input type="checkbox" name="allChk" value="" onclick="All_chk('allChk','chk[]');"></th>
+					<th width='6%'>상태</th>
+					<th width='10%'>썸네일</th>
+					<th width='*'>제목</th>
+					<th width='*'>강좌</th>
+					<th width='10%'>금액</th>
+					<th width='5%'>기간(일)</th>
+					<th width='8%'>강좌 구성</th>
+					<th width='8%'>편집</th>
+				</tr>
+				<?
+
+
+				$nTime = time();
+
+				if ($total_record) {
+					$i = $total_record - ($current_page - 1) * $record_count;
+
+					while ($row = mysql_fetch_array($result)) {
+						foreach ($row as $k => $v) {
+							${$k} = $v;
+						}
+
+						if ($status == '0')		$status = "<span class='ico09'>비활성</span>";
+						elseif ($status == '1') $status = "<span class='ico03'>활성</span>";
+				?>
+
+						<tr class='grayLine'>
+							<td>
+								<input type="checkbox" name="chk[]" value="<?= $uid ?>" class="cMail">
+							</td>
+							<td><?= $status ?></td>
+							<td><img src="<?= _UPLOAD_DIR . '/' . $upfile01 ?>" alt="썸네일"  width='100'></td>
+							<td><?= $title ?></td>
+							<td>
+								<ul class="mb-0">
+									<?
+									$query2 = "SELECT s.uid, c.title";
+									$query2 .= " FROM ks_class_set s";
+									$query2 .= " LEFT JOIN MAP_CLASS_SET M ON s.uid=M.SET_UID";
+									$query2 .= " LEFT JOIN ks_class c ON c.uid=M.CLASS_UID";
+									$query2 .= " WHERE s.sType='". _TYPE ."' AND s.uid=$uid";
+									$query2 .= " ORDER BY s.uid DESC";
+									
+									$result2 = mysql_query($query2) or die('FAILED');
+									while($row2 = mysql_fetch_assoc($result2)) {
+									?>
+										<li class="list-style"><?= $row2['title'] ?></li>
+									<? } ?>
+								</ul>
+							</td>
+							<td><?= number_format($price) ?> 원</td>
+							<td><?= $period ?></td>
+							<td><a href="javascript:void(0)" onclick='javascript:formModal("<?=$uid?>")' class='small cbtn black'>강좌 편집</a></td>
+							<td>
+								<a href="javascript:void(0)" class="btn btn-success btn-circle btn-sm" title='수정' onclick="reg_modify('<?= $uid ?>')">
+									<i class="fas fa-info-circle"></i>
+								</a>
+								<!-- <a href="javascript:checkDisabled('<?= $uid ?>');" class="btn btn-danger btn-circle btn-sm" title='삭제'> -->
+								<a href="javascript:checkDel('<?= $uid ?>');" class="btn btn-danger btn-circle btn-sm" title='삭제'>
+									<i class="fas fa-trash"></i>
+								</a>
+							</td>
+						</tr>
+					<?
+						$i--;
+					}
+				} else {
+					?>
+					<tr>
+						<td colspan='16' style='padding:50px 0;text-align:center;'>등록된 강좌가 없습니다.</td>
+					</tr>
+				<?
+				}
+				?>
+			</table>
+		</div>
+	</div>
+</form>
+<script>
+	function formModal(u) {
+		$("#multiBox").css({
+			"width": "90%",
+			"max-width": "800px"
+		});
+		$('#multi_ttl').text('강의리스트');
+		$('#multiFrame').html("<iframe src='class_index.php?uid=" + u + "' name='memberFrame' style='width:100%;height:680px;' frameborder='0' scrolling='auto'></iframe>");
+		$('.multiBox_open').click();
+	}
+
+	function checkAble(uid) {
+		GblMsgConfirmBox("비활성화 하시겠습니까?", "reg_disabled('" + uid + "')");
+	}
+
+	function checkDisabled(uid) {
+		GblMsgConfirmBox("비활성화 하시겠습니까?", "reg_disabled('" + uid + "')");
+	}
+
+	function checkDel(uid) {
+		GblMsgConfirmBox("삭제 후 복구 되지 않습니다. 정말 삭제 하시겠습니까?", "delOK('" + uid + "')");
+	}
+
+	function reg_able(uid) {
+		form = document.frm01;
+		form.type.value = 'able';
+		form.uid.value = uid;
+		form.target = 'ifra_gbl';
+		form.action = 'proc.php';
+		form.submit();
+	}
+
+	function reg_disabled(uid) {
+		form = document.frm01;
+		form.type.value = 'disabled';
+		form.uid.value = uid;
+		form.target = 'ifra_gbl';
+		form.action = 'proc.php';
+		form.submit();
+	}
+
+	function delOK(uid) {
+		form = document.frm01;
+		form.type.value = 'del';
+		form.uid.value = uid;
+		form.target = 'ifra_gbl';
+		form.action = 'proc.php';
+		form.submit();
+	}
+
+	function reg_write() {
+		form = document.frm01;
+		form.type.value = 'write';
+		form.action = 'index.php';
+		form.submit();
+	}
+
+	function reg_modify(uid) {
+		form = document.frm01;
+		form.type.value = 'edit';
+		form.uid.value = uid;
+		form.action = 'index.php';
+		form.submit();
+	}
+</script>
+
+<?
+$fName = 'frm01';
+include '../../module/pageNum.php';
+?>

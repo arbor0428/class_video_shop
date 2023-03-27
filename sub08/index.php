@@ -5,7 +5,7 @@ include '../header.php';
 	<div class="s_center">
 		<div class="bora c_w sideTit f22 bold2 dp_inline dp_c dp_cc">강의후기</div>
 		<p class="bold2 m-20 f18 c_bora01 txt-c">REVIEW</p>
-		<p class="bold2 f36 txt-c">에듀핌 CAMPUS 영상 후기</p>
+		<p class="video_review_tit bold2 f36 txt-c">에듀핌 CAMPUS 영상 후기</p>
 		<div class="swiper-container03">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide dp_f dp_c dp_cc" style="background-image:url('../images/sub/campus_sum.png')">
@@ -63,8 +63,8 @@ include '../header.php';
 	<div class="sub08_01_review_wrap">
 		<div class="s_center">
 			<p class="bold2 f18 c_bora01 txt-c">REVIEW</p>
-			<p class="bold2 f36 txt-c m_50">에듀핌 CAMPUS 수강 후기</p>
-			<div class="dp_f dp_c dp_end02 m_10">
+			<p class="video_review_tit bold2 f36 txt-c m_50">에듀핌 CAMPUS 수강 후기</p>
+			<div class="pc_swiperBtn_wrap dp_f dp_c dp_end02 m_10">
 				<div class="bnrprevBtn" style="margin-right: 5px;"><img src="../images/sub/review_bottom_btn.svg" alt=""></div>
 				<div class="bnrnextBtn"><img src="../images/sub/review_top_btn.svg" alt=""></div>
 			</div>
@@ -78,8 +78,7 @@ include '../header.php';
 				?>
 					<div class="review_box">
 						<ul class="top_chk_line dp_f dp_c">
-							<li class="best_chk bora01 c_w f12">BEST</li>
-							<li class="top_chk_line_nm c_bora01 f14 bold2 dp_f dp_c"><?= $review['title'] ?></li>
+							<li class="top_chk_line_nm c_bora01 f14 bold2 dp_f dp_c"><span class="best_chk bora01 c_w f12">BEST</span><?= $review['title'] ?></li>
 							<li class="f14"><?= $review['title'] ?> - <?= $review['target'] ?></li>
 						</ul>
 						<div class="dp_sb dp_c">
@@ -124,9 +123,12 @@ include '../header.php';
 
 
 			<!--돌아가는 일반 후기-->
-
+			<div class="m_swiperBtn_wrap dp_f dp_c dp_end02 m_10">
+				<div class="m_bnrprevBtn" style="margin-right: 5px;"><img src="../images/sub/review_bottom_btn.svg" alt=""></div>
+				<div class="m_bnrnextBtn"><img src="../images/sub/review_top_btn.svg" alt=""></div>
+			</div>
 			<div class="">
-				<div class="swiper-container05 review_box_wrap" style="height:660px; overflow:hidden;">
+				<div class="swiper-container05 review_box_wrap">
 					<div class="swiper-wrapper">
 						<?
 						foreach ($reviews as $review) {
@@ -204,6 +206,38 @@ include '../header.php';
 			nextEl: '.bnrnextBtn',
 			prevEl: '.bnrprevBtn',
 
+		},
+		breakpoints: {
+			1024: {
+				direction: 'horizontal',
+				slidesPerView: 1,
+				paceBetween: 50,
+				navigation: {
+					nextEl: '.m_bnrnextBtn',
+					prevEl: '.m_bnrprevBtn',
+
+				},
+			},
+			600: {
+				direction: 'horizontal',
+				slidesPerView: 1,
+				paceBetween: 50,
+				navigation: {
+					nextEl: '.m_bnrnextBtn',
+					prevEl: '.m_bnrprevBtn',
+
+				},
+			},
+			200: {
+				direction: 'horizontal',
+				slidesPerView: 1,
+				paceBetween: 50,
+				navigation: {
+					nextEl: '.m_bnrnextBtn',
+					prevEl: '.m_bnrprevBtn',
+
+				},
+			},
 		},
 	})
 </script>

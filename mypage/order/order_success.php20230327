@@ -1,0 +1,158 @@
+<?
+include '/home/edufim/www/header.php';
+include '/home/edufim/www/module/loading.php';
+
+$secretKey = 'test_sk_OALnQvDd2VJqkqN0p0N3Mj7X41mN';
+$credential = base64_encode($secretKey . ':');
+?>
+<div class="subWrap">
+    <div class="s_center dp_sb">
+        <?
+        include 'sidemenu.php';
+
+        $userid = $GBL_USERID;
+
+        if (!$paymentKey || !$orderId || !$amount) {
+            deny();
+            exit;
+        } else {
+            $curl = curl_init();
+            curl_setopt_array($curl, [
+                CURLOPT_URL => "https://api.tosspayments.com/v1/payments/confirm",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                CURLOPT_POSTFIELDS => "{\"paymentKey\":\"$paymentKey\",\"amount\":$amount,\"orderId\":\"$orderId\"}",
+                CURLOPT_HTTPHEADER => [
+                    "Authorization: Basic $credential",
+                    "Content-Type: application/json"
+                ],
+            ]);
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+            $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+            $isSuccess = ($httpCode === 200);
+            curl_close($curl);
+            $resJson = json_decode($response, true);
+        }
+
+        // ks_payment DB insert
+        if ($isSuccess) {
+            $orderId = $resJson['orderId'];
+            $totalAmount = $resJson['totalAmount'];
+            $method = $resJson['method'];
+            $approvedAt = date('Y-m-d H:i:s', strtotime($resJson['approvedAt']));
+            $receiptUrl = $resJson['receipt']['url'];
+            $userip = $_SERVER['REMOTE_ADDR'];
+            $rTime = time();
+
+            $sql = "insert into ks_payment (userid, orderId, paymentKey, totalAmount, method, approvedAt, receiptUrl, response, userip, rTime) values ";
+            $sql .= "('$userid', '$orderId', '$paymentKey', $totalAmount, '$method', '$approvedAt', '$receiptUrl', '$response', '$userip', $rTime)";
+            sqlExe($sql);
+        } else {
+            /*
+			$msg = "결제에 실패했습니다-paymentdb";
+			$url = "/mypage/cart.php";
+			Msg::goMsg($msg, $url);
+			exit;
+			*/
+        }
+
+        // ks_learning DB insert
+        if ($isSuccess) {
+            $row_one = sqlRowOne("SELECT class_uids FROM ks_order WHERE orderId='$orderId'");
+
+            $class_uids = json_decode($row_one);
+
+            foreach ($class_uids as $key => $class_uid) {
+                $period = sqlRowOne("SELECT period FROM ks_class WHERE uid='$class_uid'");
+                $period = intval($period) + 1;
+
+                $sDate = date('Y-m-d h:i:s', $rTime);
+                $timestamp = strtotime("+$period days", strtotime($sDate));
+                $eDate = date("Y-m-d 23:59:59", $timestamp);
+
+                // $MAP_INSERT = sqlExe("INSERT INTO MAP_MEMBER_CLASS (USERID, CLASS_UID, orderId, sDate, eDate) VALUES ('$userid', '$class_uid', '$orderId', '$sDate', '$eDate')");
+
+                // $learning_insert = sqlExe("INSERT INTO ks_learning (userid, class_uid, rTime) VALUES ('$userid', $class_uid, $rTime)");
+
+                $learning_insert = sqlExe("INSERT INTO ks_learning (userid, class_uid, orderId, sDate, eDate) 
+                    VALUES ('$userid', '$class_uid', '$orderId', '$sDate', '$eDate')");
+
+                $learning_uid = sqlRowOne("SELECT uid FROM ks_learning WHERE userid='$userid' AND class_uid='$class_uid' AND sDate='$sDate'");
+
+                $class_list_uids = sqlArray("SELECT uid FROM ks_class_list WHERE class_uid=$class_uid");
+
+                foreach ($class_list_uids as $uids) {
+                    $uid = $uids['uid'];
+                    $learning_list_insert = sqlExe("INSERT INTO ks_learning_list (learning_uid, class_list_uid) VALUES ($learning_uid, $uid)");
+                }
+            }
+            sqlExe("UPDATE ks_order SET status=1 WHERE orderId='$orderId'");
+            sqlExe("DELETE FROM ks_cart WHERE userid='$userid' AND pid=$class_uid");
+            $use_coupon_uid = sqlRowOne("SELECT use_coupon_uid FROM ks_order WHERE status=1 AND orderId='$orderId'");
+            sqlExe("UPDATE ks_coupon_list SET status=1 WHERE userid='$userid' AND coupon_uid='$use_coupon_uid'");
+        }
+
+        if ($isSuccess && !$learning_insert) {
+            // 결제 취소 요청
+            $curl = curl_init();
+            curl_setopt_array($curl, [
+                CURLOPT_URL => "https://api.tosspayments.com/v1/payments/$paymentKey/cancel",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                CURLOPT_POSTFIELDS => "{\"cancelReason\":\"DB error\"}",
+                CURLOPT_HTTPHEADER => [
+                    "Authorization: Basic $credential",
+                    "Content-Type: application/json"
+                ],
+            ]);
+            $cancelResponse = curl_exec($curl);
+            $cancelErr = curl_error($curl);
+            curl_close($curl);
+        }
+        ?>
+
+        <!-- Content Wrapper -->
+        <div class="s_cont">
+            <!-- Main Content -->
+            <div class="s_cont_tit f20 bold2 c_bora01">강좌 결제</div>
+            <div class="payResult_Wrap">
+                <?
+                if ($isSuccess) {
+                ?>
+                    <div class="payResult_box">
+                        <h2 class="tit">결제가 완료 되었습니다</h2>
+                        <p>주문번호: <?= $orderId ?></p>
+                        <p>결제일시: <?= $approvedAt ?></p>
+                        <p>결제수단: <?= $method ?></p>
+                        <p>결제금액: <span class="pay-success-num"><?= number_format($totalAmount) ?></span> P</p>
+                        <a href="/mypage/learning/" class="classBtn bora dp_inline dp_c dp_cc c_w">수강하러가기</a>
+                    </div>
+                <?
+                } else { ?>
+                    <div class="payResult_box" style="display: none;">
+                        <h2>결제에 실패 하였습니다.</h2>
+                        <p>에러코드: <?= $resJson['code'] ?></p>
+                        <p>에러메시지: <?= $resJson['message'] ?></p>
+                        <p>결제 오류 발생 시 예약센터로 문의주시기 바랍니다.</p>
+                        <p><?= $errorMsg ?></p>
+                        <p><?= $cancelResponse ?></p>
+                        <p><?= $cancelErr ?></p>
+                        <a href="/" class="classBtn gry03 dp_inline dp_c dp_cc c_w">홈으로</a>
+                    </div>
+                <? } ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?
+include '/home/edufim/www/footer.php';
+?>

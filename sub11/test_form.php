@@ -6,7 +6,7 @@
    <div class="s_center">
       <div class="test_goBox">
         <div class="test_go_top bora01 dp_sb">
-          <p class="dp_f dp_c">
+          <p class="test_go_top_tit dp_f dp_c">
             <span class="dp_f dp_c bold2 c_w">에듀핌</span>
             <span class="c_w">- 무릎손상의 단계별 재활 운동법 1편 [필기시험]</span>
           </p>

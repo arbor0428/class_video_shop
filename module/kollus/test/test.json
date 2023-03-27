@@ -1,0 +1,73 @@
+[
+  {
+    "request_id": "20230215-callback-63ec7a65cb615",
+    "full_filename": "_드로잉 숄더/에듀핌_교육_테이핑2_미리보기 (1080p).mp4",
+    "filename": "에듀핌_교육_테이핑2_미리보기 (1080p).mp4",
+    "content_provider_key": "i-web",
+    "upload_file_key": "20230215-xeb9tvvy"
+  },
+
+  {
+    "request_id": "20230215-callback-63ec7cf596929",
+    "full_filename": "_드로잉 숄더/에듀핌_교육_테이핑2_미리보기 (1080p).mp4",
+    "filename": "에듀핌_교육_테이핑2_미리보기 (1080p).mp4",
+    "profile_key": "i-web-pc1-hd|i-web-tablet1-hd|i-web-mobile1-hd",
+    "transcoding_result": "success",
+    "content_provider_key": "i-web",
+    "upload_file_key": "20230215-xeb9tvvy"
+  },
+
+  {
+    "request_id": "20230215-callback-63ec807673248",
+    "channel_name": "드로잉 숄더",
+    "full_filename": "_드로잉 숄더/에듀핌_교육_테이핑2_미리보기 (1080p).mp4",
+    "update_type": "channel_join",
+    "filename": "에듀핌_교육_테이핑2_미리보기 (1080p).mp4",
+    "profile_key": "i-web-pc1-hd|i-web-tablet1-hd|i-web-mobile1-hd",
+    "content_provider_key": "i-web",
+    "media_content_key": "Yp8GsbBA",
+    "upload_file_key": "20230215-xeb9tvvy",
+    "channel_key": "mqa5l7iogu80ylms"
+  },
+
+  {
+    "request_id": "20230217-callback-63eec2e7b0596",
+    "channel_name": "드로잉 숄더",
+    "full_filename": "_드로잉 숄더/zz.mp4",
+    "update_type": "channel_leave",
+    "filename": "zz.mp4",
+    "content_provider_key": "i-web",
+    "media_content_key": "hi9ZsuyL",
+    "upload_file_key": "20230216-emgqji23",
+    "channel_key": "mqa5l7iogu80ylms"
+  },
+
+  {
+    "request_id": "20230217-callback-63eec3f4e6013",
+    "channel_name": "드로잉 숄더",
+    "full_filename": "_드로잉 숄더/zz.mp4",
+    "update_type": "channel_join",
+    "filename": "zz.mp4",
+    "profile_key": "i-web-pc1-hd|i-web-tablet1-hd|i-web-mobile1-hd",
+    "content_provider_key": "i-web",
+    "media_content_key": "hi9ZsuyL",
+    "upload_file_key": "20230216-emgqji23",
+    "channel_key": "mqa5l7iogu80ylms"
+  }
+  https://v.kr.kollus.com/si?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtYyI6W3sibWNrZXkiOiJwT1h4eDB2bCIsIm1jcGYiOm51bGx9XSwiY3VpZCI6IjIyMDYxNjE1NTExMTkwNjY5OSIsImV4cHQiOjE2NzY2Mjc5NzV9.WXaJGOb-jbmUzI31jW7qnz4xBh4IGrZAl_veaRPfT_Y
+  &custom_key=619a29e8e3ec0f60837f89c36296c774d4b2d2dc78686d8fb8ee0bb3979defd4
+  &autoplay=
+  &uservalue0=1120
+  &uservalue1=982
+  &uservalue2=2206161551119066
+  &uservalue3=CHRSTD
+  &uservalue4=229155
+  &uservalue5=615316
+  &uservalue6=1778378
+  &uservalue7=HS
+  &uservalue8=106.246.92.237
+  &uservalue9=bs_iipa
+  &now=1676620776
+  &normalized_hash=BPw9E%2FVrpEoRJvrVY2EuBQ%3D%3D
+  &expire_time=30%27
+]

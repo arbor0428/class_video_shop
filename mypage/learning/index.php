@@ -1,0 +1,184 @@
+<?
+include '/home/edufim/www/header.php';
+
+$side_menu = 3;
+$topTxt01 = '수강중인 강좌';
+
+include '../location02_2.php';
+
+$query = "SELECT l.uid luid, l.progress, l.recentDate recentDate, c.*
+    FROM ks_learning l
+    JOIN ks_class c ON l.class_uid=c.uid
+    WHERE l.userid='$GBL_USERID'
+    ORDER BY l.sDate DESC";
+
+$result = mysql_query($query) or die('Could not connect: ' . mysql_error());
+$num_row = mysql_num_rows($result);
+
+?>
+<div class="subWrap">
+    <div class="s_center dp_sb">
+
+        <? include '/home/edufim/www/mypage/sidemenu.php'; ?>
+
+        <div class="s_cont">
+            <div class="s_cont_tit">
+                <span class="m_s_cont_tit">수강중인 강좌</span>
+                <ul class="s_cont_tabbtn dp_f">
+                    <li class="on"><a href="/mypage/learning/">수강중인 강좌</a></li>
+                    <li><a href="/mypage/wish/">찜한 강좌</a></li>
+                    <li><a href="/mypage/qna/">나의 학습질문</a></li>
+                    <li><a href="/mypage/review/">나의 리뷰</a></li>
+                    <li><a href="/mypage/certClass/">수강증 발급</a></li>
+                    <li><a href="/mypage/certCompletion/">수료증 발급</a></li>
+                    <li><a href="/mypage/certLicense/">자격증 발급</a></li>
+                </ul>
+            </div>
+            <div class="top_searchBar top_searchBar_block dp_sb">
+                <div class="dp_f">
+                    <div class="selectwrap dp_f dp_c">
+                        <p class="select_tit c_gry04 f14">정렬 기준</p>
+                        <select name="" id="">
+                            <option value="">최근 강의순</option>
+                            <option value="">제목순</option>
+                        </select>
+                    </div>
+                    <div class="selectwrap dp_f dp_c">
+                        <p class="select_tit c_gry04 f14">진행률</p>
+                        <select name="" id="">
+                            <option value="">모두 보기</option>
+                            <option value="">수강중</option>
+                            <option value="">완강</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputwrap dp_f">
+                    <input class="search" type="text" placeholder="강좌명으로 검색" value="" name="">
+                    <a class="searchBtn bora01 c_w dp_f dp_c dp_cc" href="" title="검색">검색</a>
+                </div>
+            </div>
+            <div class="class_videoList_wrap">
+                <?
+                if ($num_row > 0) {
+
+                    while ($row = mysql_fetch_array($result)) {
+
+                        $cade01 = $row["cade01"];
+                        $cade02 = $row["cade02"];
+
+                        $cade01 = sqlRowOne("SELECT title FROM ks_class_cade01 WHERE uid=$cade01");
+                        $cade02 = sqlRowOne("SELECT title FROM ks_class_cade02 WHERE uid=$cade02");
+                ?>
+                        <div class="class_videoList">
+                            <div class="class_videoCont dp_sb dp_c">
+                                <a href="javascript:void(0)" onclick="reg_view('<?= $row['luid'] ?>')">
+                                    <div class="imgWrap gry" style="background-image: url('/upfile/class/<?= $row['upfile01'] ?>')">
+                                        <!-- <button type="button" title="관심" class="likeMark" onclick="return;"></button> -->
+                                    </div>
+                                </a>
+                                <div class="video_progress">
+                                    <div class="dp_sb dp_end video_progress_txt">
+                                        <a href="javascript:void(0)" onclick="reg_view('<?= $row['luid'] ?>')">
+                                            <div class="play_titWrap">
+                                                <p class="play_tit"><?= $row['title'] ?></p>
+                                                <span class="c_gry04 f14">선생님: <?= $row['tname'] ?></span>
+                                            </div>
+                                        </a>
+                                        <div class="playBtnWrap dp_f">
+                                            <? if ($row['progress'] < 80) { ?>
+                                                <div class="play_status f14 dp_f dp_c dp_cc">80% 달성 시 응시 가능</div>
+                                            <? } else { ?>
+                                                <a class="play_status f14 dp_f dp_c dp_cc on" href="javascript:void(0)" onclick="reg_exam('<?= $row['luid'] ?>')">시험 응시</a>
+                                            <? } ?>
+                                            <img src="../images/v_play.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="progressBar_wrap dp_sb dp_c">
+                                        <p class="c_bora01 bold2 f14"><?= $row['progress'] ?>%</p>
+                                        <div class="progressBar">
+                                            <div class="progressBar_fill" style="width: <?= $row['progress'] ?>%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="class_video_tit_wrap dp_f">
+                                <p class="class_video_tit c_gry04 f14"><?= $cade01 ?> - <?= $cade02 ?></p>
+                                <p class="class_video_tit c_gry04 f14">
+                                    <span>&nbsp;&nbsp;|&nbsp;</span>
+                                    <!-- <span><?= $cade01 ?>/<?= $cade01 ?>강 ·</span> -->
+                                    <span>최근 수강일: <? echo ($row['recentDate'] != null) ? date('Y-m-d H:i', $row['recentDate']) : "미수강"; ?></span>
+                                </p>
+                            </div>
+                        </div>
+
+                    <? }
+                } else {
+                    ?>
+                    <div class="noListShow">
+                        <p class="txt-c bold2">수강중인 강좌가 없습니다.</p>
+                        <p class="txt-c c_gry04 f15">나를 성장 시켜줄 좋은 강좌들을 찾아보세요.</p>
+                        <a class="goClassList c_bora01 dp_f dp_c dp_cc" href="/sub01" title="강좌리스트 보러가기">강좌리스트 보러가기</a>
+                    </div>
+                <? } ?>
+
+                <!-- <div class="class_videoList openyet">
+					<div class="class_videoCont dp_sb dp_c">
+						<div class="imgWrap gry">
+							<button type="button" title="관심" class="likeMark"></button>
+							<img src="" alt="">
+						</div>
+						<div class="video_progress">
+							<div class="dp_sb dp_end">
+								<div class="play_titWrap">
+									<p class="play_tit">재활 운동법 1편</p>
+									<span class="c_gry04 f14">에듀핌 강사</span>
+								</div>
+								<div class="playBtnWrap dp_f">
+									<div class="play_status f14 dp_f dp_c dp_cc on">강좌 구매 후 수강가능</div>
+									<img src="../images/v_play.svg" alt="">
+								</div>
+							</div>
+							<div class="progressBar_wrap dp_sb dp_c">
+								<p class="c_bora01 bold2 f14">0%</p>
+								<div class="progressBar">
+									<div class="progressBar_fill" style="width: 0%;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="class_video_tit_wrap dp_f">
+						<p class="class_video_tit c_gry04 f14">ALL 클래스 - 필라테스 지도자 자격증 과정</p>
+						<p class="class_video_tit c_gry04 f14"><span>1/20강</span> · <span>최근 수강일 2022.09.28</span></p>
+					</div>
+				</div> -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<form method="post" name="frm01">
+    <input type="hidden" name="uid" value="">
+</form>
+
+<script>
+    const reg_view = function(uid) {
+        const form = document.frm01
+        form.uid.value = uid
+        form.action = "./view.php"
+        form.submit()
+    }
+    const reg_exam = function(uid) {
+        const form = document.frm01
+        form.uid.value = uid
+        form.action = "../exam/"
+        form.submit()
+    }
+
+    $('.likeMark').click(function(event) {
+        event.preventDefault()
+        $(this).toggleClass("on")
+    });
+</script>
+<?
+include '/home/edufim/www/footer.php';
+?>

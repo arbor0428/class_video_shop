@@ -1,5 +1,6 @@
 <?
 	include '../header.php';
+	if (isLogin()) deny();
 ?>
 
 <div class="subWrap">

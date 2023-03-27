@@ -1,7 +1,7 @@
 /* �˸�â */
 .popup_background {background:#fff;z-index:99999999; border-radius:10px}
 .popup_background2 {background:#fff; z-index:99999999; border-radius:3px}
-.close_button_pop {background-color: transparent; border-collapse:collapse;border:0;width:20px;height:20px;cursor:pointer;}
+.close_button_pop {background-color: transparent; border-collapse:collapse;border:0;width:24px;height:24px;cursor:pointer;}
 .close_button_pop img {width: 100%;}
 .close_button_pop2 {background:url("../images/x_icon.svg") no-repeat;border-collapse:collapse;border:0;width:20px;height:20px;cursor:pointer;background-size:cover;margin:7px;}
 .close_button_pop3 {position:absolute;top:-30px;right:-50px;;background:url("../images/x_icon.svg") no-repeat;border-collapse:collapse;border:0;width:30px;height:30px;cursor:pointer;background-size:cover;}

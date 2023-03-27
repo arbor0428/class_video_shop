@@ -1,0 +1,87 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+
+	<!-- Sidebar - Brand-->
+	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/adm/">
+		<div class="sidebar-brand-icon"><img src='/images/favicon.png'> 에듀핌</div>
+	</a>
+
+	<!-- Divider -->
+	<hr class="sidebar-divider my-0">
+
+	<!-- Divider -->
+	<hr class="sidebar-divider">
+
+	<li class="nav-item  <?= $sideArr[1] ?>">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#subList1" aria-expanded="true" aria-controls="subList1">
+			<span>클래스관리</span>
+		</a>
+		<div id="subList1" class="collapse <?= $showArr[1] ?>" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<a class="collapse-item <?= $subArr['class'] ?>" href="/adm/class/">클래스관리</a>
+				<a class="collapse-item <?= $subArr['event'] ?>" href="/adm/chart/">이벤트 관리</a>
+				<a class="collapse-item <?= $subArr['license'] ?>" href="/adm/chart/">자격증과정 관리</a>
+				<a class="collapse-item <?= $subArr['chart'] ?>" href="/adm/chart/">BEST콜라보 관리</a>
+			</div>
+		</div>
+	</li>
+
+	<li class="nav-item  <?= $sideArr[2] ?>">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#subList2" aria-expanded="true" aria-controls="subList2">
+			<span>회원관리</span>
+		</a>
+		<div id="subList2" class="collapse <?= $showArr[2] ?>" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<a class="collapse-item <?= $subArr['member'] ?>" href="/adm/member/">일반회원</a>
+				<a class="collapse-item <?= $subArr['center'] ?>" href="/adm/center/">관리자회원</a>
+			</div>
+		</div>
+	</li>
+
+	<li class="nav-item <?= $sideArr[3] ?>">
+		<a class="nav-link" href="/adm/testList/">
+			<span>검사관리</span>
+		</a>
+	</li>
+
+	<li class="nav-item <?= $sideArr[4] ?>">
+		<a class="nav-link" href="/adm/magazineList/">
+			<span>아맘때매거진 관리</span>
+		</a>
+	</li>
+
+	<li class="nav-item  <?= $sideArr[5] ?>">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#subList6" aria-expanded="true" aria-controls="subList6">
+			<span>커뮤니티 관리</span>
+		</a>
+		<div id="subList6" class="collapse <?= $showArr[5] ?>" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<a class="collapse-item <?= $subArr['freeBoard'] ?>" href="/adm/freeBoard/">자유게시판 관리</a>
+				<a class="collapse-item <?= $subArr['today'] ?>" href="/adm/today/">오늘의 한마디</a>
+			</div>
+		</div>
+	</li>
+
+	<li class="nav-item <?= $sideArr[6] ?>">
+		<a class="nav-link" href="/adm/payment/">
+			<span>결제내역</span>
+		</a>
+	</li>
+
+
+	<li class="nav-item <?= $sideArr[7] ?>">
+		<a class="nav-link" href="/adm/notice/">
+			<span>공지</span>
+		</a>
+	</li>
+
+	<!-- Divider -->
+	<hr class="sidebar-divider">
+
+	<!-- Sidebar Toggler (Sidebar) -->
+	<div class="text-center d-none d-md-inline">
+		<button class="rounded-circle border-0" id="sidebarToggle"></button>
+	</div>
+
+</ul>
+<!-- End of Sidebar -->

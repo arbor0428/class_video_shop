@@ -1,0 +1,31 @@
+<?
+include '../header.php';
+$side_menu = 1;
+?>
+
+<div class="subWrap">
+	<div class="s_center dp_sb">
+		<?
+		include 'sidemenu.php';
+		
+		if (!$type)	$type = 'list';
+
+		switch ($type) {
+			case 'write':
+			case 'edit':
+				include 'write.php';
+				break;
+			case 'view':
+				include 'view.php';
+				break;
+			case 'list':
+				include 'list.php';
+				break;
+		}
+		?>
+	</div>
+</div>
+
+<?
+include '../footer.php';
+?>

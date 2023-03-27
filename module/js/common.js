@@ -1,99 +1,3 @@
-function flash_vars(c,d,e,f) {
-	var flash_tag = "";
-	flash_tag = '<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" ';
-	flash_tag +='codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" ';
-	flash_tag +='WIDTH="'+c+'" HEIGHT="'+d+'" >';
-	flash_tag +='<param name="wmode" value="transparent">'; 
-	//이부분은 플래쉬 배경을 투명으로 설정하는 부분으로 필요없다면 삭제해도 무방함
-	flash_tag +='<param name="movie" value="'+e+'">';
-	flash_tag +='<param name="quality" value="high">';
-	flash_tag +='<param name="flashvars" value="'+f+'">';
-	flash_tag +='<embed src="'+e+'" flashvars="'+f+'" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"  WIDTH="'+c+'" HEIGHT="'+d+'"></embed></object>';
-	document.write(flash_tag);
-}
-
-function swf_obj(src,w,h,swfid){
-	swf_html = '';
-	swf_html += '<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" WIDTH="'+w+'" HEIGHT="'+h+'" id="'+swfid+'">';
-	swf_html += '<param name="movie" value="'+src+'">';
-	swf_html += '<param name="quality" value="high">';
-	swf_html += '<PARAM NAME="menu" VALUE="false">';
-	swf_html += '<PARAM NAME="wmode" VALUE="transparent">';
-	swf_html += '<EMBED src="'+src+'" menu="false" wmode="transparent" quality="high" WIDTH="'+w+'" HEIGHT="'+h+'" NAME="'+swfid+'"></EMBED>';
-	swf_html += '<\/object>';
-	document.write(swf_html);
-}
-
-//주민등록번호 유효성 체크
-function checkJumin(form_name1,form_name2) 
-{
-	var formvalue = form_name1.value + form_name2.value;
-	var result;
-	var sum = 0;
-	var temp = 2;
-	for(var i = 0; i <= 11; i++) {
-		sum += parseInt(formvalue.substr(i,1))*temp;
-		temp++;
-		if(temp == 10) {
-			temp = 2;
-		}
-	}
-	result = parseInt(sum) % 11;
-	result = (11 - result) % 10;
-	if (result != formvalue.substr(12,1)) {
-		return false;
-	} else {
-		return true;
-	}
-
-	return true;
-}
-
-//사업자등록번호 유효성 체크(숫자10자리)
-function checkBiz(vencod) 
-{ 
-	var sum = 0; 
-	var getlist = new Array(10); 
-	var chkvalue =new Array("1","3","7","1","3","7","1","3","5");  
-
-	try
-	{
-		for(var i=0; i<10; i++) 
-		{ 
-			getlist[i] = vencod.substring(i, i+1); 
-		}         
-
-		for(var i=0; i<9; i++) 
-		{ 
-			sum += getlist[i]*chkvalue[i]; 
-		}  
-
-		sum		= sum + parseInt((getlist[8]*5)/10); 
-		sidliy	= sum % 10; 
-		sidchk	= 0;        
-
-		if(sidliy != 0)
-		{ 
-			sidchk = 10 - sidliy; 
-		} 
-		else 
-		{
-			sidchk = 0; 
-		}         
-
-		if(sidchk != getlist[9]) 
-		{ 
-			return false; 
-		} 
-
-		return true; 
-	}
-	catch(e)
-	{
-		return false;
-	}
-}
-
 //HTML제거 함수
 function trimHTML(strHtml){
 	var objRegExp = new RegExp("<html(.*|)<body([^>]*)>","gi");
@@ -168,9 +72,7 @@ function imgResize(target_img, g_width, g_height)
 	target_img.src = newImg.src;
     target_img.width = newWidth;
     target_img.height = newHeight;
-
 }
-
 
 //년, 월, 일 입력시 나이 리턴
 function getAge(yy, mm, dd) {
@@ -314,19 +216,6 @@ function isEmailModal(form_element_name,msg){
 	}
 } 
 
-//basic function : 
-/*
-function isFrmEmpty(form_element_name, msg)
-{
-	if(form_element_name.value == ""){
-		alert(msg);
-		form_element_name.focus();
-		return true;
-	}
-	else
-		return false;
-}
-*/
 function isFrmEmpty(form_element_name, msg)
 {
 	chkTxt = form_element_name.value.replace(/\s/gi, ''); // 모든 공백을 제거
@@ -520,7 +409,7 @@ function getChkCnt(form_name, element_name)
 
 	return chklen;
 }
-
+/*
 function selectAll(form_name, element_name)
 {
 	var form_element = eval("document."+form_name+"."+element_name);
@@ -571,7 +460,7 @@ function selectAll2(root_check, form_name, element_name)
 		}
 	}
 }
-
+*/
 //모든 checkbox선택
 function allcheck(sel){ 
 	var f = document.FRM; 
@@ -925,7 +814,7 @@ function number_format_reset(numstr){
 }
 
 
-function onlyNumber(){
+function onlyNumber(event){
 	var key = event.keyCode;
 	
     if((key >= 48 && key <= 57)){
@@ -1050,6 +939,18 @@ function GblMsgBox(msg,url){
 	return;
 }
 
+function GblMsgBox2(msg,url){
+	document.getElementById("alertTxt").innerText = msg;
+
+	if(url){
+		// document.getElementById("alertCloseBtn").innerHTML = "";
+		document.getElementById("alertBtn").innerHTML = "<input type='button' class='btn_notice_reg' value='확인' onclick=\""+url+"\">";
+	}
+
+	$(".GblNotice_open").click();
+	return;
+}
+
 function GblMsgConfirmBox(msg,url){
 	document.getElementById("confirmTxt").innerText = msg;
 
@@ -1074,7 +975,6 @@ function GblMsgConfirmBox2(msg,url){
 
 function pageNum(fname,rs){
 	form = document[fname];
-	form.type.value = '';
 	form.record_start.value = rs;
 	form.target = '';
 	form.action = form.next_url.value;
@@ -1140,8 +1040,7 @@ function fn_Number(obj,e){
 	35, 36, // End, Home Key
 	110, 190,		//dot 
 	144	//NumLock
-*/
-	
+*/	
 	if (!(e.which && (e.which >= 48 && e.which <= 57) || (e.which >= 96 && e.which <= 105) || e.which == 8 || e.which == 46 || e.which == 37 || e.which == 39 || e.which == 9 || e.which == 35 || e.which == 36 || e.which == 110 || e.which == 190 || e.which == 144)) {
 		e.preventDefault();
 	}
@@ -1152,17 +1051,11 @@ function fn_Number(obj,e){
 	}
 }
 
-
-
-
-
 function urldecode(str){
 	return decodeURIComponent((str + '').replace(/%(?![\da-f]{2})/gi, function(){
 		return '%25';
 	}).replace(/\+/g, '%20'));
 }
-
-
 
 function isCellPhone(p){
 	p = p.split('-').join('');
@@ -1170,69 +1063,38 @@ function isCellPhone(p){
 	return regPhone.test(p);
 }
 
-
 function isEmailChk(email){
 	var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 	return re.test(email);
 }
-//쪽지보내기
-function noteForm(receiver){
-	UserOS = $('#UserOS').text();
 
-	w = '500';
-	document.getElementById("multiFrame").innerHTML = "<iframe src='/module/noteForm.php?receiver="+receiver+"' width='"+w+"' height='600' frameborder='0' scrolling='auto'></iframe>";
-	$(".multiBox_open").click();
+$(document).on('keypress keyup blur', 'input.input_number', function() {
+    this.value = uncomma(this.value);
+});
+$(document).on('keypress keyup blur', 'input.input_won', function() {
+    this.value = comma(uncomma(this.value));
+});
+
+function comma(str) {
+    str = String(str);
+    var minus = str.substring(0, 1);
+  
+    str = str.replace(/[^\d]+/g, '');
+    str = str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+  
+    if(minus == "-") str = "-"+str;
+  
+    return str;
 }
 
-//공지쪽지보내기
-function noteNotice(receiver){
-	UserOS = $('#UserOS').text();
+function uncomma(str) {
+    str = String(str);
+    str = str.replace(/[^\d]+/g, '');
+    str = str.replace(/(^0+)/, '');
+    
+    // var minus = str.substring(0, 1);
+    // if(minus == "-") str = "-"+str;
+    if (str === '') str = 0;
 
-	w = '500';
-
-	document.getElementById("multiFrame").innerHTML = "<iframe src='/module/noteForm.php?notice=1&receiver="+receiver+"' width='"+w+"' height='600' frameborder='0' scrolling='auto'></iframe>";
-	$(".multiBox_open").click();
-}
-
-//작성글보러가기
-function userSearch(userid){
-	UserOS = $('#UserOS').text();
-
-	if(UserOS == 'PC')	document.location.href = '/search/up_index.php?f_userid='+userid;
-	
-	
-}
-
-//회원명 클릭시 활성화메뉴
-function userBoxMenuOpen(thisID,userid){
-	var pos = $('#'+thisID).offset();
-	var w = $('#'+thisID).width();
-
-	GBL_USERID = $('#GBL_USERID').text();
-
-	if(GBL_USERID)	$('#boxMenu01').html("<a href=\"javascript:noteForm('"+userid+"');\"><img src='/images/note.png' class='icon'>쪽지보내기</a>");
-	else					$('#boxMenu01').html("<a href=\"javascript:GblMsgBox('로그인 후 이용이 가능합니다.','');\"><img src='/images/note.png' class='icon'>쪽지보내기</a>");
-
-	$('#boxMenu02').html("<a href=\"javascript:userSearch('"+userid+"');\"><img src='/images/txt.png' class='icon'>작성글보러가기</a>");
-
-	$('.userBox').css('top',pos.top);
-	$('.userBox').css('left',(pos.left)+w+10);
-	$('.userBox').fadeIn("fast");
-}
-
-//회원명 클릭시 활성화메뉴(팝업용)
-function userBoxMenuOpen2(thisID,userid){
-	var pos = $('#'+thisID).offset();
-	var w = $('#'+thisID).width();
-
-	$('#boxMenu01').html("<a href=\"javascript:opener.noteForm('"+userid+"');self.close();\"><img src='/images/note.png' class='icon'>쪽지보내기</a>");
-	$('#boxMenu02').html("<a href=\"javascript:opener.userSearch('"+userid+"');\"><img src='/images/txt.png' class='icon'>작성글보러가기</a>");
-
-	$('.userBox').css('top',pos.top);
-	$('.userBox').css('left',(pos.left)+w+10);
-	$('.userBox').fadeIn("fast");
-}
-
-function userBoxMenuClose(){
-	$('.userBox').hide();
+    return parseInt(str);
 }

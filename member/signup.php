@@ -1,5 +1,6 @@
 <?
 include '../header.php';
+if (isLogin()) deny();
 ?>
 
 <div class="subWrap">
@@ -8,17 +9,27 @@ include '../header.php';
 		<div class="signin">
 			<div class="signin__inner">
 				<p class="signin__title">회원가입</p>
-				<form action="/module/login/signup_proc.php" method="post" name="FRM">
+				<form action="/module/login/signup_proc.php" method="post" name="frm01" id="frm01">
+					<input type="hidden" name="m" value="checkplusService">				<!-- 필수 데이타로, 누락하시면 안됩니다. -->
+					<input type="hidden" name="EncodeData" value="">					<!-- 업체정보를 암호화 한 데이타입니다. -->
+                    <input type='hidden' name='kakaoID' value="<?=$kakaoID?>">
+                    <input type='hidden' name='naverID' value="<?=$naverID?>">
+                    <input type='hidden' name='googleID' value="<?=$googleID?>">
+
 					<!-- 필수사항 -->
 					<p class="essential__text">필수사항</p>
 					<div class="signin__row">
-						<input type="text" placeholder="이메일 입력 (edufim@naver.com)" name="email" />
-						<input type="password" placeholder="비밀번호 입력 (10자 이상)" name="pwd" />
+						<input type="text" placeholder="이메일 입력 (edufim@naver.com)" name="userid" />
+						<input type="password" placeholder="비밀번호 (숫자, 영문, 특수문자 조합 최소 8자)" name="pwd" />
 						<input type="password" placeholder="비밀번호 확인" name="pwdChk" />
-						<input type="text" placeholder="이름" name="mname" readonly />
+						
+						<div class="input-address">
+							<input type="text" placeholder="이름" name="mname" id="mname" readonly style="background-color:#efefef;"/>
+							<div class="search-address__btn" onclick="niceCheck('mobile');">본인인증</div>
+						</div>
 						<div class="input-phone">
-							<input type="text" placeholder="휴대폰번호 입력" name="phone" />
-							<a href="javascript:void(0)" class="send-code__btn">인증번호 발송</a>
+							<input type="text" placeholder="핸드폰번호" name="phone" id="phone" readonly style="background-color:#efefef;"/>
+							<!-- <a href="javascript:void(0)" class="send-code__btn">인증번호 발송</a> -->
 						</div>
 						<div class="input-phone input-phone2">
 							<input type="text" placeholder="인증번호 입력" name="phoneChk" class="phoneChk" />
@@ -28,11 +39,11 @@ include '../header.php';
 					<div class="signin__row signin__row2">
 						<p>주소</p>
 						<div class="input-address">
-							<input type="text" placeholder="우편번호 검색" name="postCode" id="postCode" class="openkakao" value="1" readonly />
+							<input type="text" placeholder="우편번호 검색" name="postCode" id="postCode" class="openkakao" readonly />
 							<div class="search-address__btn openkakao">검색</div>
 						</div>
-						<input type="text" placeholder="주소를 입력해주세요" id="address" name="address" class="openkakao" value="1" readonly />
-						<input type="text" placeholder="나머지 주소를 입력해주세요" name="address_detail" />
+						<input type="text" placeholder="주소를 입력하세요" id="address" name="addr01" class="openkakao" readonly />
+						<input type="text" placeholder="나머지 주소를 입력하세요" name="addr02" />
 					</div>
 					<div class="signin__row signin__row2">
 						<p>성별</p>
@@ -50,7 +61,7 @@ include '../header.php';
 					<p class="essential__text">선택사항</p>
 					<div class="signin__row">
 						<select name="option01">
-							<option value="">직업을 선택해주세요.</option>
+							<option value="">직업을 선택하세요.</option>
 							<option value="회사원">회사원</option>
 							<option value="대학생">대학생</option>
 							<option value="현업 필라테스 강사">현업 필라테스 강사</option>
@@ -130,7 +141,7 @@ include '../header.php';
 							<a href="javscript:void(0)" class="terms__link">보기</a>
 						</div>
 						<div class="agree__row">
-							<input type="checkbox" name="agree03" id="agree03" value="receive_check" />
+							<input type="checkbox" name="agree03" id="agree03" value="receiveChk" />
 							<label for="agree03">(선택) 마케팅 정보 수신 동의</label>
 							<a href="javscript:void(0)" class="terms__link">보기</a>
 						</div>
@@ -143,7 +154,7 @@ include '../header.php';
 						</div>
 					</div>
 					<!--// 약관동의 -->
-					<a href="javascript:check_signup_submit();" class="signin__btn">회원가입</a>
+					<a href="javascript:void(0)" class="signin__btn" onclick="check_signup_submit()">회원가입</a>
 				</form>
 			</div>
 		</div>
@@ -162,7 +173,7 @@ include '../header.php';
 					//선택시 입력값 세팅
 					document.getElementById("postCode").value = data.zonecode;
 					document.getElementById("address").value = data.address; // 주소 넣기
-					document.querySelector("input[name=address_detail]").focus(); //상세입력 포커싱
+					document.querySelector("input[name=addr02]").focus(); //상세입력 포커싱
 				},
 			}).open();
 		});
@@ -175,15 +186,177 @@ include '../header.php';
 			}, 180000); //3분이 되면 타이머를 삭제한다.
 		});
 	});
+	
+	//나이스 본인인증
+	function niceCheck(t){
 
-	const Timer = document.getElementById("Timer"); //스코어 기록창-분
-	let time = 180000;
-	let min = 3;
-	let sec = 60;
+		if(t == 'mobile')	act = 'moduleCheck.php';
 
-	Timer.text = min + ":" + "00";
+		id = setTimeout(function(){	
+			$.post('/module/niceID/mobile/'+act,{}, function(result){
+				if(result){
+					parData = JSON.parse(result);
+					msg = parData.msg;
+					
+					if(msg){
+						GblMsgBox(msg,'');
+						return;
+					}else{
+						data = parData.data;
 
-	function TIMER() {
+						if(t == 'mobile'){
+							
+							window.open('', 'popupChk', 'width=500, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
+							document.frm01.EncodeData.value = data;
+							document.frm01.action = "https://nice.checkplus.co.kr/CheckPlusSafeModel/checkplus.cb";
+							document.frm01.target = "popupChk";
+							document.frm01.submit();
+						}
+					}
+				}else{
+					GblMsgBox('통신오류','');
+					return;
+				}
+			});	
+		}, 500);
+	}
+
+	const check_signup_submit = function() {
+		const form = document.frm01;
+
+		const userid = form.userid.value;
+		const pwd = form.pwd.value;
+		const pwdChk = form.pwdChk.value;
+		const phone = form.phone.value;
+		const postCode = form.postCode.value;
+		const addr01 = form.addr01.value;
+		const gender = form.gender.value;
+		const agree01 = form.agree01.checked;
+		const agree02 = form.agree02.checked;
+
+		if (userid === "") {
+			GblMsgBox("이메일을 입력하세요")
+			form.userid.focus()
+			return
+		} else if (!isEmailChk(userid)) {
+			GblMsgBox("올바른 이메일 입력하세요.")
+			form.userid.focus()
+			return
+        } else if (pwd === "") {
+			GblMsgBox("비밀번호를 입력하세요.")
+			form.pwd.focus()
+			return
+		} else if (!check_pwd()) {
+            form.pwd.focus()
+            return
+        } else if (pwd != pwdChk) {
+			GblMsgBox("비밀번호가 일치하지 않습니다")
+			form.pwdChk.focus()
+			return
+		} else if (phone === "") {
+			GblMsgBox("핸드폰번호를 입력하세요.")
+			form.phone.focus()
+			return
+		// } else if (isCellPhone(phone)) {
+		// 	GblMsgBox("올바른 핸드폰번호를 입력하세요")
+		// 	form.phone.focus()
+		// 	return
+        } else if (postCode === "") {
+			GblMsgBox("주소를 입력하세요")
+			form.postCode.focus()
+			return
+		} else if (addr01 === "") {
+			GblMsgBox("주소를 입력하세요")
+			form.addr01.focus()
+			return
+		} else if (gender === "") {
+			GblMsgBox("성별을 선택하세요")
+			$(".gender__radio").attr("tabindex", -1).focus()
+			return
+		} else if (!agree01) {
+			GblMsgBox("이용약관에 동의 바랍니다")
+			form.agree01.focus()
+			return
+		} else if (!agree02) {
+			GblMsgBox("개인정보 취급방침에 동의 바랍니다.")
+			form.agree02.focus()
+			return
+		}
+		form.action = '/module/login/signup_proc.php';
+		form.target = 'ifra_gbl';
+		form.submit();
+	}
+
+    function check_pwd () {
+        const form = document.frm01;
+        const pwd = form.pwd.value;
+        
+        const num = pwd.search(/[0-9]/g);
+        const eng = pwd.search(/[a-z]/ig);
+        const spe = pwd.search(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/g);
+        //var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+        if(pwd.length < 4 || pwd.length > 20){
+            GblMsgBox("4자리 ~ 20자리 이내로 입력하세요.");
+            return false;
+
+        // } else if(num < 0 || eng < 0 || spe < 0 || pwd.search(/\s/) != -1){
+        } else if(num < 0){
+            GblMsgBox("숫자, 영문, 특수문자를 조합하여 입력하세요.");
+            return false;
+
+        }else {
+            return true;
+        }
+    }
+
+    /*
+	const check_input = {
+		userid() {
+			const userid = $('input[name=userid]').val();
+			return (userid != "") && isEmailChk(userid);
+		},
+		pwd() {
+			const pwd = $('input[name=pwd]').val();
+			const pwdChk = $('input[name=pwdChk]').val();
+			return (pwd != "") && (pwd === pwdChk) && (pwdChk != "");
+		},
+		phone() {
+			const phone = $('input[name=phone]').val();
+			return (phone != "") && isCellPhone(phone);
+		},
+		mname() {
+			const mname = $('input[name=mname]').val();
+			return (mname != "");
+		},
+		postCode() {
+			const postCode = $('input[name=postCode]').val();
+			return (postCode != "");
+		},
+		addr01() {
+			const addr01 = $('input[name=addr01]').val();
+			return (addr01 != "");
+		},
+		gender() {
+			const gender = $('input[name=gender]').val();
+			return (gender != "");
+		},
+		agree1() {
+			return $('input[name=agree01]').is("checked");
+		},
+		agree2() {
+			return $('input[name=agree02]').is("checked");
+		}
+	}
+*/
+
+	const TIMER = function() {
+		const Timer = document.getElementById("Timer"); //스코어 기록창-분
+		let time = 180000;
+		let min = 3;
+		let sec = 60;
+		Timer.text = min + ":" + "00";
+		
 		PlAYTIME = setInterval(function() {
 			time = time - 1000; //1초씩 줄어듦
 			min = time / (60 * 1000); //초를 분으로 나눠준다.
@@ -200,71 +373,6 @@ include '../header.php';
 				Timer.value = Math.floor(min) + ":" + "00";
 			}
 		}, 1000); //1초마다
-	}
-
-	const check_signup_submit = function() {
-		const form = document.FRM;
-
-		const email = form.email.value;
-		const pwd = form.pwd.value;
-		const pwdChk = form.pwdChk.value;
-		const phone = form.phone.value;
-		const postCode = form.postCode.value;
-		const address = form.address.value;
-		const gender = form.gender.value;
-		const agree01 = form.agree01.checked;
-		const agree02 = form.agree02.checked;
-
-		const email_regex = '^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$';
-		const pwd_regex = '';
-		const phone_regex = '\d{10,11}';
-		const address_regex = '\d[0-9]';
-
-
-		if (email === "") {
-			GblMsgBox("이메일을 입력해주세요", "")
-			form.email.focus()
-			return
-		} else if (pwd === "") {
-			GblMsgBox("비밀번호를 입력해주세요", "")
-			form.pwd.focus()
-			return
-		} else if (pwd != pwdChk) {
-			GblMsgBox("비밀번호가 일치하지 않습니다", "")
-			form.pwdChk.focus()
-			return
-		} else if (phone === "") {
-			GblMsgBox("휴대폰번호를 입력해주세요", "")
-			form.phone.focus()
-			return
-		} else if (postCode === "") {
-			GblMsgBox("주소를 입력해주세요", "")
-			form.postCode.focus()
-			return
-		} else if (address === "") {
-			GblMsgBox("주소를 입력해주세요", "")
-			form.address.focus()
-			return
-		} else if (gender === "") {
-			GblMsgBox("성별을 선택해주세요", "")
-			$(".gender__radio").attr("tabindex", -1).focus()
-			return
-		} else if (!agree01) {
-			GblMsgBox("이용약관에 동의해주세요", "")
-			form.agree01.focus()
-			return
-		} else if (!agree02) {
-			GblMsgBox("개인정보 취급방침에 동의해주세요", "")
-			form.agree02.focus()
-			return
-		}
-
-
-		
-
-		// form.target = 'ifra_gbl';
-		// form.submit();
-		// return;
 	}
 </script>
 
