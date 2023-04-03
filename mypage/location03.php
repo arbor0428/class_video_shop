@@ -7,9 +7,9 @@
 						<button type="button"><span>강좌신청 관리</span></button>
 						<div class="next-depth">
 							<ul style="display: none;">
-								<li><a href="./sub01.php">HOME</a></li>
-								<li><a href="./learning/index.php">학습 관리</a></li>
-								<li><a href="./sub14.php">설정</a></li>
+								<li><a href="../recommended/">HOME</a></li>
+								<li><a href="../learning/">학습 관리</a></li>
+								<li><a href="../edit/">설정</a></li>
 							</ul>
 						</div>
 					</li>
@@ -19,10 +19,10 @@
 						<button type="button"><span><?=$topTxt01?></span></button>
 						<div class="next-depth">
 							<ul style="display: none;">
-								<li><a href="./cart.php">장바구니</a></li>
-								<li><a href="./sub11.php">쿠폰함</a></li>
-								<li><a href="./sub12.php">적립금</a></li>
-								<li><a href="./sub13.php">구매내역</a></li>
+								<li><a href="../cart">장바구니</a></li>
+								<li><a href="../coupon/">쿠폰함</a></li>
+								<li><a href="../point/">적립금</a></li>
+								<li><a href="../orderList/">구매내역</a></li>
 							</ul>
 						</div>
 					</li>

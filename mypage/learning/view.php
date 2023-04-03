@@ -1,6 +1,5 @@
 <?
 include '/home/edufim/www/header.php';
-
 if (!isLogin()) redirectLogin();
 if (isEmpty($uid))  deny("/mypage/learning/");
 
@@ -17,11 +16,25 @@ $row = mysql_fetch_assoc($result);
 
 // Learning - class list
 $class_uid = $row['class_uid'];
-$query2 = "SELECT l.*, k.updated_at, k.progress_values
-    FROM ks_class_list l
-    LEFT JOIN kollus_progress_relations k ON l.kollus_video_id=k.video_id
-    WHERE l.class_uid='$class_uid'
-    ORDER BY l.sort";
+$query2 = "SELECT l.*, k.updated_at, k.progress_values, v.length
+FROM ks_class_list l
+LEFT JOIN kollus_progress_relations k ON l.kollus_video_id=k.video_id AND k.member_id='$GBL_UID'
+JOIN kollus_video v ON l.kollus_video_id=v.id
+WHERE l.class_uid='$class_uid'
+ORDER BY l.sort";
+
+if($_SERVER['REMOTE_ADDR'] == '106.246.92.237'){
+    echo $query2;
+}
+
+// $query = "SELECT *
+// FROM ks_learning l
+// RIGHT JOIN ks_learning_list ll ON l.uid=ll.learning_uid
+// LEFT JOIN ks_class_list cl ON ll.class_list_uid=cl.uid
+// LEFT JOIN kollus_progress_relations k ON cl.kollus_video_id=k.video_id
+// WHERE l.uid='$uid'
+// ORDER BY cl.sort";
+
 $result2 = mysql_query($query2) or die('Could not connect: ' . mysql_error());
 $num_row2 = mysql_num_rows($result2);
 
@@ -41,14 +54,13 @@ if (empty($_POST['class_list_uid'])) {
     // kollus video setting
     $class_list_uid = $_POST['class_list_uid'];
 
-    $memberId = sqlRowOne("SELECT uid FROM ks_member WHERE userid='$GBL_USERID'");
     $kollus_video_id = sqlRowOne("SELECT kollus_video_id FROM ks_class_list WHERE uid='$class_list_uid'");
 
     // kollus_video
     $video_row = sqlRow("SELECT * FROM kollus_video WHERE id='$kollus_video_id'");
 
     // kollus_progress_relations
-    $progress_relations_row = sqlRow("SELECT * FROM kollus_progress_relations WHERE id='$kollus_video_id' AND member_id='$memberId'");
+    $progress_relations_row = sqlRow("SELECT * FROM kollus_progress_relations WHERE id='$kollus_video_id' AND member_id='$GBL_UID'");
 
     // kollus_progress_datas
     $progress_datas_row = sqlRow("SELECT * FROM kollus_progress_datas WHERE progress_relation_id='" . $progress_relations_row['id'] . "'");
@@ -123,6 +135,20 @@ if (empty($_POST['class_list_uid'])) {
                 <? } else { ?>
                     <iframe src="<?php echo $webTokenURL; ?>" allowfullscreen></iframe>
                 <? } ?>
+            </div>
+
+            <!-- 강의자료 -->
+            <div class="detail_cont_sub_tit">
+                <span class="bora01 c_w bold2">강의 자료</span>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="/upfile/class/<?= $row['upfile02'] ?>" download="<?= $row['realfile02'] ?>"><?= $row['realfile02'] ?></a></li>
+                    <li><a href="/upfile/class/<?= $row['upfile03'] ?>" download="<?= $row['realfile03'] ?>"><?= $row['realfile03'] ?></a></li>
+                    <li><a href="/upfile/class/<?= $row['upfile04'] ?>" download="<?= $row['realfile04'] ?>"><?= $row['realfile04'] ?></a></li>
+                    <li><a href="/upfile/class/<?= $row['upfile05'] ?>" download="<?= $row['realfile05'] ?>"><?= $row['realfile05'] ?></a></li>
+                    <li><a href="/upfile/class/<?= $row['upfile06'] ?>" download="<?= $row['realfile06'] ?>"><?= $row['realfile06'] ?></a></li>
+                </ul>
             </div>
 
 
@@ -241,7 +267,7 @@ if (empty($_POST['class_list_uid'])) {
                     ?>
                             <div class="per_class_list_box">
                                 <a href="javascript:void(0)" title="<?= $row2['title'] ?>" onclick="showList('<?= $row2['uid'] ?>', '<?= $row2['sort'] ?>');">
-                                    <p class="bold2"><?= $row2['sort'] ?>강. <?= $row2['title'] ?></p>
+                                    <p class="bold2"><? /*<?= $row2['sort'] ?>강. */?><?= $row2['title'] ?></p>
                                     <span class="c_gry04 f12"><?= $row2['exp'] ?></span>
                                     <div class="now_class_status_wrap dp_sb p_r">
                                         <div class="now_class_status_play dp_f dp_c">

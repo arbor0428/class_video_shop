@@ -1,3 +1,10 @@
+<?php
+if ($GBL_MTYPE != 'A') {
+	// header('Location:/adm/main.php');
+	header('Location:/adm/main.php');
+	exit;
+}
+?>
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -14,15 +21,15 @@
 
 	<li class="nav-item  <?= $sideArr[1] ?>">
 		<a class="nav-link collapsed" href="javascript:void(0)" data-toggle="collapse" data-target="#subList1" aria-expanded="true" aria-controls="subList1">
-			<span>클래스 관리</span>
+			<span>상품 관리</span>
 		</a>
 		<div id="subList1" class="collapse <?= $showArr[1] ?>" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item <?= $subArr['all'] ?>" href="/adm/class/all">ALL클래스</a>
-				<a class="collapse-item <?= $subArr['license'] ?>" href="/adm/class/license/">자격증과정</a>
-				<a class="collapse-item <?= $subArr['best'] ?>" href="/adm/class/best/">BEST콜라보</a>
-				<!-- <a class="collapse-item <?= $subArr['off'] ?>" href="/adm/class/off/">필라테스자격증</a> -->
-				<!-- <a class="collapse-item <?= $subArr['homet'] ?>" href="/adm/class/homet/">홈트</a> -->
+				<a class="collapse-item <?= $subArr['all'] ?>" href="/adm/prod/all">ALL클래스</a>
+				<a class="collapse-item <?= $subArr['license'] ?>" href="/adm/prod/license/">자격증과정</a>
+				<a class="collapse-item <?= $subArr['best'] ?>" href="/adm/prod/best/">BEST콜라보</a>
+				<!-- <a class="collapse-item <?= $subArr['off'] ?>" href="/adm/prod/off/">필라테스자격증</a> -->
+				<a class="collapse-item <?= $subArr['store'] ?>" href="/adm/prod/store/">스토어</a>
 			</div>
 		</div>
 	</li>
@@ -33,11 +40,11 @@
 		</a>
 		<div id="subList2" class="collapse <?= $showArr[2] ?>" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item <?= $subArr['user'] ?>" href="/adm/member/user/">회원</a>
-				<a class="collapse-item <?= $subArr['admin'] ?>" href="/adm/member/admin/">관리자</a>
+				<a class="collapse-item <?= $subArr['user'] ?>" href="/adm/member/user/">전체</a>
+				<!-- <a class="collapse-item <?= $subArr['admin'] ?>" href="/adm/member/admin/">관리자</a> -->
 				<a class="collapse-item <?= $subArr['completion'] ?>" href="/adm/member/completion/">수료증 조회</a>
 				<a class="collapse-item <?= $subArr['license'] ?>" href="/adm/member/license/">자격증 조회</a>
-				<a class="collapse-item <?= $subArr['profile'] ?>" href="/adm/member/profile/">프로필 편집</a>
+				<!-- <a class="collapse-item <?= $subArr['profile'] ?>" href="/adm/member/profile/">프로필 편집</a> -->
 			</div>
 		</div>
 	</li>
@@ -61,9 +68,9 @@
 		</a>
 		<div id="subList4" class="collapse <?= $showArr[4] ?>" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item <?= $subArr['store'] ?>" href="/adm/shop/store/">스토어</a>
+				<!-- <a class="collapse-item <?= $subArr['store'] ?>" href="/adm/shop/store/">스토어</a> -->
 				<a class="collapse-item <?= $subArr['order'] ?>" href="/adm/shop/order/">주문</a>
-				<a class="collapse-item <?= $subArr['payment'] ?>" href="/adm/shop/payment/">결제</a>
+				<!-- <a class="collapse-item <?= $subArr['payment'] ?>" href="/adm/shop/payment/">결제</a> -->
 				<!-- <a class="collapse-item <?= $subArr['address'] ?>" href="/adm/shop/address/">주소</a> -->
 			</div>
 		</div>
@@ -77,6 +84,7 @@
 			<div class="bg-white py-2 collapse-inner rounded">
 				<a class="collapse-item <?= $subArr['banner'] ?>" href="/adm/main/banner/">메인 배너</a>
 				<a class="collapse-item <?= $subArr['event'] ?>" href="/adm/main/event/">이벤트 배너</a>
+				<!-- <a class="collapse-item <?= $subArr['ai'] ?>" href="/adm/main/ai/">ai추천</a> -->
 				<!-- <a class="collapse-item <?= $subArr['address'] ?>" href="/adm/shop/address/">주소</a> -->
 			</div>
 		</div>

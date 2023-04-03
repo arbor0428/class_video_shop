@@ -1,15 +1,19 @@
 <?
 include './header.php';
-include './sidemenu.php';
+if ($GBL_MTYPE == 'A') {
+    include './sidemenu.php';
 
-$query = "SELECT * FROM config_main ORDER BY sort";
-$row_arr = sqlArray($query);
+} elseif ($GBL_MTYPE == 'T') {
+    include './sidemenu-T.php';
+}
 ?>
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
     <!-- Main Content -->
     <div id="content">
-        <? include './nav.php'; ?>
+        <?
+        include './nav.php';
+        ?>
         <!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- Content Row -->

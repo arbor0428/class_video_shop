@@ -52,10 +52,10 @@ $data[''] = $userid;
 								<? } ?>
 							</select>
 						</div>
-						<div class="inputwrap dp_f dp_c">
+						<!-- <div class="inputwrap dp_f dp_c">
 							<input type="checkbox">
 							<label for="">결제 금액</label>
-						</div>
+						</div> -->
 						<!-- <div class="inputwrap dp_f dp_c">
 							<input type="checkbox">
 							<label for="">학습 진도</label>

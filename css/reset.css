@@ -339,3 +339,5 @@ section {
     content: '' !important;
 }
 .strkt{text-decoration:line-through;text-decoration-color:#666;}
+.check-default {cursor: default !important;}
+.check-default::after {cursor: default !important;}

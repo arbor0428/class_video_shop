@@ -5,34 +5,37 @@ $side_menu02 = 1;
 
 if (isEmpty($_GET['cade01'])) die("/sub01");
 else if (isEmpty($_GET['cade02'])) die("/sub01");
+else if (isEmpty($_GET['cade03'])) die("/sub01");
 else {
     $cade01 = $_GET['cade01'];
     $cade02 = $_GET['cade02'];
+    $cade03 = $_GET['cade03'];
 }
 
-$cade01_title = sqlRowOne("select title from ks_class_cade01 where uid=$cade01");
-$cade02_title = sqlRowOne("select title from ks_class_cade01 where uid=$cade02");
 ?>
 
 <div class="subWrap">
     <div class="s_center dp_sb">
         <?
         include 'sidemenu.php';
+        $cade01_title = sqlRowOne("select title from ks_class_cade01 where uid=$cade01");
+        $cade02_title = sqlRowOne("select title from ks_class_cade02 where uid=$cade02");
+        $cade03_title = sqlRowOne("select title from ks_class_cade03 where uid=$cade03");
         ?>
         <div class="s_cont">
             <div class="s_cont_tit02 dp_f dp_c bor_bot">
-                <span class="f20 regular line dp_f dp_c"><a href="" title="전체">전체</a></span>
+                <span class="f20 regular line dp_f dp_c"><?= $cade01_title ?></span>
+                    <!-- <a href="" title="전체">전체</a>-->
+                
                 <!-- <span class="f20 regular line dp_f dp_c">체형분석 전문가</span> -->
                 <span class="f20 regular line dp_f dp_c">
-                    <a href="/sub01/sub01.php?&cade01=<?= $cade01 ?>" title="<?= $cade01_title ?>">
-                        <?= $cade01_title ?>
-                    </a>
+                    <!-- <a href="/sub01/sub01.php?&cade01=<?= $cade01 ?>" title="<?= $cade01_title ?>"></a> -->
+                        <?= $cade02_title ?>
                 </span>
                 <!-- <span class="f20 bold2 c_bora01">하위메뉴</span> -->
                 <span class="f20 bold2 c_bora01">
-                    <a href="/sub01/sub01.php?&cade01=<?= $cade01 ?>&cade02=<?= $cade02 ?>" title="<?= $cade02_title ?>">
-                        <?= $cade02_title ?>
-                    </a>
+                    <!-- <a href="/sub01/sub01.php?&cade01=<?= $cade01 ?>&cade02=<?= $cade02 ?>" title="<?= $cade02_title ?>"></a> -->
+                        <?= $cade03_title ?>
                 </span>
             </div>
             <div class="top_searchBar">
@@ -54,7 +57,7 @@ $cade02_title = sqlRowOne("select title from ks_class_cade01 where uid=$cade02")
                     <?
                     $query2 = "SELECT *, (SELECT COUNT(1) FROM ks_wish WHERE ks_wish.userid='$GBL_USERID' AND ks_class.uid=ks_wish.class_uid) AS is_wish";
                     $query2 .= " FROM ks_class";
-                    $query2 .= " WHERE status='1' AND cade01=$cade01 AND cade02=$cade02";
+                    $query2 .= " WHERE status='1' AND cade01=$cade01 AND cade02=$cade02 AND cade03=$cade03";
                     $query2 .= " ORDER BY uid";
 
                     $row_arr = sqlArray($query2);

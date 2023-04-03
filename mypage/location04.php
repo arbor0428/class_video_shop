@@ -7,9 +7,9 @@
 						<button type="button"><span>설정</span></button>
 						<div class="next-depth">
 							<ul style="display: none;">
-								<li><a href="./sub01.php">HOME</a></li>
-								<li><a href="./learning/index.php">학습 관리</a></li>
-								<li><a href="./cart.php">강좌신청 관리</a></li>
+								<li><a href="../recommended/">HOME</a></li>
+								<li><a href="../learning/">학습 관리</a></li>
+								<li><a href="../cart/">강좌신청 관리</a></li>
 							</ul>
 						</div>
 					</li>
@@ -19,8 +19,8 @@
 						<button type="button"><span><?=$topTxt01?></span></button>
 						<div class="next-depth">
 							<ul style="display: none;">
-								<li><a href="./sub14.php">개인정보 수정</a></li>
-								<li><a href="./sub15.php">모바일기기 초기화</a></li>
+								<li><a href="../edit/">개인정보 수정</a></li>
+								<li><a href="../mobileReset/">모바일기기 초기화</a></li>
 							</ul>
 						</div>
 					</li>

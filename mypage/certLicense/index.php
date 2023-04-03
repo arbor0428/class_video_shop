@@ -3,9 +3,9 @@ include '../../header.php';
 $side_menu = 9;
 $topTxt01 = '자격증 발급';
 
-$query = "SELECT l.class_set_uid, l.progress, c.title 
-    FROM ks_learning_set l
-    JOIN ks_class_set c ON l.class_set_uid=c.uid 
+$query = "SELECT l.license_uid, l.progress, c.title 
+    FROM ks_learning_license l
+    JOIN ks_class_set c ON l.license_uid=c.uid 
     WHERE l.userid='$GBL_USERID' AND l.progress>=80";
 
 $row_arr = sqlArray($query);
@@ -39,20 +39,20 @@ include '../location02.php';
                 <table class="subTbl certi certiTbl">
                     <tbody>
                         <tr class="brb000">
-                            <th>강좌명</th>
+                            <th>자격증명</th>
                             <th>내 진도율</th>
                             <th>비고</th>
                         </tr>
 
-                        <? if ($row_num > 0) { ?>
-                            <?
+                        <?
+                        if ($row_num > 0) {
                             foreach ($row_arr as $key => $row) {
                                 $class_set_uid = $row['class_set_uid'];
                                 $query2 = "SELECT * FROM ks_cert_license WHERE userid='$GBL_USERID' AND class_set_uid='$class_set_uid'";
                                 $row_num2 = sqlRowCount($query2);
 
                                 $testTxt = ($row_num2 > 0) ? "자격증 발급" : "시험 응시";
-                            ?>
+                        ?>
                                 <tr>
                                     <td><?= $row['title'] ?></td>
                                     <td><?= $row['progress'] ?>%</td>
@@ -61,11 +61,15 @@ include '../location02.php';
                                     </td>
                                 </tr>
                             <? } ?>
-                        <? } else { ?>
+                        <?
+                        } else {
+                        ?>
                             <tr class="noResult">
-                                <td colspan="3">수강 완료 강좌가 없습니다.</td>
+                                <td colspan="3">수강 자격증 강좌가 없습니다.</td>
                             </tr>
-                        <? } ?>
+                        <?
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>

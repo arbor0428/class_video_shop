@@ -20,8 +20,6 @@
         border-radius: 2px;
         font: 700 12px/2em Tahoma, AppleGothic, sans-serif;
         letter-spacing: -1px;
-        *display: inline;
-        *zoom: 1
     }
 
     .pageNum a {

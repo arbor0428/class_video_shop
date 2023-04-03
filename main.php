@@ -8,7 +8,7 @@ $limit = 10;
 <!--  -->
 <section>
     <div class="visual">
-        <div class="visualSlick">
+        <div class="visualSlick pcvisual">
             <?
             $query = "SELECT * FROM config_main WHERE type='BANNER' AND (upfile!='' AND upfile IS NOT NULL) ORDER BY sort";
             $result = mysql_query($query) or die('Banner Config Error : ' . mysql_error());
@@ -16,7 +16,20 @@ $limit = 10;
                 $sort = sprintf("%02d", $row['sort']);
             ?>
                 <div class="v_slickBox v_slick<?= $sort ?>">
-                    <a href="<?= $row['url'] ?>" title="mainslide<?= $sort ?>" target="<?= $row['target'] ?>" style="background-image:url('/upfile/main/<?= $row['upfile'] ?>')"></a>
+                    <a href="<?= $row['url'] ?>" title="mainslide<?= $sort ?>" target="<?= $row['target'] ?>" style="background-image:url('/upfile/main/<?= $row['upfile'] ?>')"><img src="/upfile/main/<?= $row['upfile'] ?>" alt=""></a>
+                </div>
+            <? } ?>
+        </div>
+        <!-- 모바일 메인 배너 -->
+         <div class="visualSlick mvisual">
+            <?
+            $query = "SELECT * FROM config_main WHERE type='BANNER' AND (upfile!='' AND upfile IS NOT NULL) ORDER BY sort";
+            $result = mysql_query($query) or die('Banner Config Error : ' . mysql_error());
+            while ($row = mysql_fetch_assoc($result)) {
+                $sort = sprintf("%02d", $row['sort']);
+            ?>
+                <div class="v_slickBox v_slick<?= $sort ?>">
+                    <a href="<?= $row['url'] ?>" title="mainslide<?= $sort ?>" target="<?= $row['target'] ?>"><img src="/upfile/main/<?= $row['upfile_m'] ?>" alt=""></a>
                 </div>
             <? } ?>
         </div>
@@ -35,6 +48,8 @@ $limit = 10;
 </section>
 
 <script>
+    AOS.init(); //aos 플러그인 동작 실행
+
     var $status = $('.pagingInfo');
     var $slickElement = $('.visualSlick');
 
@@ -76,8 +91,8 @@ $limit = 10;
 <section class="cont1 blue_gradient c_w">
     <div class="c_center">
         <div class="newWrap">
-            <p class="cont1_tit c_orange bold2">지금 인기 있는 신규 클래스</p>
-            <p class="cont1_sub_tit c_w bold">
+            <p class="cont1_tit c_orange bold2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">지금 인기 있는 신규 클래스</p>
+            <p class="cont1_sub_tit c_w bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="500">
                 선생님들의 실력이 계속 업그레이드 될 수 있게<br> 
                 지금 에듀핌에서 수강생들에게 가장 필요한 강의들을 끊임없이 업데이트 하고 있습니다.
             </p>
@@ -132,15 +147,15 @@ $limit = 10;
 </section>
 <section class="cont1_2">
     <div class="c_center txt-c">
-        <p class="cont1_2_tit01">
+        <p class="cont1_2_tit01" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
             교육 <span class="bold2">수료</span>만 해서는 더 이상<br>
             <span class="bold2">경쟁력 있는 커리어</span>를 가질 수 없습니다.
         </p>
-        <p class="cont1_2_tit02">
+        <p class="cont1_2_tit02" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="500">
             에듀핌은 6개 자격증 보유 기관으로 내가 꼭 필요한 강의들로 구성할 수 있게<br>
             <span class="bold2">선택적</span>인 강좌 구성과 실력이 향상 될 수 있게 <span class="bold2">체계적</span>인 자격증 과정을 제공합니다.
         </p>
-        <p class="cont1_2_tit03 bold2">
+        <p class="cont1_2_tit03 bold2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="1000">
             에듀핌은 여러분의 <span class="c_w">진짜 실력과 경쟁력 있는</span>커리어 성장을<br>
             동시에 서포트합니다.
         </p>
@@ -148,12 +163,14 @@ $limit = 10;
             <p class="c_bora bold2">전문가를 더 전문가 답게</p>
             <h3>자격증 과정</h3>
         </div>
-        <ul class="curri_slide_tab_btn dp_f dp_c">
-            <li class="on"><a class="bold" href="" title="물리치료사">물리치료사</a></li>
-            <li><a class="bold" href="" title="필라테스 강사">필라테스 강사</a></li>
-            <li><a class="bold" href="" title="트레이너">트레이너</a></li>
-            <li><a class="bold" href="" title="골프 티칭 프로">골프 티칭 프로</a></li>
-        </ul>
+        <div class="curri_slide_tab_btn_wrap">
+            <ul class="curri_slide_tab_btn dp_f dp_c">
+                <li class="on"><a class="bold" href="" title="물리치료사">물리치료사</a></li>
+                <li><a class="bold" href="" title="필라테스 강사">필라테스 강사</a></li>
+                <li><a class="bold" href="" title="트레이너">트레이너</a></li>
+                <li><a class="bold" href="" title="골프 티칭 프로">골프 티칭 프로</a></li>
+            </ul>
+        </div>
         <div class="curri_slide_tab_wrap">
             <div id="curricont01" class="curri_slide_tab">
                 <div class="curriswiper01_wrap p_r">
@@ -575,19 +592,19 @@ var swiper19 = new Swiper(".curriswiper04", {
 </script>
 <section class="cont1_3 blue_gradient">
     <div class="c_center txt-c">
-        <p class="cont1_3_tit01 c_pink bold2">국제 표준 인증</p>
-        <p class="cont1_3_tit02 c_w">
+        <p class="cont1_3_tit01 c_pink bold2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">국제 표준 인증</p>
+        <p class="cont1_3_tit02 c_w" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
             넘쳐나는 교육들! 어떤 기준으로 교육을 선택하실 건가요?<br>
             정답은 그냥 교육이 아닌, 어디에서나 인정 받을 수 있는 교육이 필요합니다.
         </p>
-        <p class="cont1_3_tit03 pink c_w">에듀핌은 국제표준인증을 받은 퀄리티 높은 교육입니다.</p>
+        <p class="cont1_3_tit03 pink c_w" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="600">에듀핌은 국제표준인증을 받은 퀄리티 높은 교육입니다.</p>
 
-        <p class="cont1_3_tit04 c_w butler">EDUFIM CAMPUS</p>
-        <p class="cont1_3_tit05 c_w">100% 활용하기</p>
+        <p class="cont1_3_tit04 c_w butler" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="900">EDUPIM CAMPUS</p>
+        <p class="cont1_3_tit05 c_w" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="1200">100% 활용하기</p>
 
-        <img src="/images/new_add/main_edufimCampus.png" alt="">
+        <img src="/images/new_add/main_edufimCampus.png" alt="" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="1500">
 
-        <div class="cont1_3_imgDetail txt-c">
+        <div class="cont1_3_imgDetail txt-c" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
             <p class="c_w bold">
                 에듀핌 캠퍼스의 모든 커리큘럼은<br>
                 국제표준기구에서 커리큘럼(소프트웨어)와 오프라인(하드웨어) 과정 부문에서<br>
@@ -595,7 +612,7 @@ var swiper19 = new Swiper(".curriswiper04", {
             </p>
         </div>
 
-        <p class="hotWrap_tit c_w bold">
+        <p class="hotWrap_tit c_w bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
             지금 에듀핌에서<br> 
             선생님들이 가장 많이 선택한 강의는?
         </p>
@@ -714,31 +731,44 @@ var swiper19 = new Swiper(".curriswiper04", {
 
 <section class="cont1_4">
     <div class="c_center txt-c">
-        <p class="cont1_4_tit01">
+        <p class="cont1_4_tit01" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
             내 실력에 맞게 차근차근 공부하고 싶은데...<br>
             어디서 부터 어떻게 시작할지 막막하다면?
         </p>
-        <p class="cont1_4_tit02 bold2">에듀핌 AI 맞춤 강좌추천으로 시작하세요!</p>
-        <p class="cont1_4_tit03">현상태에서 객관적으로 나에게 맞는 강의를 추천해</p>
-        <p class="cont1_4_tit03 back c_w">실력 향상의 가장 빠른 길을 제시해드립니다.</p>
+        <p class="cont1_4_tit02 bold2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">에듀핌 AI 맞춤 강좌추천으로 시작하세요!</p>
+        <p class="cont1_4_tit03" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="600">현상태에서 객관적으로 나에게 맞는 강의를 추천해</p>
+        <p class="cont1_4_tit03 back c_w" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="900">실력 향상의 가장 빠른 길을 제시해드립니다.</p>
         <div class="videoTit dp_f dp_c">
             <span class="blue c_w span_ti dp_f dp_c dp_cc">AI</span>
             <h3>나에게 딱 맞는 강좌 추천</h3>
         </div>
-        <ul class="ai_tab_btn dp_f dp_c">
-            <li class="on dp_f dp_cc"><a class="bold" href="" title="물리치료사">물리치료사</a></li>
-            <li class="dp_f dp_cc"><a class="bold" href="" title="필라테스 강사">필라테스 강사</a></li>
-            <li class="dp_f dp_cc"><a class="bold" href="" title="트레이너">트레이너</a></li>
-            <li class="dp_f dp_cc"><a class="bold" href="" title="일반인">일반인</a></li>
-        </ul>
+        <div class="ai_tab_btn_wrap">
+            <ul class="ai_tab_btn dp_f dp_c">
+                <?
+                $ai_arr = sqlArray('SELECT * FROM ai_recommended WHERE depth=0');
+                foreach($ai_arr as $ai) {
+                ?>
+                <li class="dp_f dp_cc"><a class="bold" href="javascript:void(0)" title="<?= $ai['value'] ?>"><?= $ai['value'] ?></a></li>
+                <?
+                }
+                ?>
+                <!-- <li class="dp_f dp_cc"><a class="bold" href="javascript:void(0)" title="필라테스 강사">필라테스 강사</a></li>
+                <li class="dp_f dp_cc"><a class="bold" href="javascript:void(0)" title="트레이너">트레이너</a></li>
+                <li class="dp_f dp_cc"><a class="bold" href="javascript:void(0)" title="일반인">일반인</a></li> -->
+            </ul>
+        </div>
         <div class="ai_tab_box_wrap">
+            <?
+            $ai_arr = sqlArray('SELECT * FROM ai_recommended WHERE depth=1');
+            foreach($ai_arr as $ai) {
+            ?>
             <div class="ai_tab_box">
                 <div class="dp_sb dp_wrap">
                     <div class="ai_tab_box_child dp_sb dp_c">
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">물리치료사</p>
                             <p class="ai_tit_bot bold">환자 평가가 어렵다</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai01.png" alt="">
@@ -748,7 +778,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">물리치료사</p>
                             <p class="ai_tit_bot bold">도수치료 스킬 업</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai02.png" alt="">
@@ -758,7 +788,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">물리치료사</p>
                             <p class="ai_tit_bot bold">근골격계 재활 운동 치료</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai03.png" alt="">
@@ -768,7 +798,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">물리치료사</p>
                             <p class="ai_tit_bot bold">스페셜 치료</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai04.png" alt="">
@@ -776,13 +806,17 @@ var swiper19 = new Swiper(".curriswiper04", {
                     </div>
                 </div>
             </div>
+            <?
+            }
+            ?>
+            <!-- 
             <div class="ai_tab_box">
                 <div class="dp_sb dp_wrap">
                     <div class="ai_tab_box_child dp_sb dp_c">
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">필라테스 강사</p>
                             <p class="ai_tit_bot bold">기초 해부 뽀개기</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai05.png" alt="">
@@ -792,7 +826,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">필라테스 강사</p>
                             <p class="ai_tit_bot bold">체형 교정 전문 강사 되기</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai06.png" alt="">
@@ -802,7 +836,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">필라테스 강사</p>
                             <p class="ai_tit_bot bold">시퀀스를 다양하게</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai07.png" alt="">
@@ -812,7 +846,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">필라테스 강사</p>
                             <p class="ai_tit_bot bold">스페셜 케이스</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai08.png" alt="">
@@ -826,7 +860,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">트레이너</p>
                             <p class="ai_tit_bot bold">기초 해부 뽀개기</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai09.png" alt="">
@@ -836,7 +870,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">트레이너</p>
                             <p class="ai_tit_bot bold">PT 전문가 되기</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai10.png" alt="">
@@ -846,7 +880,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">트레이너</p>
                             <p class="ai_tit_bot bold">교정 재활 트레이닝</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai11.png" alt="">
@@ -856,7 +890,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">트레이너</p>
                             <p class="ai_tit_bot bold">스페셜 트레이닝</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai12.png" alt="">
@@ -870,7 +904,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">일반인</p>
                             <p class="ai_tit_bot bold">국제 인증 필라테스 강사 되기</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai13.png" alt="">
@@ -880,7 +914,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">일반인</p>
                             <p class="ai_tit_bot bold">돌려 깎기 시리즈 (다이어트)</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai14.png" alt="">
@@ -890,7 +924,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">일반인</p>
                             <p class="ai_tit_bot bold">예쁜 자세 (자세교정)</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai15.png" alt="">
@@ -900,7 +934,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         <div class="ai_tab_txt_box">
                             <p class="c_blue04 ai_tit_top">일반인</p>
                             <p class="ai_tit_bot bold">통증 뽀개기</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
+                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
                         </div>
                         <div class="ai_tab_img">
                             <img src="../images/new_add/bnr_ai16.png" alt="">
@@ -908,6 +942,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                     </div>
                 </div>
             </div>
+             -->
         </div>
     </div>
 </section>
@@ -932,7 +967,7 @@ var swiper19 = new Swiper(".curriswiper04", {
 
         posY = $(window).scrollTop();
 
-        $('#classShowFrame').html("<iframe src='./classDetail.php' name='' style='width:100%;height:700px;' frameborder='0' scrolling='auto'></iframe>");
+        $('#classShowFrame').html("<iframe src='./classDetail.php' name='' style='width:100%;height:766px;' frameborder='0' scrolling='auto'></iframe>");
 
         $('.classShow_open').click();
         $("html, body").addClass("not_scroll");
@@ -943,8 +978,8 @@ var swiper19 = new Swiper(".curriswiper04", {
 <!--  -->
 <section class="cont2 blue_gradient c_w">
     <div class="c_center">
-        <p class="cont2_tit01 c_w bold2 txt-c">에듀핌에서 성장한 선생님들의 생생한 후기!</p>
-        <p class="cont2_tit02 c_w txt-c">
+        <p class="cont2_tit01 c_w bold2 txt-c" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">에듀핌에서 성장한 선생님들의 생생한 후기!</p>
+        <p class="cont2_tit02 c_w txt-c" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
             에듀핌을 방문하신 모든 선생님들도 원하는 목적까지 달성할 수 있도록<br>
             에듀핌이 발맞춰 도와드리겠습니다.
         </p>
@@ -990,14 +1025,14 @@ var swiper19 = new Swiper(".curriswiper04", {
                     foreach ($classes as $class) {
                     ?>
                         <div class="rvdo_box swiper-slide">
-                            <!-- <a href="" title=""> -->
+                            <!-- <a href="javascript:void(0)" title=""> -->
                             <img src="/upfile/thumb.png" alt="" style="width:inherit; height:inherit;">
                             <img class="playShape" src="/images/playBtn.svg" alt="">
                             <!-- </a> -->
                         </div>
                     <? } ?>
                     <!-- <div class="rvdo_box swiper-slide">
-						<a href="" title="">
+						<a href="javascript:void(0)" title="">
 							<img src="" alt="">
 							<img class="playShape" src="/images/playBtn.svg" alt="">
 						</a>
@@ -1075,33 +1110,34 @@ var swiper19 = new Swiper(".curriswiper04", {
 <!--  -->
 <section class="cont2_1 blk02 c_w">
     <div class="c_center">
+        <p class="cont2_1_mtit c_w">당신의 커리어를 높이는 길잡이</p>
         <div class="matrix_wrap">
-            <div class="matrix_box matrix01 dp_f dp_fc dp_c dp_cc">
+            <div class="matrix_box matrix01 dp_f dp_fc dp_c dp_cc" data-aos="fade-down" data-aos-easing="ease" data-aos-duration="1000">
                 <img src="./images/new_add/hexagon_icon01.png" alt="">
                 <p class="matrix_tit bold">체형분석평가사</p>
                 <a class="matrix_btn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
             </div>
-            <div class="matrix_box matrix02 dp_f dp_fc dp_c dp_cc">
+            <div class="matrix_box matrix02 dp_f dp_fc dp_c dp_cc" data-aos="fade-down" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="200">
                 <img src="./images/new_add/hexagon_icon02.png" alt="">
                 <p class="matrix_tit bold">피지컬동작처방사</p>
                 <a class="matrix_btn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
             </div>
-            <div class="matrix_box matrix03 dp_f dp_fc dp_c dp_cc">
+            <div class="matrix_box matrix03 dp_f dp_fc dp_c dp_cc" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
                 <img src="./images/new_add/hexagon_icon06.png" alt="">
                 <p class="matrix_tit bold">필라테스 지도자</p>
                 <a class="matrix_btn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
             </div>
-            <div class="matrix_box matrix04 dp_f dp_fc dp_c dp_cc">
+            <div class="matrix_box matrix04 dp_f dp_fc dp_c dp_cc" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
                 <img src="./images/new_add/hexagon_icon03.png" alt="">
                 <p class="matrix_tit bold">근골격계시퀀스처방사</p>
                 <a class="matrix_btn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
             </div>
-            <div class="matrix_box matrix05 dp_f dp_fc dp_c dp_cc">
+            <div class="matrix_box matrix05 dp_f dp_fc dp_c dp_cc" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="600">
                 <img src="./images/new_add/hexagon_icon05.png" alt="">
                 <p class="matrix_tit bold">골프피지오 & 필라테스</p>
                 <a class="matrix_btn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
             </div>
-            <div class="matrix_box matrix06 dp_f dp_fc dp_c dp_cc">
+            <div class="matrix_box matrix06 dp_f dp_fc dp_c dp_cc" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="800">
                 <img src="./images/new_add/hexagon_icon04.png" alt="">
                 <p class="matrix_tit bold">필라테스시퀀스처방사</p>
                 <a class="matrix_btn dp_f dp_c dp_cc" href="" title="바로가기">바로가기</a>
@@ -1119,16 +1155,16 @@ var swiper19 = new Swiper(".curriswiper04", {
 <section class="cont3 blue_gradient">
     <div class="c_center">
         
-        <p class="cont3_tit01 c_w txt-c bold2">이제 에듀핌을 시작하려고 한다면?</p>
-        <div class="cont3_num dp_f dp_c dp_cc c_w txt-c bora bold">01</div>
-        <p class="cont3_tit02 c_w txt-c bold">놓치면 후회하는 에듀핌을 120% 활용하는 방법!</p>
-        <div class="ballon_wrap">
+        <p class="cont3_tit01 c_w txt-c bold2" data-aos="fade-up" data-aos-easing="ease">이제 에듀핌을 시작하려고 한다면?</p>
+        <div class="cont3_num dp_f dp_c dp_cc c_w txt-c bora bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">01</div>
+        <p class="cont3_tit02 c_w txt-c bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="600">놓치면 후회하는 에듀핌을 120% 활용하는 방법!</p>
+        <div class="ballon_wrap"  data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="900">
             <div class="ballon c_w dp_f dp_c dp_cc">Check Point</div>
         </div>
-        <p class="cont3_tit03 c_w txt-c bold2">글로벌 커리어를 위한 첫 걸음</p>
+        <p class="cont3_tit03 c_w txt-c bold2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="1200">글로벌 커리어를 위한 첫 걸음</p>
 
         <div class="global_career_wrap dp_sb dp_c dp_wrap">
-            <div class="global_career_box dp_f dp_c">
+            <div class="global_career_box dp_f dp_c" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
                 <img src="./images/new_add/career_icon01.png" alt="">
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">맞춤진단</p>
@@ -1138,7 +1174,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                     </p>
                 </div>
             </div>
-            <div class="global_career_box dp_f dp_c">
+            <div class="global_career_box dp_f dp_c" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
                 <img src="./images/new_add/career_icon02.png" alt="">
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">0강 미리수강</p>
@@ -1148,7 +1184,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                     </p>
                 </div>
             </div>
-            <div class="global_career_box dp_f dp_c">
+            <div class="global_career_box dp_f dp_c" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
                 <img src="./images/new_add/career_icon03.png" alt="">
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">자격증 과정 선택</p>
@@ -1158,7 +1194,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                     </p>
                 </div>
             </div>
-            <div class="global_career_box dp_f dp_c">
+            <div class="global_career_box dp_f dp_c" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
                 <img src="./images/new_add/career_icon04.png" alt="">
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">단일 강좌 선택</p>
@@ -1168,7 +1204,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                     </p>
                 </div>
             </div>
-            <div class="global_career_box dp_f dp_c">
+            <div class="global_career_box dp_f dp_c" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
                 <img src="./images/new_add/career_icon05.png" alt="">
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">80% 수강 완료</p>
@@ -1178,7 +1214,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                     </p>
                 </div>
             </div>
-            <div class="global_career_box dp_f dp_c">
+            <div class="global_career_box dp_f dp_c" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
                 <img src="./images/new_add/career_icon06.png" alt="">
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">시험</p>
@@ -1190,12 +1226,12 @@ var swiper19 = new Swiper(".curriswiper04", {
             </div>
         </div>
 
-        <div class="cont3_num dp_f dp_c dp_cc c_w txt-c bora bold">02</div>
-        <p class="cont3_tit02 c_w txt-c bold">
+        <div class="cont3_num dp_f dp_c dp_cc c_w txt-c bora bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">02</div>
+        <p class="cont3_tit02 c_w txt-c bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
             수강생들을 위한 Special Event로<br>
             풍성한 혜택을 누려보세요!
         </p>
-        <div class="ballon_wrap">
+        <div class="ballon_wrap" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
             <div class="ballon c_w dp_f dp_c dp_cc">이달의 혜택</div>
         </div>
 
@@ -1232,11 +1268,13 @@ var swiper19 = new Swiper(".curriswiper04", {
         <div class="c_titWrap">
             <h3 class="c_w">한컷 강의</h3>
         </div>
-        <ul class="tabBtn04 vdTabBtn dp_f">
-            <li><a class="on dp_f dp_c dp_cc c_w bold" href="#vdcontSlick01" title=""># 앞서가는 운동지도자를 꿈꿔요</a></li>
-            <li><a class="dp_f dp_c dp_cc c_w bold" href="#vdcontSlick02" title=""># 기초가 탄탄한 운동지도자를 꿈꿔요</a></li>
-            <li><a class="dp_f dp_c dp_cc c_w bold" href="#vdcontSlick03" title=""># 필라테스 지도자를 꿈꿔요</a></li>
-        </ul>
+        <div class="tabBtn04_wrap">
+            <ul class="tabBtn04 vdTabBtn dp_f">
+                <li><a class="on dp_f dp_c dp_cc c_w bold" href="#vdcontSlick01" title=""># 앞서가는 운동지도자를 꿈꿔요</a></li>
+                <li><a class="dp_f dp_c dp_cc c_w bold" href="#vdcontSlick02" title=""># 기초가 탄탄한 운동지도자를 꿈꿔요</a></li>
+                <li><a class="dp_f dp_c dp_cc c_w bold" href="#vdcontSlick03" title=""># 필라테스 지도자를 꿈꿔요</a></li>
+            </ul>
+        </div>
         <div class="tabCont04 vdTabCont">
             <div id="vdcontSlick01" class="tabBox">
                 <div class="vdTabSlick01_wrap p_r">
@@ -1435,16 +1473,16 @@ var swiper19 = new Swiper(".curriswiper04", {
 
 <section class="cont3_2">
     <div class="c_center txt-c">
-        <p class="cont3_2_tit01 butler">Certification</p>
-        <p class="cont3_2_tit02 bold2">80% 이상 수강 및 시험 응시 후 수료증을 발급 받아보세요!</p>
-        <img src="../images/new_add/main_certification.png" alt="">
+        <p class="cont3_2_tit01 butler" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">Certification</p>
+        <p class="cont3_2_tit02 bold2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">80% 이상 수강 및 시험 응시 후 수료증을 발급 받아보세요!</p>
+        <img src="../images/new_add/main_certification.png" alt="" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="600">
     </div>
 </section>
 
 <section class="cont3_3">
     <div class="c_center">
-        <p class="cont3_plus_tit txt-c light">선생님들의 <span class="bold2">진짜 실력향상</span>을 최선을 다해 도와줄 전문 강사진입니다.</p>
-        <p class="cont3_plus_det txt-c light">
+        <p class="cont3_plus_tit txt-c light" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">선생님들의 <span class="bold2">진짜 실력향상</span>을 최선을 다해 도와줄 전문 강사진입니다.</p>
+        <p class="cont3_plus_det txt-c light" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="600">
             <span class="bold2">현실성</span>없는 이론만 나열하는 것이 아닌<br>
             지금도 임상에서 활동중인 전문 강사진이 여러분이 <span class="bold2">진짜 필요로</span> 하는 부분을<br>
             정확히 캐치해서 채워드리겠습니다.
@@ -1461,7 +1499,7 @@ var swiper19 = new Swiper(".curriswiper04", {
     <div class="c_center p_r">
         <div class="c_titWrap dp_sb dp_end">
             <div class="titcont">
-                <p class="bold2 c_blue04">EDUFIM Instructor</p>
+                <p class="bold2 c_blue04">EDUPIM Instructor</p>
                 <h3>에듀핌의 전문가팀을 소개합니다.</h3>
             </div>
             <!-- <a class="c_tit_btn c_blue" href="" title="">자세히 보기+</a> -->
@@ -1663,7 +1701,7 @@ var swiper19 = new Swiper(".curriswiper04", {
 
 <section class="cont4_2 blue_gradient">
     <div class="c_center">
-        <p class="txt-c c_w">
+        <p class="txt-c c_w" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
             수강생 입장을 최우선으로<br>
             최상 퀄리티의 강의와 자격증 과정으로<br>
             <span class="bold2">선생님들이 글로벌 커리어를 가질 수 있게 최선을 다해 돕겠습니다.</span>

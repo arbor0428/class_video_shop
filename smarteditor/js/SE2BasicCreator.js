@@ -1,6 +1,6 @@
 function createSEditor2(elIRField, htParams, elSeAppContainer){
 	if(!window.$Jindo){
-		parent.document.body.innerHTML="Áøµµ ÇÁ·¹ÀÓ¿÷ÀÌ ÇÊ¿äÇÕ´Ï´Ù.<br>\n<a href='http://dev.naver.com/projects/jindo/download'>http://dev.naver.com/projects/jindo/download</a>¿¡¼­ Jindo 1.5.3 ¹öÀüÀÇ jindo.min.js¸¦ ´Ù¿î·Îµå ¹Ş¾Æ /js Æú´õ¿¡ º¹»ç ÇØ ÁÖ¼¼¿ä.\n(¾ÆÁ÷ Jindo 2 ´Â Áö¿øÇÏÁö ¾Ê½À´Ï´Ù.)";
+		parent.document.body.innerHTML="ì§„ë„ í”„ë ˆì„ì›ì´ í•„ìš”í•©ë‹ˆë‹¤.<br>\n<a href='http://dev.naver.com/projects/jindo/download'>http://dev.naver.com/projects/jindo/download</a>ì—ì„œ Jindo 1.5.3 ë²„ì „ì˜ jindo.min.jsë¥¼ ë‹¤ìš´ë¡œë“œ ë°›ì•„ /js í´ë”ì— ë³µì‚¬ í•´ ì£¼ì„¸ìš”.\n(ì•„ì§ Jindo 2 ëŠ” ì§€ì›í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.)";
 		return;
 	}
 
@@ -15,8 +15,8 @@ function createSEditor2(elIRField, htParams, elSeAppContainer){
 		htParams = {}; 
 		htParams.fOnBeforeUnload = null;
 	}
-	htParams.elAppContainer = elAppContainer;												// ¿¡µğÅÍ UI ÃÖ»óÀ§ element ¼ÂÆÃ 
-	htParams.oNavigator = jindo.$Agent().navigator();										// navigator °´Ã¼ ¼ÂÆÃ
+	htParams.elAppContainer = elAppContainer;												// ì—ë””í„° UI ìµœìƒìœ„ element ì…‹íŒ… 
+	htParams.oNavigator = jindo.$Agent().navigator();										// navigator ê°ì²´ ì…‹íŒ…
 	
 	var oEditor = new nhn.husky.HuskyCore(htParams);
 	oEditor.registerPlugin(new nhn.husky.CorePlugin(htParams?htParams.fOnAppLoad:null));	
@@ -37,10 +37,10 @@ function createSEditor2(elIRField, htParams, elSeAppContainer){
 	var aAdditionalFontList = htParams.aAdditionalFontList;
 	
 	oEditor.registerPlugin(new nhn.husky.SE_EditingAreaManager("WYSIWYG", oIRTextarea, htDimension,  htParams.fOnBeforeUnload, elAppContainer));
-	oEditor.registerPlugin(new nhn.husky.SE_EditingArea_WYSIWYG(oWYSIWYGIFrame));			// Tab Editor ¸ğµå
-	oEditor.registerPlugin(new nhn.husky.SE_EditingArea_HTMLSrc(oHTMLSrc));					// Tab HTML ¸ğµå
-	oEditor.registerPlugin(new nhn.husky.SE_EditingArea_TEXT(oTextArea));					// Tab Text ¸ğµå
-	oEditor.registerPlugin(new nhn.husky.SE2M_EditingModeChanger(elAppContainer, htConversionMode));	// ¸ğµå°£ º¯°æ(Editor, HTML, Text)
+	oEditor.registerPlugin(new nhn.husky.SE_EditingArea_WYSIWYG(oWYSIWYGIFrame));			// Tab Editor ëª¨ë“œ
+	oEditor.registerPlugin(new nhn.husky.SE_EditingArea_HTMLSrc(oHTMLSrc));					// Tab HTML ëª¨ë“œ
+	oEditor.registerPlugin(new nhn.husky.SE_EditingArea_TEXT(oTextArea));					// Tab Text ëª¨ë“œ
+	oEditor.registerPlugin(new nhn.husky.SE2M_EditingModeChanger(elAppContainer, htConversionMode));	// ëª¨ë“œê°„ ë³€ê²½(Editor, HTML, Text)
 	oEditor.registerPlugin(new nhn.husky.SE_PasteHandler()); 								// WYSIWYG Paste Handler
 	
 	oEditor.registerPlugin(new nhn.husky.HuskyRangeManager(oWYSIWYGIFrame));
@@ -49,37 +49,37 @@ function createSEditor2(elIRField, htParams, elSeAppContainer){
 	oEditor.registerPlugin(new nhn.husky.SE_WYSIWYGStyler());
 	oEditor.registerPlugin(new nhn.husky.SE2M_Toolbar(elAppContainer));
 	
-	oEditor.registerPlugin(new nhn.husky.Hotkey());											// ´ÜÃàÅ°
-	oEditor.registerPlugin(new nhn.husky.SE_EditingAreaVerticalResizer(elAppContainer, htConversionMode));	// ÆíÁı¿µ¿ª ¸®»çÀÌÁî
+	oEditor.registerPlugin(new nhn.husky.Hotkey());											// ë‹¨ì¶•í‚¤
+	oEditor.registerPlugin(new nhn.husky.SE_EditingAreaVerticalResizer(elAppContainer, htConversionMode));	// í¸ì§‘ì˜ì—­ ë¦¬ì‚¬ì´ì¦ˆ
 	oEditor.registerPlugin(new nhn.husky.DialogLayerManager());
 	oEditor.registerPlugin(new nhn.husky.ActiveLayerManager());
-	oEditor.registerPlugin(new nhn.husky.SE_WYSIWYGStyleGetter());							// Ä¿¼­ À§Ä¡ ½ºÅ¸ÀÏ Á¤º¸ °¡Á®¿À±â
+	oEditor.registerPlugin(new nhn.husky.SE_WYSIWYGStyleGetter());							// ì»¤ì„œ ìœ„ì¹˜ ìŠ¤íƒ€ì¼ ì •ë³´ ê°€ì ¸ì˜¤ê¸°
 
-	oEditor.registerPlugin(new nhn.husky.SE_WYSIWYGEnterKey("P"));							// ¿£ÅÍ ½Ã Ã³¸®, ÇöÀç´Â P·Î Ã³¸®
+	oEditor.registerPlugin(new nhn.husky.SE_WYSIWYGEnterKey("P"));							// ì—”í„° ì‹œ ì²˜ë¦¬, í˜„ì¬ëŠ” Pë¡œ ì²˜ë¦¬
 	
-	oEditor.registerPlugin(new nhn.husky.SE2M_ColorPalette(elAppContainer));				// »ö»ó ÆÈ·¹Æ®
-	oEditor.registerPlugin(new nhn.husky.SE2M_FontColor(elAppContainer));					// ±ÛÀÚ»ö
-	oEditor.registerPlugin(new nhn.husky.SE2M_BGColor(elAppContainer));						// ±ÛÀÚ¹è°æ»ö
-	oEditor.registerPlugin(new nhn.husky.SE2M_FontNameWithLayerUI(elAppContainer, aAdditionalFontList));	// ±Û²ÃÁ¾·ù
-	oEditor.registerPlugin(new nhn.husky.SE2M_FontSizeWithLayerUI(elAppContainer));			// ±Û²ÃÅ©±â
+	oEditor.registerPlugin(new nhn.husky.SE2M_ColorPalette(elAppContainer));				// ìƒ‰ìƒ íŒ”ë ˆíŠ¸
+	oEditor.registerPlugin(new nhn.husky.SE2M_FontColor(elAppContainer));					// ê¸€ììƒ‰
+	oEditor.registerPlugin(new nhn.husky.SE2M_BGColor(elAppContainer));						// ê¸€ìë°°ê²½ìƒ‰
+	oEditor.registerPlugin(new nhn.husky.SE2M_FontNameWithLayerUI(elAppContainer, aAdditionalFontList));	// ê¸€ê¼´ì¢…ë¥˜
+	oEditor.registerPlugin(new nhn.husky.SE2M_FontSizeWithLayerUI(elAppContainer));			// ê¸€ê¼´í¬ê¸°
 	
 	oEditor.registerPlugin(new nhn.husky.SE2M_LineStyler());								 
 	oEditor.registerPlugin(new nhn.husky.SE2M_ExecCommand(oWYSIWYGIFrame));
-	oEditor.registerPlugin(new nhn.husky.SE2M_LineHeightWithLayerUI(elAppContainer));		// ÁÙ°£°İ	
+	oEditor.registerPlugin(new nhn.husky.SE2M_LineHeightWithLayerUI(elAppContainer));		// ì¤„ê°„ê²©	
 
-	oEditor.registerPlugin(new nhn.husky.SE2M_Quote(elAppContainer));						// ÀÎ¿ë±¸
-	oEditor.registerPlugin(new nhn.husky.SE2M_Hyperlink(elAppContainer));					// ¸µÅ©
-	oEditor.registerPlugin(new nhn.husky.SE2M_SCharacter(elAppContainer));					// Æ¯¼ö¹®ÀÚ
-	oEditor.registerPlugin(new nhn.husky.SE2M_FindReplacePlugin(elAppContainer));			// Ã£±â/¹Ù²Ù±â
-	oEditor.registerPlugin(new nhn.husky.SE2M_TableCreator(elAppContainer));				// Å×ÀÌºí »ı¼º
-	oEditor.registerPlugin(new nhn.husky.SE2M_TableEditor(elAppContainer));					// Å×ÀÌºí ÆíÁı
-	oEditor.registerPlugin(new nhn.husky.SE2M_TableBlockStyler(elAppContainer));			// Å×ÀÌºí ½ºÅ¸ÀÏ
+	oEditor.registerPlugin(new nhn.husky.SE2M_Quote(elAppContainer));						// ì¸ìš©êµ¬
+	oEditor.registerPlugin(new nhn.husky.SE2M_Hyperlink(elAppContainer));					// ë§í¬
+	oEditor.registerPlugin(new nhn.husky.SE2M_SCharacter(elAppContainer));					// íŠ¹ìˆ˜ë¬¸ì
+	oEditor.registerPlugin(new nhn.husky.SE2M_FindReplacePlugin(elAppContainer));			// ì°¾ê¸°/ë°”ê¾¸ê¸°
+	oEditor.registerPlugin(new nhn.husky.SE2M_TableCreator(elAppContainer));				// í…Œì´ë¸” ìƒì„±
+	oEditor.registerPlugin(new nhn.husky.SE2M_TableEditor(elAppContainer));					// í…Œì´ë¸” í¸ì§‘
+	oEditor.registerPlugin(new nhn.husky.SE2M_TableBlockStyler(elAppContainer));			// í…Œì´ë¸” ìŠ¤íƒ€ì¼
 	if(nhn.husky.SE2M_AttachQuickPhoto){
-		oEditor.registerPlugin(new nhn.husky.SE2M_AttachQuickPhoto(elAppContainer));			// »çÁø			
+		oEditor.registerPlugin(new nhn.husky.SE2M_AttachQuickPhoto(elAppContainer));			// ì‚¬ì§„			
 	}
 
 	oEditor.registerPlugin(new nhn.husky.MessageManager(oMessageMap));
-	oEditor.registerPlugin(new nhn.husky.SE2M_QuickEditor_Common(elAppContainer));			// Äü¿¡µğÅÍ °øÅë(Ç¥, ÀÌ¹ÌÁö)
+	oEditor.registerPlugin(new nhn.husky.SE2M_QuickEditor_Common(elAppContainer));			// í€µì—ë””í„° ê³µí†µ(í‘œ, ì´ë¯¸ì§€)
 	
 	oEditor.registerPlugin(new nhn.husky.SE2B_CSSLoader());									// CSS lazy load
 	if(window.frameElement){
@@ -87,7 +87,7 @@ function createSEditor2(elIRField, htParams, elSeAppContainer){
 	}
 	
 	oEditor.registerPlugin(new nhn.husky.SE_ToolbarToggler(elAppContainer, htParams.bUseToolbar));
-	oEditor.registerPlugin(new nhn.husky.SE2M_Accessibility(elAppContainer));				// ¿¡µğÅÍ³»ÀÇ À¥Á¢±Ù¼º °ü·Ã ±â´É¸ğÀ½ ÇÃ·¯±×ÀÎ 
+	oEditor.registerPlugin(new nhn.husky.SE2M_Accessibility(elAppContainer));				// ì—ë””í„°ë‚´ì˜ ì›¹ì ‘ê·¼ì„± ê´€ë ¨ ê¸°ëŠ¥ëª¨ìŒ í”ŒëŸ¬ê·¸ì¸ 
 	
 	return oEditor;
 }

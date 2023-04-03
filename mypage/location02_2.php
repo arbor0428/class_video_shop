@@ -7,9 +7,9 @@
 						<button type="button"><span>학습 관리</span></button>
 						<div class="next-depth">
 							<ul style="display: none;">
-								<li><a href="../sub01.php">HOME</a></li>
-								<li><a href="../cart.php">강좌신청 관리</a></li>
-								<li><a href="../sub14.php">설정</a></li>
+								<li><a href="../recommended/">HOME</a></li>
+								<li><a href="../cart/">강좌신청 관리</a></li>
+								<li><a href="../edit/">설정</a></li>
 							</ul>
 						</div>
 					</li>
@@ -19,13 +19,13 @@
 						<button type="button"><span><?=$topTxt01?></span></button>
 						<div class="next-depth">
 							<ul style="display: none;">
-								<li><a href="./index.php">수강중인 강좌</a></li>
-								<li><a href="../sub04.php">찜한 강좌</a></li>
-								<li><a href="../sub05.php">나의 학습질문</a></li>
-								<li><a href="../sub06.php">나의 리뷰</a></li>
-								<li><a href="../sub07.php">수강증 발급</a></li>
-								<li><a href="../sub08.php">수료증 발급</a></li>
-								<li><a href="../sub09.php">자격증 발급</a></li>
+								<li><a href="../learning/">수강중인 강좌</a></li>
+								<li><a href="../wish/">찜한 강좌</a></li>
+								<li><a href="../qna/">나의 학습질문</a></li>
+								<li><a href="../review/">나의 리뷰</a></li>
+								<li><a href="../certClass/">수강증 발급</a></li>
+								<li><a href="../certCompletion/">수료증 발급</a></li>
+								<li><a href="../certLicense/">자격증 발급</a></li>
 							</ul>
 						</div>
 					</li>

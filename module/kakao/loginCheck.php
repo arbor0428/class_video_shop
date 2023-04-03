@@ -129,7 +129,7 @@
 				sqlExe("update ks_member set loginDate='".$rDate."', loginTime=".$rTime." where userid='".$row['userid']."'");
 
 				//로그인 정보기록
-				sqlExe("insert into ks_login_log (mtype,userid,snsLogin,device,userip,rDate,rTime) values ('".$row['mtype']."','".$row['userid']."','kakao','".$UserOS."','".$userip."','".$rDate."','".$rTime."')");
+				//sqlExe("insert into ks_login_log (mtype,userid,snsLogin,device,userip,rDate,rTime) values ('".$row['mtype']."','".$row['userid']."','kakao','".$UserOS."','".$userip."','".$rDate."','".$rTime."')");
 
 				Msg::goNext('/');
 				exit;

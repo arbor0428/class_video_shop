@@ -1,5 +1,5 @@
 <?
-include "/home/edufim/www/adm/head.php";
+include "/home/edufim/www/adm/header.php";
 
 $row = sqlRow("SELECT * FROM ks_member WHERE userid='$GBL_USERID'");
 

@@ -1,9 +1,16 @@
+<?php
+if ($GBL_MTYPE != 'T') {
+	// header('Location:/adm/main.php');
+	header('Location:/adm/main.php');
+	exit;
+}
+?>
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
 	<!-- Sidebar - Brand-->
 	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/adm/">
-		<div class="sidebar-brand-icon"><img src='/images/favicon.png'> 에듀핌 관리자</div>
+		<div class="sidebar-brand-icon"><img src='/images/favicon.png'> 에듀핌 강사 </div>
 	</a>
 
 	<!-- Divider -->
@@ -12,6 +19,23 @@
 	<!-- Divider -->
 	<hr class="sidebar-divider">
 
+    
+	<li class="nav-item <?= $sideArr[1] ?>">
+		<a class="nav-link" href="/adm/teacher/profile">
+			<span>프로필 관리</span>
+		</a>
+	</li>
+	<!-- <li class="nav-item <?= $sideArr[2] ?>">
+		<a class="nav-link" href="#">
+			<span>회원 관리</span>
+		</a>
+	</li>
+	<li class="nav-item <?= $sideArr[3] ?>">
+		<a class="nav-link" href="#">
+			<span>강좌 관리</span>
+		</a>
+	</li> -->
+<?/*?>
 	<li class="nav-item  <?= $sideArr[1] ?>">
 		<a class="nav-link collapsed" href="javascript:void(0)" data-toggle="collapse" data-target="#subList1" aria-expanded="true" aria-controls="subList1">
 			<span>클래스 관리</span>
@@ -97,13 +121,13 @@
 		</div>
 	</li>                                                                                                                           
 
-	<!-- 
 	<li class="nav-item <?= $sideArr[3] ?>">
 		<a class="nav-link" href="/adm/testList/">
 			<span>이벤트 관리</span>
 		</a>
 	</li>
-
+<?*/?>
+	<!-- 
 	<li class="nav-item <?= $sideArr[4] ?>">
 		<a class="nav-link" href="/adm/magazineList/">
 			<span>아맘때매거진 관리</span>

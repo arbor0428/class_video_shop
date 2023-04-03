@@ -20,7 +20,7 @@ include _ADM . '/sidemenu.php';
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 </div>
                 <div class="card-body">
-                    <form name='FRM' action="./proc.php" method='post' ENCTYPE="multipart/form-data">
+                    <form name='frm01' action="./proc.php" method='post' ENCTYPE="multipart/form-data">
                         <input type="hidden" name="type" value="">
                         <input type="hidden" name="next_url" value="<?= $PHP_SELF ?>">
                         <input type="hidden" name="tot_num" value="">
@@ -28,7 +28,8 @@ include _ADM . '/sidemenu.php';
                         <div style='width:1000px;'>
                             <div class='mCadeTit02' style='margin-bottom:3px;'>
                                 <?= _TITLE ?> 이미지 사이즈<br>
-                                ※ PC : <b style='color:red'>1920px * 200px</b> <!-- / Tablet, Mobile : <b style='color:red'>450px * 450px</b> --><br>
+                                ※ PC : <b style='color:red'>1920px * 200px</b><br>
+                                ※ Tablet, Mobile : <b style='color:red'>450px * 450px</b><br>
                                 ※ 2개이상의 이미지를 넣어야 슬라이드 모션이 실행됩니다.<br>
                                 <!-- ※ 노출기간을 입력하지 않으면 상시 표시됩니다. -->
                             </div>
@@ -40,18 +41,20 @@ include _ADM . '/sidemenu.php';
 
                                 for ($i = 0; $i < count($row_arr); $i++) {
                                     $row = $row_arr[$i];
-
                                     $index = $i + 1;
+
                                     $sort = $row['sort'];
                                     $upfile = $row['upfile'];
                                     $realfile = $row['realfile'];
+                                    $upfile_m = $row['upfile_m'];
+                                    $realfile_m = $row['realfile_m'];
                                     $url = $row['url'];
                                     $target = $row['target'];
                                 ?>
 
                                     <tr>
                                         <!-- <th width='15%' rowspan='4'>이미지 #<?= $index ?></th> -->
-                                        <th width='15%' rowspan='2'>이미지 # <?= $index ?></th>
+                                        <th width='15%' rowspan='3'>이미지 # <?= $index ?></th>
                                         <th>PC</th>
                                         <td>
                                             <table cellpadding='0' cellspacing='0' border='0'>
@@ -98,6 +101,45 @@ include _ADM . '/sidemenu.php';
                                     </tr>
 
                                     <tr>
+                                        <th>Tablet, Mobile</th>
+                                        <td>
+                                            <table cellpadding='0' cellspacing='0' border='0'>
+                                                <?
+                                                if ($upfile_m) {
+                                                ?>
+                                                    <tr>
+                                                        <td colspan='2' style="padding-bottom:5px;">
+                                                            <a href="/upfile/main/<?= $upfile_m ?>" target="_blank">
+                                                                <img src='/upfile/main/<?= $upfile_m ?>' width='200'>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                <?
+                                                }
+                                                ?>
+                                                <tr>
+                                                    <td>
+                                                        <input type="hidden" name="upfile_m[]" class="form-control" value="<?= $upfile_m ?>">
+                                                        <input type="file" name="file_m[]" class="form-control" onchange="fileChk(this)" data-index="<?= $index ?>" style="font-size:0.8rem; height:29px; padding: 1px 0.5rem">
+                                                    </td>
+                                                    <?
+                                                    if ($upfile_m) {
+                                                    ?>
+                                                        <td style='padding:0 0 0 10px;'>
+                                                            <input type="hidden" name="del_file_m[]" id="del_file_m_<?= $index ?>" value="N">
+                                                            <input type="checkbox" class="form-control" style="display:inline-block;" data-index="<?= $index ?>" onchange="setDelChk_m(this)">
+                                                            <span class='ico09'>삭제</span>
+                                                            <input type="text" name="realfile_m[]" value="<?= $realfile_m ?>" style="background-color:#fff;" readonly>
+                                                        </td>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
                                         <th width='15%'>링크 <?= $url ?> (PC)</th>
                                         <td width='60%'>
                                             <select name='target[]'>
@@ -112,12 +154,12 @@ include _ADM . '/sidemenu.php';
                                         <th width='15%'>링크 <?= $ino ?> (MOBILE)</th>
                                         <td width='60%'>
                                             <select name='target<?= $ino ?>'>
-                                                <option value='_self' <? if ($target == '_self') {
+                                                <option value='_self' <? if ($target == '_self') 
                                                                             echo 'selected';
-                                                                        } ?>>현재창</option>
-                                                <option value='_blank' <? if ($target == '_blank') {
+                                                                         ?>>현재창</option>
+                                                <option value='_blank' <? if ($target == '_blank') 
                                                                             echo 'selected';
-                                                                        } ?>>새창</option>
+                                                                         ?>>새창</option>
                                             </select>
                                             <input name="M_link<?= $ino ?>" id="M_link<?= $ino ?>" style="width:80%" type="text" value="<?= $M_link ?>">
                                         </td>
@@ -227,6 +269,10 @@ include _ADM . '/sidemenu.php';
 
         const setDelChk = function(e) {
             document.getElementById('del_file_' + e.dataset.index).value = (e.checked) ? 'Y' : 'N'
+        }
+
+        const setDelChk_m = function(e) {
+            document.getElementById('del_file_m_' + e.dataset.index).value = (e.checked)? 'Y' : 'N'
         }
 
         function go_sort(num, dir) {

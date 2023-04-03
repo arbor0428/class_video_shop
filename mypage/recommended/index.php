@@ -3,7 +3,7 @@ include '../../header.php';
 $side_menu = 1;
 $topTxt01 = '맞춤 강좌';
 
-include 'location01.php';
+include '../location01.php';
 
 $main_query = "SELECT *, (SELECT COUNT(1) FROM ks_wish WHERE ks_wish.userid='$GBL_USERID' AND ks_class.uid=ks_wish.class_uid) AS is_wish FROM ks_class WHERE status=1";
 $limit = 3;
@@ -50,7 +50,9 @@ $limit = 3;
                             </div>
                         </a>
                     </div>
-                <? } ?>
+                <?
+                }
+                ?>
             </div>
         </div>
     </div>

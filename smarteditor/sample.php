@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/HuskyEZCreator.js" charset="euc-kr"></script>
+<script type="text/javascript" src="js/HuskyEZCreator.js" charset="utf-8"></script>
 
 
 

@@ -1,16 +1,23 @@
 <?
 include '../header.php';
 $side_menu = 1;
+
+if (isEmpty($_GET['cade01'])) $cade01 = 1;
+else $cade01 = $_GET['cade01'];
 ?>
 
 <div class="subWrap">
     <div class="s_center dp_sb">
         <?
         include 'sidemenu.php';
+        $cade01_title = sqlRowOne("select title from ks_class_cade01 where uid='$cade01'");
         ?>
         <div class="s_cont">
             <div class="s_cont_tit02 dp_f dp_c bor_bot">
-                <span class="f20 bold2 c_bora01"><a href="/sub01" title="전체">전체</a></span>
+                <span class="f20 bold2 c_bora01">
+                    <!-- <a href="/sub01" title="전체">전체</a> -->
+                    <?= $cade01_title ?>
+                </span>
             </div>
             <div class="top_searchBar">
                 <div class="selectwrap dp_f dp_c">
@@ -25,21 +32,21 @@ $side_menu = 1;
             </div>
 
             <?
-            $query = "SELECT c.*, c1.title title01, c2.title title02 FROM ks_class c";
-            $query .= " LEFT JOIN ks_class_cade01 c1 ON c.cade01=c1.uid";
+            $query = "SELECT c.*, c2.title title02, c3.title title03 FROM ks_class c";
             $query .= " LEFT JOIN ks_class_cade02 c2 ON c.cade02=c2.uid";
-            $query .= " GROUP BY c.cade01, c.cade02";
+            $query .= " LEFT JOIN ks_class_cade03 c3 ON c.cade03=c3.uid";
+            $query .= " WHERE c.cade01='$cade01'";
+            $query .= " GROUP BY c.cade02, c.cade03";
 
             $cade_arr = sqlArray($query);
             foreach ($cade_arr as $cade) {
             ?>
                 <div class="all_list_wrap">
                     <div class="s_cont_tit02 dp_f dp_c">
-                        <span class="f18 bold2 dp_f dp_c line"><?= $cade['title01'] ?></span>
-                        <span class="f18 bold2 c_bora01"><?= $cade['title02'] ?></span>
+                        <span class="f18 bold2 dp_f dp_c line"><?= $cade['title02'] ?></span>
+                        <span class="f18 bold2 c_bora01"><?= $cade['title03'] ?></span>
                     </div>
                     <div class="dp_f dp_wrap">
-
                         <?
                         // $query2 = "SELECT c.*, w.class_uid";
                         // $query2 .= " FROM ks_class c";
@@ -49,7 +56,7 @@ $side_menu = 1;
 
                         $query2 = "SELECT *, (SELECT COUNT(1) FROM ks_wish WHERE ks_wish.userid='$GBL_USERID' AND ks_class.uid=ks_wish.class_uid) AS is_wish";
                         $query2 .= " FROM ks_class";
-                        $query2 .= " WHERE status='1' AND cade01=" . $cade['cade01'] . " AND cade02=" . $cade['cade02'];
+                        $query2 .= " WHERE status='1' AND cade01='$cade01' AND cade02='" . $cade['cade02'] . "' AND cade03='" . $cade['cade03'] . "'";
                         $query2 .= " ORDER BY uid";
 
                         $row_arr = sqlArray($query2);

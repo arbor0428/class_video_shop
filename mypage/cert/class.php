@@ -1,13 +1,15 @@
 <?
 include "/home/edufim/www/module/login/head.php";
 
-$query = "SELECT l.userid, l.sDate, l.eDate, m.name, c.title, c.period, o.rDate, o.amount
+$query = "SELECT l.userid, l.sDate, l.eDate, m.name, (SELECT name FROM ks_member WHERE ks_member.uid=c.tuid) tname, c.title, c.period, o.rDate, o.amount
 	FROM ks_learning l
 	JOIN ks_member m ON l.userid=m.userid
 	JOIN ks_class c ON l.class_uid=c.uid
-	JOIN ks_order o ON l.orderId=o.orderId
+	JOIN ks_order o ON l.order_no=o.order_no
 	WHERE l.userid='$GBL_USERID' AND l.class_uid='$uid'";
 $row = sqlRow($query);
+
+// $tname = sqlRowOne("SELECT name FROM ks_member WHERE uid=" . $row['tuid']);
 
 foreach ($row as $k => $v) {
 	${$k} = $v;

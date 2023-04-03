@@ -1,3 +1,38 @@
+<div class="fixed-bnr">
+	<ul class="fixed-menu dp_f dp_c dp_sb">
+		<li>
+			<a class="dp_f dp_cc dp_fc" href="/" title="">
+				<img src="/images/new_add/doc_icon01.svg" alt="home">
+				<p class="bold">홈</p>
+			</a>
+		</li>
+		<li>
+			<a class="dp_f dp_cc dp_fc" href="/sub03/" title="">
+				<img src="/images/new_add/doc_icon03.svg" alt="자격증 과정">
+				<p class="bold">자격증 과정</p>
+			</a>
+		</li>
+		<li>
+			<a class="dp_f dp_cc dp_fc" href="/sub04/" title="">
+				<img src="/images/new_add/doc_icon05.svg" alt="BEST 콜라보">
+				<p class="bold">BEST 콜라보</p>
+			</a>
+		</li>
+		<li>
+			<a class="dp_f dp_cc dp_fc" href="/mypage/learning/" title="">
+				<img src="/images/new_add/doc_icon02.svg" alt="나의 강의실">
+				<p class="bold">나의 강의실</p>
+			</a>
+		</li>
+        <li>
+			<a class="dp_f dp_cc dp_fc" href="/mypage/edit/" title="">
+				<img src="/images/new_add/doc_icon04.svg" alt="마이페이지">
+				<p class="bold">마이페이지</p>
+			</a>
+		</li>
+	</ul>
+</div>
+
 <div class="fixBtnWrap">
     <div class="mediaWrap dp_f dp_fc">
         <div class="mediaOpenBtn bora"></div>
@@ -8,6 +43,7 @@
         </ul>
     </div>
     <ul class="updownWrap dp_f dp_fc">
+        <li class="m_show"><a class="dp_b" href="http://pf.kakao.com/_bsqxcK" target="_blank"></a></li>
         <li><a class="upBtn dp_f dp_c dp_cc" href=""><img src="/images/upward.svg" alt=""></a></li>
         <li><a class="downBtn dp_f dp_c dp_cc" href=""><img src="/images/downward.svg" alt="" style="transform:rotate(180deg);"></a></li>
     </ul>
@@ -90,7 +126,8 @@
     </div>
     <div class="f_bot02">
         <div class="c_center">
-            <img class="f_logo" src="/images/footer_logo.svg" alt="">
+           <!-- <img class="f_logo" src="/images/footer_logo.svg" alt="">-->
+		   <img class="f_logo" src="/images/logo_wht3.png" alt="" style="width:150px">
             <div class="dp_sb">
                 <div class="f_bot02_left">
                     <div class="dp_f">
@@ -121,7 +158,7 @@
                     </ul>
                 </div>
             </div>
-            <p class="copyright bold">COPYRIGHT EDU FIM. ALL RIGHTS RESERVED.</p>
+            <p class="copyright bold">COPYRIGHT EDUPIM. ALL RIGHTS RESERVED.</p>
         </div>
     </div>
 </footer>
@@ -192,7 +229,7 @@
 
     // 맨아래로 가기	
     $('.downBtn').click(function() {
-        
+
         $('html, body').animate({
             scrollTop: 15000
         }, 400);
@@ -248,7 +285,8 @@
         })
     }
 
-    const copy_link = function() {
+    function copy_link() {
+        console.log("copy_link");
         let copy_url = '';
         let copy_textarea = document.createElement("textarea");
         document.body.appendChild(copy_textarea);
@@ -260,10 +298,10 @@
         alert("URL이 복사되었습니다.")
     }
 
-    $(window).scroll(function(){
-    let scroll = $('html, body').scrollTop();
+    $(window).scroll(function() {
+        let scroll = $('html, body').scrollTop();
 
-    console.log(scroll);
+        // console.log(scroll);
     });
 </script>
 

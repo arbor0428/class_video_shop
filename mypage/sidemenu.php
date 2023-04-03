@@ -1,5 +1,5 @@
 <?
-    if (!isLogin()) redirectLogin();
+    if (!isLogin()) deny('/member/login.php');
 	
     $userid = $GBL_USERID;
 	$side[$side_menu]="content_box_a";

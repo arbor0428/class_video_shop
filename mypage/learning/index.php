@@ -6,11 +6,12 @@ $topTxt01 = '수강중인 강좌';
 
 include '../location02_2.php';
 
-$query = "SELECT l.uid luid, l.progress, l.recentDate recentDate, c.*
-    FROM ks_learning l
-    JOIN ks_class c ON l.class_uid=c.uid
-    WHERE l.userid='$GBL_USERID'
-    ORDER BY l.sDate DESC";
+$query = "SELECT l.uid luid, l.progress, l.recentDate recentDate, c.*, IFNULL(m.name, '미정') tname
+FROM ks_learning l
+JOIN ks_class c ON l.class_uid=c.uid
+LEFT JOIN ks_member m ON m.uid=c.tuid
+WHERE l.userid='$GBL_USERID'
+ORDER BY l.sDate DESC";
 
 $result = mysql_query($query) or die('Could not connect: ' . mysql_error());
 $num_row = mysql_num_rows($result);
@@ -19,7 +20,9 @@ $num_row = mysql_num_rows($result);
 <div class="subWrap">
     <div class="s_center dp_sb">
 
-        <? include '/home/edufim/www/mypage/sidemenu.php'; ?>
+        <?
+        include '/home/edufim/www/mypage/sidemenu.php';
+        ?>
 
         <div class="s_cont">
             <div class="s_cont_tit">
@@ -57,6 +60,19 @@ $num_row = mysql_num_rows($result);
                     <a class="searchBtn bora01 c_w dp_f dp_c dp_cc" href="" title="검색">검색</a>
                 </div>
             </div>
+            <div class="top_searchBar top_searchBar_block">
+                <?
+                $cade01 = sqlRowOne("SELECT uid FROM ks_license_cade01 WHERE title='국제인증자격증과정'");
+                $query = "SELECT * FROM ks_license WHERE status='1' AND cade01='$cade01'";
+                $license_arr = sqlArray($query);
+                foreach ($license_arr as $license) {
+                ?>
+                    <input type="radio" name="f_license" id="<?= $license['uid'] ?>" value="<?= $license['title'] ?>">
+                    <label for="<?= $license['uid'] ?>"><?= $license['title'] ?></label>
+                <?
+                }
+                ?>
+            </div>
             <div class="class_videoList_wrap">
                 <?
                 if ($num_row > 0) {
@@ -81,7 +97,7 @@ $num_row = mysql_num_rows($result);
                                         <a href="javascript:void(0)" onclick="reg_view('<?= $row['luid'] ?>')">
                                             <div class="play_titWrap">
                                                 <p class="play_tit"><?= $row['title'] ?></p>
-                                                <span class="c_gry04 f14">선생님: <?= $row['tname'] ?></span>
+                                                <span class="c_gry04 f14"><?= $row['tname'] ?></span>
                                             </div>
                                         </a>
                                         <div class="playBtnWrap dp_f">
@@ -90,7 +106,7 @@ $num_row = mysql_num_rows($result);
                                             <? } else { ?>
                                                 <a class="play_status f14 dp_f dp_c dp_cc on" href="javascript:void(0)" onclick="reg_exam('<?= $row['luid'] ?>')">시험 응시</a>
                                             <? } ?>
-                                            <img src="../images/v_play.svg" alt="">
+                                            <img src="/images/v_play.svg" alt="play">
                                         </div>
                                     </div>
                                     <div class="progressBar_wrap dp_sb dp_c">
@@ -119,39 +135,48 @@ $num_row = mysql_num_rows($result);
                         <p class="txt-c c_gry04 f15">나를 성장 시켜줄 좋은 강좌들을 찾아보세요.</p>
                         <a class="goClassList c_bora01 dp_f dp_c dp_cc" href="/sub01" title="강좌리스트 보러가기">강좌리스트 보러가기</a>
                     </div>
-                <? } ?>
+                <?
+                }
+                
+                $query2 = "SELECT * FROM ks_class WHERE status=1";
 
-                <!-- <div class="class_videoList openyet">
-					<div class="class_videoCont dp_sb dp_c">
-						<div class="imgWrap gry">
-							<button type="button" title="관심" class="likeMark"></button>
-							<img src="" alt="">
-						</div>
-						<div class="video_progress">
-							<div class="dp_sb dp_end">
-								<div class="play_titWrap">
-									<p class="play_tit">재활 운동법 1편</p>
-									<span class="c_gry04 f14">에듀핌 강사</span>
-								</div>
-								<div class="playBtnWrap dp_f">
-									<div class="play_status f14 dp_f dp_c dp_cc on">강좌 구매 후 수강가능</div>
-									<img src="../images/v_play.svg" alt="">
-								</div>
-							</div>
-							<div class="progressBar_wrap dp_sb dp_c">
-								<p class="c_bora01 bold2 f14">0%</p>
-								<div class="progressBar">
-									<div class="progressBar_fill" style="width: 0%;"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="class_video_tit_wrap dp_f">
-						<p class="class_video_tit c_gry04 f14">ALL 클래스 - 필라테스 지도자 자격증 과정</p>
-						<p class="class_video_tit c_gry04 f14"><span>1/20강</span> · <span>최근 수강일 2022.09.28</span></p>
-					</div>
-				</div> -->
+                $result2 = mysql_query($query2) or die('Could not connect: ' . mysql_error());
 
+                while ($row2 = mysql_fetch_array($result2)) {
+                ?>
+                    <div class="class_videoList openyet">
+                        <div class="class_videoCont dp_sb dp_c">
+                            <div class="imgWrap gry">
+                                <!-- <button type="button" title="관심" class="likeMark"></button> -->
+                                <img src="/upfile/class/<?= $row2['upfile01'] ?>" alt="<?= $row2['realfile01'] ?>" width="200" height="110">
+                            </div>
+                            <div class="video_progress">
+                                <div class="dp_sb dp_end">
+                                    <div class="play_titWrap">
+                                        <p class="play_tit"><?= $row2['title'] ?></p>
+                                        <span class="c_gry04 f14"><?= $row2['tname'] ?></span>
+                                    </div>
+                                    <div class="playBtnWrap dp_f">
+                                        <div class="play_status f14 dp_f dp_c dp_cc on">강좌 구매 후 수강가능</div>
+                                        <img src="/images/v_play.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="progressBar_wrap dp_sb dp_c">
+                                    <p class="c_bora01 bold2 f14">0%</p>
+                                    <div class="progressBar">
+                                        <div class="progressBar_fill" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class_video_tit_wrap dp_f">
+                            <p class="class_video_tit c_gry04 f14"><?= $cade01 ?> - <?= $cade02 ?> - <?= $cade02 ?></p>
+                            <p class="class_video_tit c_gry04 f14"><span> <?= $class_list_num_rows ?></span> · <span>최근 수강일 </span></p>
+                        </div>
+                    </div>
+                <?
+                }
+                ?>
             </div>
         </div>
     </div>

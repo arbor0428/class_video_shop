@@ -16,7 +16,7 @@ switch ($type) {
             exit;
         }
         $sql = "DELETE FROM ks_cart WHERE userid='$userid'";
-        $sql .=  " AND pid=$class_uid";
+        $sql .=  " AND class_uid=$class_uid";
 
         $result_del = sqlExe($sql);
         if ($result_del) {
@@ -35,7 +35,7 @@ switch ($type) {
 
         $sql = "DELETE FROM ks_cart WHERE userid='$userid' AND";
         foreach ($class_uids as $key => $class_uid) {
-            $sql .=  " pid=$class_uid";
+            $sql .=  " class_uid=$class_uid";
             if ($key === count($class_uids) - 1) break;
             $sql .= " OR";
         }

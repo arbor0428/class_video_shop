@@ -15,7 +15,7 @@ if (!isset($case)) $case = 1;
 $num_row_use = sqlRowCount($query . " AND l.status=1");
 
 if ($case == 1)     $query .= " AND l.status=1";
-elseif ($case == 2) $query .= " AND l.status=0";
+elseif ($case == 2) $query .= " AND l.status=2";
 else                $query .= "";
 
 $query .= " ORDER BY l.status DESC";

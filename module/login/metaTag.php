@@ -8,7 +8,7 @@
 <meta property="og:url" content="http://www.edupimcampus.com/">
 <meta property="og:title" content="에듀핌">
 <meta property="og:type" content="website">
-<meta property="og:image" content="/images/sns.png"><!--sns이미지-->
+<meta property="og:image" content="/images/sns3.png"><!--sns이미지-->
 <meta property="og:description" content="깊이를 채우다. 글로벌 커리어 에듀핌 코리아">
 
 <meta name="apple-mobile-web-app-capable" content="yes">

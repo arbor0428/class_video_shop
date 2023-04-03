@@ -37,7 +37,9 @@ include '../location03.php';
 
                 <div class="s_cont_tit f20 bold2 c_bora01 nobrb">장바구니</div>
 
-                <? if ($num_row > 0) { ?>
+                <?
+                if ($num_row > 0) {
+                ?>
                     <!--수강중인 강좌가 있을때 보여지는 부분-->
                     <div class="tableWrap">
                         <div class="dp_sb m_10">
@@ -130,7 +132,7 @@ include '../location03.php';
                         <tbody>
                             <tr>
                                 <th>결제상품 수</th>
-                                <td><span id="numOfProd">0</span> 개</td>
+                                <td><span id="numOfProd"><?= $numOfProd ?></span> 개</td>
                             </tr>
                             <tr>
                                 <th>상품금액</th>
@@ -165,32 +167,34 @@ include '../location03.php';
                     <?
                     $row_arr = sqlArray("SELECT * FROM ks_class WHERE `status`=1 LIMIT 5");
                     foreach ($row_arr as $row) {
-                        ?>
-                            <div class="nVdSlickBox">
-                                <a href="/sub01/view.php?&code=<?= $row['uid'] ?>" title="<?= $row['title'] ?>">
-                                    <div class="imgWrap c_gry02 p_r" style="background-image: url('/upfile/class/<?= $row['upfile01'] ?>')">
-                                        <!-- <button type="button" title="관심" class="likeMark <? if ($row['is_wish']) echo 'on'; ?>" onclick="thumbWish(this)" data-id="<?= $row['uid'] ?>"></button> -->
+                    ?>
+                        <div class="nVdSlickBox">
+                            <a href="/sub01/view.php?&code=<?= $row['uid'] ?>" title="<?= $row['title'] ?>">
+                                <div class="imgWrap c_gry02 p_r" style="background-image: url('/upfile/class/<?= $row['upfile01'] ?>')">
+                                    <!-- <button type="button" title="관심" class="likeMark <? if ($row['is_wish']) echo 'on'; ?>" onclick="thumbWish(this)" data-id="<?= $row['uid'] ?>"></button> -->
+                                </div>
+                                <div class="nVdCont">
+                                    <div class="nVdTop">
+                                        <p class="nVdtit01 bold2 dotdot"><?= $row['title'] ?></p>
+                                        <p class="nVdtit02 c_gry03 dotdot"><?= $row['exp'] ?></p>
+                                        <ul class="clickicon dp_f dp_c">
+                                            <li class="dp_f dp_c">
+                                                <img src="/images/likeChk.svg" alt="">
+                                                <span><?= $row['wish'] ?></span>
+                                            </li>
+                                            <li class="dp_f dp_c">
+                                                <img src="/images/bestChk.svg" alt="">
+                                                <span><?= $row['hit'] ?>%</span>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="nVdCont">
-                                        <div class="nVdTop">
-                                            <p class="nVdtit01 bold2 dotdot"><?= $row['title'] ?></p>
-                                            <p class="nVdtit02 c_gry03 dotdot"><?= $row['exp'] ?></p>
-                                            <ul class="clickicon dp_f dp_c">
-                                                <li class="dp_f dp_c">
-                                                    <img src="/images/likeChk.svg" alt="">
-                                                    <span><?= $row['wish'] ?></span>
-                                                </li>
-                                                <li class="dp_f dp_c">
-                                                    <img src="/images/bestChk.svg" alt="">
-                                                    <span><?= $row['hit'] ?>%</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div><?= price_tag($row['price'], $row['discountPrice'], $row['discountRate'], $row['period']) ?></div>
-                                    </div>
-                                </a>
-                            </div>
-                    <? } ?>
+                                    <div><?= price_tag($row['price'], $row['discountPrice'], $row['discountRate'], $row['period']) ?></div>
+                                </div>
+                            </a>
+                        </div>
+                    <?
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -258,7 +262,7 @@ include '../location03.php';
         else {
             const form = document.frm01
             const seleted_class_uids = document.querySelectorAll('.class_uids:checked')
-            form.type.value = 'ORDER'
+            form.type.value = 'ORDER_CLASS'
             form.userid.value = data.userid
             setOrderData(seleted_class_uids)
             form.action = "../order/"
@@ -285,8 +289,8 @@ include '../location03.php';
         let total_discountPrice = 0
         seleted_class_uids.forEach(ele => {
             let uid = ele.value
-            console.log(data.cart[uid].price);
-            console.log(data.cart[uid].discountPrice);
+            // console.log(data.cart[uid].price);
+            // console.log(data.cart[uid].discountPrice);
             total_discountPrice += (data.cart[uid].price - data.cart[uid].discountPrice)
         })
         $('#total_discountPrice').text(number_format(total_discountPrice))

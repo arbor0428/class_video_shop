@@ -3,9 +3,8 @@
 	$side_menu=13;
 	$topTxt01='내 구매내역';
 
-    $query = "SELECT o.*, p.*, m.*
+    $query = "SELECT o.*, m.*
         FROM ks_order o 
-        JOIN ks_payment p ON o.orderId=p.orderId 
         JOIN ks_member m ON o.userid=m.userid 
         WHERE o.userid='$GBL_USERID'";
 

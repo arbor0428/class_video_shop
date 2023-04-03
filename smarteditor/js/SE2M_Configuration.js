@@ -6,30 +6,30 @@ nhn.husky = nhn.husky || {};
 nhn.husky.SE2M_Configuration = nhn.husky.SE2M_Configuration || {};
 
 /**
- * CSS LazyLoad¸¦ À§ÇÑ °æ·Î
+ * CSS LazyLoadë¥¼ ìœ„í•œ ê²½ë¡œ
  */
 nhn.husky.SE2M_Configuration.SE2B_CSSLoader = {
 	sCSSBaseURI : "css"
 };
 
 /**
- * ÆíÁı¿µ¿ª ¼³Á¤
+ * í¸ì§‘ì˜ì—­ ì„¤ì •
  */
 nhn.husky.SE2M_Configuration.SE_EditingAreaManager = {
-	sCSSBaseURI : "css",					// smart_editor2_inputarea.html ÆÄÀÏÀÇ »ó´ë°æ·Î
+	sCSSBaseURI : "css",					// smart_editor2_inputarea.html íŒŒì¼ì˜ ìƒëŒ€ê²½ë¡œ
 	sBlankPageURL : "smart_editor2_inputarea.html",
 	sBlankPageURL_EmulateIE7 : "smart_editor2_inputarea_ie8.html",
-	aAddtionalEmulateIE7 : [] // IE8 default »ç¿ë, IE9 ~ ¼±ÅÃÀû »ç¿ë
+	aAddtionalEmulateIE7 : [] // IE8 default ì‚¬ìš©, IE9 ~ ì„ íƒì  ì‚¬ìš©
 };
 
 /**
- * [À¥Á¢±Ù¼º]
- * ´ÜÃàÅ° ALT+,  ALT+. À» ÀÌ¿ëÇÏ¿© ½º¸¶Æ®¿¡µğÅÍ ¿µ¿ªÀÇ ÀÌÀü/ÀÌÈÄ ¿ä¼Ò·Î ÀÌµ¿ÇÒ ¼ö ÀÖ´Ù.
- * 		sBeforeElementId : ½º¸¶Æ®¿¡µğÅÍ ¿µ¿ª ÀÌÀü ¿ä¼ÒÀÇ id
- * 		sNextElementId : ½º¸¶Æ®¿¡µğÅÍ ¿µ¿ª ÀÌÈÄ ¿ä¼ÒÀÇ id 
+ * [ì›¹ì ‘ê·¼ì„±]
+ * ë‹¨ì¶•í‚¤ ALT+,  ALT+. ì„ ì´ìš©í•˜ì—¬ ìŠ¤ë§ˆíŠ¸ì—ë””í„° ì˜ì—­ì˜ ì´ì „/ì´í›„ ìš”ì†Œë¡œ ì´ë™í•  ìˆ˜ ìˆë‹¤.
+ * 		sBeforeElementId : ìŠ¤ë§ˆíŠ¸ì—ë””í„° ì˜ì—­ ì´ì „ ìš”ì†Œì˜ id
+ * 		sNextElementId : ìŠ¤ë§ˆíŠ¸ì—ë””í„° ì˜ì—­ ì´í›„ ìš”ì†Œì˜ id 
  * 
- * ½º¸¶Æ®¿¡µğÅÍ ¿µ¿ª ÀÌ¿ÜÀÇ Á¦¸ñ ¿µ¿ª (¿¹:½º¸¶Æ®¿¡µğÅÍ°¡ Àû¿ëµÈ ºí·Î±× ¾²±â ÆäÀÌÁö¿¡¼­ÀÇ Á¦¸ñ ¿µ¿ª) ¿¡ ÇØ´çÇÏ´Â ¿¤¸®¸ÕÆ®¿¡¼­ TabÅ°¸¦ ´©¸£¸é ¿¡µğÆÃ ¿µ¿ªÀ¸·Î Æ÷Ä¿½º¸¦ ÀÌµ¿½ÃÅ³ ¼ö ÀÖ´Ù.
- * 		sTitleElementId : Á¦¸ñ¿¡ ÇØ´çÇÏ´Â input ¿ä¼ÒÀÇ id. 
+ * ìŠ¤ë§ˆíŠ¸ì—ë””í„° ì˜ì—­ ì´ì™¸ì˜ ì œëª© ì˜ì—­ (ì˜ˆ:ìŠ¤ë§ˆíŠ¸ì—ë””í„°ê°€ ì ìš©ëœ ë¸”ë¡œê·¸ ì“°ê¸° í˜ì´ì§€ì—ì„œì˜ ì œëª© ì˜ì—­) ì— í•´ë‹¹í•˜ëŠ” ì—˜ë¦¬ë¨¼íŠ¸ì—ì„œ Tabí‚¤ë¥¼ ëˆ„ë¥´ë©´ ì—ë””íŒ… ì˜ì—­ìœ¼ë¡œ í¬ì»¤ìŠ¤ë¥¼ ì´ë™ì‹œí‚¬ ìˆ˜ ìˆë‹¤.
+ * 		sTitleElementId : ì œëª©ì— í•´ë‹¹í•˜ëŠ” input ìš”ì†Œì˜ id. 
  */
 nhn.husky.SE2M_Configuration.SE2M_Accessibility = {
     sBeforeElementId : '',
@@ -38,10 +38,10 @@ nhn.husky.SE2M_Configuration.SE2M_Accessibility = {
 };
 
 /**
- * ¸µÅ© ±â´É ¿É¼Ç
+ * ë§í¬ ê¸°ëŠ¥ ì˜µì…˜
  */
 nhn.husky.SE2M_Configuration.SE2M_Hyperlink = {
-	bAutolink : true	// ÀÚµ¿¸µÅ©±â´É »ç¿ë¿©ºÎ(±âº»°ª:true)
+	bAutolink : true	// ìë™ë§í¬ê¸°ëŠ¥ ì‚¬ìš©ì—¬ë¶€(ê¸°ë³¸ê°’:true)
 };
 
 nhn.husky.SE2M_Configuration.Quote = {

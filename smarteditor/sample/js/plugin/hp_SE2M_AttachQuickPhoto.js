@@ -1,8 +1,8 @@
 /**
- * @use °£´Ü Æ÷Åä ¾÷·Îµå¿ëÀ¸·Î Á¦ÀÛµÇ¾ú½À´Ï´Ù.
+ * @use ê°„ë‹¨ í¬í†  ì—…ë¡œë“œìš©ìœ¼ë¡œ ì œì‘ë˜ì—ˆìŠµë‹ˆë‹¤.
  * @author cielo
  * @See nhn.husky.SE2M_Configuration 
- * @ ÆË¾÷ ¸¶Å©¾÷Àº SimplePhotoUpload.html°ú SimplePhotoUpload_html5.htmlÀÌ ÀÖ½À´Ï´Ù. 
+ * @ íŒì—… ë§ˆí¬ì—…ì€ SimplePhotoUpload.htmlê³¼ SimplePhotoUpload_html5.htmlì´ ìˆìŠµë‹ˆë‹¤. 
  */
 
 nhn.husky.SE2M_AttachQuickPhoto = jindo.$Class({		
@@ -16,7 +16,7 @@ nhn.husky.SE2M_AttachQuickPhoto = jindo.$Class({
 	
 	$LOCAL_BEFORE_FIRST : function(sMsg){
 		if(!!this.oPopupMgr){ return; }
-		// Popup Manager¿¡¼­ »ç¿ëÇÒ param
+		// Popup Managerì—ì„œ ì‚¬ìš©í•  param
 		this.htPopupOption = {
 			oApp : this.oApp,
 			sName : this.name,
@@ -28,7 +28,7 @@ nhn.husky.SE2M_AttachQuickPhoto = jindo.$Class({
 	},
 	
 	/**
-	 * Æ÷Åä À¥Å¾ ¿ÀÇÂ
+	 * í¬í†  ì›¹íƒ‘ ì˜¤í”ˆ
 	 */
 	$ON_ATTACHPHOTO_OPEN_WINDOW : function(){			
 		this.htPopupOption.sUrl = this.makePopupURL();
@@ -36,8 +36,8 @@ nhn.husky.SE2M_AttachQuickPhoto = jindo.$Class({
 
 		this.oPopupWindow = this.oPopupMgr.openWindow(this.htPopupOption);
 		
-		// Ã³À½ ·ÎµùÇÏ°í IE¿¡¼­ Ä¿¼­°¡ ÀüÇô ¾ø´Â °æ¿ì
-		// º¹¼ö ¾÷·Îµå½Ã¿¡ ¼ø¼­°¡ ¹Ù²ñ
+		// ì²˜ìŒ ë¡œë”©í•˜ê³  IEì—ì„œ ì»¤ì„œê°€ ì „í˜€ ì—†ëŠ” ê²½ìš°
+		// ë³µìˆ˜ ì—…ë¡œë“œì‹œì— ìˆœì„œê°€ ë°”ë€œ
 		// [SMARTEDITORSUS-1698]
 		this.oApp.exec('FOCUS', [true]);
 		// --[SMARTEDITORSUS-1698]
@@ -45,8 +45,8 @@ nhn.husky.SE2M_AttachQuickPhoto = jindo.$Class({
 	},
 	
 	/**
-	 * ¼­ºñ½ºº°·Î ÆË¾÷¿¡  parameter¸¦ Ãß°¡ÇÏ¿© URLÀ» »ı¼ºÇÏ´Â ÇÔ¼ö	 
-	 * nhn.husky.SE2M_AttachQuickPhoto.prototype.makePopupURL·Î µ¤¾î½á¼­ »ç¿ëÇÏ½Ã¸é µÊ.
+	 * ì„œë¹„ìŠ¤ë³„ë¡œ íŒì—…ì—  parameterë¥¼ ì¶”ê°€í•˜ì—¬ URLì„ ìƒì„±í•˜ëŠ” í•¨ìˆ˜	 
+	 * nhn.husky.SE2M_AttachQuickPhoto.prototype.makePopupURLë¡œ ë®ì–´ì¨ì„œ ì‚¬ìš©í•˜ì‹œë©´ ë¨.
 	 */
 	makePopupURL : function(){
 		var sPopupUrl = "./sample/photo_uploader/photo_uploader.html";
@@ -55,7 +55,7 @@ nhn.husky.SE2M_AttachQuickPhoto = jindo.$Class({
 	},
 	
 	/**
-	 * ÆË¾÷¿¡¼­ È£ÃâµÇ´Â ¸Ş¼¼Áö.
+	 * íŒì—…ì—ì„œ í˜¸ì¶œë˜ëŠ” ë©”ì„¸ì§€.
 	 */
 	$ON_SET_PHOTO : function(aPhotoData){
 		var sContents, 
@@ -87,25 +87,25 @@ nhn.husky.SE2M_AttachQuickPhoto = jindo.$Class({
 				sContents += this._getPhotoTag(aPhotoInfo);
 			}
 
-			this.oApp.exec("PASTE_HTML", [sContents]); // À§Áñ Ã·ºÎ ÆÄÀÏ ºÎºĞ È®ÀÎ
+			this.oApp.exec("PASTE_HTML", [sContents]); // ìœ„ì¦ ì²¨ë¶€ íŒŒì¼ ë¶€ë¶„ í™•ì¸
 		}catch(e){
-			// upload½Ã error¹ß»ı¿¡ ´ëÇØ¼­ skipÇÔ
+			// uploadì‹œ errorë°œìƒì— ëŒ€í•´ì„œ skipí•¨
 			return false;
 		}
 	},
 
 	/**
-	 * @use ÀÏ¹İ Æ÷Åä tag »ı¼º
+	 * @use ì¼ë°˜ í¬í†  tag ìƒì„±
 	 */
 	_getPhotoTag : function(htPhotoInfo){
 
-		//µî·ÏÇÑ ÀÌ¹ÌÁö°¡ ÃÖ´ë»çÀÌÁî¸¦ ÃÊ°úÇÒ °æ¿ì
+		//ë“±ë¡í•œ ì´ë¯¸ì§€ê°€ ìµœëŒ€ì‚¬ì´ì¦ˆë¥¼ ì´ˆê³¼í•  ê²½ìš°
 		nWidth = parseInt(htPhotoInfo.nWidth);
 		if(nWidth > 1100)	deWidth = "width:100%;";
 		else					deWidth = '';
 
 
-		// id¿Í class´Â ½æ³×ÀÏ°ú ¿¬°üÀÌ ¸¹½À´Ï´Ù. ¼öÁ¤½Ã ½æ³×ÀÏ ¿µ¿ªµµ Test
+		// idì™€ classëŠ” ì¸ë„¤ì¼ê³¼ ì—°ê´€ì´ ë§ìŠµë‹ˆë‹¤. ìˆ˜ì •ì‹œ ì¸ë„¤ì¼ ì˜ì—­ë„ Test
 		var sTag = '<img src="{=sOriginalImageURL}" title="{=sName}" style="max-width:100%;height:auto;'+deWidth+'">';
 		if(htPhotoInfo.bNewLine){
 			sTag += '<br style="clear:both;">';

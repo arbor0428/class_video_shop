@@ -1,10 +1,12 @@
 <?
 include '../header.php';
 
-define('_NAME', '자격증 과정');
+define('_NAME', '국제인증자격증과정');
 define('_UPLOAD_DIR', '/upfile/license/');
 
-$query = "SELECT * FROM ks_license WHERE status='1'";
+$cade01 = sqlRowOne("SELECT uid FROM ks_license_cade01 WHERE title='" . _NAME . "'");
+
+$query = "SELECT * FROM ks_license WHERE status='1' AND cade01='$cade01'";
 $result = mysql_query($query) or die(mysql_error());
 ?>
 
@@ -20,7 +22,7 @@ $result = mysql_query($query) or die(mysql_error());
                 }
             ?>
                 <div class="nVdSlickBox">
-                    <a href="./view.php?&code=<?= $uid ?>" title="<?= $title ?>">
+                    <a href="./view.php?code=<?= $uid ?>" title="<?= $title ?>">
                         <div class="imgWrap c_gry02 p_r">
                             <!-- <button type="button" title="관심" class="likeMark <? if ($isWish) echo 'on'; ?>" onclick="thumbWish(this)" data-id="<?= $uid ?>" data-ctype="<?= _CTYPE ?>"></button> -->
                             <img src="<?= _UPLOAD_DIR . $upfile01 ?>" alt="<?= $title ?>" width="276" height="150">

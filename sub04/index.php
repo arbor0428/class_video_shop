@@ -19,7 +19,7 @@ $result = mysql_query($query) or die(mysql_error());
                 }
             ?>
                 <div class="nVdSlickBox">
-                    <a href="./view.php?&code=<?= $uid ?>" title="<?= $title ?>">
+                    <a href="./view.php?code=<?= $uid ?>" title="<?= $title ?>">
                         <div class="imgWrap c_gry02 p_r">
                             <!-- <button type="button" title="관심" class="likeMark <? if ($isWish) echo 'on'; ?>" onclick="thumbWish(this)" data-id="<?= $uid ?>" data-ctype="<?= _CTYPE ?>"></button> -->
                             <img src="<?= _UPLOAD_DIR . $upfile01 ?>" alt="<?= $title ?>" width="276" height="150">

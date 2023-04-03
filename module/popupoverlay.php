@@ -100,12 +100,22 @@
 
 <a id="classShow_open" class="classShow_open"></a>
 <div id="classShow" class="popup_background">
-    <div style="height: 34px;">
+    <div style="height: 20px;">
         <div class="cls_buttonali2"><button class="cerPrint_close close_button_pop"><img src="/images/x_icon.svg" alt=""></button></div>
     </div>
     <div id='classShowFrame' style="background:#fff; overflow:hidden; position:relative;"></div>
 </div>
 
+<!-- pg팝업 -->
+<a id="pgBox_open" class="pgBox_open"></a>
+<a id="pgBox_close" class="pgBox_close"></a>
+<div id="pgBox" class="popup_background" style="min-width:300px;">
+	<div class="popup_notice">
+		<div class="write_it">
+			<div id='pgFrame' style="background:#fff;overflow:hidden;position:relative;"></div>
+		</div>
+	</div>
+</div>
 
 <style>
     #multiBox {
@@ -156,7 +166,7 @@
     }
 
     #classShow {
-        padding: 40px;
+        padding: 20px 40px;
         box-sizing: border-box;
         min-width: 800px;
         position: relative;

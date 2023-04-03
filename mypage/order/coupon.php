@@ -6,8 +6,9 @@ if (!$GBL_USERID) {
     exit;
 }
 
-$sql = "SELECT c.*, l.eTime FROM ks_coupon_log l JOIN ks_coupon c ON l.coupon_uid=c.uid WHERE l.userid='$GBL_USERID' AND l.status='0'";
+$sql = "SELECT c.*, l.eTime FROM ks_coupon_log l JOIN ks_coupon c ON l.coupon_uid=c.uid WHERE l.userid='$GBL_USERID' AND l.status='1'";
 $couponArr = sqlArray($sql);
+$num_rows = sqlRowCount($sql);
 ?>
 
 <form action="./index.php" name="frm03" method="post">
@@ -16,7 +17,7 @@ $couponArr = sqlArray($sql);
             <div class="dp_f dp_c m_12">
                 <span class="bold2">쿠폰 적용</span>
                 <span>&nbsp;-&nbsp;사용 가능</span>
-                <span class="c_bora01 bold2">&nbsp;2&nbsp;</span>
+                <span class="c_bora01 bold2">&nbsp;<?= $num_rows ?>&nbsp;</span>
             </div>
             <div class="couponApplyList">
                 <div class="radioWrap dp_f dp_c">

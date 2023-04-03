@@ -35,7 +35,14 @@
 .depthWrap .boxWrap .depthbox {display:none; position: absolute; top: 0; left: 0; width: 100%; background-color: #fff; box-shadow: 0 11px 10px rgb(0,0,0,3%); overflow: hidden; z-index: 9999; transition: all 0.5s;}
 /* .depthWrap .depthbox:nth-child(1) {display: block;} */
 .depthWrap .depthbox .alcMnWrap {border-left: 1px solid #ECECEC; height: 100%;}
-.depthWrap .depthbox .allClassMenu {height: 100%; padding: 15px; box-sizing: border-box; border-right: 1px solid #ECECEC;}
+.depthWrap .depthbox .alcMnWrap_btn {margin: 20px 0;}
+.depthWrap .depthbox .alcMnWrap_btn li {margin-right: 10px;}
+.depthWrap .depthbox .alcMnWrap_btn li a {background-color: #c189ff;}
+.depthWrap .depthbox .alcMnWrap_btn li.on a {background-color: #8B29F7; color: #fff;}
+.depthWrap .depthbox .alcMnWrap_wrap .alcMnWrap {display: none;}
+.depthWrap .depthbox .alcMnWrap_wrap .alcMnWrap:nth-child(1) {display: flex;}
+.depthWrap .depthbox .alcMnWrap_btn li a {padding: 5px 20px; border-radius: 5px;}
+.depthWrap .depthbox .allClassMenu {flex: 1; padding: 15px; box-sizing: border-box; border-right: 1px solid #ECECEC;}
 .depthWrap .depthbox .allClassMenu .depth1 > li {margin-bottom: 20px;}
 .depthWrap .depthbox .allClassMenu .depth1 > li > a {display: block; margin-bottom: 10px;}
 .depthWrap .depthbox .allClassMenu .depth2 {margin-bottom: 20px;}
@@ -64,11 +71,8 @@ header .m-navWrap {display: none;}
 .visualSlick .v_slickBox a {
 	display: block;
 	width: 100%;
-	height: 645px;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
+.mvisual {display: none !important;}
 
 .visualSlick .v_slickBox img {
 	width: 100%;
@@ -194,7 +198,7 @@ h3 {font-size:1.875rem;}
 .cont1_4 .ai_tab_box_wrap {margin-top: 40px;}
 .cont1_4 .ai_tab_box_wrap .ai_tab_box {display: none;}
 .cont1_4 .ai_tab_box_wrap .ai_tab_box:first-child {display: block;}
-.cont1_4 .ai_tab_box_wrap .ai_tab_box .ai_tab_box_child {margin-bottom: 20px; padding: 25px 30px; box-sizing:border-box; width: 49%; border-radius: 10px; background-color: #fff;}
+.cont1_4 .ai_tab_box_wrap .ai_tab_box .ai_tab_box_child {margin-bottom: 20px; padding: 25px 30px; box-sizing:border-box; width: 49%; border-radius: 10px; background-color: #fff; box-shadow: 0px 0px 20px #747A8229;}
 .cont1_4 .ai_tab_box_wrap .ai_tab_box .ai_tab_box_child .ai_tab_txt_box {text-align: left;}
 .cont1_4 .ai_tab_box_wrap .ai_tab_box .ai_tab_box_child .ai_tab_txt_box .ai_tit_bot {margin: 4px 0 30px 0; font-size:1.250rem;}
 .cont1_4 .ai_tab_box_wrap .ai_tab_box .ai_tab_box_child .ai_tab_txt_box .ai_goBtn {width: 82px; height: 36px; border: 1px solid #D1D1D1; border-radius: 8px; font-size: 0.875rem; color: #666666;}
@@ -214,7 +218,8 @@ h3 {font-size:1.875rem;}
 .ai_curri_box_wrap .ai_curri_box .nVdBot {font-size: 18px;}
 .ai_curri_box_wrap .ai_curri_box .nVdBot .priceDet {margin-left: 10px;}
 .ai_curri_box_wrap .ai_curri_box .nVdBot .monDet {font-size: 12px; color: #666;}
-
+.classDetail_wrap .clickicon li img {margin-right: 5px;}
+.classDetail_wrap .clickicon li:first-child {margin-right: 10px;}
 
 .c_titWrap {padding-bottom: 25px;}
 .c_titWrap .span_ti {margin-right: 10px; width: 80px; height: 40px; border-radius: 4px; font-size:1.563rem; font-weight: 500;}
@@ -302,6 +307,7 @@ h3 {font-size:1.875rem;}
 
 
 .cont2_1 {padding: 120px 0;}
+.cont2_1 .cont2_1_mtit {display: none;}
 .cont2_1 .matrix_wrap {margin: 0 auto; position: relative; width: 915px; height: 880px;}
 .cont2_1 .matrix_wrap .matrix_box {position: absolute; width: 280px; height: 320px; clip-path: polygon(50% 0, 100% 23%, 100% 77%, 50% 100%, 0 77%, 0 23%); border-radius: 3px;}
 .cont2_1 .matrix_wrap .matrix_box.matrix01 {top: 0; left: 160px; background-color: #00B1FF;}
@@ -376,6 +382,7 @@ h3 {font-size:1.875rem;}
 .cont3 .bannerSlick .slick-dots li button {width: 10px; height: 10px;}
 .cont3 .bannerSlick .slick-dots li button:before {width: 10px; height: 10px; color: #fff;}
 .cont3 .bannerSlick_wrap {margin-bottom: 120px;}
+.cont3 .bannerSlick_wrap .v_slickBox img {width: 100%;}
 .cont3 .swiper-button-prev, .cont3 .swiper-button-next {
 	margin-top: 0;
 	width: 48px; 
@@ -463,6 +470,8 @@ h3 {font-size:1.875rem;}
 
 /*중간영역*/
 
+
+.fixed-bnr {display: none;}
 /*footer*/
 footer .f_top01 .yelloTit {margin: 23px 0 13px 0; font-size:1.625rem; color: #F7D593;}
 footer .f_top01 .f_top01_det {margin-bottom: 30px; font-size: 0.875rem;}
@@ -508,6 +517,15 @@ footer .familySlickBtn li:nth-child(3) {background-image: url("../images/navy_ri
 .fixBtnWrap .mediaWrap .mediaToggle {display: none; position:absolute; bottom:57px; left:0px; width:100%; z-index:11; box-sizing:border-box;}
 
 
+
+
+
 .fixBtnWrap .updownWrap li {margin: 5px 0; width: 55px; height: 55px; border-radius: 50%; background-color: #8B29F7;}
 .fixBtnWrap .updownWrap li a {width: 100%; height: 100%;}
+
+.fixBtnWrap .updownWrap li.m_show {display: none; position:relative; margin: 5px 0; width: 40px; height: 40px; border-radius: 50%; background-position: center center; background-repeat: no-repeat; background-size: 22px 22px; cursor: pointer;}
+.fixBtnWrap .updownWrap li.m_show:before {font-size: 0.875rem; color: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: absolute; right:20px; top: 0; border-radius: 55px 0 0 55px; width: 0; height: 40px; z-index: -99; transition: all 0.3s; overflow:hidden;}
+.fixBtnWrap .updownWrap li.m_show:hover:before {padding-left: 20px; width: 88px;}
+.fixBtnWrap .updownWrap li.m_show {background-image: url("../images/k_icon.png"); background-color: #fde500;}
+.fixBtnWrap .updownWrap li.m_show:before {content: "1:1 상담하기"; background-color: #fde500; color: #240f0e;}
 /*footer*/

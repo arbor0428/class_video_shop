@@ -4,25 +4,20 @@ include '../../header.php';
 if (!isLogin()) redirectLogin();
 
 if (!isset($class_uids)) {
-    Msg::goMsg("잘못된 접근 입니다.", '/');
+    Msg::goMsg("잘못된 접근 입니다.", '/mypage/cart/');
     exit;
 } else if (count($class_uids) <= 0) {
     Msg::goMsg("상품을 선택하세요.", '/mypage/cart/');
     exit;
 } else {
-    $sql = "SELECT ca.*, c.*
-        FROM ks_cart ca
-        RIGHT JOIN ks_class c ON ca.class_uid=c.uid
-        WHERE ca.userid='$GBL_USERID' AND";
-
+    $clause = "(";
     foreach ($class_uids as $key => $class_uid) {
-        $sql .=  " ca.class_uid=$class_uid";
-        if ($key === count($class_uids) - 1) break;
-        $sql .= " OR";
+        $clause .= ($key != count($class_uids) - 1) ? $class_uid . "," : $class_uid . ")";
     }
+    $query = "SELECT * FROM ks_class WHERE uid IN $clause";
 
-    $orderArr = sqlArray($sql);
-    $numOforder = sqlRowCount($sql);
+    $orderArr = sqlArray($query);
+    $numOforder = sqlRowCount($query);
     $member = sqlRow("SELECT name, point FROM ks_member WHERE userid='$GBL_USERID'");
 
     $buyr_name = $member['name'];
@@ -35,7 +30,12 @@ if (!isset($class_uids)) {
     if (count($orderArr) > 1) $good_name = $orderArr[0]['title'] . " 외 " . ($numOforder - 1) . "건";
     else $good_name = $orderArr[0]['title'] . " " . $numOforder . "건";
 
-    $ordr_idxx = '202303' . time();
+    $class_uids_str = '';
+    foreach ($class_uids as $class_uid) {
+        $class_uids_str .= $class_uid . "|";
+    }
+    $ordr_idxx = '202304' . time();
+    $class_uids = substr($class_uids_str, 0, -1);
 
     $data['site_cd'] = 'T0000';
     $data['site_name'] = 'EDUFIM';
@@ -103,21 +103,38 @@ if (!isset($class_uids)) {
     /* 표준웹 실행 */
     function jsf__pay(form) {
         try {
-            const frm = document.order_info;
+            // console.log(data);return;
+            // form.usable_point.value = data.point
 
-            frm.site_cd.value = data.site_cd
-            frm.site_name.value = data.site_name
-            frm.pay_method.value = '100000000000'
+            form.class_uids.value = data.class_uids;
 
-            frm.buyr_name.value = data.buyr_name
-            frm.buyr_mail.value = isEmailChk(data.buyr_mail) ? data.buyr_mail : ""
+            form.price.value = data.price;
+            form.discountPrice.value = data.discountPrice;
+            form.use_point.value = data.use_point;
 
-            frm.ordr_idxx.value = data.ordr_idxx
-            frm.good_name.value = data.good_name
-            frm.good_mny.value = data.good_mny
-            frm.good_mny.value = 1000
+            form.site_cd.value = data.site_cd;
+            form.site_name.value = data.site_name;
 
-            KCP_Pay_Execute(form);
+            form.buyr_name.value = data.buyr_name;
+            form.buyr_mail.value = data.buyr_mail;
+
+            form.ordr_idxx.value = data.ordr_idxx;
+            form.good_name.value = data.good_name;
+            form.good_mny.value = data.good_mny;
+
+            if (form.UserOS.value == 'pc') {
+                form.pay_method.value = '100000000000';
+
+                form.action = "result.php";
+                KCP_Pay_Execute(form);
+
+            } else if (form.UserOS.value == 'mobile') {
+                form.pay_method.value = 'CARD';
+                // form.van_code.value = ''
+
+                form.action = "kcp_api_trade_reg.php";
+                form.submit();
+            }
         } catch (e) {
             /* IE 에서 결제 정상종료시 throw로 스크립트 종료 */
             console.log(e);
@@ -128,7 +145,8 @@ if (!isset($class_uids)) {
 <div class="subWrap">
     <div class="s_center dp_sb">
         <div class="s_cont" style="margin: 0 auto;">
-            <form class="form-cart" name="order_info" method="post" action="/module/kcp/kcp_api_pay.php">
+
+            <form class="form-cart" name="order_info" method="post" action="result.php">
                 <div class="s_cont_tit f20 bold2 c_bora01 nobrb">주문상품정보</div>
                 <div class="tableWrap">
                     <table class="subTbl">
@@ -142,7 +160,9 @@ if (!isset($class_uids)) {
                                 <th>금액</th>
                             </tr>
 
-                            <? foreach ($orderArr as $order) { ?>
+                            <?
+                            foreach ($orderArr as $order) {
+                            ?>
                                 <tr>
                                     <td>
                                         <div class="dp_f">
@@ -252,22 +272,40 @@ if (!isset($class_uids)) {
                     <a class="bora01 c_w dp_f dp_c dp_cc" href="javascript:void(0)" onclick="jsf__pay(document.order_info)" title="결제하기">결제하기</a>
                 </div>
 
+                <!-- 기기 정보 -->
+                <input type='hidden' name='UserOS' value='<?= $UserOS ?>'>
 
+                <!-- 모바일 -->
+                <!-- 리턴 URL (kcp와 통신후 결제를 요청할 수 있는 암호화 데이터를 전송 받을 가맹점의 주문페이지 URL) -->
+                <input type="hidden" name="Ret_URL" value="http://edupimcampus.com/mypage/order/result.php" />
+                <input type="hidden" name="user_agent" value="" /> <!--사용 OS-->
+                <!--<input type="hidden"   name="site_cd"         value="T0000" />--> <!--사이트코드-->
+
+                <!-- 인증시 필요한 파라미터(변경불가)-->
+                <!-- <input type="hidden" name="pay_method"      value=""> -->
+                <input type="hidden" name="van_code" value="">
+
+                <!-- PC -->
+                <!-- 사용자 정보 -->
+                <input type="hidden" name="class_uids" value="<?= ($class_uids) ?>" readonly>
+                <input type="hidden" name="price" value="" readonly>
+                <input type="hidden" name="discountPrice" value="" readonly>
+                <!-- <input type="hidden" name="use_point" value="" readonly> -->
 
                 <!-- 가맹점 정보 설정-->
                 <input type="hidden" name="site_cd" value="<?= $site_cd ?>" />
                 <input type="hidden" name="site_name" value="<?= $site_name ?>" />
                 <input type="hidden" name="pay_method" value="" />
 
-                <input type="text" name="buyr_name" value="<?= $buyr_name ?>" />
-                <input type="text" name="buyr_mail" value="<?= $GBL_USERID ?>" />
+                <input type="hidden" name="buyr_name" value="<?= $buyr_name ?>" />
+                <input type="hidden" name="buyr_mail" value="<?= $GBL_USERID ?>" />
                 <!-- 
                 ※필수 항목
                 표준웹에서 값을 설정하는 부분으로 반드시 포함되어야 합니다.값을 설정하지 마십시오
                 -->
-                <input type="text" name="ordr_idxx" value="<?= $ordr_idxx ?>" maxlength="40" />
-                <input type="text" name="good_name" value="<?= $good_name ?>" />
-                <input type="text" name="good_mny" value="<?= $good_mny ?>" maxlength="9" />
+                <input type="hidden" name="ordr_idxx" value="<?= $ordr_idxx ?>" maxlength="40" />
+                <input type="hidden" name="good_name" value="<?= $good_name ?>" />
+                <input type="hidden" name="good_mny" value="<?= $good_mny ?>" maxlength="9" />
 
                 <input type="hidden" name="res_cd" value="" />
                 <input type="hidden" name="res_msg" value="" />
@@ -376,6 +414,44 @@ if (!isset($class_uids)) {
                 <!--  결제창의 상단문구를 변경할 수 있는 파라미터 입니다. -->
                 <!-- <input type="hidden" name="kcp_pay_title"   value="상단문구추가" /> -->
             </form>
+
+            <div class="recommend_box">
+                <div class="s_cont_tit f20 bold2 c_bora01 nobrb">추천 강좌</div>
+                <div class="dp_f dp_wrap">
+                    <?
+                    $row_arr = sqlArray("SELECT * FROM ks_class WHERE `status`=1 LIMIT 3");
+                    foreach ($row_arr as $row) {
+                    ?>
+                        <div class="nVdSlickBox">
+                            <a href="/sub01/view.php?&code=<?= $row['uid'] ?>" title="<?= $row['title'] ?>">
+                                <div class="imgWrap c_gry02 p_r" style="background-image: url('/upfile/class/<?= $row['upfile01'] ?>')">
+                                    <button type="button" title="관심" class="likeMark <? if ($row['is_wish']) echo 'on'; ?>" onclick="thumbWish(this)" data-id="<?= $row['uid'] ?>"></button>
+                                </div>
+                                <div class="nVdCont">
+                                    <div class="nVdTop">
+                                        <p class="nVdtit01 bold2 dotdot"><?= $row['title'] ?></p>
+                                        <p class="nVdtit02 c_gry03 dotdot"><?= $row['exp'] ?></p>
+                                        <ul class="clickicon dp_f dp_c">
+                                            <li class="dp_f dp_c">
+                                                <img src="/images/likeChk.svg" alt="">
+                                                <span><?= $row['wish'] ?></span>
+                                            </li>
+                                            <li class="dp_f dp_c">
+                                                <img src="/images/bestChk.svg" alt="">
+                                                <span><?= $row['hit'] ?>%</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div><?= price_tag($row['price'], $row['discountPrice'], $row['discountRate'], $row['period']) ?></div>
+                                </div>
+                            </a>
+                        </div>
+                    <?
+                    }
+                    ?>
+                </div>
+            </div>
+
             <section id="detail_sec03">
                 <div class="detail_cont_sub_tit">
                     <!-- <span class="bora01 c_w bold2">환불</span> -->
@@ -443,6 +519,7 @@ if (!isset($class_uids)) {
         let use_coupon_uid = order_frm.use_coupon_uid.value;
         let use_coupon_price = uncomma(order_frm.use_coupon_price.value);
         let use_point = uncomma(order_frm.use_point.value);
+        console.log(use_point);
         let good_mny = parseInt(data.price) - parseInt(data.discountPrice) - use_coupon_price - use_point
 
         data.use_coupon_uid = use_coupon_uid

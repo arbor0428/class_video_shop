@@ -1,7 +1,7 @@
 <?
 include 'head.php';
 
-if ($GBL_MTYPE == 'A') {
+if ($GBL_MTYPE == 'A' || $GBL_MTYPE == 'T') {
 	// header('Location:/adm/main.php');
 	header('Location:/adm/main.php');
 	exit;

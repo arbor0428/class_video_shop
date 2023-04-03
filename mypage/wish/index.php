@@ -63,14 +63,14 @@ WHERE c.`status`=1 AND w.userid='$GBL_USERID'";
                                         <p class="nVdtit01 bold2 dotdot"><?= $row['title'] ?></p>
                                         <p class="nVdtit02 c_gry03 dotdot"><?= $row['exp'] ?></p>
                                         <ul class="clickicon dp_f dp_c">
-                                            <li class="dp_f dp_c">
-                                                <img src="/images/likeChk.svg" alt="">
+                                             <li class="dp_f dp_c">
+                                                <img src="/images/likeChk_gry.png" alt="">
                                                 <span><?= $row['wish'] ?></span>
-                                            </li>
-                                            <li class="dp_f dp_c">
-                                                <img src="/images/bestChk.svg" alt="">
-                                                <span><?= $row['hit'] ?>%</span>
-                                            </li>
+                                                </li>
+                                                <li class="dp_f dp_c">
+                                                    <img src="/images/bestChk_gry.png" alt="">
+                                                    <span><?= $row['hit'] ?>%</span>
+                                                </li>
                                         </ul>
                                     </div>
                                     <div><?= price_tag($row['price'], $row['discountPrice'], $row['discountRate'], $row['period']) ?></div>

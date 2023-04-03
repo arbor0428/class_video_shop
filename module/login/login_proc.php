@@ -36,16 +36,49 @@ if ($num) {
 		Msg::GblMsgBoxParent($msg, '');
 		exit;
 
-	} else {
+	} elseif ($next_url === '/adm/index.php') {
+        if ($info['mtype'] === 'M') {
+            $msg = '권한이 없습니다';
+            Msg::onlyMsg($msg);
+            Msg::goKorea('/');
+            exit;
 
+        } else {
+            $userip = $_SERVER['REMOTE_ADDR'];
+            $loginTime = time();
+            $loginDate = date('Y-m-d H:i:s', $loginTime);
+    
+            // Update recent login
+            sqlExe("UPDATE ks_member SET userip='$userip', loginDate='$loginDate', loginTime='$loginTime' WHERE userid='$userid'");
+    
+            // Insert login log
+            
+            // Create session
+            $_SESSION['ses_member_uid']	    = $info['uid'];
+            $_SESSION['ses_member_userid']	= $info['userid'];
+            $_SESSION['ses_member_name']	= $info['name'];
+            $_SESSION['ses_member_type']	= $info['mtype'];
+    
+            Msg::goKorea('/adm');
+            exit;
+        }
+
+    } else {
+        $userip = $_SERVER['REMOTE_ADDR'];
         $loginTime = time();
         $loginDate = date('Y-m-d H:i:s', $loginTime);
-        sqlExe("UPDATE ks_member SET loginDate='$loginDate', loginTime='$loginTime' WHERE userid='$userid'");
+
+        // Update recent login
+        sqlExe("UPDATE ks_member SET userip='$userip', loginDate='$loginDate', loginTime='$loginTime' WHERE userid='$userid'");
+
+        // Insert login log
         
+        // Create session
 		$_SESSION['ses_member_uid']	    = $info['uid'];
-		$_SESSION['ses_member_userid']	= $userid;
+		$_SESSION['ses_member_userid']	= $info['userid'];
 		$_SESSION['ses_member_name']	= $info['name'];
 		$_SESSION['ses_member_type']	= $info['mtype'];
+
 		Msg::goKorea($next_url);
 		exit;
 	}

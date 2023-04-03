@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta http-equiv="Content-Style-Type" content="text/css">
 <title>사진 첨부하기 :: SmartEditor2</title>
@@ -42,12 +42,23 @@ h1{color:#333;font-size:14px;letter-spacing:-1px}
 .upload{margin:0 4px 0 0;_margin:0;padding:6px 0 4px 6px;border:solid 1px #d5d5d5;color:#a1a1a1;font-size:12px;border-right-color:#efefef;border-bottom-color:#efefef;length:300px;}
 :root  .upload{padding:6px 0 2px 6px;}
 </style>
+<script>
+    function setUploadType(){
+        setUpType = 'true';
+        location.href = 'photo_uploader.html?setUpType='+setUpType;
+    }
+</script>
 </head>
 <body>
 <div id="pop_wrap">
 	<!-- header -->
     <div id="pop_header">
-        <h1>사진 첨부하기</h1>
+        <div style="width:49%;float:left;">
+            <h1>사진 첨부하기</h1>
+        </div>
+        <div style="width:49%;float:left;text-align:right;margin-top:-7px;">
+            <input type="button" value="첨부방식변경" style="padding:5px;cursor:pointer;" onclick="setUploadType();">
+        </div>
     </div>
     <!-- //header -->
     <!-- container -->
@@ -92,9 +103,9 @@ h1{color:#333;font-size:14px;letter-spacing:-1px}
     </div>
     <!-- //footer -->
 </div>
-<script type="text/javascript" src="jindo.min.js" charset="euc-kr"></script>
-<script type="text/javascript" src="jindo.fileuploader.js" charset="euc-kr"></script>
-<script type="text/javascript" src="attach_photo.js" charset="euc-kr"></script>
+<script type="text/javascript" src="jindo.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="jindo.fileuploader.js" charset="utf-8"></script>
+<script type="text/javascript" src="attach_photo.js" charset="utf-8"></script>
 
 </body>
 </html>

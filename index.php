@@ -1,8 +1,8 @@
 <?php
-if ($_SERVER['REMOTE_ADDR'] == '106.246.92.237') {
+include './main.php';
+// if ($_SERVER['REMOTE_ADDR'] == '106.246.92.237') {
 
-    include './main.php';
-} else {
+// } else {
 
-    include './ex_show.php';
-}
+//     include './ex_show.php';
+// }

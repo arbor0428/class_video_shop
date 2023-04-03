@@ -7,9 +7,11 @@ include "/home/edufim/www/module/login/head.php";
             <div class="h_top_wrap dp_sb">
                 <div class="langWrap">
                     <div class="toggleTit dp_f dp_c">
-                        <img src="../images/earthIcon.svg" alt="">
+                        <!-- <img src="../images/earthIcon.svg" alt=""> -->
                         <span class="f12 bold" style="margin: 0 15px 0 8px;">KOR</span>
-                        <div class="dp_f dp_c langArr"><img src="../images/lang_arrow.svg" alt=""></div>
+                        <div class="dp_f dp_c langArr">
+                            <!-- <img src="../images/lang_arrow.svg" alt=""> -->
+                        </div>
                     </div>
                     <div class="toggleDown">
                         <ul class="toggleDownmenu">
@@ -35,7 +37,7 @@ include "/home/edufim/www/module/login/head.php";
                     <li><a href="/mypage/certLicense/" title="자격증조회">자격증조회</a></li>
                 </ul>
             </div>
-            <h1 class="logo txt-c"><a href="/" title="logo"><img src="/images/logo.svg" alt="logo"></a></h1>
+            <h1 class="logo txt-c"><a href="/" title="logo"><!--<img src="/images/logo.svg" alt="logo">--><img src="/images/logo_wht3.png" alt="logo"></a></h1>
 
             <!-- 모바일메뉴 -->
             <div class="m-navWrap">
@@ -55,102 +57,256 @@ include "/home/edufim/www/module/login/head.php";
                                 <li><a href="/member/login.php" title="로그인">로그인</a></li>
                             <? } else { ?>
                                 <li><a href="/module/login/logout_proc.php" title="로그인">로그아웃</a></li>
-                                <li><a href="/mypage/cart.php" title="장바구니">장바구니</a></li>
+                                <li><a href="/mypage/cart" title="장바구니">장바구니</a></li>
                             <? } ?>
                         </ul>
                         <a class="classBtn bora dp_f dp_c dp_cc c_w" href="/mypage/learning/" title="나의 강의실">나의 강의실</a>
                     </div>
                     <ul class="m-nav">
                         <li>
-                            <a href="javascript:avoid(0);" title="ALL 클래스">ALL 클래스</a>
+                            <a href="javascript:void(0);" title="ALL 클래스">ALL 클래스</a>
                             <span class="lnr lnr-chevron-down"></span>
                             <span class="lnr lnr-chevron-up"></span>
-                            <?
-                            $sql = "SELECT * FROM ks_class_cade01 ORDER BY sort";
-                            $cade01 = sqlArray($sql);
-                            for ($i = 0; $i < count($cade01); $i++) {
-                            ?>
-                                <ul class="m-depth2">
-                                    <li>
-                                        <a href="/sub01/sub01.php?&cade01=<?= $cade01[$i]['sort'] ?>" title="<?= $cade01[$i]['title'] ?>"><?= $cade01[$i]['title'] ?></a>
+                            <div class="m-depth2">
+                                <div class="p_r toggle_tit">
+                                    <p>물리치료사</p>
+                                    <span class="lnr lnr-chevron-down"></span>
+                                    <span class="lnr lnr-chevron-up"></span>
+                                </div>
+                                    <div class="toggle_cont">
+                            
+                                    <?
+                                    $cade01 = sqlRowOne("SELECT uid FROM ks_class_cade01 WHERE title='물리치료사'");
+                                    $sql = "SELECT * FROM ks_class_cade02 WHERE cade01=$cade01 ORDER BY sort";
+                                    $cade02 = sqlArray($sql);
+                                    for ($i = 0; $i < count($cade02); $i++) {
+                                    ?>
                                         <ul class="m-depth3">
-                                            <?
-                                            $cade01_uid = $cade01[$i]['uid'];
-                                            $sql = "SELECT * FROM ks_class_cade02 WHERE cade01=$cade01_uid ORDER BY sort";
-                                            $cade02 = sqlArray($sql);
-                                            for ($j = 0; $j < count($cade02); $j++) {
-                                            ?>
-                                                <li>
-                                                    <a href="/sub01/sub02.php?&cade01=<?= $cade01[$i]['sort'] ?>&cade02=<?= $cade02[$j]['sort'] ?>" title="<?= $cade02[$j]['title'] ?>"><?= $cade02[$j]['title'] ?></a>
-                                                    <ul class="m-depth4">
+                                            <li>
+                                                <a class="c_bora dp_b bold2" href="/sub01/sub01.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>" title="<?= $cade02[$i]['title'] ?>">
+                                                    <?= $cade02[$i]['title'] ?>
+                                                </a>
+                                                <ul class="m-depth5">
+                                                    <?
+                                                    $cade02_uid = $cade02[$i]['uid'];
+                                                    $sql = "SELECT * FROM ks_class_cade03 WHERE cade01=$cade01 AND cade02=$cade02_uid ORDER BY sort";
+                                                    $cade03 = sqlArray($sql);
+                                                    for ($j = 0; $j < count($cade03); $j++) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="c_bora dp_b bold2" href="/sub01/sub02.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>&cade03=<?= $cade03[$j]['uid'] ?>" title="<?= $cade03[$j]['title'] ?>"><?= $cade03[$j]['title'] ?></a>
+                                                            <ul class="m-depth6">
 
-                                                        <?
-                                                        $cade02_uid = $cade02[$j]['uid'];
-                                                        $sql = "SELECT uid, title FROM ks_class WHERE status=1 AND cade01=$cade01_uid AND cade02=$cade02_uid";
-                                                        $classes = sqlArray($sql);
-                                                        foreach ($classes as $class) {
-                                                        ?>
-                                                            <li><a href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
-                                                        <? } ?>
-                                                    </ul>
-                                                </li>
-                                            <? } ?>
+                                                                <?
+                                                                $cade03_uid = $cade03[$j]['uid'];
+                                                                $sql = "SELECT uid, title FROM ks_class WHERE status=1 AND cade01=$cade01 AND cade02=$cade02_uid AND cade03=$cade03_uid";
+                                                                $classes = sqlArray($sql);
+                                                                foreach ($classes as $class) {
+                                                                ?>
+                                                                    <li><a class="c_gry dp_b" href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
+                                                                <? } ?>
+                                                            </ul>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    <? } ?>
+                                </div>
+                            </div>
+                            <div class="m-depth2">
+                                <div class="p_r toggle_tit">
+                                    <p>필라테스</p>
+                                    <span class="lnr lnr-chevron-down"></span>
+                                    <span class="lnr lnr-chevron-up"></span>
+                                </div>
+                                <div class="toggle_cont">
+                                    <?
+                                    $cade01 = sqlRowOne("SELECT uid FROM ks_class_cade01 WHERE title='필라테스'");
+                                    $sql = "SELECT * FROM ks_class_cade02 WHERE cade01=$cade01 ORDER BY sort";
+                                    $cade02 = sqlArray($sql);
+                                    for ($i = 0; $i < count($cade02); $i++) {
+                                    ?>
+                                        <ul class="m-depth3">
+                                            <li>
+                                                <a class="c_bora dp_b bold2" href="/sub01/sub01.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>" title="<?= $cade02[$i]['title'] ?>">
+                                                    <?= $cade02[$i]['title'] ?>
+                                                </a>
+                                                <ul class="m-depth5">
+                                                    <?
+                                                    $cade02_uid = $cade02[$i]['uid'];
+                                                    $sql = "SELECT * FROM ks_class_cade03 WHERE cade01=$cade01 AND cade02=$cade02_uid ORDER BY sort";
+                                                    $cade03 = sqlArray($sql);
+                                                    for ($j = 0; $j < count($cade03); $j++) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="bold2 dp_b " href="/sub01/sub02.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>&cade03=<?= $cade03[$j]['uid'] ?>" title="<?= $cade03[$j]['title'] ?>"><?= $cade03[$j]['title'] ?></a>
+                                                            <ul class="m-depth6">
+
+                                                                <?
+                                                                $cade03_uid = $cade03[$j]['uid'];
+                                                                $sql = "SELECT uid, title FROM ks_class WHERE status=1 AND cade01=$cade01 AND cade02=$cade02_uid AND cade03=$cade03_uid";
+                                                                $classes = sqlArray($sql);
+                                                                foreach ($classes as $class) {
+                                                                ?>
+                                                                    <li><a class="c_gry dp_b" href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
+                                                                <? } ?>
+                                                            </ul>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    <? } ?>
+                                </div>
+                            </div>
+                            <div class="m-depth2">
+                                <div class="p_r toggle_tit">
+                                    <p>트레이너</p>
+                                    <span class="lnr lnr-chevron-down"></span>
+                                    <span class="lnr lnr-chevron-up"></span>
+                                </div>
+                                <div class="toggle_cont">
+                                    <?
+                                    $cade01 = sqlRowOne("SELECT uid FROM ks_class_cade01 WHERE title='트레이너'");
+                                    $sql = "SELECT * FROM ks_class_cade02 WHERE cade01=$cade01 ORDER BY sort";
+                                    $cade02 = sqlArray($sql);
+                                    for ($i = 0; $i < count($cade02); $i++) {
+                                    ?>   
+                                        <ul class="depth1">
+                                            <li>
+                                                <a class="c_bora dp_b bold2" href="/sub01/sub01.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>" title="<?= $cade02[$i]['title'] ?>">
+                                                    <?= $cade02[$i]['title'] ?>
+                                                </a>
+                                                <ul class="m-depth3">
+                                                    <?
+                                                    $cade02_uid = $cade02[$i]['uid'];
+                                                    $sql = "SELECT * FROM ks_class_cade03 WHERE cade01=$cade01 AND cade02=$cade02_uid ORDER BY sort";
+                                                    $cade03 = sqlArray($sql);
+                                                    for ($j = 0; $j < count($cade03); $j++) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="bold2 dp_b " href="/sub01/sub02.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>&cade03=<?= $cade03[$j]['uid'] ?>" title="<?= $cade03[$j]['title'] ?>"><?= $cade03[$j]['title'] ?></a>
+                                                            <ul class="m-depth5">
+
+                                                                <?
+                                                                $cade03_uid = $cade03[$j]['uid'];
+                                                                $sql = "SELECT uid, title FROM ks_class WHERE status=1 AND cade01=$cade01 AND cade02=$cade02_uid AND cade03=$cade03_uid";
+                                                                $classes = sqlArray($sql);
+                                                                foreach ($classes as $class) {
+                                                                ?>
+                                                                    <li><a class="c_gry dp_b" href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
+                                                                <? } ?>
+                                                            </ul>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    <? } ?>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="국제인증자격증과정">국제인증자격증과정</a>
+                            <span class="lnr lnr-chevron-down"></span>
+                            <span class="lnr lnr-chevron-up"></span>
+                            <div class="m-depth2">
+
+                                <?
+                                    $cade01 = sqlRowOne("SELECT uid FROM ks_license_cade01 WHERE title='국제인증자격증과정'");
+
+                                    $sql = "SELECT * FROM ks_license WHERE status=1 AND cade01='$cade01' ORDER BY uid";
+                                    $license_arr = sqlArray($sql);
+
+                                    for ($i = 0; $i < count($license_arr); $i++) {
+                                        $license = $license_arr[$i];
+                                ?>
+
+                                <ul class="m-depth3">
+                                    <li>
+                                        <a class="c_bora dp_b bold2" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                            <?= $license['title'] ?>
+                                        </a>
+                                        <ul class="m-depth5">
+                                            <li>
+                                                <a class="bold2 dp_b" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                                    필수 이수강좌
+                                                </a>
+                                                <ul class="m-depth6">
+                                                    <?
+                                                    $required_classes = sqlArray("SELECT (SELECT title FROM ks_class WHERE ks_license_list.class_uid=ks_class.uid) AS ctitle FROM ks_license_list WHERE license_uid=" . $license['uid'] . " AND is_required=1 ORDER BY sort");
+                                                    foreach ($required_classes as $class) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="c_gry dp_b" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                                                <?= $class['ctitle'] ?>
+                                                            </a>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="bold2 dp_b" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                                    선택 이수강좌
+                                                </a>
+                                                <ul class="m-depth6">
+                                                    <?
+                                                    $not_required_classes = sqlArray("SELECT (SELECT title FROM ks_class WHERE ks_license_list.class_uid=ks_class.uid) AS ctitle FROM ks_license_list WHERE license_uid=" . $license['uid'] . " AND is_required=0 ORDER BY sort");
+                                                    foreach ($not_required_classes as $class) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="c_gry dp_b" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                                                <?= $class['ctitle'] ?>
+                                                            </a>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
-                            <? } ?>
-                        </li>
-                        <li>
-                            <a href="javascript:avoid(0);" title="국제인증자격증과정">국제인증자격증과정</a>
-                            <span class="lnr lnr-chevron-down"></span>
-                            <span class="lnr lnr-chevron-up"></span>
-                            <ul class="m-depth2">
-
-                                <?
-                                $licenses_sql = "SELECT * FROM ks_license WHERE status=1";
-                                $licenses = sqlArray($licenses_sql);
-                                foreach ($licenses as $license) {
-                                ?>
-                                    <li><a href="/sub03/view.php?&code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>"><?= $license['title'] ?></a></li>
                                 <? } ?>
-                                <!-- <li><a href="" title="국제인증강사">국제인증강사zz</a></li>
-								<li><a href="" title="체형분석평가사">체형분석평가사ddff</a></li>
-								<li><a href="" title="필라테스지도자">fff필라테스지도자</a></li>
-								<li><a href="" title="물리치료사 강사">물ff리치료사 강사</a></li>
-								<li><a href="" title="골프피지오 2급">골프피지오 2급</a></li>
-								<li><a href="" title="체형분석운동지도자">체형분석운동지도자</a></li>
-								<li><a href="" title="Anatomy master">Anatomy master</a></li>
-								<li><a href="" title="필라테스시퀀스처방사">필라테스시퀀스처방사</a></li> -->
-                            </ul>
+                            </div>
                         </li>
                         <li>
                             <a href="/sub04/" title="BEST 콜라보">BEST 콜라보</a>
                         </li>
                         <li>
-                            <a href="javascript:avoid(0);" title="필라테스자격증">필라테스자격증</a>
-                            <span class="lnr lnr-chevron-down"></span>
+                            <a href="/sub05/" title="필라테스자격증">필라테스자격증</a>
+<!--                             <span class="lnr lnr-chevron-down"></span>
                             <span class="lnr lnr-chevron-up"></span>
                             <ul class="m-depth2">
-                                <!-- <li><a href="/sub06/" title="홈트">홈트</a></li> -->
+                                <li><a href="/sub06/" title="홈트">홈트</a></li>
                                 <?
                                 $homet_arr = sqlArray("SELECT * FROM ks_class WHERE cade01=20");
-
+                            
                                 for ($i = 0; $i < count($homet_arr); $i++) {
                                     $homet = $homet_arr[$i];
                                 ?>
                                     <li><a href="/sub06/view.php?&code=<?= $homet['uid'] ?>" title="<?= $homet['title'] ?>"><?= $homet['title'] ?></a></li>
                                 <? } ?>
-                                <!-- <li><a href="" title="다이어트">다이어트</a></li>
+                                <li><a href="" title="다이어트">다이어트</a></li>
                                 <li><a href="" title="체형교정">체형교정</a></li>
-                                <li><a href="" title="통증컨트롤">통증컨트롤</a></li> -->
-                            </ul>
+                                <li><a href="" title="통증컨트롤">통증컨트롤</a></li>
+                            </ul> -->
                         </li>
                         <li>
-                            <a href="javascript:avoid(0);" title="STORE">STORE</a>
+                            <a href="javascript:void(0);" title="STORE">STORE</a>
                             <span class="lnr lnr-chevron-down"></span>
                             <span class="lnr lnr-chevron-up"></span>
                             <ul class="m-depth2">
-                                <li><a href="/sub07/" title="스토어">스토어</a></li>
+                                <li><a href="/store/" title="스토어">스토어</a></li>
                                 <li><a href="" title="교재">교재</a></li>
                                 <li><a href="" title="CBP 필로우">CBP 필로우</a></li>
                             </ul>
@@ -159,7 +315,7 @@ include "/home/edufim/www/module/login/head.php";
                             <a href="/sub08/" title="후기">후기</a>
                         </li>
                         <!-- <li>
-							<a href="javascript:avoid(0);" title="자격증시험응시">자격증시험응시</a>
+							<a href="javascript:void(0);" title="자격증시험응시">자격증시험응시</a>
 							<span class="lnr lnr-chevron-down"></span>
 							<span class="lnr lnr-chevron-up"></span>
 							<ul class="m-depth2">
@@ -168,7 +324,7 @@ include "/home/edufim/www/module/login/head.php";
 							</ul>
 						</li> -->
                         <li>
-                            <a href="javascript:avoid(0);" title="Q&A">Q&A</a>
+                            <a href="javascript:void(0);" title="Q&A">Q&A</a>
                             <span class="lnr lnr-chevron-down"></span>
                             <span class="lnr lnr-chevron-up"></span>
                             <ul class="m-depth2">
@@ -205,6 +361,16 @@ include "/home/edufim/www/module/login/head.php";
                 flag = true;
             }
         });
+    //모바일 ALL클래스 4-5차 메뉴 TOGGLE
+    $(".m-depth2 > .toggle_tit").on("click", function() {
+
+        $(".toggle_cont").stop().slideUp();
+        $(this).siblings(".toggle_cont").stop().slideToggle();
+
+        $(this).parent().siblings().children(".toggle_tit").removeClass("on");
+        $(this).toggleClass("on");
+    });
+
     </script>
 
     <div class="h_bot">
@@ -214,7 +380,7 @@ include "/home/edufim/www/module/login/head.php";
                 <li><a class="dp_b bold" href="/sub03/" title="국제인증자격증과정">국제인증자격증과정</a></li>
                 <li><a class="dp_b bold" href="/sub04/" title="BEST 콜라보">BEST 콜라보</a></li>
                 <li><a class="dp_b bold" href="/sub05/" title="필라테스자격증">필라테스자격증</a></li>
-                <li><a class="dp_b bold" href="/sub07/" title="STORE">STORE</a></li>
+                <li><a class="dp_b bold" href="/store/" title="STORE">STORE</a></li>
                 <li><a class="dp_b bold" href="/sub08/" title="후기">후기</a></li>
                 <!-- <li><a class="dp_b bold" href="/sub09/" title="자격증시험응시">자격증시험응시</a></li> -->
                 <li><a class="dp_b bold" href="/sub10/sub01.php" title="Q&A">Q&A</a></li>
@@ -223,93 +389,221 @@ include "/home/edufim/www/module/login/head.php";
         </div>
         <div class="depthWrap">
             <div class="boxWrap">
-                <div class="depthbox" style="height: 470px;">
+                <div class="depthbox">
+                    <div class="c_center">
+                        <ul class="alcMnWrap_btn dp_f dp_c">
+                            <li class="on"><a class="dp_f dp_c dp_cc c_w" href="" title="물리치료사">물리치료사</a></li>
+                            <li><a class="dp_f dp_c dp_cc c_w" href="" title="필라테스">필라테스</a></li>
+                            <li><a class="dp_f dp_c dp_cc c_w" href="" title="트레이너">트레이너</a></li>
+                        </ul>
+                        <div class="alcMnWrap_wrap">
+                            <div class="dp_f alcMnWrap">
+                                <?
+                                $cade01 = sqlRowOne("SELECT uid FROM ks_class_cade01 WHERE title='물리치료사'");
+                                $sql = "SELECT * FROM ks_class_cade02 WHERE cade01=$cade01 ORDER BY sort";
+                                $cade02 = sqlArray($sql);
+                                for ($i = 0; $i < count($cade02); $i++) {
+                                ?>
+                                    <div class="allClassMenu wid20">
+                                        <ul class="depth1">
+                                            <li>
+                                                <a class="c_bora dp_b bold2" href="/sub01/sub01.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>" title="<?= $cade02[$i]['title'] ?>">
+                                                    <?= $cade02[$i]['title'] ?>
+                                                </a>
+                                                <ul class="depth2">
+                                                    <?
+                                                    $cade02_uid = $cade02[$i]['uid'];
+                                                    $sql = "SELECT * FROM ks_class_cade03 WHERE cade01=$cade01 AND cade02=$cade02_uid ORDER BY sort";
+                                                    $cade03 = sqlArray($sql);
+                                                    for ($j = 0; $j < count($cade03); $j++) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="bold2" href="/sub01/sub02.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>&cade03=<?= $cade03[$j]['uid'] ?>" title="<?= $cade03[$j]['title'] ?>"><?= $cade03[$j]['title'] ?></a>
+                                                            <ul class="depth3">
+
+                                                                <?
+                                                                $cade03_uid = $cade03[$j]['uid'];
+                                                                $sql = "SELECT uid, title FROM ks_class WHERE status=1 AND cade01=$cade01 AND cade02=$cade02_uid AND cade03=$cade03_uid";
+                                                                $classes = sqlArray($sql);
+                                                                foreach ($classes as $class) {
+                                                                ?>
+                                                                    <li><a class="c_gry dp_b" href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
+                                                                <? } ?>
+                                                            </ul>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                <? } ?>
+                            </div>
+                            <div class="dp_f alcMnWrap">
+                                <?
+                                $cade01 = sqlRowOne("SELECT uid FROM ks_class_cade01 WHERE title='필라테스'");
+                                $sql = "SELECT * FROM ks_class_cade02 WHERE cade01=$cade01 ORDER BY sort";
+                                $cade02 = sqlArray($sql);
+                                for ($i = 0; $i < count($cade02); $i++) {
+                                ?>
+                                    <div class="allClassMenu wid20">
+                                        <ul class="depth1">
+                                            <li>
+                                                <a class="c_bora dp_b bold2" href="/sub01/sub01.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>" title="<?= $cade02[$i]['title'] ?>">
+                                                    <?= $cade02[$i]['title'] ?>
+                                                </a>
+                                                <ul class="depth2">
+                                                    <?
+                                                    $cade02_uid = $cade02[$i]['uid'];
+                                                    $sql = "SELECT * FROM ks_class_cade03 WHERE cade01=$cade01 AND cade02=$cade02_uid ORDER BY sort";
+                                                    $cade03 = sqlArray($sql);
+                                                    for ($j = 0; $j < count($cade03); $j++) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="bold2" href="/sub01/sub02.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>&cade03=<?= $cade03[$j]['uid'] ?>" title="<?= $cade03[$j]['title'] ?>"><?= $cade03[$j]['title'] ?></a>
+                                                            <ul class="depth3">
+
+                                                                <?
+                                                                $cade03_uid = $cade03[$j]['uid'];
+                                                                $sql = "SELECT uid, title FROM ks_class WHERE status=1 AND cade01=$cade01 AND cade02=$cade02_uid AND cade03=$cade03_uid";
+                                                                $classes = sqlArray($sql);
+                                                                foreach ($classes as $class) {
+                                                                ?>
+                                                                    <li><a class="c_gry dp_b" href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
+                                                                <? } ?>
+                                                            </ul>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                <? } ?>
+                            </div>
+                            <div class="dp_f alcMnWrap">
+                                <?
+                                $cade01 = sqlRowOne("SELECT uid FROM ks_class_cade01 WHERE title='트레이너'");
+                                $sql = "SELECT * FROM ks_class_cade02 WHERE cade01=$cade01 ORDER BY sort";
+                                $cade02 = sqlArray($sql);
+                                for ($i = 0; $i < count($cade02); $i++) {
+                                ?>
+                                    <div class="allClassMenu wid20">
+                                        <ul class="depth1">
+                                            <li>
+                                                <a class="c_bora dp_b bold2" href="/sub01/sub01.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>" title="<?= $cade02[$i]['title'] ?>">
+                                                    <?= $cade02[$i]['title'] ?>
+                                                </a>
+                                                <ul class="depth2">
+                                                    <?
+                                                    $cade02_uid = $cade02[$i]['uid'];
+                                                    $sql = "SELECT * FROM ks_class_cade03 WHERE cade01=$cade01 AND cade02=$cade02_uid ORDER BY sort";
+                                                    $cade03 = sqlArray($sql);
+                                                    for ($j = 0; $j < count($cade03); $j++) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="bold2" href="/sub01/sub02.php?cade01=<?= $cade01 ?>&cade02=<?= $cade02[$i]['uid'] ?>&cade03=<?= $cade03[$j]['uid'] ?>" title="<?= $cade03[$j]['title'] ?>"><?= $cade03[$j]['title'] ?></a>
+                                                            <ul class="depth3">
+
+                                                                <?
+                                                                $cade03_uid = $cade03[$j]['uid'];
+                                                                $sql = "SELECT uid, title FROM ks_class WHERE status=1 AND cade01=$cade01 AND cade02=$cade02_uid AND cade03=$cade03_uid";
+                                                                $classes = sqlArray($sql);
+                                                                foreach ($classes as $class) {
+                                                                ?>
+                                                                    <li><a class="c_gry dp_b" href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
+                                                                <? } ?>
+                                                            </ul>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                <? } ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="depthbox">
                     <div class="c_center dp_f alcMnWrap">
                         <?
-                        $sql = "SELECT * FROM ks_class_cade01 ORDER BY sort";
-                        $cade01 = sqlArray($sql);
-                        for ($i = 0; $i < count($cade01); $i++) {
+                        $cade01 = sqlRowOne("SELECT uid FROM ks_license_cade01 WHERE title='국제인증자격증과정'");
+
+                        $sql = "SELECT * FROM ks_license WHERE status=1 AND cade01='$cade01' ORDER BY uid";
+                        $license_arr = sqlArray($sql);
+
+                        for ($i = 0; $i < count($license_arr); $i++) {
+                            $license = $license_arr[$i];
                         ?>
                             <div class="allClassMenu wid20">
                                 <ul class="depth1">
                                     <li>
-                                        <a class="c_bora dp_b bold2" href="/sub01/sub01.php?&cade01=<?= $cade01[$i]['sort'] ?>" title="<?= $cade01[$i]['title'] ?>"><?= $cade01[$i]['title'] ?></a>
+                                        <a class="c_bora dp_b bold2" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                            <?= $license['title'] ?>
+                                        </a>
                                         <ul class="depth2">
-                                            <?
-                                            $cade01_uid = $cade01[$i]['uid'];
-                                            $sql = "SELECT * FROM ks_class_cade02 WHERE cade01=$cade01_uid ORDER BY sort";
-                                            $cade02 = sqlArray($sql);
-                                            for ($j = 0; $j < count($cade02); $j++) {
-                                            ?>
-                                                <li>
-                                                    <a class="bold2" href="/sub01/sub02.php?&cade01=<?= $cade01[$i]['sort'] ?>&cade02=<?= $cade02[$j]['sort'] ?>" title="<?= $cade02[$j]['title'] ?>"><?= $cade02[$j]['title'] ?></a>
-                                                    <ul class="depth3">
-
-                                                        <?
-                                                        $cade02_uid = $cade02[$j]['uid'];
-                                                        $sql = "SELECT uid, title FROM ks_class WHERE status=1 AND cade01=$cade01_uid AND cade02=$cade02_uid";
-                                                        $classes = sqlArray($sql);
-                                                        foreach ($classes as $class) {
-                                                        ?>
-                                                            <li><a class="c_gry dp_b" href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
-                                                        <? } ?>
-                                                    </ul>
-                                                </li>
-                                            <? } ?>
+                                            <li>
+                                                <a class="bold2" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                                    필수 이수강좌
+                                                </a>
+                                                <ul class="depth3">
+                                                    <?
+                                                    $required_classes = sqlArray("SELECT (SELECT title FROM ks_class WHERE ks_license_list.class_uid=ks_class.uid) AS ctitle FROM ks_license_list WHERE license_uid=" . $license['uid'] . " AND is_required=1 ORDER BY sort");
+                                                    foreach ($required_classes as $class) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="c_gry dp_b" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                                                <?= $class['ctitle'] ?>
+                                                            </a>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="bold2" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                                    선택 이수강좌
+                                                </a>
+                                                <ul class="depth3">
+                                                    <?
+                                                    $not_required_classes = sqlArray("SELECT (SELECT title FROM ks_class WHERE ks_license_list.class_uid=ks_class.uid) AS ctitle FROM ks_license_list WHERE license_uid=" . $license['uid'] . " AND is_required=0 ORDER BY sort");
+                                                    foreach ($not_required_classes as $class) {
+                                                    ?>
+                                                        <li>
+                                                            <a class="c_gry dp_b" href="/sub03/view.php?code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>">
+                                                                <?= $class['ctitle'] ?>
+                                                            </a>
+                                                        </li>
+                                                    <?
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
-                        <? } ?>
-                    </div>
-                </div>
-                <div class="depthbox" style="height: 160px;">
-                    <div class="c_center dp_f alcMnWrap">
                         <?
-                        $sql = "SELECT * FROM ks_license_cade01 ORDER BY sort";
-                        $cade01 = sqlArray($sql);
-                        for ($i = 0; $i < count($cade01); $i++) {
+                        }
                         ?>
-                            <div class="allClassMenu wid20">
-                                <ul class="depth1">
-                                    <li>
-                                        <!-- <a class="c_bora dp_b bold2" href="/sub01/sub01.php?&cade01=<?= $cade01[$i]['sort'] ?>" title="<?= $cade01[$i]['title'] ?>"><?= $cade01[$i]['title'] ?></a> -->
-                                        <a class="c_bora dp_b bold2" href="/sub03/" title="<?= $cade01[$i]['title'] ?>"><?= $cade01[$i]['title'] ?></a>
-                                        <ul class="depth2">
-                                            <?
-                                            $cade01_uid = $cade01[$i]['uid'];
-                                            $sql = "SELECT * FROM ks_license_cade02 WHERE cade01=$cade01_uid ORDER BY sort";
-                                            $cade02 = sqlArray($sql);
-                                            for ($j = 0; $j < count($cade02); $j++) {
-                                            ?>
-                                                <li>
-                                                    <!-- <a class="bold2" href="/sub01/sub02.php?&cade01=<?= $cade01[$i]['sort'] ?>&cade02=<?= $cade02[$j]['sort'] ?>" title="<?= $cade02[$j]['title'] ?>"><?= $cade02[$j]['title'] ?></a> -->
-                                                    <a class="bold2" href="/sub03/" title="<?= $cade02[$j]['title'] ?>"><?= $cade02[$j]['title'] ?></a>
-                                                    <ul class="depth3">
-
-                                                        <?
-                                                        $cade02_uid = $cade02[$j]['uid'];
-                                                        $sql = "SELECT uid, title FROM ks_license WHERE status=1 AND cade01=$cade01_uid AND cade02=$cade02_uid";
-                                                        $classes = sqlArray($sql);
-                                                        foreach ($classes as $class) {
-                                                        ?>
-                                                            <!-- <li><a class="c_gry dp_b" href="/sub01/view.php?&code=<?= $class['uid'] ?>" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li> -->
-                                                            <li><a class="c_gry dp_b" href="/sub03/" title="<?= $class['title'] ?>"><?= $class['title'] ?></a></li>
-                                                        <? } ?>
-                                                    </ul>
-                                                </li>
-                                            <? } ?>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        <? } ?>
                     </div>
                 </div>
+
                 <div class="depthbox">
                     <!--빈값 best콜라보-->
                 </div>
+
                 <div class="depthbox" style="height: 160px;">
+                    <?
+                    $cade01 = sqlRowOne("SELECT uid FROM ks_license_cade01 WHERE title='필라테스자격증'");
+                    ?>
                     <div class="dp_f hght100">
                         <div class="boraMenuTit bora c_w dp_f dp_end02">
                             <p class="dp_f dp_c">
@@ -321,44 +615,22 @@ include "/home/edufim/www/module/login/head.php";
                             <li>
                                 <ul class="b_menu">
                                     <?
-                                    $f2f_arr = sqlArray("SELECT * FROM ks_class WHERE cade01=19");
+                                    $sql = "SELECT * FROM ks_license_cade02 WHERE cade01='$cade01' ORDER BY sort";
+                                    $cade02 = sqlArray($sql);
 
-                                    for ($i = 0; $i < count($f2f_arr); $i++) {
-                                        $f2f = $f2f_arr[$i];
+                                    for ($i = 0; $i < count($cade02); $i++) {
+                                        $license = $cade02[$i];
                                     ?>
-                                        <li><a href="/sub05/view.php?&code=<?= $f2f['uid'] ?>" title="<?= $f2f['title'] ?>"><?= $f2f['title'] ?></a></li>
+                                        <li><a href="/sub05/view.php?&code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>"><?= $license['title'] ?></a></li>
                                     <? } ?>
                                     <!-- <li><a href="" title="필라테스 지도자 자격증">필라테스 지도자 자격증</a></li>
 									<li><a href="" title="CBP 카이로플랙틱">CBP 카이로플랙틱</a></li> -->
                                 </ul>
                             </li>
-                            <li>
-                                <ul class="b_menu">
-                                    <?
-                                    for ($i = 2; $i < 4; $i++) {
-                                        $f2f = $f2f_arr[$i];
-                                    ?>
-                                        <li><a href="/sub05/view.php?&code=<?= $f2f['uid'] ?>" title="<?= $f2f['title'] ?>"><?= $f2f['title'] ?></a></li>
-                                    <? } ?>
-                                    <!-- <li><a href="" title="골프 피지오 베이직">골프 피지오 베이직</a></li>
-									<li><a href="" title="근막경선 림프반사">근막경선 림프반사</a></li> -->
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="b_menu">
-                                    <?
-                                    for ($i = 4; $i < count($f2f_arr); $i++) {
-                                        $f2f = $f2f_arr[$i];
-                                    ?>
-                                        <li><a href="/sub05/view.php?&code=<?= $f2f['uid'] ?>" title="<?= $f2f['title'] ?>"><?= $f2f['title'] ?></a></li>
-                                    <? } ?>
-                                    <!-- <li><a href="" title="골프 피지오 어드벤스">골프 피지오 어드벤스</a></li>
-									<li><a href="" title="STM 연부조직이완술">STM 연부조직이완술</a></li> -->
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="depthbox" style="height: 160px;">
                     <div class="dp_f hght100">
                         <div class="boraMenuTit bora c_w dp_f dp_end02">
@@ -401,35 +673,6 @@ include "/home/edufim/www/module/login/head.php";
 						</ul>
 					</div> -->
                 </div>
-                <!-- <div class="depthbox" style="height: 160px;">
-					<div class="dp_f hght100">
-						<div class="boraMenuTit bora c_w dp_f dp_end02">
-							<p class="dp_f dp_c">
-								자격증시험응시
-								<span class="lnr lnr-chevron-right"></span>
-							</p>
-						</div>
-						<ul class="boraMenuCont dp_f">
-							<li>
-								<ul class="b_menu">
-									<li><a href="" title="필라테스 지도자과정 이론시험">필라테스 지도자과정 이론시험</a></li>
-								</ul>
-							</li>
-							<li>
-								<ul class="b_menu">
-									<li>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<ul class="b_menu">
-									<li>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div> -->
                 <div class="depthbox" style="height: 160px;">
                     <div class="dp_f hght100">
                         <div class="boraMenuTit bora c_w dp_f dp_end02">
@@ -483,6 +726,19 @@ include "/home/edufim/www/module/login/head.php";
             "opacity": 1,
             "display": "block"
         });
+
+    });
+
+    $(".alcMnWrap_btn li").on("click",function(event){
+        event.preventDefault();
+
+        let tabNumber = $(this).index();
+
+        $(".alcMnWrap_btn li").removeClass("on");
+        $(this).addClass("on");
+
+        $(".alcMnWrap_wrap .alcMnWrap").stop().hide();
+        $(".alcMnWrap_wrap .alcMnWrap").eq(tabNumber).css({"display":"flex"});
 
     });
 
@@ -545,3 +801,10 @@ include "/home/edufim/www/module/login/head.php";
         $(this).parent().toggleClass("on");
     });
 </script>
+
+<?
+unset($cade01);
+unset($cade02);
+unset($cade03);
+unset($cade04);
+?>

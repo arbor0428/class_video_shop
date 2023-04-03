@@ -1,9 +1,13 @@
 <?
+header("Pragma: no-cache");
+header("Cache-Control: no-cache, must-revalidate");
 include '/home/edufim/www/header.php';
 
 // 진입 페이지 체크
-$num_row = sqlRowCount("SELECT * FROM ks_exam WHERE pid=$class_uid ORDER BY qnum");
-if($num_row != 10) {
+$query = "SELECT * FROM ks_exam WHERE etype='CLASS' AND class_uid='$class_uid' ORDER BY qnum";
+$row_arr = sqlArray($query);
+$num_rows = sqlRowCount($query);
+if($num_rows < 10) {
     Msg::goMsg('시험이 준비중입니다.', '/mypage/learning/');
     exit;
 }
@@ -27,7 +31,6 @@ if (!$row_num) {
 }
 
 $result = sqlExe("UPDATE ks_member SET eng_name='$eng_name' WHERE userid='$GBL_USERID'");
-$row_arr = sqlArray("SELECT * FROM ks_exam WHERE pid=$class_uid ORDER BY qnum");
 
 ?>
 
@@ -39,8 +42,8 @@ $row_arr = sqlArray("SELECT * FROM ks_exam WHERE pid=$class_uid ORDER BY qnum");
                     <span class="dp_f dp_c bold2 c_w">에듀핌</span>
                     <span class="c_w">- <?= $ctitle ?> [필기시험]</span>
                 </p>
-                <a class="test_closeBtn" href="http://edufim.smilework.kr/mypage/sub08.php" title="뒤로가기">
-                    <img src="../images/sub/test_go_x_icon.svg" alt="">
+                <a class="test_closeBtn" href="javascript:void(0)" title="뒤로가기">
+                    <img src="/images/sub/test_go_x_icon.svg" alt="">
                 </a>
             </div>
             <div class="test_go_bot">
@@ -61,10 +64,20 @@ $row_arr = sqlArray("SELECT * FROM ks_exam WHERE pid=$class_uid ORDER BY qnum");
                 <div class="test_chk_wrap dp_sb">
                     <div class="test_quest">
                         <h3 class="c_bora01 bold2">시험 시작</h3>
-
-                        <? foreach ($row_arr as $key => $row) { ?>
+                        <?
+                        foreach ($row_arr as $key => $row) {
+                            ?>
                             <div class="quest_box">
                                 <p class="quest_tit bold2 dp_f"><span><?= $row['qnum'] ?>.</span>&nbsp;<span><?= $row['qtitle'] ?></span></p>
+                                <?
+                                if ($row['upfile01']) {
+                                ?>
+                                    <div class="m_24">
+                                        <img src='/upfile/exam/<?= $row['upfile01'] ?>' alt="<?= $row['realfile01'] ?>" width="650">
+                                    </div>
+                                <?
+                                }
+                                ?>
                                 <ul class="quest_det">
                                     <li class="picked<?= $row['qnum'] ?> picked_<?= $row['qnum'] ?>_01" data_filter="<?= $row['qnum'] ?>">① <?= $row['q1'] ?></li>
                                     <li class="picked<?= $row['qnum'] ?> picked_<?= $row['qnum'] ?>_02" data_filter="<?= $row['qnum'] ?>">② <?= $row['q2'] ?></li>
@@ -72,8 +85,9 @@ $row_arr = sqlArray("SELECT * FROM ks_exam WHERE pid=$class_uid ORDER BY qnum");
                                     <li class="picked<?= $row['qnum'] ?> picked_<?= $row['qnum'] ?>_04" data_filter="<?= $row['qnum'] ?>">④ <?= $row['q4'] ?></li>
                                 </ul>
                             </div>
-                        <? } ?>
-
+                        <?
+                    }
+                    ?>
                     </div>
                     <div class="test_answer">
                         <div class="test_answer_pin_box">
