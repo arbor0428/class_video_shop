@@ -35,7 +35,7 @@ switch ($type) {
         break;
 
     case 'able':
-        sqlExe("UPDATE ks_class SET status='$status' WHERE uid='$uid'");
+        sqlExe("UPDATE ks_coupon SET status='$status' WHERE uid='$uid'");
         break;
 
     default:
@@ -45,8 +45,8 @@ switch ($type) {
 
 unset($dbconn);
 Msg::goMsg($msg, $next_url);
-
 ?>
+
 <!-- <form name='frm' method='post' action='<?= $next_url ?>'>
 	<input type='hidden' name='record_start' value='<?= $record_start ?>'>
 	<input type='hidden' name='f_c02a' value='<?= $f_c02a ?>'>

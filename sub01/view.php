@@ -122,7 +122,8 @@ $hasClass = sqlRowCount("SELECT uid FROM ks_learning WHERE userid='$GBL_USERID' 
                     <div class="detail_cont_subcont curricul_subcont">
                         <div class="curricul_box_wrap">
                             <?
-                            //foreach ($list_preview_arr as $list_preview) {
+                            /*
+                            foreach ($list_preview_arr as $list_preview) {
                             ?>
                             <!-- <div class="curricul_box">
                                     <a href="javascript:void(0)" onclick="playPreview('<?= $list_preview['media_content_key'] ?>')">
@@ -136,8 +137,9 @@ $hasClass = sqlRowCount("SELECT uid FROM ks_learning WHERE userid='$GBL_USERID' 
                                     </a>
                                 </div> -->
                             <?
-                            //}
-                            foreach ($list_arr as $list) {
+                            }
+                            */
+                            foreach ($list_arr as $key => $list) {
                                 if ($list['is_preview'] == '1') {
                                     $media_content_key = sqlRowOne("SELECT media_content_key FROM kollus_video WHERE id=" . $list['kollus_video_id']);
 
@@ -151,7 +153,9 @@ $hasClass = sqlRowCount("SELECT uid FROM ks_learning WHERE userid='$GBL_USERID' 
                                 }
                             ?>
                                 <div class="curricul_box">
-                                    <? echo $ele; ?>
+                                    <?
+                                    echo $ele;
+                                    ?>
                                     <div class="dp_sb dp_c">
                                         <div class="curricul_box_text">
                                             <p class="bold2"><?= $list['title'] ?> <? echo $ico_play?></p>
@@ -159,7 +163,9 @@ $hasClass = sqlRowCount("SELECT uid FROM ks_learning WHERE userid='$GBL_USERID' 
                                         </div>
                                         <span class="curricul_box_time f14 bold"><?= gmdate('H:i:s', $list['length']) ?></span>
                                     </div>
-                                    <? echo $ele2; ?>
+                                    <?
+                                    echo $ele2;
+                                    ?>
                                 </div>
                             <?
                             }
@@ -473,6 +479,9 @@ $hasClass = sqlRowCount("SELECT uid FROM ks_learning WHERE userid='$GBL_USERID' 
     }
 
     $(function() {
+        // 첫번째 미리보기 클릭
+        $(".curricul_box > a")[0].click();
+
         $(".curricul_box").slice(0, 3).show(); // 최초 3개 선택
         $(".morescroll_wrap01 .morescroll").click(function(e) { // Load More를 위한 클릭 이벤트e
             e.preventDefault();

@@ -99,7 +99,7 @@ if (empty($_POST['class_list_uid'])) {
 
     $customKey = '156789126bb13feaa49d68c402f42b578edea889e48640ecfd3d8dcf5ce7dfd5';
 
-    $webTokenURL = 'http://v.kr.kollus.com/s?&jwt=' . $jwtToken . '&custom_key=' . $customKey . '&uservalue0=' . $uid;
+    $webTokenURL = 'https://v.kr.kollus.com/s?&jwt=' . $jwtToken . '&custom_key=' . $customKey . '&uservalue0=' . $uid;
 }
 
 ?>

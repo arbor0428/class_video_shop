@@ -80,6 +80,7 @@ echo "<script>const data=" . json_encode($data) . "</script>";
                                                 <th width="65"></th>
                                             </tr>
                                             <?
+                                            $amount = 0;
                                             while ($row = mysql_fetch_assoc($result)) {
                                                 if ($row['status'] == '0')     $statusTxt = "<span class='ico09'>비활성</span>";
                                                 elseif ($row['status'] == '1') $statusTxt = "<span class='ico06'>활성</span>";
@@ -112,8 +113,12 @@ echo "<script>const data=" . json_encode($data) . "</script>";
                                                         </button>
                                                     </td>
                                                 </tr>
-                                            <? } ?>
+                                            <?
+                                            $amount += intval($row['discountPrice']);
+                                            }
+                                        ?>
                                         </table>
+                                        <div class="txt-r">합계 : <?= number_format($amount) ?>원 </div>
                                     </form>
                                     <form name='frm02' action="./proc.php" method='post' ENCTYPE="multipart/form-data" class="user">
                                         <input type="text" style="display: none;">

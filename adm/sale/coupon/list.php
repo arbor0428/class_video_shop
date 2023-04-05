@@ -26,7 +26,6 @@ $result = mysql_query($query) or die(mysql_error());
 $config_coupon_uid = sqlRowOne("SELECT config_value FROM config_sale WHERE config_key='signup_coupon'");
 ?>
 
-
 <form name='frm01' id='frm01' method='post' action="<?= $_SERVER['PHP_SELF'] ?>">
     <input type="text" style="display: none;">
     <input type='hidden' name='type' value='<?= $type ?>'>
@@ -85,25 +84,6 @@ $config_coupon_uid = sqlRowOne("SELECT config_value FROM config_sale WHERE confi
                         $discountPrice = $row["discountPrice"];
                         $discountPeriod = $row["discountPeriod"];
                         $rDate = $row["rDate"];
-
-                        // if ($orderNum) {
-                        // 	$status = '사용';
-                        // 	//주문내역 uid값
-                        // 	$orderUid = sqlRowOne("select orderId from ks_order where use_coupon_uid='" . $uid . "'");
-                        // } else {
-                        // 	$status = '미사용';
-                        // 	$orderUid = '';
-
-                        // 	//만료확인
-                        // }
-
-                        // if (strtotime($discountDate) > strtotime($rDate)) {
-                        //     $status = "<span class='ico03'>활성</span>";
-                        //     $dateColor = "style='color:#BC00FF;font-weight:600;'";
-                        // } else {
-                        //     $status = "<span class='ico10'>만료</span>";
-                        //     $dateColor = "";
-                        // }
                 ?>
                         <tr class='grayLine'>
                             <td>
@@ -112,7 +92,7 @@ $config_coupon_uid = sqlRowOne("SELECT config_value FROM config_sale WHERE confi
                             <td><?= $i ?></td>
                             <td>
                                 <label class="switch">
-                                    <input type="checkbox" name="status_<?= $uid ?>" value='<?= $uid ?>' class="switch-input" style="position:fixed" onchange="switchAble(this);" data-isset="<? echo ($uid == $config_coupon_uid) ? 1 : 0; ?>" <? if ($status == 1) echo 'checked'; ?>>
+                                    <input type="checkbox" name="status_<?= $uid ?>" value='<?= $uid ?>' class="switch-input" style="position:fixed" onchange="switchAble(this);" data-isset="<?= ($uid == $config_coupon_uid) ? 1 : 0; ?>" <? if ($status == 1) echo 'checked'; ?>>
                                     <span class="switch-label" data-on="활성" data-off="비활성"></span>
                                     <span class="switch-handle"></span>
                                 </label>
@@ -131,7 +111,8 @@ $config_coupon_uid = sqlRowOne("SELECT config_value FROM config_sale WHERE confi
                                     ?>
                                 </ul>
                             </td>
-                            <!-- <td class="c_bora01" <? echo $dateColor; ?>> ~ <?= $discountDate ?></td> -->
+                            <!-- <td class="c_bora01" <? //echo $dateColor; 
+                                                        ?>> ~ <?= $discountDate ?></td> -->
                             <td><?= $rDate ?></td>
                             <td>
                                 <a href="javascript:void(0)" class="btn btn-success btn-circle btn-sm" title='편집' onclick="reg_edit('<?= $uid ?>')">

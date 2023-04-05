@@ -122,8 +122,8 @@ $remained_num = sqlRowOne("SELECT remained_num FROM ks_cert_completion WHERE lea
             // $('#couponListFrame').html("<iframe src='./coupon.php?userid=" + data.buyr_mail + "&use_coupon_uid=" + data.use_coupon_uid + "' name='couponListFrame' style='width:100%;height:655px;' frameborder='0' scrolling='auto'></iframe>");
             // $('.couponList_open').click();
 
-            $('#multiBox').html("<iframe src='about:blank' name='ifra_kcp' id='ifra_kcp' width='740' height='565' frameborder='0' scrolling='no'></iframe>");
-            $(".multiBox_open").click();
+            $('#pgFrame').html("<iframe src='about:blank' name='ifra_kcp' id='ifra_kcp' width='740' height='565' frameborder='0' scrolling='no'></iframe>");
+            $(".pgBox_open").click();
             
             form.type.value = 'write';
             form.target = 'ifra_kcp';

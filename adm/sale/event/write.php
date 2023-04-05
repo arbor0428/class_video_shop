@@ -81,7 +81,7 @@ if ($type == 'edit' && $uid) { //수정할때
             </div>
         </div>
         <div class="cols">
-            <div class="cols_20 cols_ th"><span class='eqc'>*</span>이벤트 썸네일</div>
+            <div class="cols_20 cols_ th"><span class='eqc'>*</span>썸네일</div>
             <div class="cols_80 cols_">
                 <div class="form-group">
                     <?
@@ -91,22 +91,30 @@ if ($type == 'edit' && $uid) { //수정할때
                         $imgFile = "/upfile/event/" . $upfile01;
                     ?>
                         <img src='<?= $imgFile ?>' width="200">
-                        <input type="hidden" name="dbfile01" value="<?= $upfile01 ?>" readonly>
-                        <input type="text" name="realfile01" value="<?= $realfile01 ?>" readonly>
+                        <input type="hidden" name="del_upfile01" id="del_upfile01" value="N">
+                        <input type="hidden" name="dbfile01" id="dbfile01" value="<?= $upfile01 ?>">
+                        <input type="checkbox" class="form-control" style="display:inline-block;" data-index="del_upfile01" onchange="setDelChk(this)">
+                        <span class='ico09'>삭제</span>
+                        <a href="/upfile/class/<?= $upfile01 ?>" download="<?= $realfile01 ?>"><input type="text" name="realfile01" id="realfile01" class="bold" value="<?= $realfile01 ?>" style="cursor:pointer;" readonly></a>
                     <?
                     }
                     ?>
-                    <!-- <div class="file_input">
-                        <input type="text" class="form-control" title="File Route" id="file_route01" readonly>
-                        <label>찾아보기<input type="file" name="upfile01" onchange="javascript:document.getElementById('file_route01').value=this.value"></label><br>
-                    </div> -->
-                    <input type="file" name="upfile01" class="form-control">
-                    <!-- (가로:800px * 세로:450px) -->
+                    <input type="file" name='upfile01' id='upfile01' class="form-control" style="width:49%;" onchange="fileChk(this)">
                 </div>
             </div>
         </div>
         <div class="cols">
-            <div class="cols_20 cols_ th"><span class='eqc'>*</span>이벤트 쿠폰</div>
+            <div class="cols_20 cols_ th"><span class='eqc'>*</span>이벤트 기간</div>
+            <div class="cols_80 cols_">
+                <div class="form-group datapicker-wrap">
+                    <input type="text" name="sDate" id="sDate" class="form-control fpicker" value="<?= $sDate ?>" placeholder='시작 날짜'>
+                    <span class="tilde">~</span>
+                    <input type="text" name="eDate" id="eDate" class="form-control fpicker" value="<?= $eDate ?>" placeholder='종료 날짜'>
+                </div>
+            </div>
+        </div>
+        <div class="cols">
+            <div class="cols_20 cols_ th">쿠폰</div>
             <div class="cols_80 cols_">
                 <div class="form-group">
                     <select name="coupon_uid" id="coupon_uid" class="form-control input-30" value="<?= $coupon_uid ?>">
@@ -125,13 +133,83 @@ if ($type == 'edit' && $uid) { //수정할때
                 </div>
             </div>
         </div>
+        
         <div class="cols">
-            <div class="cols_20 cols_ th"><span class='eqc'>*</span>이벤트 기간</div>
+            <div class="cols_20 cols_ th">영상</div>
             <div class="cols_80 cols_">
-                <div class="form-group datapicker-wrap">
-                    <input type="text" name="sDate" id="sDate" class="form-control fpicker" value="<?= $sDate ?>" placeholder='시작 날짜'>
-                    <span class="tilde">~</span>
-                    <input type="text" name="eDate" id="eDate" class="form-control fpicker" value="<?= $eDate ?>" placeholder='종료 날짜'>
+                <div class="form-group">
+                    <select name="kollus_video_id">
+                        <option value="">없음</option>
+                        <?
+                        $query = "SELECT id, filename FROM kollus_video ORDER BY filename";
+                        $videos = sqlArray($query);
+                        foreach ($videos as $key => $video) {
+                            if ($kollus_video_id == $video['id']) $chk = 'selected';
+                            else $chk = '';
+                        ?>
+                        <option value="<?= $video['id'] ?>" <?= $chk ?>><?= $video['filename'] ?></option>
+                        <?
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cols">
+            <div class="cols_20 cols_ th">업로드 # 1</div>
+            <div class="cols_80 cols_">
+                <div class="form-group">
+                    <input type="file" name='upfile02' id='upfile02' class="form-control" style="width:49%;" onchange="fileChk(this)">
+                    <?
+                    if ($upfile02) {
+                    ?>
+                        <input type="hidden" name="del_upfile02" id="del_upfile02" value="N">
+                        <input type="hidden" name="dbfile02" id="dbfile02" value="<?= $upfile02 ?>">
+                        <input type="checkbox" class="form-control" style="display:inline-block;" data-index="del_upfile02" onchange="setDelChk(this)">
+                        <span class='ico09'>삭제</span>
+                        <a href="/upfile/class/<?= $upfile02 ?>" download="<?= $realfile02 ?>"><input type="text" name="realfile02" id="realfile02" class="bold" value="<?= $realfile02 ?>" style="cursor:pointer;" readonly></a>
+                    <?
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+        <div class="cols">
+            <div class="cols_20 cols_ th">업로드 # 2</div>
+            <div class="cols_80 cols_">
+                <div class="form-group">
+                    <input type="file" name='upfile03' id='upfile03' class="form-control" style="width:49%;" onchange="fileChk(this)">
+                    <?
+                    if ($upfile03) {
+                    ?>
+                        <input type="hidden" name="del_upfile03" id="del_upfile03" value="N">
+                        <input type="hidden" name="dbfile03" id="dbfile03" value="<?= $upfile03 ?>">
+                        <input type="checkbox" class="form-control" style="display:inline-block;" data-index="del_upfile03" onchange="setDelChk(this)">
+                        <span class='ico09'>삭제</span>
+                        <a href="/upfile/class/<?= $upfile03 ?>" download="<?= $realfile03 ?>"><input type="text" name="realfile03" id="realfile03" class="bold" value="<?= $realfile03 ?>" style="cursor:pointer;" readonly></a>
+                    <?
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+        <div class="cols">
+            <div class="cols_20 cols_ th">업로드 # 3</div>
+            <div class="cols_80 cols_">
+                <div class="form-group">
+                    <input type="file" name='upfile04' id='upfile04' class="form-control" style="width:49%;" onchange="fileChk(this)">
+                    <?
+                    if ($upfile04) {
+                    ?>
+                        <input type="hidden" name="del_upfile04" id="del_upfile04" value="N">
+                        <input type="hidden" name="dbfile04" id="dbfile04" value="<?= $upfile04 ?>">
+                        <input type="checkbox" class="form-control" style="display:inline-block;" data-index="del_upfile04" onchange="setDelChk(this)">
+                        <span class='ico09'>삭제</span>
+                        <a href="/upfile/class/<?= $upfile04 ?>" download="<?= $realfile04 ?>"><input type="text" name="realfile04" id="realfile04" class="bold" value="<?= $realfile04 ?>" style="cursor:pointer;" readonly></a>
+                    <?
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -246,5 +324,34 @@ if ($type == 'edit' && $uid) { //수정할때
     function func() {
         valz = $('#class_uid').val()
         console.log(valz);
+    }
+
+    const fileChk = function(file) {
+        let obj = file.files[0];
+
+        const fileTypes = ['application/pdf', 'image/gif', 'image/jpeg', 'image/png', 'image/bmp', 'image/tif', 'application/haansofthwp', 'application/x-hwp'];
+        if (obj.name.length > 100) {
+            alert("파일명이 100자 이상입니다.");
+            file.value = '';
+            return false;
+        } else if (obj.size > (100 * 1024 * 1024)) {
+            alert("최대 파일 용량인 100MB를 초과하였습니다.");
+            file.value = '';
+            return false;
+        } else if (obj.name.lastIndexOf('.') == -1) {
+            alert("확장자가 없는 파일입니다.");
+            file.value = '';
+            return false;
+        } else if (!fileTypes.includes(obj.type)) {
+            alert("첨부가 불가능한 파일입니다.");
+            file.value = '';
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+    const setDelChk = function(e) {
+        document.getElementById(e.dataset.index).value = (e.checked) ? 'Y' : 'N'
     }
 </script>

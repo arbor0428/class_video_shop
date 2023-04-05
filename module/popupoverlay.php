@@ -109,7 +109,8 @@
 <!-- pg팝업 -->
 <a id="pgBox_open" class="pgBox_open"></a>
 <a id="pgBox_close" class="pgBox_close"></a>
-<div id="pgBox" class="popup_background" style="min-width:300px;">
+<div id="pgBox" class="popup_background" style="min-width:300px;display:none;">
+	<div class="cls_buttonali" id="alertCloseBtn"><button class="GblNotice_close close_button_pop2"></button></div>
 	<div class="popup_notice">
 		<div class="write_it">
 			<div id='pgFrame' style="background:#fff;overflow:hidden;position:relative;"></div>
@@ -228,7 +229,7 @@
 <!-- 팝업 스크립트 -->
 <script>
     $(document).ready(function() {
-        $('#GblNotice,#conFirm').popup({
+        $('#GblNotice,#conFirm,#pgBox').popup({
             transition: 'all 0.3s',
             blur: false,
             escape: false,
@@ -261,9 +262,10 @@
         jQuery('input').attr("autocomplete", "off");
 
 
-        $(".close_button_pop").click(function(event) {
+        $(".close_button_pop,.close_button_pop2").click(function(event) {
             $('#multiBox').popup('hide');
             $('#titleBox').popup('hide');
+            $('#pgBox').popup('hide');
             $('#classConsBox').popup('hide');
             $('#cerPrint').popup('hide');
             $('#cerSearch').popup('hide');

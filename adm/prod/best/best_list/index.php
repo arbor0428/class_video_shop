@@ -27,15 +27,15 @@ $group = floor($record_start / ($record_count * $link_count));
 // $query .= " JOIN ks_class c ON M.CLASS_UID=c.uid";
 // $query .= " WHERE M.CLASS_UID IS NOT NULL";
 
-$result = mysql_query("$query WHERE c.category01='1' AND l.class_uid IS NOT NULL ORDER BY sort") or die(mysql_error());
-$result2 = mysql_query("$query WHERE c.category01='1' AND l.class_uid IS NULL ORDER BY c.status DESC") or die(mysql_error());
+$result = mysql_query("$query WHERE l.class_uid IS NOT NULL ORDER BY sort") or die(mysql_error());
+$result2 = mysql_query("$query WHERE l.class_uid IS NULL ORDER BY c.status DESC") or die(mysql_error());
 $total_record = mysql_num_rows($result2);
 
 $total_page = (int)($total_record / $record_count);
 if ($total_record % $record_count) {
     $total_page++;
 }
-$result2 = mysql_query("$query WHERE c.category01='1' AND l.class_uid IS NULL ORDER BY c.status DESC LIMIT $record_start, $record_count") or die(mysql_error());
+$result2 = mysql_query("$query WHERE l.class_uid IS NULL ORDER BY c.status DESC LIMIT $record_start, $record_count") or die(mysql_error());
 
 
 $data = array(

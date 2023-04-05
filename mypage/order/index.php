@@ -4,11 +4,13 @@ include '../../header.php';
 if (!isLogin()) redirectLogin();
 
 if (!isset($class_uids)) {
-    Msg::goMsg("잘못된 접근 입니다.", '/mypage/cart/');
+    $MSG->goNext_New("/mypage/cart/");
     exit;
+
 } else if (count($class_uids) <= 0) {
-    Msg::goMsg("상품을 선택하세요.", '/mypage/cart/');
+    $MSG->goNext_New("/mypage/cart/");
     exit;
+
 } else {
     $clause = "(";
     foreach ($class_uids as $key => $class_uid) {
@@ -34,7 +36,6 @@ if (!isset($class_uids)) {
     foreach ($class_uids as $class_uid) {
         $class_uids_str .= $class_uid . "|";
     }
-    $ordr_idxx = '202304' . time();
     $class_uids = substr($class_uids_str, 0, -1);
 
     $data['site_cd'] = 'T0000';
@@ -43,7 +44,6 @@ if (!isset($class_uids)) {
     $data['buyr_name'] = $buyr_name;
     $data['buyr_mail'] = $GBL_USERID;
 
-    $data['ordr_idxx'] = $ordr_idxx;
     $data['good_name'] = $good_name;
     $data['good_mny'] = $good_mny;
 
@@ -118,7 +118,7 @@ if (!isset($class_uids)) {
             form.buyr_name.value = data.buyr_name;
             form.buyr_mail.value = data.buyr_mail;
 
-            form.ordr_idxx.value = data.ordr_idxx;
+            form.ordr_idxx.value = data.buyr_mail.split('@')[0].toUpperCase() + (new Date().getTime()).toString();
             form.good_name.value = data.good_name;
             form.good_mny.value = data.good_mny;
 
@@ -135,6 +135,7 @@ if (!isset($class_uids)) {
                 form.action = "kcp_api_trade_reg.php";
                 form.submit();
             }
+            
         } catch (e) {
             /* IE 에서 결제 정상종료시 throw로 스크립트 종료 */
             console.log(e);
@@ -224,6 +225,27 @@ if (!isset($class_uids)) {
                     </table>
                 </div>
 
+                <div class="tableWrap" style="margin-top: 20px;">
+                    <p class="discount_tit f18 bold2">결제 방법</p>
+                    <table class="subTbl brbt0">
+                        <colgroup>
+                            <col style="width: 15%;">
+                            <col style="width: 85%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="txt-l">결제 방식</th>
+                                <td class="txt-l selectwrap">
+                                    <select name="pay_type" id="pay_type" class="form-control">
+                                        <option value="">선택</option>
+                                        <option value="100000000000">신용카드</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <div class="totalAmtWrap dp_sb m-50">
                     <div class="wid50">
                         <p class="f20 bold2">총 결제금액</p>
@@ -295,7 +317,6 @@ if (!isset($class_uids)) {
                 <!-- 가맹점 정보 설정-->
                 <input type="hidden" name="site_cd" value="<?= $site_cd ?>" />
                 <input type="hidden" name="site_name" value="<?= $site_name ?>" />
-                <input type="hidden" name="pay_method" value="" />
 
                 <input type="hidden" name="buyr_name" value="<?= $buyr_name ?>" />
                 <input type="hidden" name="buyr_mail" value="<?= $GBL_USERID ?>" />
@@ -303,7 +324,7 @@ if (!isset($class_uids)) {
                 ※필수 항목
                 표준웹에서 값을 설정하는 부분으로 반드시 포함되어야 합니다.값을 설정하지 마십시오
                 -->
-                <input type="hidden" name="ordr_idxx" value="<?= $ordr_idxx ?>" maxlength="40" />
+                <input type="hidden" name="ordr_idxx" />
                 <input type="hidden" name="good_name" value="<?= $good_name ?>" />
                 <input type="hidden" name="good_mny" value="<?= $good_mny ?>" maxlength="9" />
 

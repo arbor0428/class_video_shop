@@ -21,7 +21,7 @@ $limit = 10;
             <? } ?>
         </div>
         <!-- 모바일 메인 배너 -->
-         <div class="visualSlick mvisual">
+        <div class="visualSlick mvisual">
             <?
             $query = "SELECT * FROM config_main WHERE type='BANNER' AND (upfile!='' AND upfile IS NOT NULL) ORDER BY sort";
             $result = mysql_query($query) or die('Banner Config Error : ' . mysql_error());
@@ -93,7 +93,7 @@ $limit = 10;
         <div class="newWrap">
             <p class="cont1_tit c_orange bold2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">지금 인기 있는 신규 클래스</p>
             <p class="cont1_sub_tit c_w bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="500">
-                선생님들의 실력이 계속 업그레이드 될 수 있게<br> 
+                선생님들의 실력이 계속 업그레이드 될 수 있게<br>
                 지금 에듀핌에서 수강생들에게 가장 필요한 강의들을 끊임없이 업데이트 하고 있습니다.
             </p>
             <div class="video_tit_wrap dp_sb dp_c">
@@ -184,7 +184,7 @@ $limit = 10;
                                     <p class="curri_kind_bot_tit bold">체형분석 평가사 자격증</p>
                                     <div class="kind_detailgo dp_sb dp_c">
                                         <p class="curri_kind_bot_det c_gry08">
-                                            정확한 평가와 진단. 
+                                            정확한 평가와 진단.
                                             <br>확실한 전 후 비교 근거 제시
                                         </p>
                                         <a class="currigoBtn c_gry08" href="" title="바로가기">바로가기</a>
@@ -269,7 +269,7 @@ $limit = 10;
                                     <p class="curri_kind_bot_tit bold">체형분석 평가사 자격증</p>
                                     <div class="kind_detailgo dp_sb dp_c">
                                         <p class="curri_kind_bot_det c_gry08">
-                                            정확한 평가와 진단. 
+                                            정확한 평가와 진단.
                                             <br>확실한 전 후 비교 근거 제시
                                         </p>
                                         <a class="currigoBtn c_gry08" href="" title="바로가기">바로가기</a>
@@ -369,7 +369,7 @@ $limit = 10;
                                     <p class="curri_kind_bot_tit bold">체형분석 평가사 자격증</p>
                                     <div class="kind_detailgo dp_sb dp_c">
                                         <p class="curri_kind_bot_det c_gry08">
-                                            정확한 평가와 진단. 
+                                            정확한 평가와 진단.
                                             <br>확실한 전 후 비교 근거 제시
                                         </p>
                                         <a class="currigoBtn c_gry08" href="" title="바로가기">바로가기</a>
@@ -471,124 +471,124 @@ $limit = 10;
     </div>
 </section>
 <script>
-$(".curri_slide_tab_btn > li").on("click", function(event) {
+    $(".curri_slide_tab_btn > li").on("click", function(event) {
 
-    event.preventDefault();
+        event.preventDefault();
 
-    let tabNumber = $(this).index();
+        let tabNumber = $(this).index();
 
-    $(".curri_slide_tab_btn > li").removeClass("on");
-    $(this).addClass("on");
+        $(".curri_slide_tab_btn > li").removeClass("on");
+        $(this).addClass("on");
 
 
-    $(".curri_slide_tab_wrap > .curri_slide_tab").hide();
-    $(".curri_slide_tab_wrap > .curri_slide_tab").eq(tabNumber).show();
+        $(".curri_slide_tab_wrap > .curri_slide_tab").hide();
+        $(".curri_slide_tab_wrap > .curri_slide_tab").eq(tabNumber).show();
 
-});
+    });
 
-var swiper16 = new Swiper(".curriswiper01", {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: ".curriswiper01_wrap .swiper-button-next",
-        prevEl: ".curriswiper01_wrap .swiper-button-prev",
-    },
-    breakpoints: {
-        1024: {
-            slidesPerView: 2,
-            paceBetween: 50,
-            allowTouchMove: true,
+    var swiper16 = new Swiper(".curriswiper01", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".curriswiper01_wrap .swiper-button-next",
+            prevEl: ".curriswiper01_wrap .swiper-button-prev",
         },
-        600: {
-            slidesPerView: 2,
-            paceBetween: 50,
-            allowTouchMove: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 2,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
+            600: {
+                slidesPerView: 2,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
+            200: {
+                slidesPerView: 1,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
         },
-        200: {
-            slidesPerView: 1,
-            paceBetween: 50,
-            allowTouchMove: true,
-        },
-    },
-});
+    });
 
-var swiper17 = new Swiper(".curriswiper02", {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: ".curriswiper02_wrap .swiper-button-next",
-        prevEl: ".curriswiper02_wrap .swiper-button-prev",
-    },
-    breakpoints: {
-        1024: {
-            slidesPerView: 2,
-            paceBetween: 50,
-            allowTouchMove: true,
+    var swiper17 = new Swiper(".curriswiper02", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".curriswiper02_wrap .swiper-button-next",
+            prevEl: ".curriswiper02_wrap .swiper-button-prev",
         },
-        600: {
-            slidesPerView: 2,
-            paceBetween: 50,
-            allowTouchMove: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 2,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
+            600: {
+                slidesPerView: 2,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
+            200: {
+                slidesPerView: 1,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
         },
-        200: {
-            slidesPerView: 1,
-            paceBetween: 50,
-            allowTouchMove: true,
-        },
-    },
-});
+    });
 
-var swiper18 = new Swiper(".curriswiper03", {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: ".curriswiper03_wrap .swiper-button-next",
-        prevEl: ".curriswiper03_wrap .swiper-button-prev",
-    },
-    breakpoints: {
-        1024: {
-            slidesPerView: 2,
-            paceBetween: 50,
-            allowTouchMove: true,
+    var swiper18 = new Swiper(".curriswiper03", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".curriswiper03_wrap .swiper-button-next",
+            prevEl: ".curriswiper03_wrap .swiper-button-prev",
         },
-        600: {
-            slidesPerView: 2,
-            paceBetween: 50,
-            allowTouchMove: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 2,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
+            600: {
+                slidesPerView: 2,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
+            200: {
+                slidesPerView: 1,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
         },
-        200: {
-            slidesPerView: 1,
-            paceBetween: 50,
-            allowTouchMove: true,
-        },
-    },
-});
+    });
 
-var swiper19 = new Swiper(".curriswiper04", {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: ".curriswiper04_wrap .swiper-button-next",
-        prevEl: ".curriswiper04_wrap .swiper-button-prev",
-    },
-    breakpoints: {
-        1024: {
-            slidesPerView: 2,
-            paceBetween: 50,
-            allowTouchMove: true,
+    var swiper19 = new Swiper(".curriswiper04", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".curriswiper04_wrap .swiper-button-next",
+            prevEl: ".curriswiper04_wrap .swiper-button-prev",
         },
-        600: {
-            slidesPerView: 2,
-            paceBetween: 50,
-            allowTouchMove: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 2,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
+            600: {
+                slidesPerView: 2,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
+            200: {
+                slidesPerView: 1,
+                paceBetween: 50,
+                allowTouchMove: true,
+            },
         },
-        200: {
-            slidesPerView: 1,
-            paceBetween: 50,
-            allowTouchMove: true,
-        },
-    },
-});
+    });
 </script>
 <section class="cont1_3 blue_gradient">
     <div class="c_center txt-c">
@@ -613,7 +613,7 @@ var swiper19 = new Swiper(".curriswiper04", {
         </div>
 
         <p class="hotWrap_tit c_w bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">
-            지금 에듀핌에서<br> 
+            지금 에듀핌에서<br>
             선생님들이 가장 많이 선택한 강의는?
         </p>
 
@@ -746,9 +746,9 @@ var swiper19 = new Swiper(".curriswiper04", {
             <ul class="ai_tab_btn dp_f dp_c">
                 <?
                 $ai_arr = sqlArray('SELECT * FROM ai_recommended WHERE depth=0');
-                foreach($ai_arr as $ai) {
+                foreach ($ai_arr as $ai) {
                 ?>
-                <li class="dp_f dp_cc"><a class="bold" href="javascript:void(0)" title="<?= $ai['value'] ?>"><?= $ai['value'] ?></a></li>
+                    <li class="dp_f dp_cc"><a class="bold" href="javascript:void(0)" title="<?= $ai['value'] ?>"><?= $ai['value'] ?></a></li>
                 <?
                 }
                 ?>
@@ -759,57 +759,59 @@ var swiper19 = new Swiper(".curriswiper04", {
         </div>
         <div class="ai_tab_box_wrap">
             <?
+            /*
             $ai_arr = sqlArray('SELECT * FROM ai_recommended WHERE depth=1');
-            foreach($ai_arr as $ai) {
+            foreach ($ai_arr as $ai) {
             ?>
-            <div class="ai_tab_box">
-                <div class="dp_sb dp_wrap">
-                    <div class="ai_tab_box_child dp_sb dp_c">
-                        <div class="ai_tab_txt_box">
-                            <p class="c_blue04 ai_tit_top">물리치료사</p>
-                            <p class="ai_tit_bot bold">환자 평가가 어렵다</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
+            
+            <?
+            }*/
+            ?>
+                <div class="ai_tab_box">
+                    <div class="dp_sb dp_wrap">
+                        <div class="ai_tab_box_child dp_sb dp_c">
+                            <div class="ai_tab_txt_box">
+                                <p class="c_blue04 ai_tit_top">물리치료사</p>
+                                <p class="ai_tit_bot bold">환자 평가가 어렵다</p>
+                                <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
+                            </div>
+                            <div class="ai_tab_img">
+                                <img src="../images/new_add/bnr_ai01.png" alt="">
+                            </div>
                         </div>
-                        <div class="ai_tab_img">
-                            <img src="../images/new_add/bnr_ai01.png" alt="">
+                        <div class="ai_tab_box_child dp_sb dp_c">
+                            <div class="ai_tab_txt_box">
+                                <p class="c_blue04 ai_tit_top">물리치료사</p>
+                                <p class="ai_tit_bot bold">도수치료 스킬 업</p>
+                                <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
+                            </div>
+                            <div class="ai_tab_img">
+                                <img src="../images/new_add/bnr_ai02.png" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="ai_tab_box_child dp_sb dp_c">
-                        <div class="ai_tab_txt_box">
-                            <p class="c_blue04 ai_tit_top">물리치료사</p>
-                            <p class="ai_tit_bot bold">도수치료 스킬 업</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
+                        <div class="ai_tab_box_child dp_sb dp_c">
+                            <div class="ai_tab_txt_box">
+                                <p class="c_blue04 ai_tit_top">물리치료사</p>
+                                <p class="ai_tit_bot bold">근골격계 재활 운동 치료</p>
+                                <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
+                            </div>
+                            <div class="ai_tab_img">
+                                <img src="../images/new_add/bnr_ai03.png" alt="">
+                            </div>
                         </div>
-                        <div class="ai_tab_img">
-                            <img src="../images/new_add/bnr_ai02.png" alt="">
-                        </div>
-                    </div>
-                    <div class="ai_tab_box_child dp_sb dp_c">
-                        <div class="ai_tab_txt_box">
-                            <p class="c_blue04 ai_tit_top">물리치료사</p>
-                            <p class="ai_tit_bot bold">근골격계 재활 운동 치료</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
-                        </div>
-                        <div class="ai_tab_img">
-                            <img src="../images/new_add/bnr_ai03.png" alt="">
-                        </div>
-                    </div>
-                    <div class="ai_tab_box_child dp_sb dp_c">
-                        <div class="ai_tab_txt_box">
-                            <p class="c_blue04 ai_tit_top">물리치료사</p>
-                            <p class="ai_tit_bot bold">스페셜 치료</p>
-                            <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
-                        </div>
-                        <div class="ai_tab_img">
-                            <img src="../images/new_add/bnr_ai04.png" alt="">
+                        <div class="ai_tab_box_child dp_sb dp_c">
+                            <div class="ai_tab_txt_box">
+                                <p class="c_blue04 ai_tit_top">물리치료사</p>
+                                <p class="ai_tit_bot bold">스페셜 치료</p>
+                                <a class="ai_goBtn dp_f dp_c dp_cc" href="javascript:void(0)" title="바로가기">바로가기</a>
+                            </div>
+                            <div class="ai_tab_img">
+                                <img src="../images/new_add/bnr_ai04.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <?
-            }
-            ?>
-            <!-- 
+            
             <div class="ai_tab_box">
                 <div class="dp_sb dp_wrap">
                     <div class="ai_tab_box_child dp_sb dp_c">
@@ -942,12 +944,12 @@ var swiper19 = new Swiper(".curriswiper04", {
                     </div>
                 </div>
             </div>
-             -->
+            
         </div>
     </div>
 </section>
 <script>
-    $(".ai_tab_btn > li").on("click",function(event){
+    $(".ai_tab_btn > li").on("click", function(event) {
 
         event.preventDefault();
 
@@ -965,13 +967,18 @@ var swiper19 = new Swiper(".curriswiper04", {
     $(".ai_goBtn").click(function(event) {
         event.preventDefault();
 
+		let browerWid = $(window).innerWidth();
+
         posY = $(window).scrollTop();
-
-        $('#classShowFrame').html("<iframe src='./classDetail.php' name='' style='width:100%;height:766px;' frameborder='0' scrolling='auto'></iframe>");
-
+		if (browerWid < 500) {
+			 $('#classShowFrame').html("<iframe src='./classDetail.php' name='' style='width:100%;height:460px;' frameborder='0' scrolling='auto'></iframe>");
+		} else {
+			$('#classShowFrame').html("<iframe src='./classDetail.php' name='' style='width:100%;height:766px;' frameborder='0' scrolling='auto'></iframe>");
+		}
         $('.classShow_open').click();
         $("html, body").addClass("not_scroll");
         $("section").css("top", -posY);
+
     });
 </script>
 
@@ -1154,11 +1161,11 @@ var swiper19 = new Swiper(".curriswiper04", {
 <!--  -->
 <section class="cont3 blue_gradient">
     <div class="c_center">
-        
+
         <p class="cont3_tit01 c_w txt-c bold2" data-aos="fade-up" data-aos-easing="ease">이제 에듀핌을 시작하려고 한다면?</p>
         <div class="cont3_num dp_f dp_c dp_cc c_w txt-c bora bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="300">01</div>
         <p class="cont3_tit02 c_w txt-c bold" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="600">놓치면 후회하는 에듀핌을 120% 활용하는 방법!</p>
-        <div class="ballon_wrap"  data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="900">
+        <div class="ballon_wrap" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="900">
             <div class="ballon c_w dp_f dp_c dp_cc">Check Point</div>
         </div>
         <p class="cont3_tit03 c_w txt-c bold2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="1200">글로벌 커리어를 위한 첫 걸음</p>
@@ -1169,7 +1176,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">맞춤진단</p>
                     <p class="global_career_det c_w">
-                        AI 맞춤 커리큘럼 진단으로<br> 
+                        AI 맞춤 커리큘럼 진단으로<br>
                         꼭 필요한 강좌를 마음대로 선택
                     </p>
                 </div>
@@ -1179,7 +1186,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">0강 미리수강</p>
                     <p class="global_career_det c_w">
-                        원하는 강좌를 구매하기 전에 <br> 
+                        원하는 강좌를 구매하기 전에 <br>
                         미리 수강
                     </p>
                 </div>
@@ -1189,7 +1196,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                 <div class="global_career_txt">
                     <p class="global_career_tit c_w bold">자격증 과정 선택</p>
                     <p class="global_career_det c_w">
-                        글로벌 커리어 전문가를 위한<br> 
+                        글로벌 커리어 전문가를 위한<br>
                         자격증 과정 선택
                     </p>
                 </div>
@@ -1510,16 +1517,21 @@ var swiper19 = new Swiper(".curriswiper04", {
             <li class="eduPernextBtn"></li>
         </ul>
         <div class="eduPerSlick">
-            <div class="eduPerBox">
-                <div class="dp_f eduPerBox_wrap">
-                    <div class="perWrap">
-                        <img src="/images/instructor1.png" alt="">
-                    </div>
-                    <div class="perYear">
-                        <p class="perNm">김철원 대표이사</p>
-                        <ul class="perYearCont">
-                            <li class="bold2">약력</li>
-                            <li>現 라온필라테스 대표</li>
+            <?
+            $teacher_arr = sqlArray("SELECT * FROM ks_member WHERE mtype='T' AND status=1 AND userid!='teacher@naver.com'");
+            foreach ($teacher_arr as $key => $teacher) {
+            ?>
+                <div class="eduPerBox">
+                    <div class="dp_f eduPerBox_wrap">
+                        <div class="perWrap">
+                            <img src="/upfile/member/<?= $teacher['upfile01'] ?>" alt="<?= $teacher['realfile01'] ?>">
+                        </div>
+                        <div class="perYear">
+                            <p class="perNm"><?= $teacher['name'] . ' ' . $teacher['job'] ?></p>
+                            <ul class="perYearCont">
+                                <li class="bold2">약력</li>
+                                <?= $teacher['ment01'] ?>
+                                <!-- <li>現 라온필라테스 대표</li>
                             <li>現 (주)에듀핌 대표이사</li>
                             <li>現 대한물리치료사협회 정회원</li>
                             <li>現 대한정형도수물리치료학회 정회원</li>
@@ -1527,16 +1539,32 @@ var swiper19 = new Swiper(".curriswiper04", {
                             <li>前 현명의원 도수치료센터 센터장</li>
                             <li>前 동서한방병원 재활치료센터</li>
                             <li>前 SRC 삼육 재활 전문 센터</li>
-                            <li>前 농촌진흥원 장수마을 프로젝트 연구원</li>
-                        </ul>
-                        <div class="vdTastyTit bold2">영상 맛보기</div>
-                        <div class="vdTastyImg">
-                            <img src="/upfile/teacher.png" alt="" style="width:inherit; height:inherit;">
+                            <li>前 농촌진흥원 장수마을 프로젝트 연구원</li> -->
+                            </ul>
+                            <div class="vdTastyTit bold2">영상 맛보기</div>
+                            <div class="vdTastyImg">
+                                <?
+                                $teacher_class = sqlRow("SELECT upfile01, realfile01 FROM ks_class WHERE uid='" . $teacher['class_uid'] . "'");
+                                if ($teacher_class) {
+                                ?>
+                                    <a href="/sub01/view.php?code=<?= $teacher['class_uid'] ?>" style="width:inherit; height:inherit;">
+                                        <img src="/upfile/class/<?= $teacher_class[0] ?>" alt="<?= $teacher_class[1] ?>" style="width:inherit; height:inherit;">
+                                    </a>
+                                <?
+                                } else {
+                                ?>
+                                    <img src="/upfile/teacher.png" alt="preivew" style="width:inherit; height:inherit;">
+                                <?
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="eduPerBox">
+            <?
+            }
+            ?>
+            <!-- <div class="eduPerBox">
                 <div class="dp_f eduPerBox_wrap">
                     <div class="perWrap">
                         <img src="/images/instructor2.png" alt="">
@@ -1666,7 +1694,7 @@ var swiper19 = new Swiper(".curriswiper04", {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

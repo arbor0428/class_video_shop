@@ -19,11 +19,11 @@
 					<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
 					<ul class="clickicon dp_f dp_c">
 						<li class="dp_f dp_c">
-							<img src="/images/likeChk.svg" alt="">
+							<img src="/images/new_add/likeChk_c.svg" alt="">
 							<span>10884</span>
 						</li>
 						<li class="dp_f dp_c">
-							<img src="/images/bestChk.svg" alt="">
+							<img src="/images/new_add/bestChk_c.svg" alt="">
 							<span>97%</span>
 						</li>
 					</ul>
@@ -51,11 +51,11 @@
 					<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
 					<ul class="clickicon dp_f dp_c">
 						<li class="dp_f dp_c">
-							<img src="/images/likeChk.svg" alt="">
+							<img src="/images/new_add/likeChk_c.svg" alt="">
 							<span>10884</span>
 						</li>
 						<li class="dp_f dp_c">
-							<img src="/images/bestChk.svg" alt="">
+							<img src="/images/new_add/bestChk_c.svg" alt="">
 							<span>97%</span>
 						</li>
 					</ul>
@@ -83,11 +83,11 @@
 					<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
 					<ul class="clickicon dp_f dp_c">
 						<li class="dp_f dp_c">
-							<img src="/images/likeChk.svg" alt="">
+							<img src="/images/new_add/likeChk_c.svg" alt="">
 							<span>10884</span>
 						</li>
 						<li class="dp_f dp_c">
-							<img src="/images/bestChk.svg" alt="">
+							<img src="/images/new_add/bestChk_c.svg" alt="">
 							<span>97%</span>
 						</li>
 					</ul>
@@ -115,11 +115,11 @@
 					<p class="nVdtit02 c_gry03 dotdot">대학병원 스포츠 의학팀 무릎 재활 프레젠터 직강</p>
 					<ul class="clickicon dp_f dp_c">
 						<li class="dp_f dp_c">
-							<img src="/images/likeChk.svg" alt="">
+							<img src="/images/new_add/likeChk_c.svg" alt="">
 							<span>10884</span>
 						</li>
 						<li class="dp_f dp_c">
-							<img src="/images/bestChk.svg" alt="">
+							<img src="/images/new_add/bestChk_c.svg" alt="">
 							<span>97%</span>
 						</li>
 					</ul>

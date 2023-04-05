@@ -12,7 +12,7 @@ $side_menu = 1;
 		<div class="s_cont">
 			<div class="s_cont_tit f20 bold2 c_bora01">공지사항</div>
 
-			<div class=" ">
+			<div class="">
 				<?
 				$table_id = 'table_1675005604';
 
@@ -20,6 +20,14 @@ $side_menu = 1;
 
 				//게시판 환경설정
 				include $boardRoot . "config.php";
+                
+                if($_SERVER['REMOTE_ADDR'] == '106.246.92.237'){
+                    echo $boardRoot. "<br>";
+                    echo $type. "<br>";
+                    echo $write_file. "<br>";
+                    echo $list_file. "<br>";
+                    echo $view_file. "<br>";
+                }
 				switch ($type) {
 					case 'write':
 					case 'edit':

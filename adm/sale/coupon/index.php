@@ -110,18 +110,17 @@ include _ADM . '/sidemenu.php';
                 } else {
                     if (e.checked) status = '1';
                     else status = '0';
-                    type = 'able';
                     uid = e.value;
 
                     $.post('./proc.php', {
-                        'type': type,
+                        'type': 'able',
                         'uid': uid,
                         'status': status
                     }, function() {
 
                     })
                     .done(function(jqXHR){
-                        console.log('success');
+                        console.log(jqXHR);
                     })
                     .fail(function(error){
                         console.log(error);

@@ -84,18 +84,18 @@ $result = mysql_query($query2);
 				</span>
 				<span class="text">쿠폰사용내역</span>
 			</a> -->
-			<a href="javascript:ifra_xls();" class="btn btn-sm btn-success btn-icon-split">
+			<!-- <a href="javascript:ifra_xls();" class="btn btn-sm btn-success btn-icon-split">
 				<span class="icon text-white-50">
 					<i class="fas fa-download"></i>
 				</span>
 				<span class="text">엑셀다운로드</span>
-			</a>
+			</a> -->
 			<table cellpadding='0' cellspacing='0' border='0' width='100%' class='listTable' style='min-width:900px;margin:5px 0;'>
 				<tr>
 					<th width='70'>번호</th>
 					<th width='110'>상태</th>
 					<th width='110'>구분</th>
-					<th>자격증발급번호</th>
+					<th>수료증발급번호</th>
 					<th>강좌</th>
 					<th>아이디</th>
 					<th width='120'>발급일</th>
@@ -135,7 +135,7 @@ $result = mysql_query($query2);
 				} else {
 					?>
 					<tr>
-						<td colspan='10' style='padding:50px 0;text-align:center;'>쿠폰정보가 없습니다.</td>
+						<td colspan='10' style='padding:50px 0;text-align:center;'>정보가 없습니다.</td>
 					</tr>
 				<?
 				}
@@ -175,7 +175,7 @@ $result = mysql_query($query2);
 		form.submit();
 	}
 	const del = function(uid) {
-		if(confirm('해당 쿠폰을 삭제하시겠습니까?\n삭제후에는 복구가 불가능합니다')){
+		if(confirm('정말 삭제하시겠습니까?\n삭제후에는 복구가 불가능합니다')){
 			const form = document.frm01;
 			form.type.value = 'del';
 			form.uid.value = uid;
@@ -206,7 +206,7 @@ $result = mysql_query($query2);
 			"width": "90%",
 			"max-width": "750px"
 		});
-		$('#multi_ttl').text('쿠폰등록 엑셀 업로드');
+		$('#multi_ttl').text('엑셀 업로드');
 		$('#multiFrame').html("<iframe src='ExcelUpload.php' name='excelFrame' style='width:100%;height:480px;' frameborder='0' scrolling='auto'></iframe>");
 
 		$('.multiBox_open').click();

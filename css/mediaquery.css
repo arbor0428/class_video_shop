@@ -1679,5 +1679,14 @@
     .fixed-bnr .fixed-menu {width: 90%;}
     .fixed-bnr .fixed-menu li a img {height: 27px;}
     .fixed-bnr .fixed-menu li a p {font-size: 0.875rem;}
-
+	.cont1_4 .ai_tab_btn li {width: 24%;}
+	.cont3 .vdTabBtn {width: 880px;}
+	.classDetail_wrap .videoTit .span_ti {width: 50px; height: 30px; font-size: 1.250rem;}
+	.classDetail_wrap .videoTit p {font-size: 16px;}
+	.classDetail_wrap .videoTit .hash {font-size: 16px;}
+	.classDetail_wrap .ai_curri_box_wrap .ai_curri_box .ai_curri_img_wrap {width: 40%; height: auto;}
+	.classDetail_wrap .ai_curri_box_wrap .ai_curri_box .nVdCont {width: 58%;}
+	.classDetail_wrap .ai_curri_box_wrap .ai_curri_box .nVdTop .nVdtit01 {font-size: 14px;}
+	.classDetail_wrap .ai_curri_box_wrap .ai_curri_box .nVdTop .nVdtit02 {font-size: 12px;}
+	.classDetail_wrap .ai_curri_box_wrap .ai_curri_box .nVdBot {font-size: 12px;}
 }

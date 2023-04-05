@@ -1,5 +1,10 @@
 <?
 include "/home/edufim/www/module/login/head.php";
+
+if($_SERVER['REMOTE_ADDR'] == '106.246.92.237' && $deviceId){
+	echo$deviceId.'/';
+}
+
 ?>
 <header class="header blue_gradient c_w" id="header">
     <div class="h_top bor_bot">
@@ -284,7 +289,7 @@ include "/home/edufim/www/module/login/head.php";
                         </li>
                         <li>
                             <a href="/sub05/" title="필라테스자격증">필라테스자격증</a>
-<!--                             <span class="lnr lnr-chevron-down"></span>
+                            <!-- <span class="lnr lnr-chevron-down"></span>
                             <span class="lnr lnr-chevron-up"></span>
                             <ul class="m-depth2">
                                 <li><a href="/sub06/" title="홈트">홈트</a></li>
@@ -380,6 +385,7 @@ include "/home/edufim/www/module/login/head.php";
                 <li><a class="dp_b bold" href="/sub03/" title="국제인증자격증과정">국제인증자격증과정</a></li>
                 <li><a class="dp_b bold" href="/sub04/" title="BEST 콜라보">BEST 콜라보</a></li>
                 <li><a class="dp_b bold" href="/sub05/" title="필라테스자격증">필라테스자격증</a></li>
+                <li><a class="dp_b bold" href="/event/" title="이벤트">이벤트</a></li>
                 <li><a class="dp_b bold" href="/store/" title="STORE">STORE</a></li>
                 <li><a class="dp_b bold" href="/sub08/" title="후기">후기</a></li>
                 <!-- <li><a class="dp_b bold" href="/sub09/" title="자격증시험응시">자격증시험응시</a></li> -->
@@ -622,13 +628,19 @@ include "/home/edufim/www/module/login/head.php";
                                         $license = $cade02[$i];
                                     ?>
                                         <li><a href="/sub05/view.php?&code=<?= $license['uid'] ?>" title="<?= $license['title'] ?>"><?= $license['title'] ?></a></li>
-                                    <? } ?>
+                                    <?
+                                    }
+                                    ?>
                                     <!-- <li><a href="" title="필라테스 지도자 자격증">필라테스 지도자 자격증</a></li>
 									<li><a href="" title="CBP 카이로플랙틱">CBP 카이로플랙틱</a></li> -->
                                 </ul>
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="depthbox">
+                    <!--빈값 best콜라보-->
                 </div>
 
                 <div class="depthbox" style="height: 160px;">

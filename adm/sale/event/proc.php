@@ -1,7 +1,7 @@
 <?
 include "/home/edufim/www/adm/header.php";
 
-$tot_num = '1';    //첨부파일 최대갯수
+$tot_num = 4;
 $upfile = '/upfile/event';
 $UPLOAD_DIR = _WWW . $upfile;
 
@@ -57,27 +57,46 @@ switch ($type) {
         if ($type == 'write') {
             $sDate = date('Y-m-d', strtotime($sDate));
             $eDate = date('Y-m-d', strtotime($eDate));
+            if ($sDate > $eDate) {
+                $msg = '이벤트 기간이 잘못 되었습니다';
+                Msg::goMsg($msg, $next_url);
+                exit;
+            }
             $rTime = time();
 
-            $sql = "INSERT INTO ks_event (status, title, exp, target, upfile01, realfile01, coupon_uid, sDate, eDate, ment01,  rTime) VALUES";
-            $sql .= " (0, '$title', '$exp', '$target', '$arr_new_file[1]', '$real_name[1]', '$coupon_uid', '$sDate', '$eDate', '$ment01',  $rTime)";
+            $sql = "INSERT INTO ks_event (status, title, exp, target, upfile01, realfile01, upfile02, realfile02, upfile03, realfile03, upfile04, realfile04, coupon_uid, sDate, eDate, ment01, kollus_video_id, rTime) VALUES";
+            $sql .= " (0, '$title', '$exp', '$target', '$arr_new_file[1]', '$real_name[1]', '$arr_new_file[2]', '$real_name[2]', '$arr_new_file[3]', '$real_name[3]', '$arr_new_file[4]', '$real_name[4]', '$coupon_uid', '$sDate', '$eDate', '$ment01', '$kollus_video_id', $rTime)";
             $result = sqlExe($sql);
             $msg = '등록되었습니다';
 
         } else if ($type == 'edit') {
-            $sql = "UPDATE ks_event SET ";
-            $sql .= "title='$title',";
-            $sql .= "exp='$exp',";
-            $sql .= "target='$target',";
-            $sql .= "coupon_uid='$coupon_uid',";
-            $sql .= "sDate='$sDate',";
-            $sql .= "eDate='$eDate',";
-            $sql .= "ment01='$ment01'";
+            $sql = "UPDATE ks_event SET";
+            $sql .= " title='$title',";
+            $sql .= " exp='$exp',";
+            $sql .= " target='$target',";
+            $sql .= " coupon_uid='$coupon_uid',";
+            $sql .= " sDate='$sDate',";
+            $sql .= " eDate='$eDate',";
+            $sql .= " ment01='$ment01',";
+            $sql .= " kollus_video_id='$kollus_video_id',";
 
             if ($arr_new_file[1] || $del_upfile01 == 'Y') {
-                $sql .= ", upfile01='$arr_new_file[1]'";
-                $sql .= ", realfile01='$real_name[1]'";
+                $sql .= " upfile01='$arr_new_file[1]',";
+                $sql .= " realfile01='$real_name[1]',";
             }
+            if ($arr_new_file[2] || $del_upfile01 == 'Y') {
+                $sql .= " upfile02='$arr_new_file[2]',";
+                $sql .= " realfile02='$real_name[2]',";
+            }
+            if ($arr_new_file[3] || $del_upfile01 == 'Y') {
+                $sql .= " upfile03='$arr_new_file[3]',";
+                $sql .= " realfile03='$real_name[3]',";
+            }
+            if ($arr_new_file[4] || $del_upfile01 == 'Y') {
+                $sql .= " upfile04='$arr_new_file[4]',";
+                $sql .= " realfile04='$real_name[4]',";
+            }
+            $sql = substr($sql, 0, -1);
 
             $sql .= " WHERE uid=$uid";
             $result = sqlExe($sql);

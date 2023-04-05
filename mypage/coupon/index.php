@@ -45,7 +45,7 @@ $num_row = sqlRowCount($query);
                 </div>
                 <div class="couponBox wid50 dp_sb dp_fc">
                     <div class="couponTop dp_f dp_c">
-                        <img src="../images/timeIcon.png" alt="">
+                        <img src="/images/timeIcon.png" alt="">
                         만료임박 쿠폰
                     </div>
                     <div class="couponBot dp_f dp_end dp_end02">
@@ -60,13 +60,16 @@ $num_row = sqlRowCount($query);
                     <li class="<? if ($case == 1) echo "on"; ?>"><a href="/mypage/coupon/" title="사용가능">사용가능</a></li>
                     <li class="<? if ($case == 2) echo "on"; ?>"><a href="/mypage/coupon/?case=2" title="사용완료 · 기간만료">사용완료 · 기간만료</a></li>
                     <li class="<? if ($case == 3) echo "on"; ?>"><a href="/mypage/coupon/?case=3" title="전체 쿠폰">전체 쿠폰</a></li>
-                    <!-- <li class="<? if ($case == 4) echo "on"; ?>"><a href="/mypage/coupon/?case=2" title="만료임박">만료임박</a></li> -->
+                    <!-- <li class="<? //if ($case == 4) echo "on"; 
+                                    ?>"><a href="/mypage/coupon/?case=2" title="만료임박">만료임박</a></li> -->
                 </ul>
                 <div class="couTabContWrap">
 
                     <div class="couTabCont">
 
-                        <? if ($num_row > 0) { ?>
+                        <?
+                        if ($num_row > 0) {
+                        ?>
 
                             <div class="dp_f dp_wrap">
                                 <?
@@ -74,7 +77,8 @@ $num_row = sqlRowCount($query);
                                     foreach ($row as $k => $v) {
                                         ${$k} = $v;
                                     }
-                                    if ($status == 1) { ?>
+                                    if ($status == 1) {
+                                ?>
                                         <div class="couponUseBox dp_sb dp_fc">
                                             <div class="couponUse dp_sb dp_fc">
                                                 <div>
@@ -88,7 +92,9 @@ $num_row = sqlRowCount($query);
                                             </div>
                                             <div class="botText c_w bora01 dp_f dp_c dp_cc">C&nbsp;O&nbsp;U&nbsp;P&nbsp;O&nbsp;N</div>
                                         </div>
-                                    <? } else { ?>
+                                    <?
+                                    } else {
+                                    ?>
                                         <div class="couponUseBox dp_sb dp_fc used">
                                             <div class="couponUse dp_sb dp_fc">
                                                 <div>
@@ -102,7 +108,8 @@ $num_row = sqlRowCount($query);
                                             </div>
                                             <div class="botText c_w bora01 dp_f dp_c dp_cc">C&nbsp;O&nbsp;U&nbsp;P&nbsp;O&nbsp;N</div>
                                         </div>
-                                <? }
+                                <?
+                                    }
                                 } ?>
 
                                 <!-- <div class="couponUseBox dp_sb dp_fc">

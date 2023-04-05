@@ -3,8 +3,8 @@
 .popup_background2 {background:#fff; z-index:99999999; border-radius:3px}
 .close_button_pop {background-color: transparent; border-collapse:collapse;border:0;width:24px;height:24px;cursor:pointer;}
 .close_button_pop img {width: 100%;}
-.close_button_pop2 {background:url("../images/x_icon.svg") no-repeat;border-collapse:collapse;border:0;width:20px;height:20px;cursor:pointer;background-size:cover;margin:7px;}
-.close_button_pop3 {position:absolute;top:-30px;right:-50px;;background:url("../images/x_icon.svg") no-repeat;border-collapse:collapse;border:0;width:30px;height:30px;cursor:pointer;background-size:cover;}
+.close_button_pop2 {background:url("/images/x_icon.svg") no-repeat;border-collapse:collapse;border:0;width:20px;height:20px;cursor:pointer;background-size:cover;margin:7px;}
+.close_button_pop3 {position:absolute;top:-30px;right:-50px;;background:url("/images/x_icon.svg") no-repeat;border-collapse:collapse;border:0;width:30px;height:30px;cursor:pointer;background-size:cover;}
 .cls_buttonali {
 width:96%;
 padding:13px;
@@ -23,7 +23,7 @@ right: 20px;
 .popup_notice2 {padding:0 0px;background:#ffffff;border-radius:5px;}
 .radio_style5 {position:relative;top:5px;}
 .pop_div_dotted {border-bottom:1px dotted #e1e1e1;clear:both;width:100%;height:1px;margin-top:10px;margin-bottom:10px;}
-.write_it {font-size:14px;font-weight:normal;color:#656565;padding-top:20px;padding-bottom:20px;text-align:center;}
+.write_it {font-size:14px;font-weight:normal;color:#656565;padding-top:40px;padding-bottom:20px;text-align:center;}
 .txt_bold {font-weight:bold;}
 .btn_ali_pop2 {text-align:center;padding-top:5px;margin:0 auto;width:150px;margin-bottom:30px;}
 .btn_notice_reg {background:#5f5f5f;font-size:15px;font-weight:normal;padding:10px 15px 10px 15px;color:#fff;font-weight:bold;border:0;font-family:'Nanum Gothic';cursor:pointer;width:150px;}

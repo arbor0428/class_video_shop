@@ -134,6 +134,7 @@
                         <ul class="companyList dp_f">
                             <li class="dp_f dp_c">주식회사 에듀핌</li>
                             <li class="dp_f dp_c">대표자 : 김철원</li>
+                            <li class="dp_f dp_c">대표번호 : 070-2535-4861</li>
                             <li class="dp_f dp_c">Tel : 010-3968-9609</li>
                             <li class="dp_f dp_c">E-mail : fim2021@naver.com</li>
                         </ul>
