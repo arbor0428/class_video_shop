@@ -1,7 +1,0 @@
-<svg id="체크박스" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-  <g id="사각형_155" data-name="사각형 155" fill="#bc00ff" stroke="#bc00ff" stroke-width="1">
-    <rect width="20" height="20" rx="3" stroke="none"/>
-    <rect x="0.5" y="0.5" width="19" height="19" rx="2.5" fill="none"/>
-  </g>
-  <path id="패스_677" data-name="패스 677" d="M1288.071,745.106l-3.25,8.69-2.494-3.181-2.358.008,4.235,5.4,1.619-.041.348-.736,3.8-10.141Z" transform="translate(-1274.968 -740.106)" fill="#fff"/>
-</svg>

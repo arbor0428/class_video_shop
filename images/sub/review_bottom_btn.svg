@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <g id="bottom_btn" transform="translate(-0.053 0.034)">
-    <circle id="타원_5" data-name="타원 5" cx="15" cy="15" r="15" transform="translate(30.053 -0.034) rotate(90)" fill="#bc00ff" opacity="0.2"/>
-    <path id="패스_75" data-name="패스 75" d="M0,0,7,7,0,14" transform="translate(22.053 12.466) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-  </g>
-</svg>
